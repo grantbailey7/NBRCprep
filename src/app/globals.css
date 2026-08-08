@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-teal: #0D9488;
+    --brand-teal-dark: #115E59;
+    --brand-black: #0A0A0A;
+  }
+
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-white text-brand-black font-sans;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-brand-gray-900 text-white font-semibold rounded-lg hover:bg-brand-gray-800 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-gray-900 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-brand-gray-900 text-brand-gray-900 font-semibold rounded-lg hover:bg-brand-gray-900 hover:text-white transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-gray-900 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .card {
+    @apply bg-white border border-brand-gray-200 rounded-xl shadow-sm;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 border border-brand-gray-300 rounded-lg text-black placeholder-brand-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-shadow duration-150;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-brand-gray-700 mb-1;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-black;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-brand-gray-500 mt-2;
+  }
+
+  .progress-bar {
+    @apply h-2 bg-brand-gray-200 rounded-full overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-teal-500 rounded-full transition-all duration-500;
+  }
+}
+
+/* Marquee / testimonials */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Flashcard flip animation */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Content Protection */
+.exam-protected-content {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.exam-protected-content input,
+.exam-protected-content textarea,
+.exam-protected-content select {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.exam-protected-content img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+@media print {
+  .exam-protected-content {
+    display: none !important;
+  }
+
+  body::after {
+    content: 'Printing exam content is not permitted.';
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 80px 40px;
+    color: #333;
+  }
+}

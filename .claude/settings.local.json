@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\api\\\\auth\\\\[...nextauth]\" \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\api\\\\auth\\\\register\" \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\api\\\\auth\\\\forgot-password\" \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\api\\\\auth\\\\reset-password\")",
+      "Bash(mkdir -p \"C:/Users/grant/OneDrive/Desktop/Certin/NBRCprep/src/app/api/flashcards/progress\" \"C:/Users/grant/OneDrive/Desktop/Certin/NBRCprep/src/app/api/exams/mini/[examId]/submit\" \"C:/Users/grant/OneDrive/Desktop/Certin/NBRCprep/src/app/api/exams/full/[examId]/submit\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\divisions\\\\[division]\\\\flashcards\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\divisions\\\\[division]\\\\mini-exams\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\divisions\\\\[division]\\\\full-exams\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\terms\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\privacy\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\refund\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\divisions\\\\[division]\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\\\\src\\\\app\\\\divisions\\\\[division]\\\\full-exams\\\\[examId]\")",
+      "Bash(npm install *)",
+      "Bash(git init *)",
+      "Bash(git branch *)",
+      "Bash(npx prisma *)",
+      "Bash(npx next *)",
+      "Bash(git add *)"
+    ]
+  }
+}

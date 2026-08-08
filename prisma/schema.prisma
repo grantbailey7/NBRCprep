@@ -1,0 +1,310 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum PlanType {
+  FREE
+  MONTHLY       // $29/month — TMC only
+  FULL_ACCESS   // $149 one-time — TMC only
+  FULL_BUNDLE   // $249 one-time — All divisions
+}
+
+enum FlashcardStatus {
+  UNKNOWN
+  KNOWN
+  REVIEW_LATER
+}
+
+enum DivisionSlug {
+  TMC    // Therapist Multiple-Choice
+  NPS    // Neonatal/Pediatric Specialist
+  ACCS   // Adult Critical Care Specialist
+  SDS    // Sleep Disorders Specialist
+  CPFT   // Certified Pulmonary Function Technologist
+  RPFT   // Registered Pulmonary Function Technologist
+}
+
+enum BlogStatus {
+  DRAFT
+  SCHEDULED
+  PUBLISHED
+}
+
+enum SeoMode {
+  STEALTH
+  LIMITED
+  NORMAL
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String?   @unique
+  username      String?   @unique
+  emailVerified DateTime?
+  name          String?
+  passwordHash  String?
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  planType              PlanType @default(FREE)
+  stripeCustomerId      String?  @unique
+  stripeSubscriptionId  String?  @unique
+  stripePriceId         String?
+  stripeCurrentPeriodEnd DateTime?
+
+  registeredDeviceId    String?
+
+  emailStep             Int      @default(0)
+  emailOptOut           Boolean  @default(false)
+
+  accounts Account[]
+  sessions Session[]
+
+  flashcardProgress  UserFlashcardProgress[]
+  miniExamResults    UserMiniExamResult[]
+  fullExamResults    UserFullExamResult[]
+  studyStreaks       StudyStreak[]
+}
+
+model Division {
+  id          String       @id @default(cuid())
+  slug        DivisionSlug @unique
+  name        String
+  shortName   String
+  description String
+  color       String       @default("#FFD100")
+  examMinutes Int          @default(180)
+
+  flashcards  Flashcard[]
+  miniExams   MiniExam[]
+  fullExams   FullExam[]
+}
+
+model Flashcard {
+  id           String  @id @default(cuid())
+  divisionId   String
+  question     String  @db.Text
+  answer       String  @db.Text
+  choices      Json?
+  correctChoice String?
+  difficulty   Int     @default(2)
+  topic        String?
+  isFree       Boolean @default(false)
+  orderIndex   Int     @default(0)
+
+  division  Division                @relation(fields: [divisionId], references: [id])
+  progress  UserFlashcardProgress[]
+
+  @@index([divisionId])
+}
+
+model UserFlashcardProgress {
+  id          String          @id @default(cuid())
+  userId      String
+  flashcardId String
+  status      FlashcardStatus @default(UNKNOWN)
+  lastSeenAt  DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  flashcard Flashcard @relation(fields: [flashcardId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, flashcardId])
+  @@index([userId])
+}
+
+model MiniExam {
+  id         String  @id @default(cuid())
+  divisionId String
+  title      String
+  examIndex  Int
+  isFree     Boolean @default(false)
+
+  division  Division          @relation(fields: [divisionId], references: [id])
+  questions MiniExamQuestion[]
+  results   UserMiniExamResult[]
+
+  @@unique([divisionId, examIndex])
+  @@index([divisionId])
+}
+
+model MiniExamQuestion {
+  id                 String @id @default(cuid())
+  miniExamId         String
+  questionIndex      Int
+  questionText       String @db.Text
+  choices            Json
+  correctChoice      String
+  explanationCorrect String @db.Text
+  explanationWrong   String @db.Text
+  topic              String?
+
+  miniExam MiniExam @relation(fields: [miniExamId], references: [id], onDelete: Cascade)
+
+  @@unique([miniExamId, questionIndex])
+  @@index([miniExamId])
+}
+
+model UserMiniExamResult {
+  id              String   @id @default(cuid())
+  userId          String
+  miniExamId      String
+  scorePercentage Float
+  passed          Boolean
+  takenAt         DateTime @default(now())
+  answers         Json
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  miniExam MiniExam @relation(fields: [miniExamId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([miniExamId])
+}
+
+model FullExam {
+  id              String @id @default(cuid())
+  divisionId      String
+  title           String
+  examIndex       Int
+  durationMinutes Int
+  questionCount   Int
+
+  division  Division           @relation(fields: [divisionId], references: [id])
+  questions FullExamQuestion[]
+  results   UserFullExamResult[]
+
+  @@unique([divisionId, examIndex])
+  @@index([divisionId])
+}
+
+model FullExamQuestion {
+  id                 String @id @default(cuid())
+  fullExamId         String
+  questionIndex      Int
+  questionText       String @db.Text
+  choices            Json
+  correctChoice      String
+  explanationCorrect String @db.Text
+  explanationWrong   String @db.Text
+  topic              String?
+
+  fullExam FullExam @relation(fields: [fullExamId], references: [id], onDelete: Cascade)
+
+  @@unique([fullExamId, questionIndex])
+  @@index([fullExamId])
+}
+
+model UserFullExamResult {
+  id              String   @id @default(cuid())
+  userId          String
+  fullExamId      String
+  scorePercentage Float
+  passed          Boolean
+  takenAt         DateTime @default(now())
+  timeTakenSeconds Int?
+  answers         Json
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fullExam FullExam @relation(fields: [fullExamId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([fullExamId])
+}
+
+model StudyStreak {
+  id            String   @id @default(cuid())
+  userId        String
+  studyDate     DateTime @db.Date
+  createdAt     DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, studyDate])
+  @@index([userId])
+}
+
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  email     String
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([email])
+}
+
+model Testimonial {
+  id           String @id @default(cuid())
+  text         String
+  authorName   String @default("Verified User")
+  rating       Int    @default(5)
+  displayOrder Int    @default(0)
+  isActive     Boolean @default(true)
+}
+
+model BlogPost {
+  id          String     @id @default(cuid())
+  slug        String     @unique
+  title       String
+  description String
+  content     String     @db.Text
+  category    String
+  readTime    String     @default("5 min read")
+  status      BlogStatus @default(DRAFT)
+  publishAt   DateTime?
+  publishedAt DateTime?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  @@index([status])
+  @@index([publishAt])
+}
+
+model SiteSettings {
+  id       String  @id @default("singleton")
+  seoMode  SeoMode @default(STEALTH)
+  robotsAllowAll Boolean @default(false)
+  sitemapEnabled Boolean @default(false)
+  metaNoIndex    Boolean @default(true)
+}

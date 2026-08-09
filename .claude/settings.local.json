@@ -28,7 +28,8 @@
       "PowerShell(Test-Path \"$env:USERPROFILE\\\\.ssh\\\\id_rsa.pub\"; Test-Path \"$env:USERPROFILE\\\\.ssh\\\\id_ed25519.pub\")",
       "PowerShell([Convert]::ToBase64String\\(\\(1..32 | ForEach-Object { Get-Random -Minimum 0 -Maximum 256 }\\) -as [byte[]]\\); [Convert]::ToBase64String\\(\\(1..32 | ForEach-Object { Get-Random -Minimum 0 -Maximum 256 }\\) -as [byte[]]\\); [Convert]::ToBase64String\\(\\(1..32 | ForEach-Object { Get-Random -Minimum 0 -Maximum 256 }\\) -as [byte[]]\\))",
       "Bash(git push *)",
-      "PowerShell(Set-Location \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\"; npx tsx -e \"const { PrismaClient } = require\\('@prisma/client'\\); const p = new PrismaClient\\(\\); p.division.findMany\\({select:{id:true,slug:true}}\\).then\\(d=>{console.log\\(JSON.stringify\\(d\\)\\);p.\\\\$disconnect\\(\\)}\\)\")"
+      "PowerShell(Set-Location \"C:\\\\Users\\\\grant\\\\OneDrive\\\\Desktop\\\\Certin\\\\NBRCprep\"; npx tsx -e \"const { PrismaClient } = require\\('@prisma/client'\\); const p = new PrismaClient\\(\\); p.division.findMany\\({select:{id:true,slug:true}}\\).then\\(d=>{console.log\\(JSON.stringify\\(d\\)\\);p.\\\\$disconnect\\(\\)}\\)\")",
+      "Bash(npx tsc *)"
     ]
   }
 }

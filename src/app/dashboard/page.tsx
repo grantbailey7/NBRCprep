@@ -156,11 +156,11 @@ export default async function DashboardPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-brand-gray-950 px-4 py-8 sm:px-6 lg:px-8">
+      <main className="min-h-screen bg-brand-gray-50 px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           {/* Welcome and Stats Header */}
           <div className="mb-8">
-            <h1 className="section-title text-3xl font-bold text-white">
+            <h1 className="section-title text-3xl font-bold text-black">
               Welcome back, {session.user.name ?? 'Student'}!
             </h1>
             <div className="mt-4 flex flex-wrap items-center gap-6">
@@ -168,8 +168,8 @@ export default async function DashboardPage() {
               <div className="card flex items-center gap-3 px-5 py-3">
                 <span className="text-2xl">🔥</span>
                 <div>
-                  <p className="text-sm text-brand-gray-400">Study Streak</p>
-                  <p className="text-xl font-bold text-teal-400">
+                  <p className="text-sm text-brand-gray-500">Study Streak</p>
+                  <p className="text-xl font-bold text-teal-600">
                     {streak} day{streak !== 1 ? 's' : ''}
                   </p>
                 </div>
@@ -179,8 +179,8 @@ export default async function DashboardPage() {
               <div className="card flex items-center gap-3 px-5 py-3">
                 <span className="text-2xl">📊</span>
                 <div>
-                  <p className="text-sm text-brand-gray-400">Test Readiness</p>
-                  <p className="text-xl font-bold text-teal-400">{testReadiness}%</p>
+                  <p className="text-sm text-brand-gray-500">Test Readiness</p>
+                  <p className="text-xl font-bold text-teal-600">{testReadiness}%</p>
                 </div>
               </div>
             </div>
@@ -188,11 +188,11 @@ export default async function DashboardPage() {
 
           {/* Upgrade Nudge for Free Users */}
           {session.user.planType === 'FREE' && (
-            <div className="mb-8 rounded-lg border border-teal-400/30 bg-teal-500/10 p-4">
+            <div className="mb-8 rounded-lg border border-teal-400/30 bg-teal-50 p-4">
               <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
                 <div>
-                  <p className="font-semibold text-teal-400">Upgrade Your Plan</p>
-                  <p className="text-sm text-brand-gray-300">
+                  <p className="font-semibold text-teal-700">Upgrade Your Plan</p>
+                  <p className="text-sm text-brand-gray-600">
                     Unlock all divisions, unlimited exams, and advanced analytics.
                   </p>
                 </div>
@@ -204,7 +204,7 @@ export default async function DashboardPage() {
           )}
 
           {/* Division Cards Grid */}
-          <h2 className="section-title mb-4 text-xl font-semibold text-white">Your Divisions</h2>
+          <h2 className="section-title mb-4 text-xl font-semibold text-black">Your Divisions</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {divisionStats.map((division) => (
               <Link
@@ -214,21 +214,21 @@ export default async function DashboardPage() {
               >
                 {/* Division Header */}
                 <div className="mb-4">
-                  <span className="inline-block rounded bg-teal-500/20 px-2 py-0.5 text-xs font-bold text-teal-400">
+                  <span className="inline-block rounded bg-teal-500/20 px-2 py-0.5 text-xs font-bold text-teal-700">
                     {division.code}
                   </span>
-                  <h3 className="mt-1 text-lg font-semibold text-white">{division.name}</h3>
+                  <h3 className="mt-1 text-lg font-semibold text-black">{division.name}</h3>
                 </div>
 
                 {/* Flashcard Progress */}
                 <div className="mb-3">
                   <div className="mb-1 flex items-center justify-between text-sm">
-                    <span className="text-brand-gray-400">Flashcards</span>
-                    <span className="text-brand-gray-300">
+                    <span className="text-brand-gray-500">Flashcards</span>
+                    <span className="text-brand-gray-600">
                       {division.knownCount} / {division.totalFlashcards} known
                     </span>
                   </div>
-                  <div className="h-2 w-full overflow-hidden rounded-full bg-brand-gray-800">
+                  <div className="h-2 w-full overflow-hidden rounded-full bg-brand-gray-200">
                     <div
                       className="h-full rounded-full bg-teal-500 transition-all"
                       style={{ width: `${division.progressPercent}%` }}
@@ -238,16 +238,16 @@ export default async function DashboardPage() {
 
                 {/* Mini Exam Attempts */}
                 <div className="mb-2 flex items-center justify-between text-sm">
-                  <span className="text-brand-gray-400">Mini Exam Attempts</span>
-                  <span className="font-medium text-brand-gray-300">
+                  <span className="text-brand-gray-500">Mini Exam Attempts</span>
+                  <span className="font-medium text-brand-gray-700">
                     {division.miniExamAttempts}
                   </span>
                 </div>
 
                 {/* Full Exam Best Score */}
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-brand-gray-400">Full Exam Best Score</span>
-                  <span className="font-medium text-teal-400">
+                  <span className="text-brand-gray-500">Full Exam Best Score</span>
+                  <span className="font-medium text-teal-600">
                     {division.bestFullExamScore !== null
                       ? `${Math.round(division.bestFullExamScore)}%`
                       : '—'}

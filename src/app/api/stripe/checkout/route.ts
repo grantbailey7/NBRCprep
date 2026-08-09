@@ -54,5 +54,5 @@ export async function POST(request: NextRequest) {
     allow_promotion_codes: true,
   })
 
-  return NextResponse.json({ sessionUrl: checkoutSession.url })
+  return NextResponse.json({ url: checkoutSession.url })
 }

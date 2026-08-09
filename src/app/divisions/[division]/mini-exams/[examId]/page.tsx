@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { redirect } from 'next/navigation';
 import { getAuthSession } from '@/lib/auth';
 import { Navbar } from '@/components/layout/Navbar';

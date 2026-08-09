@@ -16,7 +16,18 @@
       "Bash(git branch *)",
       "Bash(npx prisma *)",
       "Bash(npx next *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git config *)",
+      "Bash(gh repo *)",
+      "PowerShell(gh repo create NBRCprep --private --source=. --push)",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__computer",
+      "PowerShell(git config --global credential.helper)",
+      "PowerShell(Test-Path \"$env:USERPROFILE\\\\.ssh\\\\id_rsa.pub\"; Test-Path \"$env:USERPROFILE\\\\.ssh\\\\id_ed25519.pub\")",
+      "PowerShell([Convert]::ToBase64String\\(\\(1..32 | ForEach-Object { Get-Random -Minimum 0 -Maximum 256 }\\) -as [byte[]]\\); [Convert]::ToBase64String\\(\\(1..32 | ForEach-Object { Get-Random -Minimum 0 -Maximum 256 }\\) -as [byte[]]\\); [Convert]::ToBase64String\\(\\(1..32 | ForEach-Object { Get-Random -Minimum 0 -Maximum 256 }\\) -as [byte[]]\\))",
+      "Bash(git push *)"
     ]
   }
 }

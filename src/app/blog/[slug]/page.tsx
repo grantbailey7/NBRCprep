@@ -12,7 +12,7 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await prisma.blogPost.findUnique({
     where: { slug: params.slug },
-    select: { title: true, description: true, slug: true },
+    select: { title: true, description: true, slug: true, publishedAt: true },
   })
   if (!post) return { title: 'Post Not Found' }
   return {
@@ -25,6 +25,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://nbrcprep.app/blog/${post.slug}`,
       type: 'article',
       siteName: 'NBRCprep',
+      ...(post.publishedAt && { publishedTime: post.publishedAt.toISOString() }),
+    },
+    twitter: {
+      card: 'summary',
+      title: post.title,
+      description: post.description,
     },
   }
 }
@@ -37,8 +43,21 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post || post.status !== 'PUBLISHED') notFound()
   if (post.publishedAt && post.publishedAt > new Date()) notFound()
 
+  const blogPostSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    url: `https://nbrcprep.app/blog/${post.slug}`,
+    ...(post.publishedAt && { datePublished: post.publishedAt.toISOString() }),
+    author: { '@type': 'Organization', name: 'NBRCprep', url: 'https://nbrcprep.app' },
+    publisher: { '@type': 'Organization', name: 'NBRCprep', url: 'https://nbrcprep.app' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://nbrcprep.app/blog/${post.slug}` },
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }} />
       <Navbar />
 
       <main className="flex-1 bg-brand-gray-50">

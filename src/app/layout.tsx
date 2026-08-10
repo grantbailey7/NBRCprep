@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL('https://nbrcprep.app'),
   alternates: { canonical: 'https://nbrcprep.app' },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'NBRCprep — Pass the NBRC with Confidence',
     description: '2,400 original flashcards and 180 practice exams for all 6 NBRC divisions. Start free, no card required.',

@@ -35,8 +35,3 @@ export function canUserAccessMiniExam(
 export function canAccessFullExams(plan: PlanType, divisionSlug: DivisionSlug): boolean {
   return hasPaidAccess(plan, divisionSlug)
 }
-
-export function canAccessFullExam(plan: PlanType, divisionSlug: DivisionSlug, isFree: boolean): boolean {
-  if (isFree) return true
-  return hasPaidAccess(plan, divisionSlug)
-}

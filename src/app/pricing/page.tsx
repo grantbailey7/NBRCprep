@@ -71,6 +71,7 @@ export default async function PricingPage() {
   const plans = [
     {
       name: 'Monthly',
+      subtitle: 'TMC Only',
       price: '$29',
       period: 'per month',
       features: [
@@ -86,6 +87,7 @@ export default async function PricingPage() {
     },
     {
       name: 'Full Access',
+      subtitle: 'TMC Only',
       price: '$149',
       period: 'one-time',
       features: [
@@ -102,6 +104,7 @@ export default async function PricingPage() {
     },
     {
       name: 'Full Bundle',
+      subtitle: 'All 6 Divisions',
       price: '$249',
       period: 'one-time',
       features: [
@@ -173,6 +176,7 @@ export default async function PricingPage() {
                   </div>
                 )}
                 <h3 className="font-bold text-xl text-black">{plan.name}</h3>
+                <p className="text-xs font-semibold text-brand-gray-400 mt-0.5">{plan.subtitle}</p>
                 <div className="mt-3">
                   <span className="text-4xl font-black text-black">{plan.price}</span>
                   <span className="text-sm ml-1 text-brand-gray-400">/{plan.period}</span>

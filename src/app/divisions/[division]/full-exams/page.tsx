@@ -7,7 +7,7 @@ import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { prisma } from '@/lib/prisma'
 import { PlanType, DivisionSlug } from '@prisma/client'
-import { canAccessFullExam } from '@/lib/access-control'
+import { canAccessFullExams } from '@/lib/access-control'
 
 const SLUG_TO_ENUM: Record<string, string> = {
   tmc: 'TMC', nps: 'NPS', accs: 'ACCS', sds: 'SDS', cpft: 'CPFT', rpft: 'RPFT',
@@ -43,6 +43,7 @@ export default async function FullExamsListPage({ params }: { params: { division
   }
 
   const divSlug = params.division.toLowerCase()
+  const hasAccess = canAccessFullExams(plan, slugEnum as DivisionSlug)
 
   return (
     <>
@@ -57,27 +58,30 @@ export default async function FullExamsListPage({ params }: { params: { division
             <p className="mt-1 text-brand-gray-500">Full-Length Practice Exams &mdash; timed, full simulation</p>
           </div>
 
-          <div className="card mb-6 border-teal-400/30 bg-teal-500/10 p-4">
-            <p className="text-sm font-medium text-teal-700">
-              Full Exam 1 is free for all users. Upgrade your plan to unlock all full-length exams. Score 70% or higher to pass.
-            </p>
-          </div>
+          {!hasAccess && (
+            <div className="card mb-6 border-amber-400/30 bg-amber-500/10 p-4">
+              <p className="text-sm font-medium text-amber-700">
+                Full exams require a paid plan.{' '}
+                <Link href="/pricing" className="font-bold underline hover:text-amber-900">Upgrade now</Link>{' '}
+                to unlock all full-length practice exams.
+              </p>
+            </div>
+          )}
 
           <div className="space-y-4">
             {exams.map((exam) => {
-              const accessible = canAccessFullExam(plan, slugEnum as DivisionSlug, exam.isFree)
               const examResults = resultsByExam.get(exam.id) ?? []
               const bestScore = examResults.length > 0 ? Math.max(...examResults.map(r => r.scorePercentage)) : null
               const passed = examResults.some((r) => r.passed)
               const attempts = examResults.length
 
               return (
-                <div key={exam.id} className={`card flex flex-col justify-between gap-4 p-6 sm:flex-row sm:items-center ${!accessible ? 'opacity-50 grayscale' : ''}`}>
+                <div key={exam.id} className={`card flex flex-col justify-between gap-4 p-6 sm:flex-row sm:items-center ${!hasAccess ? 'opacity-50 grayscale' : ''}`}>
                   <div className="flex items-center gap-4">
                     <div className={`relative flex h-12 w-12 flex-shrink-0 flex-col items-center justify-center rounded-full text-sm font-bold ${
-                      !accessible ? 'bg-brand-gray-200 text-brand-gray-400' : passed ? 'bg-green-500/20 text-green-400' : 'bg-brand-gray-200 text-brand-gray-500'
+                      !hasAccess ? 'bg-brand-gray-200 text-brand-gray-400' : passed ? 'bg-green-500/20 text-green-400' : 'bg-brand-gray-200 text-brand-gray-500'
                     }`}>
-                      {!accessible ? (
+                      {!hasAccess ? (
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brand-gray-400" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
                         </svg>
@@ -89,29 +93,24 @@ export default async function FullExamsListPage({ params }: { params: { division
                       )}
                     </div>
                     <div>
-                      <div className="flex items-center gap-2">
-                        <p className={`text-lg font-bold ${!accessible ? 'text-brand-gray-400' : 'text-black'}`}>{exam.title}</p>
-                        {exam.isFree && (
-                          <span className="rounded-full bg-teal-500/20 px-2 py-0.5 text-xs font-bold text-teal-600">FREE</span>
-                        )}
-                      </div>
+                      <p className={`text-lg font-bold ${!hasAccess ? 'text-brand-gray-400' : 'text-black'}`}>{exam.title}</p>
                       <div className="mt-1 flex flex-wrap gap-3 text-xs text-brand-gray-500">
                         <span>{exam._count.questions} questions</span>
                         <span>&middot;</span>
                         <span>{exam.durationMinutes} minutes</span>
-                        {!accessible && (
+                        {!hasAccess && (
                           <>
                             <span>&middot;</span>
                             <span className="font-medium text-brand-gray-400">Requires upgrade</span>
                           </>
                         )}
-                        {accessible && attempts > 0 && (
+                        {hasAccess && attempts > 0 && (
                           <>
                             <span>&middot;</span>
                             <span>{attempts} attempt{attempts > 1 ? 's' : ''}</span>
                           </>
                         )}
-                        {accessible && bestScore !== null && (
+                        {hasAccess && bestScore !== null && (
                           <>
                             <span>&middot;</span>
                             <span className={bestScore >= 70 ? 'font-semibold text-green-400' : ''}>
@@ -126,10 +125,10 @@ export default async function FullExamsListPage({ params }: { params: { division
                   <div className="flex items-center gap-3">
                     {passed && (
                       <span className="rounded-full bg-green-500/20 px-3 py-1 text-xs font-semibold text-green-400">
-                        {'✓'} Passed
+                        Passed
                       </span>
                     )}
-                    {!accessible ? (
+                    {!hasAccess ? (
                       <Link href="/pricing" className="inline-flex items-center gap-1.5 rounded-lg bg-brand-gray-200 px-5 py-2 text-sm font-semibold text-brand-gray-500 transition-colors hover:bg-brand-gray-300">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />

@@ -251,6 +251,7 @@ export default async function HomePage() {
             {[
               {
                 name: 'Monthly',
+                subtitle: 'TMC Only',
                 price: '$29',
                 period: 'per month',
                 features: ['TMC flashcards (400)', 'TMC mini exams (30)', 'TMC full exams (3)', 'Cancel anytime'],
@@ -260,6 +261,7 @@ export default async function HomePage() {
               },
               {
                 name: 'Full Access',
+                subtitle: 'TMC Only',
                 price: '$149',
                 period: 'one-time',
                 features: ['All TMC content', '400 flashcards', '30 mini exams', '3 full-length exams', 'Lifetime access'],
@@ -269,6 +271,7 @@ export default async function HomePage() {
               },
               {
                 name: 'Full Bundle',
+                subtitle: 'All 6 Divisions',
                 price: '$249',
                 period: 'one-time',
                 features: ['All 6 divisions', '2,400 flashcards', '180 mini exams', '18 full-length exams', 'Lifetime access'],
@@ -289,6 +292,7 @@ export default async function HomePage() {
                   <div className="text-xs font-bold uppercase tracking-wider mb-3">Most Popular</div>
                 )}
                 <h3 className="font-bold text-xl">{plan.name}</h3>
+                <p className={`text-xs font-semibold mt-0.5 ${plan.highlight ? 'text-black/50' : 'text-brand-gray-400'}`}>{plan.subtitle}</p>
                 <div className="mt-2">
                   <span className="text-4xl font-black">{plan.price}</span>
                   <span className={`text-sm ml-1 ${plan.highlight ? 'text-black/60' : 'text-brand-gray-400'}`}>

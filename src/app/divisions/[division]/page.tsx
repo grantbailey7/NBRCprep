@@ -154,31 +154,21 @@ export default async function DivisionPage({ params }: { params: { division: str
             </Link>
 
             {/* Full Exams */}
-            <div className={`card p-6 ${!hasFullAccess ? 'opacity-60' : 'transition-all hover:ring-2 hover:ring-teal-400/50'}`}>
-              {!hasFullAccess ? (
-                <>
-                  <div className="mb-3 text-3xl">&#x1F3AF;</div>
-                  <h3 className="mb-1 text-xl font-bold text-black">Full Exams</h3>
-                  <p className="mb-4 text-sm text-brand-gray-500">
-                    Full-length timed simulations require an upgraded plan.
-                  </p>
-                  <Link href="/pricing" className="text-sm font-semibold text-teal-600">
-                    Upgrade to Access &rarr;
-                  </Link>
-                </>
-              ) : (
-                <Link href={`/divisions/${divSlug}/full-exams`} className="block h-full">
-                  <div className="mb-3 text-3xl">&#x1F3AF;</div>
-                  <h3 className="mb-1 text-xl font-bold text-black">Full Exams</h3>
-                  <p className="mb-4 text-sm text-brand-gray-500">
-                    {totalFullExams} full-length simulations &middot; {fullPassed} passed
-                  </p>
-                  <span className="text-sm font-semibold text-teal-600">
-                    Start Full Exam &rarr;
-                  </span>
-                </Link>
-              )}
-            </div>
+            <Link
+              href={`/divisions/${divSlug}/full-exams`}
+              className="card block p-6 transition-all hover:ring-2 hover:ring-teal-400/50"
+            >
+              <div className="mb-3 text-3xl">&#x1F3AF;</div>
+              <h3 className="mb-1 text-xl font-bold text-black">Full Exams</h3>
+              <p className="mb-4 text-sm text-brand-gray-500">
+                {hasFullAccess
+                  ? `${totalFullExams} full-length simulations · ${fullPassed} passed`
+                  : '1 free full exam available. Upgrade for all full-length simulations.'}
+              </p>
+              <span className="text-sm font-semibold text-teal-600">
+                {hasFullAccess ? 'Start Full Exam' : 'Try Free Exam'} &rarr;
+              </span>
+            </Link>
           </div>
         </div>
       </main>

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { getAuthSession } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { canAccessFullExams } from '@/lib/access-control'
+import { canAccessFullExam } from '@/lib/access-control'
 import { PlanType, DivisionSlug } from '@prisma/client'
 
 export async function GET(req: Request, { params }: { params: { examId: string } }) {
@@ -20,7 +20,7 @@ export async function GET(req: Request, { params }: { params: { examId: string }
     return NextResponse.json({ error: 'Exam not found' }, { status: 404 })
   }
 
-  if (!canAccessFullExams(plan, exam.division.slug as DivisionSlug)) {
+  if (!canAccessFullExam(plan, exam.division.slug as DivisionSlug, exam.isFree)) {
     return NextResponse.json({ error: 'Upgrade required' }, { status: 403 })
   }
 

@@ -54,7 +54,10 @@ export default async function MiniExamsListPage({ params }: { params: { division
             &larr; Back to {division.shortName}
           </Link>
           <h1 className="mb-2 text-3xl font-bold text-black">{division.name}</h1>
-          <p className="mb-8 text-brand-gray-500">Mini Exams &mdash; 20 questions each, scored immediately</p>
+          <p className="mb-3 text-brand-gray-500">Mini Exams &mdash; 20 questions each, scored immediately</p>
+          <div className="mb-8 rounded-lg border border-teal-400/30 bg-teal-500/10 p-3 text-sm text-teal-700">
+            Mini Exam 1 is free for all users. Upgrade your plan to unlock all 30 mini exams.
+          </div>
 
           <div className="space-y-3">
             {exams.map((exam) => {
@@ -65,19 +68,24 @@ export default async function MiniExamsListPage({ params }: { params: { division
               const attempts = examResults.length
 
               return (
-                <div key={exam.id} className={`card flex flex-col justify-between gap-4 p-5 sm:flex-row sm:items-center ${!accessible ? 'opacity-60' : ''}`}>
+                <div key={exam.id} className={`card flex flex-col justify-between gap-4 p-5 sm:flex-row sm:items-center ${!accessible ? 'opacity-50 grayscale' : ''}`}>
                   <div className="flex items-center gap-4">
-                    <div className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold ${
-                      passed ? 'bg-green-500/20 text-green-400' : 'bg-brand-gray-200 text-brand-gray-500'
+                    <div className={`relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                      !accessible ? 'bg-brand-gray-200 text-brand-gray-400' : passed ? 'bg-green-500/20 text-green-400' : 'bg-brand-gray-200 text-brand-gray-500'
                     }`}>
-                      {exam.examIndex}
+                      {!accessible ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-brand-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                        </svg>
+                      ) : exam.examIndex}
                     </div>
                     <div>
-                      <p className="font-semibold text-black">{exam.title}</p>
+                      <p className={`font-semibold ${!accessible ? 'text-brand-gray-400' : 'text-black'}`}>{exam.title}</p>
                       <div className="mt-0.5 flex gap-3 text-xs text-brand-gray-500">
                         <span>{exam._count.questions} questions</span>
-                        {attempts > 0 && <span>{attempts} attempt{attempts > 1 ? 's' : ''}</span>}
-                        {bestScore !== null && (
+                        {!accessible && <span className="font-medium text-brand-gray-400">Requires upgrade</span>}
+                        {accessible && attempts > 0 && <span>{attempts} attempt{attempts > 1 ? 's' : ''}</span>}
+                        {accessible && bestScore !== null && (
                           <span className={bestScore >= 90 ? 'font-semibold text-green-400' : 'text-brand-gray-500'}>
                             Best: {bestScore}%
                           </span>
@@ -93,8 +101,11 @@ export default async function MiniExamsListPage({ params }: { params: { division
                       </span>
                     )}
                     {!accessible ? (
-                      <Link href="/pricing" className="btn-primary px-4 py-2 text-sm">
-                        Upgrade
+                      <Link href="/pricing" className="inline-flex items-center gap-1.5 rounded-lg bg-brand-gray-200 px-4 py-2 text-sm font-semibold text-brand-gray-500 transition-colors hover:bg-brand-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                        </svg>
+                        Unlock
                       </Link>
                     ) : (
                       <Link

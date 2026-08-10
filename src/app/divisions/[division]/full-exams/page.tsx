@@ -49,18 +49,18 @@ export default async function FullExamsListPage({ params }: { params: { division
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-brand-gray-950 px-4 py-8 sm:px-6 lg:px-8">
+      <main className="min-h-screen bg-brand-gray-50 px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <Link href={`/divisions/${divSlug}`} className="mb-6 flex items-center gap-1 text-sm text-brand-gray-400 hover:text-white">
+          <Link href={`/divisions/${divSlug}`} className="mb-6 flex items-center gap-1 text-sm text-brand-gray-500 hover:text-black">
             &larr; Back to {division.shortName}
           </Link>
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-white">{division.name}</h1>
-            <p className="mt-1 text-brand-gray-400">Full-Length Practice Exams &mdash; timed, full simulation</p>
+            <h1 className="text-3xl font-bold text-black">{division.name}</h1>
+            <p className="mt-1 text-brand-gray-500">Full-Length Practice Exams &mdash; timed, full simulation</p>
           </div>
 
           <div className="card mb-6 border-teal-400/30 bg-teal-500/10 p-4">
-            <p className="text-sm font-medium text-teal-300">
+            <p className="text-sm font-medium text-teal-700">
               These exams are timed to match the real NBRC {division.shortName} exam ({division.examMinutes} minutes). Score 70% or higher to pass.
             </p>
           </div>
@@ -76,13 +76,13 @@ export default async function FullExamsListPage({ params }: { params: { division
                 <div key={exam.id} className="card flex flex-col justify-between gap-4 p-6 sm:flex-row sm:items-center">
                   <div className="flex items-center gap-4">
                     <div className={`flex h-12 w-12 flex-shrink-0 flex-col items-center justify-center rounded-full text-sm font-bold ${
-                      passed ? 'bg-green-500/20 text-green-400' : 'bg-brand-gray-800 text-brand-gray-400'
+                      passed ? 'bg-green-500/20 text-green-400' : 'bg-brand-gray-200 text-brand-gray-500'
                     }`}>
                       <span className="text-xs">FULL</span>
                       <span>{exam.examIndex}</span>
                     </div>
                     <div>
-                      <p className="text-lg font-bold text-white">{exam.title}</p>
+                      <p className="text-lg font-bold text-black">{exam.title}</p>
                       <div className="mt-1 flex flex-wrap gap-3 text-xs text-brand-gray-500">
                         <span>{exam._count.questions} questions</span>
                         <span>&middot;</span>
@@ -124,7 +124,7 @@ export default async function FullExamsListPage({ params }: { params: { division
 
             {exams.length === 0 && (
               <div className="card p-10 text-center">
-                <p className="text-brand-gray-400">No full exams available for this division yet.</p>
+                <p className="text-brand-gray-500">No full exams available for this division yet.</p>
               </div>
             )}
           </div>

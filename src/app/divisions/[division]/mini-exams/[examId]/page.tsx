@@ -89,7 +89,7 @@ export default function MiniExamPage() {
 
   if (phase === 'loading') {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-brand-gray-950">
+      <div className="flex min-h-screen items-center justify-center bg-brand-gray-50">
         <div className="h-10 w-10 animate-spin rounded-full border-4 border-teal-400 border-t-transparent" />
       </div>
     )
@@ -105,13 +105,13 @@ export default function MiniExamPage() {
       <ContentProtection>
         <div className="flex min-h-screen flex-col">
           <Navbar />
-          <main className="flex-1 bg-brand-gray-950">
+          <main className="flex-1 bg-brand-gray-50">
             <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
               {/* Score header */}
               <div className={`card mb-8 p-8 text-center ${passed ? 'border-green-400 bg-green-500/10' : 'border-red-400 bg-red-500/10'}`}>
                 <div className="mb-3 text-5xl">{passed ? '🎉' : '📚'}</div>
-                <h1 className="text-4xl font-bold text-white">{scorePercentage}%</h1>
-                <p className="mt-1 text-lg font-semibold text-brand-gray-300">
+                <h1 className="text-4xl font-bold text-black">{scorePercentage}%</h1>
+                <p className="mt-1 text-lg font-semibold text-brand-gray-600">
                   {correctCount} out of {total} correct
                 </p>
                 <div className={`mt-3 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-bold ${
@@ -122,7 +122,7 @@ export default function MiniExamPage() {
               </div>
 
               {/* Review */}
-              <h2 className="mb-4 text-xl font-bold text-white">Question Review</h2>
+              <h2 className="mb-4 text-xl font-bold text-black">Question Review</h2>
               <div className="space-y-5">
                 {(gradedAnswers as GradedAnswer[]).map((ga, i) => (
                   <div
@@ -135,7 +135,7 @@ export default function MiniExamPage() {
                       }`}>
                         {i + 1}
                       </span>
-                      <p className="font-medium text-white">{ga.questionText}</p>
+                      <p className="font-medium text-black">{ga.questionText}</p>
                     </div>
 
                     <div className="mb-3 ml-9 space-y-1.5">
@@ -150,7 +150,7 @@ export default function MiniExamPage() {
                                 ? 'bg-green-500/20 font-semibold text-green-300'
                                 : isChosen && !isCorrect
                                 ? 'bg-red-500/20 text-red-300 line-through'
-                                : 'text-brand-gray-400'
+                                : 'text-brand-gray-500'
                             }`}
                           >
                             <span className="font-bold">{key}.</span>
@@ -164,12 +164,12 @@ export default function MiniExamPage() {
 
                     {!ga.isCorrect && ga.explanationCorrect && (
                       <div className="ml-9 mt-3 space-y-2">
-                        <div className="rounded-lg border border-green-500/30 bg-green-500/10 p-3 text-sm text-brand-gray-300">
+                        <div className="rounded-lg border border-green-500/30 bg-green-500/10 p-3 text-sm text-brand-gray-600">
                           <span className="font-semibold text-green-400">Why {ga.correctChoice} is correct: </span>
                           {ga.explanationCorrect}
                         </div>
                         {ga.explanationWrong && (
-                          <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-sm text-brand-gray-300">
+                          <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-sm text-brand-gray-600">
                             <span className="font-semibold text-red-400">Why your answer was wrong: </span>
                             {ga.explanationWrong}
                           </div>
@@ -205,7 +205,7 @@ export default function MiniExamPage() {
       <ContentProtection>
         <div className="flex min-h-screen flex-col">
           <Navbar />
-          <main className="flex flex-1 items-center justify-center bg-brand-gray-950 px-4">
+          <main className="flex flex-1 items-center justify-center bg-brand-gray-50 px-4">
             <div className="card w-full max-w-md p-8 text-center">
               {error ? (
                 <>
@@ -217,8 +217,8 @@ export default function MiniExamPage() {
               ) : (
                 <>
                   <div className="mb-4 text-5xl">{'📝'}</div>
-                  <h2 className="text-2xl font-bold text-white">{exam?.title}</h2>
-                  <div className="mt-4 flex justify-center gap-4 text-sm text-brand-gray-400">
+                  <h2 className="text-2xl font-bold text-black">{exam?.title}</h2>
+                  <div className="mt-4 flex justify-center gap-4 text-sm text-brand-gray-500">
                     <span>{questions.length} questions</span>
                     <span>&middot;</span>
                     <span>Pass at 90%</span>
@@ -229,7 +229,7 @@ export default function MiniExamPage() {
                   >
                     Start Exam
                   </button>
-                  <Link href={`/divisions/${division}/mini-exams`} className="mt-3 block text-sm text-brand-gray-500 hover:text-white">
+                  <Link href={`/divisions/${division}/mini-exams`} className="mt-3 block text-sm text-brand-gray-500 hover:text-black">
                     Cancel
                   </Link>
                 </>
@@ -250,20 +250,20 @@ export default function MiniExamPage() {
     <ContentProtection>
       <div className="flex min-h-screen flex-col">
         <Navbar />
-        <main className="flex-1 bg-brand-gray-950">
+        <main className="flex-1 bg-brand-gray-50">
           <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
             {/* Progress */}
             <div className="mb-4 flex items-center justify-between">
-              <span className="text-sm text-brand-gray-400">Question {currentQ + 1} of {questions.length}</span>
-              <span className="text-sm text-brand-gray-400">{answeredCount} answered</span>
+              <span className="text-sm text-brand-gray-500">Question {currentQ + 1} of {questions.length}</span>
+              <span className="text-sm text-brand-gray-500">{answeredCount} answered</span>
             </div>
-            <div className="mb-6 h-2 w-full overflow-hidden rounded-full bg-brand-gray-800">
+            <div className="mb-6 h-2 w-full overflow-hidden rounded-full bg-brand-gray-200">
               <div className="h-full rounded-full bg-teal-500 transition-all" style={{ width: `${((currentQ + 1) / questions.length) * 100}%` }} />
             </div>
 
             {/* Question */}
             <div className="card mb-6 p-6">
-              <p className="text-base font-medium leading-relaxed text-white">{q.questionText}</p>
+              <p className="text-base font-medium leading-relaxed text-black">{q.questionText}</p>
 
               <div className="mt-6 space-y-3">
                 {Object.entries(q.choices).map(([key, val]) => {
@@ -274,12 +274,12 @@ export default function MiniExamPage() {
                       onClick={() => selectAnswer(q.id, key)}
                       className={`flex w-full gap-3 rounded-xl border-2 px-4 py-3 text-left text-sm transition-all ${
                         selected
-                          ? 'border-teal-400 bg-teal-500/10 font-semibold text-white'
-                          : 'border-brand-gray-700 bg-brand-gray-900 text-brand-gray-300 hover:border-brand-gray-500'
+                          ? 'border-teal-400 bg-teal-500/10 font-semibold text-black'
+                          : 'border-brand-gray-300 bg-brand-gray-100 text-brand-gray-600 hover:border-brand-gray-500'
                       }`}
                     >
                       <span className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold ${
-                        selected ? 'border-teal-400 bg-teal-400 text-black' : 'border-brand-gray-600'
+                        selected ? 'border-teal-400 bg-teal-400 text-black' : 'border-brand-gray-300'
                       }`}>
                         {key}
                       </span>
@@ -330,8 +330,8 @@ export default function MiniExamPage() {
                     i === currentQ
                       ? 'bg-white text-black'
                       : answers[qq.id]
-                      ? 'bg-teal-500 text-white'
-                      : 'bg-brand-gray-800 text-brand-gray-500'
+                      ? 'bg-teal-500 text-black'
+                      : 'bg-brand-gray-200 text-brand-gray-500'
                   }`}
                 >
                   {i + 1}

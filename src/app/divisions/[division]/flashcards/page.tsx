@@ -181,10 +181,10 @@ export default function FlashcardsPage() {
     return (
       <div className="flex min-h-screen flex-col">
         <Navbar />
-        <div className="flex flex-1 items-center justify-center bg-brand-gray-950">
+        <div className="flex flex-1 items-center justify-center bg-brand-gray-50">
           <div className="text-center">
-            <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-4 border-teal-400 border-t-transparent" />
-            <p className="text-brand-gray-400">Loading flashcards...</p>
+            <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-4 border-teal-500 border-t-transparent" />
+            <p className="text-brand-gray-500">Loading flashcards...</p>
           </div>
         </div>
       </div>
@@ -196,11 +196,11 @@ export default function FlashcardsPage() {
       <div className="flex min-h-screen flex-col">
         <Navbar />
 
-        <main className="flex-1 bg-brand-gray-950">
+        <main className="flex-1 bg-brand-gray-50">
           <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
             {/* Nav */}
             <div className="mb-6 flex items-center justify-between">
-              <Link href={`/divisions/${division}`} className="flex items-center gap-1 text-sm text-brand-gray-400 hover:text-white">
+              <Link href={`/divisions/${division}`} className="flex items-center gap-1 text-sm text-brand-gray-500 hover:text-black">
                 &larr; Back to {divisionLabel}
               </Link>
               <div className="flex gap-2">
@@ -209,7 +209,7 @@ export default function FlashcardsPage() {
                     key={m}
                     onClick={() => setMode(m)}
                     className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
-                      mode === m ? 'bg-teal-500 text-white' : 'bg-brand-gray-800 text-brand-gray-400 hover:bg-brand-gray-700'
+                      mode === m ? 'bg-teal-500 text-white' : 'bg-brand-gray-200 text-brand-gray-600 hover:bg-brand-gray-300'
                     }`}
                   >
                     {m === 'all' ? 'All Cards' : 'Review Later'}
@@ -222,7 +222,7 @@ export default function FlashcardsPage() {
             {progress && (
               <div className="mb-6">
                 <div className="mb-2 flex justify-between text-sm">
-                  <span className="font-medium text-brand-gray-300">
+                  <span className="font-medium text-brand-gray-700">
                     {progress.percentage}% Known
                   </span>
                   <span className="text-brand-gray-500">
@@ -230,13 +230,13 @@ export default function FlashcardsPage() {
                     {progress.reviewLater > 0 && ` · ${progress.reviewLater} review later`}
                   </span>
                 </div>
-                <div className="h-3 w-full overflow-hidden rounded-full bg-brand-gray-800">
+                <div className="h-3 w-full overflow-hidden rounded-full bg-brand-gray-200">
                   <div className="h-full rounded-full bg-teal-500 transition-all" style={{ width: `${progress.percentage}%` }} />
                 </div>
                 {isLimited && (
                   <p className="mt-2 text-xs text-brand-gray-500">
                     Showing 20 free preview cards.{' '}
-                    <Link href="/pricing" className="font-semibold text-teal-400">Upgrade for all cards</Link>
+                    <Link href="/pricing" className="font-semibold text-teal-600">Upgrade for all cards</Link>
                   </p>
                 )}
               </div>
@@ -245,7 +245,7 @@ export default function FlashcardsPage() {
             {/* Error state */}
             {error && (
               <div className="card p-6 text-center">
-                <p className="text-red-400">{error}</p>
+                <p className="text-red-500">{error}</p>
                 <button onClick={loadFlashcards} className="btn-primary mt-4">Retry</button>
               </div>
             )}
@@ -256,7 +256,7 @@ export default function FlashcardsPage() {
                 <div className="mb-4 text-5xl">
                   {mode === 'review_later' ? '✅' : '🎉'}
                 </div>
-                <h3 className="text-xl font-bold text-white">
+                <h3 className="text-xl font-bold text-black">
                   {mode === 'review_later'
                     ? 'No cards in Review Later'
                     : 'No flashcards found'}
@@ -275,15 +275,15 @@ export default function FlashcardsPage() {
                 <div className="mb-3 flex items-center justify-between text-sm text-brand-gray-500">
                   <span>{currentIndex + 1} of {flashcards.length}</span>
                   {currentCard.topic && (
-                    <span className="rounded-full bg-brand-gray-800 px-2.5 py-0.5 text-xs text-brand-gray-400">
+                    <span className="rounded-full bg-brand-gray-200 px-2.5 py-0.5 text-xs text-brand-gray-600">
                       {currentCard.topic}
                     </span>
                   )}
                   {currentCard.userStatus === 'KNOWN' && (
-                    <span className="text-xs font-semibold text-green-400">{'✓'} Known</span>
+                    <span className="text-xs font-semibold text-green-600">{'✓'} Known</span>
                   )}
                   {currentCard.userStatus === 'REVIEW_LATER' && (
-                    <span className="text-xs font-semibold text-yellow-400">{'⟳'} Review Later</span>
+                    <span className="text-xs font-semibold text-yellow-600">{'⟳'} Review Later</span>
                   )}
                 </div>
 
@@ -305,13 +305,13 @@ export default function FlashcardsPage() {
                           onClick={() => setIsFlipped(true)}
                         >
                           <div className="flex flex-1 flex-col justify-center">
-                            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-brand-gray-500">Question</p>
-                            <p className={`${qClass} font-medium leading-relaxed text-white`}>{currentCard.question}</p>
+                            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-brand-gray-400">Question</p>
+                            <p className={`${qClass} font-medium leading-relaxed text-black`}>{currentCard.question}</p>
 
                             {currentCard.choices && (
                               <div className="mt-6 space-y-2">
                                 {Object.entries(currentCard.choices as Record<string, string>).map(([key, val]) => (
-                                  <div key={key} className="flex gap-3 rounded-lg bg-brand-gray-800 px-4 py-2 text-sm text-brand-gray-300">
+                                  <div key={key} className="flex gap-3 rounded-lg bg-brand-gray-100 px-4 py-2 text-sm text-brand-gray-700">
                                     <span className="font-bold text-brand-gray-500">{key}.</span>
                                     <span>{val}</span>
                                   </div>
@@ -319,24 +319,24 @@ export default function FlashcardsPage() {
                               </div>
                             )}
                           </div>
-                          <div className="mt-4 text-center text-sm text-brand-gray-500">
+                          <div className="mt-4 text-center text-sm text-brand-gray-400">
                             Tap to reveal answer
                           </div>
                         </div>
 
                         {/* Back */}
                         <div
-                          className="flip-card-back card flex flex-col border-2 border-teal-400 p-8"
+                          className="flip-card-back card flex flex-col border-2 border-teal-500 p-8"
                           style={{ height: cardH, position: 'absolute', top: 0, left: 0, right: 0 }}
                         >
                           <div className="flex flex-1 flex-col justify-center">
-                            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-teal-400">Answer</p>
+                            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-teal-600">Answer</p>
                             {currentCard.correctChoice && (
-                              <p className="mb-2 text-sm font-bold text-teal-400">
+                              <p className="mb-2 text-sm font-bold text-teal-600">
                                 Correct: {currentCard.correctChoice}
                               </p>
                             )}
-                            <p className={`${aClass} leading-relaxed text-white`}>{currentCard.answer}</p>
+                            <p className={`${aClass} leading-relaxed text-black`}>{currentCard.answer}</p>
                           </div>
                         </div>
                       </div>
@@ -372,7 +372,7 @@ export default function FlashcardsPage() {
                 {/* Prev button */}
                 <button
                   onClick={goPrev}
-                  className="mt-3 w-full text-sm text-brand-gray-500 transition-colors hover:text-white"
+                  className="mt-3 w-full text-sm text-brand-gray-500 transition-colors hover:text-black"
                 >
                   &larr; Previous
                 </button>

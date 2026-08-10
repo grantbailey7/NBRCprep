@@ -48,13 +48,13 @@ export default async function MiniExamsListPage({ params }: { params: { division
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-brand-gray-950 px-4 py-8 sm:px-6 lg:px-8">
+      <main className="min-h-screen bg-brand-gray-50 px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <Link href={`/divisions/${divSlug}`} className="mb-6 flex items-center gap-1 text-sm text-brand-gray-400 hover:text-white">
+          <Link href={`/divisions/${divSlug}`} className="mb-6 flex items-center gap-1 text-sm text-brand-gray-500 hover:text-black">
             &larr; Back to {division.shortName}
           </Link>
-          <h1 className="mb-2 text-3xl font-bold text-white">{division.name}</h1>
-          <p className="mb-8 text-brand-gray-400">Mini Exams &mdash; 20 questions each, scored immediately</p>
+          <h1 className="mb-2 text-3xl font-bold text-black">{division.name}</h1>
+          <p className="mb-8 text-brand-gray-500">Mini Exams &mdash; 20 questions each, scored immediately</p>
 
           <div className="space-y-3">
             {exams.map((exam) => {
@@ -68,12 +68,12 @@ export default async function MiniExamsListPage({ params }: { params: { division
                 <div key={exam.id} className={`card flex flex-col justify-between gap-4 p-5 sm:flex-row sm:items-center ${!accessible ? 'opacity-60' : ''}`}>
                   <div className="flex items-center gap-4">
                     <div className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold ${
-                      passed ? 'bg-green-500/20 text-green-400' : 'bg-brand-gray-800 text-brand-gray-400'
+                      passed ? 'bg-green-500/20 text-green-400' : 'bg-brand-gray-200 text-brand-gray-500'
                     }`}>
                       {exam.examIndex}
                     </div>
                     <div>
-                      <p className="font-semibold text-white">{exam.title}</p>
+                      <p className="font-semibold text-black">{exam.title}</p>
                       <div className="mt-0.5 flex gap-3 text-xs text-brand-gray-500">
                         <span>{exam._count.questions} questions</span>
                         {attempts > 0 && <span>{attempts} attempt{attempts > 1 ? 's' : ''}</span>}
@@ -111,7 +111,7 @@ export default async function MiniExamsListPage({ params }: { params: { division
 
             {exams.length === 0 && (
               <div className="card p-10 text-center">
-                <p className="text-brand-gray-400">No mini exams available for this division yet.</p>
+                <p className="text-brand-gray-500">No mini exams available for this division yet.</p>
               </div>
             )}
           </div>

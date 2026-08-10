@@ -66,31 +66,31 @@ export default async function DivisionPage({ params }: { params: { division: str
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-brand-gray-950 px-4 py-8 sm:px-6 lg:px-8">
+      <main className="min-h-screen bg-brand-gray-50 px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           {/* Header */}
           <div className="mb-8">
-            <Link href="/dashboard" className="mb-3 flex items-center gap-1 text-sm text-brand-gray-400 hover:text-white">
+            <Link href="/dashboard" className="mb-3 flex items-center gap-1 text-sm text-brand-gray-500 hover:text-black">
               &larr; Back to Dashboard
             </Link>
             <div className="flex items-center gap-3">
-              <span className="inline-block rounded bg-teal-500/20 px-3 py-1 text-sm font-bold text-teal-400">
+              <span className="inline-block rounded bg-teal-500/20 px-3 py-1 text-sm font-bold text-teal-600">
                 {division.shortName}
               </span>
-              <h1 className="text-3xl font-bold text-white">{division.name}</h1>
+              <h1 className="text-3xl font-bold text-black">{division.name}</h1>
             </div>
-            <p className="mt-2 text-brand-gray-400">{division.description}</p>
+            <p className="mt-2 text-brand-gray-500">{division.description}</p>
           </div>
 
           {/* Metrics row */}
           <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
             <div className="card p-5">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-gray-400">Flashcards</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-gray-500">Flashcards</p>
               <div className="mb-2 flex justify-between text-sm">
-                <span className="text-brand-gray-400">Known</span>
-                <span className="font-bold text-teal-400">{flashPct}%</span>
+                <span className="text-brand-gray-500">Known</span>
+                <span className="font-bold text-teal-600">{flashPct}%</span>
               </div>
-              <div className="mb-2 h-2 w-full overflow-hidden rounded-full bg-brand-gray-800">
+              <div className="mb-2 h-2 w-full overflow-hidden rounded-full bg-brand-gray-200">
                 <div className="h-full rounded-full bg-teal-500 transition-all" style={{ width: `${flashPct}%` }} />
               </div>
               <div className="flex gap-4 text-xs text-brand-gray-500">
@@ -101,16 +101,16 @@ export default async function DivisionPage({ params }: { params: { division: str
             </div>
 
             <div className="card p-5">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-gray-400">Mini Exams</p>
-              <p className="text-3xl font-bold text-white">{miniPassed}<span className="text-lg text-brand-gray-500">/{miniTaken}</span></p>
-              <p className="mt-1 text-sm text-brand-gray-400">passed of taken</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-gray-500">Mini Exams</p>
+              <p className="text-3xl font-bold text-black">{miniPassed}<span className="text-lg text-brand-gray-500">/{miniTaken}</span></p>
+              <p className="mt-1 text-sm text-brand-gray-500">passed of taken</p>
               <p className="mt-1 text-xs text-brand-gray-500">{totalMiniExams} available</p>
             </div>
 
             <div className="card p-5">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-gray-400">Full Exams</p>
-              <p className="text-3xl font-bold text-white">{fullPassed}<span className="text-lg text-brand-gray-500">/{fullTaken}</span></p>
-              <p className="mt-1 text-sm text-brand-gray-400">passed of taken</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-gray-500">Full Exams</p>
+              <p className="text-3xl font-bold text-black">{fullPassed}<span className="text-lg text-brand-gray-500">/{fullTaken}</span></p>
+              <p className="mt-1 text-sm text-brand-gray-500">passed of taken</p>
               <p className="mt-1 text-xs text-brand-gray-500">{totalFullExams} available</p>
             </div>
           </div>
@@ -123,13 +123,13 @@ export default async function DivisionPage({ params }: { params: { division: str
               className="card block p-6 transition-all hover:ring-2 hover:ring-teal-400/50"
             >
               <div className="mb-3 text-3xl">&#x1F5C2;</div>
-              <h3 className="mb-1 text-xl font-bold text-white">Flashcards</h3>
-              <p className="mb-4 text-sm text-brand-gray-400">
+              <h3 className="mb-1 text-xl font-bold text-black">Flashcards</h3>
+              <p className="mb-4 text-sm text-brand-gray-500">
                 {plan === 'FREE'
                   ? `20 preview cards available. Upgrade for all ${totalFlashcards}.`
                   : `${totalFlashcards} flashcards — ${flashPct}% known`}
               </p>
-              <span className="text-sm font-semibold text-teal-400">
+              <span className="text-sm font-semibold text-teal-600">
                 Study Flashcards &rarr;
               </span>
             </Link>
@@ -140,15 +140,15 @@ export default async function DivisionPage({ params }: { params: { division: str
               className="card block p-6 transition-all hover:ring-2 hover:ring-teal-400/50"
             >
               <div className="mb-3 text-3xl">&#x1F4DD;</div>
-              <h3 className="mb-1 text-xl font-bold text-white">Mini Exams</h3>
-              <p className="mb-4 text-sm text-brand-gray-400">
+              <h3 className="mb-1 text-xl font-bold text-black">Mini Exams</h3>
+              <p className="mb-4 text-sm text-brand-gray-500">
                 {plan === 'FREE'
                   ? FREE_MINI_EXAM_DIVISIONS.includes(slugEnum as DivisionSlug)
                     ? '1 free mini exam available for this division.'
                     : 'Upgrade for mini exam access.'
                   : `${totalMiniExams} exams · ${miniPassed} passed`}
               </p>
-              <span className="text-sm font-semibold text-teal-400">
+              <span className="text-sm font-semibold text-teal-600">
                 Take a Mini Exam &rarr;
               </span>
             </Link>
@@ -158,22 +158,22 @@ export default async function DivisionPage({ params }: { params: { division: str
               {!hasFullAccess ? (
                 <>
                   <div className="mb-3 text-3xl">&#x1F3AF;</div>
-                  <h3 className="mb-1 text-xl font-bold text-white">Full Exams</h3>
-                  <p className="mb-4 text-sm text-brand-gray-400">
+                  <h3 className="mb-1 text-xl font-bold text-black">Full Exams</h3>
+                  <p className="mb-4 text-sm text-brand-gray-500">
                     Full-length timed simulations require an upgraded plan.
                   </p>
-                  <Link href="/pricing" className="text-sm font-semibold text-teal-400">
+                  <Link href="/pricing" className="text-sm font-semibold text-teal-600">
                     Upgrade to Access &rarr;
                   </Link>
                 </>
               ) : (
                 <Link href={`/divisions/${divSlug}/full-exams`} className="block h-full">
                   <div className="mb-3 text-3xl">&#x1F3AF;</div>
-                  <h3 className="mb-1 text-xl font-bold text-white">Full Exams</h3>
-                  <p className="mb-4 text-sm text-brand-gray-400">
+                  <h3 className="mb-1 text-xl font-bold text-black">Full Exams</h3>
+                  <p className="mb-4 text-sm text-brand-gray-500">
                     {totalFullExams} full-length simulations &middot; {fullPassed} passed
                   </p>
-                  <span className="text-sm font-semibold text-teal-400">
+                  <span className="text-sm font-semibold text-teal-600">
                     Start Full Exam &rarr;
                   </span>
                 </Link>

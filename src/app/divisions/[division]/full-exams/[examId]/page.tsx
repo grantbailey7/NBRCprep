@@ -123,7 +123,7 @@ export default function FullExamPage() {
   // LOADING
   if (phase === 'loading') {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-brand-gray-950">
+      <div className="flex min-h-screen items-center justify-center bg-brand-gray-50">
         <div className="h-10 w-10 animate-spin rounded-full border-4 border-teal-400 border-t-transparent" />
       </div>
     )
@@ -143,12 +143,12 @@ export default function FullExamPage() {
       <ContentProtection>
         <div className="flex min-h-screen flex-col">
           <Navbar />
-          <main className="flex-1 bg-brand-gray-950">
+          <main className="flex-1 bg-brand-gray-50">
             <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
               <div className={`card mb-8 p-8 text-center ${passed ? 'border-green-400 bg-green-500/10' : 'border-red-400 bg-red-500/10'}`}>
                 <div className="mb-3 text-5xl">{passed ? '🏆' : '📚'}</div>
-                <h1 className="text-4xl font-bold text-white">{score}%</h1>
-                <p className="mt-1 text-lg font-semibold text-brand-gray-300">{correctCount} of {totalQuestions} correct</p>
+                <h1 className="text-4xl font-bold text-black">{score}%</h1>
+                <p className="mt-1 text-lg font-semibold text-brand-gray-600">{correctCount} of {totalQuestions} correct</p>
                 <div className={`mt-3 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-bold ${
                   passed ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                 }`}>
@@ -156,7 +156,7 @@ export default function FullExamPage() {
                 </div>
               </div>
 
-              <h2 className="mb-4 text-xl font-bold text-white">Detailed Review</h2>
+              <h2 className="mb-4 text-xl font-bold text-black">Detailed Review</h2>
               <div className="space-y-5">
                 {(gradedResults as GradedResult[]).map((gr, i) => {
                   const question = questionsMap.get(gr.questionId)
@@ -169,7 +169,7 @@ export default function FullExamPage() {
                         }`}>
                           {i + 1}
                         </span>
-                        <p className="font-medium text-white">{question.questionText}</p>
+                        <p className="font-medium text-black">{question.questionText}</p>
                       </div>
 
                       <div className="mb-3 ml-9 space-y-1.5">
@@ -180,7 +180,7 @@ export default function FullExamPage() {
                             <div key={key} className={`flex gap-2 rounded-lg px-3 py-2 text-sm ${
                               isCorrect ? 'bg-green-500/20 font-semibold text-green-300' :
                               isChosen && !isCorrect ? 'bg-red-500/20 text-red-300 line-through' :
-                              'text-brand-gray-400'
+                              'text-brand-gray-500'
                             }`}>
                               <span className="font-bold">{key}.</span>
                               <span>{val}</span>
@@ -193,12 +193,12 @@ export default function FullExamPage() {
 
                       {!gr.correct && gr.explanationCorrect && (
                         <div className="ml-9 space-y-2">
-                          <div className="rounded-lg border border-green-500/30 bg-green-500/10 p-3 text-sm text-brand-gray-300">
+                          <div className="rounded-lg border border-green-500/30 bg-green-500/10 p-3 text-sm text-brand-gray-600">
                             <span className="font-semibold text-green-400">Why {gr.correctAnswer} is correct: </span>
                             {gr.explanationCorrect}
                           </div>
                           {gr.explanationWrong && (
-                            <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-sm text-brand-gray-300">
+                            <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-sm text-brand-gray-600">
                               <span className="font-semibold text-red-400">Why your answer was wrong: </span>
                               {gr.explanationWrong}
                             </div>
@@ -232,7 +232,7 @@ export default function FullExamPage() {
       <ContentProtection>
         <div className="flex min-h-screen flex-col">
           <Navbar />
-          <main className="flex flex-1 items-center justify-center bg-brand-gray-950 px-4">
+          <main className="flex flex-1 items-center justify-center bg-brand-gray-50 px-4">
             <div className="card w-full max-w-lg p-8 text-center">
               {error ? (
                 <>
@@ -242,22 +242,22 @@ export default function FullExamPage() {
               ) : (
                 <>
                   <div className="mb-4 text-5xl">{'🎯'}</div>
-                  <h2 className="text-2xl font-bold text-white">{exam?.title}</h2>
+                  <h2 className="text-2xl font-bold text-black">{exam?.title}</h2>
                   <div className="mt-4 grid grid-cols-3 gap-4 text-center">
-                    <div className="rounded-lg bg-brand-gray-800 p-3">
-                      <p className="text-2xl font-bold text-white">{questions.length}</p>
+                    <div className="rounded-lg bg-brand-gray-200 p-3">
+                      <p className="text-2xl font-bold text-black">{questions.length}</p>
                       <p className="text-xs text-brand-gray-500">Questions</p>
                     </div>
-                    <div className="rounded-lg bg-brand-gray-800 p-3">
-                      <p className="text-2xl font-bold text-white">{exam?.durationMinutes}</p>
+                    <div className="rounded-lg bg-brand-gray-200 p-3">
+                      <p className="text-2xl font-bold text-black">{exam?.durationMinutes}</p>
                       <p className="text-xs text-brand-gray-500">Minutes</p>
                     </div>
-                    <div className="rounded-lg bg-brand-gray-800 p-3">
-                      <p className="text-2xl font-bold text-white">70%</p>
+                    <div className="rounded-lg bg-brand-gray-200 p-3">
+                      <p className="text-2xl font-bold text-black">70%</p>
                       <p className="text-xs text-brand-gray-500">To Pass</p>
                     </div>
                   </div>
-                  <div className="mt-5 rounded-lg border border-teal-400/30 bg-teal-500/10 p-4 text-left text-sm text-teal-200">
+                  <div className="mt-5 rounded-lg border border-teal-400/30 bg-teal-500/10 p-4 text-left text-sm text-teal-700">
                     <p className="mb-1 font-semibold">Before you start:</p>
                     <ul className="list-inside list-disc space-y-1 text-xs">
                       <li>The timer starts when you click Begin</li>
@@ -269,7 +269,7 @@ export default function FullExamPage() {
                   <button onClick={startExam} className="btn-primary mt-6 w-full py-3 text-base">
                     Begin Full Exam
                   </button>
-                  <Link href={`/divisions/${division}/full-exams`} className="mt-3 block text-sm text-brand-gray-500 hover:text-white">
+                  <Link href={`/divisions/${division}/full-exams`} className="mt-3 block text-sm text-brand-gray-500 hover:text-black">
                     Cancel
                   </Link>
                 </>
@@ -298,17 +298,17 @@ export default function FullExamPage() {
           <span className="text-sm text-white/60">{answeredCount}/{questions.length} answered</span>
         </div>
 
-        <main className="flex-1 bg-brand-gray-950">
+        <main className="flex-1 bg-brand-gray-50">
           <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6">
             <div className="mb-3 flex items-center justify-between">
-              <span className="text-sm text-brand-gray-400">Question {currentQ + 1} of {questions.length}</span>
+              <span className="text-sm text-brand-gray-500">Question {currentQ + 1} of {questions.length}</span>
             </div>
-            <div className="mb-4 h-2 w-full overflow-hidden rounded-full bg-brand-gray-800">
+            <div className="mb-4 h-2 w-full overflow-hidden rounded-full bg-brand-gray-200">
               <div className="h-full rounded-full bg-teal-500 transition-all" style={{ width: `${((currentQ + 1) / questions.length) * 100}%` }} />
             </div>
 
             <div className="card mb-5 p-6">
-              <p className="text-base font-medium leading-relaxed text-white">{q.questionText}</p>
+              <p className="text-base font-medium leading-relaxed text-black">{q.questionText}</p>
               <div className="mt-5 space-y-3">
                 {Object.entries(q.choices).map(([key, val]) => {
                   const selected = answers[q.id] === key
@@ -317,11 +317,11 @@ export default function FullExamPage() {
                       key={key}
                       onClick={() => selectAnswer(q.id, key)}
                       className={`flex w-full gap-3 rounded-xl border-2 px-4 py-3 text-left text-sm transition-all ${
-                        selected ? 'border-teal-400 bg-teal-500/10 font-semibold text-white' : 'border-brand-gray-700 bg-brand-gray-900 text-brand-gray-300 hover:border-brand-gray-500'
+                        selected ? 'border-teal-400 bg-teal-500/10 font-semibold text-black' : 'border-brand-gray-300 bg-brand-gray-100 text-brand-gray-600 hover:border-brand-gray-500'
                       }`}
                     >
                       <span className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold ${
-                        selected ? 'border-teal-400 bg-teal-400 text-black' : 'border-brand-gray-600'
+                        selected ? 'border-teal-400 bg-teal-400 text-black' : 'border-brand-gray-300'
                       }`}>
                         {key}
                       </span>
@@ -348,7 +348,7 @@ export default function FullExamPage() {
             <div className="mt-4 flex flex-wrap gap-2">
               {questions.map((qq, i) => (
                 <button key={qq.id} onClick={() => setCurrentQ(i)} className={`h-8 w-8 rounded text-xs font-bold transition-colors ${
-                  i === currentQ ? 'bg-white text-black' : answers[qq.id] ? 'bg-teal-500 text-white' : 'bg-brand-gray-800 text-brand-gray-500'
+                  i === currentQ ? 'bg-white text-black' : answers[qq.id] ? 'bg-teal-500 text-black' : 'bg-brand-gray-200 text-brand-gray-500'
                 }`}>
                   {i + 1}
                 </button>

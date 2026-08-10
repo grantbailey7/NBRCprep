@@ -203,12 +203,13 @@ model UserMiniExamResult {
 }
 
 model FullExam {
-  id              String @id @default(cuid())
+  id              String  @id @default(cuid())
   divisionId      String
   title           String
   examIndex       Int
   durationMinutes Int
   questionCount   Int
+  isFree          Boolean @default(false)
 
   division  Division           @relation(fields: [divisionId], references: [id])
   questions FullExamQuestion[]

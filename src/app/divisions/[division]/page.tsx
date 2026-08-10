@@ -1,264 +1,188 @@
 export const dynamic = 'force-dynamic'
 
-import { redirect } from 'next/navigation';
-import { getAuthSession } from '@/lib/auth';
-import { Navbar } from '@/components/layout/Navbar';
-import { Footer } from '@/components/layout/Footer';
-import { prisma } from '@/lib/prisma';
-import Link from 'next/link';
+import { redirect } from 'next/navigation'
+import Link from 'next/link'
+import { getAuthSession } from '@/lib/auth'
+import { Navbar } from '@/components/layout/Navbar'
+import { Footer } from '@/components/layout/Footer'
+import { prisma } from '@/lib/prisma'
+import { PlanType, DivisionSlug } from '@prisma/client'
+import { canAccessFullExams, FREE_MINI_EXAM_DIVISIONS } from '@/lib/access-control'
 
-export const metadata = { title: 'Dashboard' };
-
-const DIVISION_INFO: Record<string, { name: string; code: string; slug: string }> = {
-  TMC: { name: 'Therapist Multiple-Choice', code: 'TMC', slug: 'tmc' },
-  NPS: { name: 'Neonatal/Pediatric Specialist', code: 'NPS', slug: 'nps' },
-  ACCS: { name: 'Adult Critical Care Specialist', code: 'ACCS', slug: 'accs' },
-  SDS: { name: 'Sleep Disorders Specialist', code: 'SDS', slug: 'sds' },
-  CPFT: { name: 'Certified Pulmonary Function Technologist', code: 'CPFT', slug: 'cpft' },
-  RPFT: { name: 'Registered Pulmonary Function Technologist', code: 'RPFT', slug: 'rpft' },
-};
-
-function calculateStreak(studyDates: Date[]): number {
-  if (studyDates.length === 0) return 0;
-
-  const sorted = studyDates
-    .map((d) => {
-      const date = new Date(d);
-      date.setHours(0, 0, 0, 0);
-      return date.getTime();
-    })
-    .sort((a, b) => b - a);
-
-  const unique = Array.from(new Set(sorted));
-
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const todayMs = today.getTime();
-  const oneDayMs = 86400000;
-
-  // Streak must include today or yesterday to be active
-  if (unique[0] !== todayMs && unique[0] !== todayMs - oneDayMs) {
-    return 0;
-  }
-
-  let streak = 1;
-  for (let i = 1; i < unique.length; i++) {
-    if (unique[i - 1] - unique[i] === oneDayMs) {
-      streak++;
-    } else {
-      break;
-    }
-  }
-
-  return streak;
+const SLUG_TO_ENUM: Record<string, string> = {
+  tmc: 'TMC',
+  nps: 'NPS',
+  accs: 'ACCS',
+  sds: 'SDS',
+  cpft: 'CPFT',
+  rpft: 'RPFT',
 }
 
-export default async function DashboardPage() {
-  const session = await getAuthSession();
+export default async function DivisionPage({ params }: { params: { division: string } }) {
+  const session = await getAuthSession()
+  if (!session) redirect(`/login?callbackUrl=/divisions/${params.division}`)
 
-  if (!session) {
-    redirect('/login');
-  }
+  const slugEnum = SLUG_TO_ENUM[params.division.toLowerCase()]
+  if (!slugEnum) redirect('/dashboard')
 
-  const userId = session.user.id;
+  const division = await prisma.division.findUnique({
+    where: { slug: slugEnum as any },
+  })
+  if (!division) redirect('/dashboard')
 
-  // Fetch all divisions with flashcard counts
-  const divisions = await prisma.division.findMany({
-    include: {
-      _count: {
-        select: { flashcards: true },
-      },
-    },
-  });
+  const userId = session.user.id
+  const plan = session.user.planType as PlanType
 
-  // Fetch user flashcard progress grouped by division
-  const userFlashcardProgress = await prisma.userFlashcardProgress.findMany({
-    where: { userId },
-    include: {
-      flashcard: {
-        select: { divisionId: true },
-      },
-    },
-  });
+  // Flashcard metrics
+  const totalFlashcards = await prisma.flashcard.count({ where: { divisionId: division.id } })
+  const progressRows = await prisma.userFlashcardProgress.groupBy({
+    by: ['status'],
+    where: { userId, flashcard: { divisionId: division.id } },
+    _count: { status: true },
+  })
+  const known = progressRows.find((p) => p.status === 'KNOWN')?._count.status ?? 0
+  const reviewLater = progressRows.find((p) => p.status === 'REVIEW_LATER')?._count.status ?? 0
+  const flashPct = totalFlashcards > 0 ? Math.round((known / totalFlashcards) * 100) : 0
 
-  // Fetch mini exam attempts count per division
-  const miniExamResults = await prisma.userMiniExamResult.findMany({
-    where: { userId },
-    include: {
-      miniExam: {
-        select: { divisionId: true },
-      },
-    },
-  });
+  // Mini exam metrics
+  const totalMiniExams = await prisma.miniExam.count({ where: { divisionId: division.id } })
+  const miniResults = await prisma.userMiniExamResult.findMany({
+    where: { userId, miniExam: { divisionId: division.id } },
+  })
+  const miniTaken = miniResults.length
+  const miniPassed = miniResults.filter((r) => r.passed).length
 
-  // Fetch full exam best scores per division
-  const fullExamResults = await prisma.userFullExamResult.findMany({
-    where: { userId },
-    include: {
-      fullExam: {
-        select: { divisionId: true },
-      },
-    },
-  });
+  // Full exam metrics
+  const totalFullExams = await prisma.fullExam.count({ where: { divisionId: division.id } })
+  const fullResults = await prisma.userFullExamResult.findMany({
+    where: { userId, fullExam: { divisionId: division.id } },
+  })
+  const fullTaken = fullResults.length
+  const fullPassed = fullResults.filter((r) => r.passed).length
 
-  // Fetch study streak
-  const studyStreaks = await prisma.studyStreak.findMany({
-    where: { userId },
-    select: { studyDate: true },
-  });
-
-  const streak = calculateStreak(studyStreaks.map((s) => s.studyDate));
-
-  // Build division stats
-  const divisionStats = divisions.map((division) => {
-    const info = DIVISION_INFO[division.slug] ?? {
-      name: division.name,
-      code: division.shortName,
-      slug: division.slug.toLowerCase(),
-    };
-
-    const totalFlashcards = division._count.flashcards;
-    const knownCount = userFlashcardProgress.filter(
-      (p) => p.flashcard.divisionId === division.id && p.status === 'KNOWN'
-    ).length;
-
-    const progressPercent = totalFlashcards > 0 ? Math.round((knownCount / totalFlashcards) * 100) : 0;
-
-    const miniExamAttempts = miniExamResults.filter(
-      (r) => r.miniExam.divisionId === division.id
-    ).length;
-
-    const divisionFullExamScores = fullExamResults
-      .filter((r) => r.fullExam.divisionId === division.id)
-      .map((r) => r.scorePercentage);
-    const bestFullExamScore =
-      divisionFullExamScores.length > 0 ? Math.max(...divisionFullExamScores) : null;
-
-    return {
-      ...info,
-      divisionId: division.id,
-      totalFlashcards,
-      knownCount,
-      progressPercent,
-      miniExamAttempts,
-      bestFullExamScore,
-    };
-  });
-
-  // Test readiness: average of all division flashcard progress percentages
-  const testReadiness =
-    divisionStats.length > 0
-      ? Math.round(
-          divisionStats.reduce((sum, d) => sum + d.progressPercent, 0) / divisionStats.length
-        )
-      : 0;
+  const divSlug = params.division.toLowerCase()
+  const hasFullAccess = canAccessFullExams(plan, slugEnum as DivisionSlug)
 
   return (
     <>
       <Navbar />
       <main className="min-h-screen bg-brand-gray-950 px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          {/* Welcome and Stats Header */}
+          {/* Header */}
           <div className="mb-8">
-            <h1 className="section-title text-3xl font-bold text-white">
-              Welcome back, {session.user.name ?? 'Student'}!
-            </h1>
-            <div className="mt-4 flex flex-wrap items-center gap-6">
-              {/* Study Streak */}
-              <div className="card flex items-center gap-3 px-5 py-3">
-                <span className="text-2xl">🔥</span>
-                <div>
-                  <p className="text-sm text-brand-gray-400">Study Streak</p>
-                  <p className="text-xl font-bold text-teal-400">
-                    {streak} day{streak !== 1 ? 's' : ''}
-                  </p>
-                </div>
-              </div>
+            <Link href="/dashboard" className="mb-3 flex items-center gap-1 text-sm text-brand-gray-400 hover:text-white">
+              &larr; Back to Dashboard
+            </Link>
+            <div className="flex items-center gap-3">
+              <span className="inline-block rounded bg-teal-500/20 px-3 py-1 text-sm font-bold text-teal-400">
+                {division.shortName}
+              </span>
+              <h1 className="text-3xl font-bold text-white">{division.name}</h1>
+            </div>
+            <p className="mt-2 text-brand-gray-400">{division.description}</p>
+          </div>
 
-              {/* Test Readiness */}
-              <div className="card flex items-center gap-3 px-5 py-3">
-                <span className="text-2xl">📊</span>
-                <div>
-                  <p className="text-sm text-brand-gray-400">Test Readiness</p>
-                  <p className="text-xl font-bold text-teal-400">{testReadiness}%</p>
-                </div>
+          {/* Metrics row */}
+          <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="card p-5">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-gray-400">Flashcards</p>
+              <div className="mb-2 flex justify-between text-sm">
+                <span className="text-brand-gray-400">Known</span>
+                <span className="font-bold text-teal-400">{flashPct}%</span>
               </div>
+              <div className="mb-2 h-2 w-full overflow-hidden rounded-full bg-brand-gray-800">
+                <div className="h-full rounded-full bg-teal-500 transition-all" style={{ width: `${flashPct}%` }} />
+              </div>
+              <div className="flex gap-4 text-xs text-brand-gray-500">
+                <span>{known} known</span>
+                <span>{reviewLater} review later</span>
+                <span>{totalFlashcards} total</span>
+              </div>
+            </div>
+
+            <div className="card p-5">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-gray-400">Mini Exams</p>
+              <p className="text-3xl font-bold text-white">{miniPassed}<span className="text-lg text-brand-gray-500">/{miniTaken}</span></p>
+              <p className="mt-1 text-sm text-brand-gray-400">passed of taken</p>
+              <p className="mt-1 text-xs text-brand-gray-500">{totalMiniExams} available</p>
+            </div>
+
+            <div className="card p-5">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-brand-gray-400">Full Exams</p>
+              <p className="text-3xl font-bold text-white">{fullPassed}<span className="text-lg text-brand-gray-500">/{fullTaken}</span></p>
+              <p className="mt-1 text-sm text-brand-gray-400">passed of taken</p>
+              <p className="mt-1 text-xs text-brand-gray-500">{totalFullExams} available</p>
             </div>
           </div>
 
-          {/* Upgrade Nudge for Free Users */}
-          {session.user.planType === 'FREE' && (
-            <div className="mb-8 rounded-lg border border-teal-400/30 bg-teal-500/10 p-4">
-              <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-                <div>
-                  <p className="font-semibold text-teal-400">Upgrade Your Plan</p>
-                  <p className="text-sm text-brand-gray-300">
-                    Unlock all divisions, unlimited exams, and advanced analytics.
+          {/* Navigation tiles */}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Flashcards */}
+            <Link
+              href={`/divisions/${divSlug}/flashcards`}
+              className="card block p-6 transition-all hover:ring-2 hover:ring-teal-400/50"
+            >
+              <div className="mb-3 text-3xl">&#x1F5C2;</div>
+              <h3 className="mb-1 text-xl font-bold text-white">Flashcards</h3>
+              <p className="mb-4 text-sm text-brand-gray-400">
+                {plan === 'FREE'
+                  ? `20 preview cards available. Upgrade for all ${totalFlashcards}.`
+                  : `${totalFlashcards} flashcards — ${flashPct}% known`}
+              </p>
+              <span className="text-sm font-semibold text-teal-400">
+                Study Flashcards &rarr;
+              </span>
+            </Link>
+
+            {/* Mini Exams */}
+            <Link
+              href={`/divisions/${divSlug}/mini-exams`}
+              className="card block p-6 transition-all hover:ring-2 hover:ring-teal-400/50"
+            >
+              <div className="mb-3 text-3xl">&#x1F4DD;</div>
+              <h3 className="mb-1 text-xl font-bold text-white">Mini Exams</h3>
+              <p className="mb-4 text-sm text-brand-gray-400">
+                {plan === 'FREE'
+                  ? FREE_MINI_EXAM_DIVISIONS.includes(slugEnum as DivisionSlug)
+                    ? '1 free mini exam available for this division.'
+                    : 'Upgrade for mini exam access.'
+                  : `${totalMiniExams} exams · ${miniPassed} passed`}
+              </p>
+              <span className="text-sm font-semibold text-teal-400">
+                Take a Mini Exam &rarr;
+              </span>
+            </Link>
+
+            {/* Full Exams */}
+            <div className={`card p-6 ${!hasFullAccess ? 'opacity-60' : 'transition-all hover:ring-2 hover:ring-teal-400/50'}`}>
+              {!hasFullAccess ? (
+                <>
+                  <div className="mb-3 text-3xl">&#x1F3AF;</div>
+                  <h3 className="mb-1 text-xl font-bold text-white">Full Exams</h3>
+                  <p className="mb-4 text-sm text-brand-gray-400">
+                    Full-length timed simulations require an upgraded plan.
                   </p>
-                </div>
-                <Link href="/pricing" className="btn-primary whitespace-nowrap">
-                  View Plans
+                  <Link href="/pricing" className="text-sm font-semibold text-teal-400">
+                    Upgrade to Access &rarr;
+                  </Link>
+                </>
+              ) : (
+                <Link href={`/divisions/${divSlug}/full-exams`} className="block h-full">
+                  <div className="mb-3 text-3xl">&#x1F3AF;</div>
+                  <h3 className="mb-1 text-xl font-bold text-white">Full Exams</h3>
+                  <p className="mb-4 text-sm text-brand-gray-400">
+                    {totalFullExams} full-length simulations &middot; {fullPassed} passed
+                  </p>
+                  <span className="text-sm font-semibold text-teal-400">
+                    Start Full Exam &rarr;
+                  </span>
                 </Link>
-              </div>
+              )}
             </div>
-          )}
-
-          {/* Division Cards Grid */}
-          <h2 className="section-title mb-4 text-xl font-semibold text-white">Your Divisions</h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {divisionStats.map((division) => (
-              <Link
-                key={division.slug}
-                href={`/divisions/${division.slug}`}
-                className="card block p-6 transition-all hover:ring-2 hover:ring-teal-400/50"
-              >
-                {/* Division Header */}
-                <div className="mb-4">
-                  <span className="inline-block rounded bg-teal-500/20 px-2 py-0.5 text-xs font-bold text-teal-400">
-                    {division.code}
-                  </span>
-                  <h3 className="mt-1 text-lg font-semibold text-white">{division.name}</h3>
-                </div>
-
-                {/* Flashcard Progress */}
-                <div className="mb-3">
-                  <div className="mb-1 flex items-center justify-between text-sm">
-                    <span className="text-brand-gray-400">Flashcards</span>
-                    <span className="text-brand-gray-300">
-                      {division.knownCount} / {division.totalFlashcards} known
-                    </span>
-                  </div>
-                  <div className="h-2 w-full overflow-hidden rounded-full bg-brand-gray-800">
-                    <div
-                      className="h-full rounded-full bg-teal-500 transition-all"
-                      style={{ width: `${division.progressPercent}%` }}
-                    />
-                  </div>
-                </div>
-
-                {/* Mini Exam Attempts */}
-                <div className="mb-2 flex items-center justify-between text-sm">
-                  <span className="text-brand-gray-400">Mini Exam Attempts</span>
-                  <span className="font-medium text-brand-gray-300">
-                    {division.miniExamAttempts}
-                  </span>
-                </div>
-
-                {/* Full Exam Best Score */}
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-brand-gray-400">Full Exam Best Score</span>
-                  <span className="font-medium text-teal-400">
-                    {division.bestFullExamScore !== null
-                      ? `${Math.round(division.bestFullExamScore)}%`
-                      : '—'}
-                  </span>
-                </div>
-              </Link>
-            ))}
           </div>
         </div>
       </main>
       <Footer />
     </>
-  );
+  )
 }

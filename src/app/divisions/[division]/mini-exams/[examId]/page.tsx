@@ -1,264 +1,347 @@
-export const dynamic = 'force-dynamic'
+'use client'
 
-import { redirect } from 'next/navigation';
-import { getAuthSession } from '@/lib/auth';
-import { Navbar } from '@/components/layout/Navbar';
-import { Footer } from '@/components/layout/Footer';
-import { prisma } from '@/lib/prisma';
-import Link from 'next/link';
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { useParams, useRouter } from 'next/navigation'
+import { Navbar } from '@/components/layout/Navbar'
+import { Footer } from '@/components/layout/Footer'
+import { ContentProtection } from '@/components/ContentProtection'
 
-export const metadata = { title: 'Dashboard' };
+type Phase = 'loading' | 'intro' | 'taking' | 'submitting' | 'results'
 
-const DIVISION_INFO: Record<string, { name: string; code: string; slug: string }> = {
-  TMC: { name: 'Therapist Multiple-Choice', code: 'TMC', slug: 'tmc' },
-  NPS: { name: 'Neonatal/Pediatric Specialist', code: 'NPS', slug: 'nps' },
-  ACCS: { name: 'Adult Critical Care Specialist', code: 'ACCS', slug: 'accs' },
-  SDS: { name: 'Sleep Disorders Specialist', code: 'SDS', slug: 'sds' },
-  CPFT: { name: 'Certified Pulmonary Function Technologist', code: 'CPFT', slug: 'cpft' },
-  RPFT: { name: 'Registered Pulmonary Function Technologist', code: 'RPFT', slug: 'rpft' },
-};
+interface Question {
+  id: string
+  questionIndex: number
+  questionText: string
+  choices: Record<string, string>
+}
 
-function calculateStreak(studyDates: Date[]): number {
-  if (studyDates.length === 0) return 0;
+interface GradedAnswer {
+  questionId: string
+  questionIndex: number
+  questionText: string
+  choices: Record<string, string>
+  chosenAnswer: string | null
+  correctChoice: string
+  isCorrect: boolean
+  explanationCorrect: string | null
+  explanationWrong: string | null
+}
 
-  const sorted = studyDates
-    .map((d) => {
-      const date = new Date(d);
-      date.setHours(0, 0, 0, 0);
-      return date.getTime();
-    })
-    .sort((a, b) => b - a);
+export default function MiniExamPage() {
+  const params = useParams()
+  const router = useRouter()
+  const { division, examId } = params as { division: string; examId: string }
 
-  const unique = Array.from(new Set(sorted));
+  const [phase, setPhase] = useState<Phase>('loading')
+  const [exam, setExam] = useState<any>(null)
+  const [questions, setQuestions] = useState<Question[]>([])
+  const [currentQ, setCurrentQ] = useState(0)
+  const [answers, setAnswers] = useState<Record<string, string>>({})
+  const [results, setResults] = useState<any>(null)
+  const [error, setError] = useState('')
 
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const todayMs = today.getTime();
-  const oneDayMs = 86400000;
+  useEffect(() => {
+    fetch(`/api/exams/mini/${examId}`)
+      .then(async (r) => {
+        if (r.status === 403) {
+          router.push('/pricing')
+          return
+        }
+        const data = await r.json()
+        if (data.error) { setError(data.error); setPhase('intro'); return }
+        setExam(data)
+        setQuestions(data.questions)
+        setPhase('intro')
+      })
+      .catch(() => { setError('Failed to load exam'); setPhase('intro') })
+  }, [examId, router])
 
-  // Streak must include today or yesterday to be active
-  if (unique[0] !== todayMs && unique[0] !== todayMs - oneDayMs) {
-    return 0;
-  }
+  async function submitExam() {
+    setPhase('submitting')
+    try {
+      // Convert answers map to array format expected by API
+      const answersArray = Object.entries(answers).map(([questionId, chosenAnswer]) => ({
+        questionId,
+        chosenAnswer,
+      }))
 
-  let streak = 1;
-  for (let i = 1; i < unique.length; i++) {
-    if (unique[i - 1] - unique[i] === oneDayMs) {
-      streak++;
-    } else {
-      break;
+      const res = await fetch(`/api/exams/mini/${examId}/submit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ answers: answersArray }),
+      })
+      const data = await res.json()
+      setResults(data)
+      setPhase('results')
+    } catch {
+      setError('Failed to submit exam')
+      setPhase('taking')
     }
   }
 
-  return streak;
-}
-
-export default async function DashboardPage() {
-  const session = await getAuthSession();
-
-  if (!session) {
-    redirect('/login');
+  function selectAnswer(questionId: string, choice: string) {
+    setAnswers((prev) => ({ ...prev, [questionId]: choice }))
   }
 
-  const userId = session.user.id;
+  const answeredCount = Object.keys(answers).length
+  const unansweredCount = questions.length - answeredCount
 
-  // Fetch all divisions with flashcard counts
-  const divisions = await prisma.division.findMany({
-    include: {
-      _count: {
-        select: { flashcards: true },
-      },
-    },
-  });
+  if (phase === 'loading') {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-brand-gray-950">
+        <div className="h-10 w-10 animate-spin rounded-full border-4 border-teal-400 border-t-transparent" />
+      </div>
+    )
+  }
 
-  // Fetch user flashcard progress grouped by division
-  const userFlashcardProgress = await prisma.userFlashcardProgress.findMany({
-    where: { userId },
-    include: {
-      flashcard: {
-        select: { divisionId: true },
-      },
-    },
-  });
+  // RESULTS
+  if (phase === 'results' && results) {
+    const { scorePercentage, passed, answers: gradedAnswers } = results
+    const correctCount = (gradedAnswers as GradedAnswer[]).filter((a) => a.isCorrect).length
+    const total = (gradedAnswers as GradedAnswer[]).length
 
-  // Fetch mini exam attempts count per division
-  const miniExamResults = await prisma.userMiniExamResult.findMany({
-    where: { userId },
-    include: {
-      miniExam: {
-        select: { divisionId: true },
-      },
-    },
-  });
+    return (
+      <ContentProtection>
+        <div className="flex min-h-screen flex-col">
+          <Navbar />
+          <main className="flex-1 bg-brand-gray-950">
+            <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+              {/* Score header */}
+              <div className={`card mb-8 p-8 text-center ${passed ? 'border-green-400 bg-green-500/10' : 'border-red-400 bg-red-500/10'}`}>
+                <div className="mb-3 text-5xl">{passed ? '🎉' : '📚'}</div>
+                <h1 className="text-4xl font-bold text-white">{scorePercentage}%</h1>
+                <p className="mt-1 text-lg font-semibold text-brand-gray-300">
+                  {correctCount} out of {total} correct
+                </p>
+                <div className={`mt-3 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-bold ${
+                  passed ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                }`}>
+                  {passed ? '✓ Passed (≥90%)' : '✗ Not passed — keep studying!'}
+                </div>
+              </div>
 
-  // Fetch full exam best scores per division
-  const fullExamResults = await prisma.userFullExamResult.findMany({
-    where: { userId },
-    include: {
-      fullExam: {
-        select: { divisionId: true },
-      },
-    },
-  });
+              {/* Review */}
+              <h2 className="mb-4 text-xl font-bold text-white">Question Review</h2>
+              <div className="space-y-5">
+                {(gradedAnswers as GradedAnswer[]).map((ga, i) => (
+                  <div
+                    key={ga.questionId}
+                    className={`card border-l-4 p-5 ${ga.isCorrect ? 'border-l-green-400' : 'border-l-red-400'}`}
+                  >
+                    <div className="mb-3 flex items-start gap-3">
+                      <span className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold ${
+                        ga.isCorrect ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                      }`}>
+                        {i + 1}
+                      </span>
+                      <p className="font-medium text-white">{ga.questionText}</p>
+                    </div>
 
-  // Fetch study streak
-  const studyStreaks = await prisma.studyStreak.findMany({
-    where: { userId },
-    select: { studyDate: true },
-  });
+                    <div className="mb-3 ml-9 space-y-1.5">
+                      {Object.entries(ga.choices).map(([key, val]) => {
+                        const isCorrect = key === ga.correctChoice
+                        const isChosen = key === ga.chosenAnswer
+                        return (
+                          <div
+                            key={key}
+                            className={`flex gap-2 rounded-lg px-3 py-2 text-sm ${
+                              isCorrect
+                                ? 'bg-green-500/20 font-semibold text-green-300'
+                                : isChosen && !isCorrect
+                                ? 'bg-red-500/20 text-red-300 line-through'
+                                : 'text-brand-gray-400'
+                            }`}
+                          >
+                            <span className="font-bold">{key}.</span>
+                            <span>{val}</span>
+                            {isCorrect && <span className="ml-auto">{'✓'}</span>}
+                            {isChosen && !isCorrect && <span className="ml-auto">{'✗'}</span>}
+                          </div>
+                        )
+                      })}
+                    </div>
 
-  const streak = calculateStreak(studyStreaks.map((s) => s.studyDate));
+                    {!ga.isCorrect && ga.explanationCorrect && (
+                      <div className="ml-9 mt-3 space-y-2">
+                        <div className="rounded-lg border border-green-500/30 bg-green-500/10 p-3 text-sm text-brand-gray-300">
+                          <span className="font-semibold text-green-400">Why {ga.correctChoice} is correct: </span>
+                          {ga.explanationCorrect}
+                        </div>
+                        {ga.explanationWrong && (
+                          <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-sm text-brand-gray-300">
+                            <span className="font-semibold text-red-400">Why your answer was wrong: </span>
+                            {ga.explanationWrong}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
 
-  // Build division stats
-  const divisionStats = divisions.map((division) => {
-    const info = DIVISION_INFO[division.slug] ?? {
-      name: division.name,
-      code: division.shortName,
-      slug: division.slug.toLowerCase(),
-    };
+              <div className="mt-8 flex gap-4">
+                <Link href={`/divisions/${division}/mini-exams`} className="btn-outline flex-1 py-3 text-center">
+                  Back to Mini Exams
+                </Link>
+                <button
+                  onClick={() => { setAnswers({}); setCurrentQ(0); setPhase('intro') }}
+                  className="btn-primary flex-1 py-3"
+                >
+                  Retake Exam
+                </button>
+              </div>
+            </div>
+          </main>
+          <Footer />
+        </div>
+      </ContentProtection>
+    )
+  }
 
-    const totalFlashcards = division._count.flashcards;
-    const knownCount = userFlashcardProgress.filter(
-      (p) => p.flashcard.divisionId === division.id && p.status === 'KNOWN'
-    ).length;
+  // INTRO
+  if (phase === 'intro') {
+    return (
+      <ContentProtection>
+        <div className="flex min-h-screen flex-col">
+          <Navbar />
+          <main className="flex flex-1 items-center justify-center bg-brand-gray-950 px-4">
+            <div className="card w-full max-w-md p-8 text-center">
+              {error ? (
+                <>
+                  <p className="mb-4 text-red-400">{error}</p>
+                  <Link href={`/divisions/${division}/mini-exams`} className="btn-outline">
+                    Back to Mini Exams
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <div className="mb-4 text-5xl">{'📝'}</div>
+                  <h2 className="text-2xl font-bold text-white">{exam?.title}</h2>
+                  <div className="mt-4 flex justify-center gap-4 text-sm text-brand-gray-400">
+                    <span>{questions.length} questions</span>
+                    <span>&middot;</span>
+                    <span>Pass at 90%</span>
+                  </div>
+                  <button
+                    onClick={() => setPhase('taking')}
+                    className="btn-primary mt-6 w-full py-3 text-base"
+                  >
+                    Start Exam
+                  </button>
+                  <Link href={`/divisions/${division}/mini-exams`} className="mt-3 block text-sm text-brand-gray-500 hover:text-white">
+                    Cancel
+                  </Link>
+                </>
+              )}
+            </div>
+          </main>
+          <Footer />
+        </div>
+      </ContentProtection>
+    )
+  }
 
-    const progressPercent = totalFlashcards > 0 ? Math.round((knownCount / totalFlashcards) * 100) : 0;
-
-    const miniExamAttempts = miniExamResults.filter(
-      (r) => r.miniExam.divisionId === division.id
-    ).length;
-
-    const divisionFullExamScores = fullExamResults
-      .filter((r) => r.fullExam.divisionId === division.id)
-      .map((r) => r.scorePercentage);
-    const bestFullExamScore =
-      divisionFullExamScores.length > 0 ? Math.max(...divisionFullExamScores) : null;
-
-    return {
-      ...info,
-      divisionId: division.id,
-      totalFlashcards,
-      knownCount,
-      progressPercent,
-      miniExamAttempts,
-      bestFullExamScore,
-    };
-  });
-
-  // Test readiness: average of all division flashcard progress percentages
-  const testReadiness =
-    divisionStats.length > 0
-      ? Math.round(
-          divisionStats.reduce((sum, d) => sum + d.progressPercent, 0) / divisionStats.length
-        )
-      : 0;
+  // TAKING
+  const q = questions[currentQ]
+  if (!q) return null
 
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen bg-brand-gray-950 px-4 py-8 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          {/* Welcome and Stats Header */}
-          <div className="mb-8">
-            <h1 className="section-title text-3xl font-bold text-white">
-              Welcome back, {session.user.name ?? 'Student'}!
-            </h1>
-            <div className="mt-4 flex flex-wrap items-center gap-6">
-              {/* Study Streak */}
-              <div className="card flex items-center gap-3 px-5 py-3">
-                <span className="text-2xl">🔥</span>
-                <div>
-                  <p className="text-sm text-brand-gray-400">Study Streak</p>
-                  <p className="text-xl font-bold text-teal-400">
-                    {streak} day{streak !== 1 ? 's' : ''}
-                  </p>
-                </div>
-              </div>
+    <ContentProtection>
+      <div className="flex min-h-screen flex-col">
+        <Navbar />
+        <main className="flex-1 bg-brand-gray-950">
+          <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+            {/* Progress */}
+            <div className="mb-4 flex items-center justify-between">
+              <span className="text-sm text-brand-gray-400">Question {currentQ + 1} of {questions.length}</span>
+              <span className="text-sm text-brand-gray-400">{answeredCount} answered</span>
+            </div>
+            <div className="mb-6 h-2 w-full overflow-hidden rounded-full bg-brand-gray-800">
+              <div className="h-full rounded-full bg-teal-500 transition-all" style={{ width: `${((currentQ + 1) / questions.length) * 100}%` }} />
+            </div>
 
-              {/* Test Readiness */}
-              <div className="card flex items-center gap-3 px-5 py-3">
-                <span className="text-2xl">📊</span>
-                <div>
-                  <p className="text-sm text-brand-gray-400">Test Readiness</p>
-                  <p className="text-xl font-bold text-teal-400">{testReadiness}%</p>
-                </div>
+            {/* Question */}
+            <div className="card mb-6 p-6">
+              <p className="text-base font-medium leading-relaxed text-white">{q.questionText}</p>
+
+              <div className="mt-6 space-y-3">
+                {Object.entries(q.choices).map(([key, val]) => {
+                  const selected = answers[q.id] === key
+                  return (
+                    <button
+                      key={key}
+                      onClick={() => selectAnswer(q.id, key)}
+                      className={`flex w-full gap-3 rounded-xl border-2 px-4 py-3 text-left text-sm transition-all ${
+                        selected
+                          ? 'border-teal-400 bg-teal-500/10 font-semibold text-white'
+                          : 'border-brand-gray-700 bg-brand-gray-900 text-brand-gray-300 hover:border-brand-gray-500'
+                      }`}
+                    >
+                      <span className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold ${
+                        selected ? 'border-teal-400 bg-teal-400 text-black' : 'border-brand-gray-600'
+                      }`}>
+                        {key}
+                      </span>
+                      {val}
+                    </button>
+                  )
+                })}
               </div>
             </div>
-          </div>
 
-          {/* Upgrade Nudge for Free Users */}
-          {session.user.planType === 'FREE' && (
-            <div className="mb-8 rounded-lg border border-teal-400/30 bg-teal-500/10 p-4">
-              <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-                <div>
-                  <p className="font-semibold text-teal-400">Upgrade Your Plan</p>
-                  <p className="text-sm text-brand-gray-300">
-                    Unlock all divisions, unlimited exams, and advanced analytics.
-                  </p>
-                </div>
-                <Link href="/pricing" className="btn-primary whitespace-nowrap">
-                  View Plans
-                </Link>
-              </div>
-            </div>
-          )}
-
-          {/* Division Cards Grid */}
-          <h2 className="section-title mb-4 text-xl font-semibold text-white">Your Divisions</h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {divisionStats.map((division) => (
-              <Link
-                key={division.slug}
-                href={`/divisions/${division.slug}`}
-                className="card block p-6 transition-all hover:ring-2 hover:ring-teal-400/50"
+            {/* Navigation */}
+            <div className="flex items-center justify-between">
+              <button
+                onClick={() => setCurrentQ((i) => Math.max(0, i - 1))}
+                disabled={currentQ === 0}
+                className="btn-outline px-5 py-2 text-sm disabled:opacity-30"
               >
-                {/* Division Header */}
-                <div className="mb-4">
-                  <span className="inline-block rounded bg-teal-500/20 px-2 py-0.5 text-xs font-bold text-teal-400">
-                    {division.code}
-                  </span>
-                  <h3 className="mt-1 text-lg font-semibold text-white">{division.name}</h3>
-                </div>
+                &larr; Previous
+              </button>
 
-                {/* Flashcard Progress */}
-                <div className="mb-3">
-                  <div className="mb-1 flex items-center justify-between text-sm">
-                    <span className="text-brand-gray-400">Flashcards</span>
-                    <span className="text-brand-gray-300">
-                      {division.knownCount} / {division.totalFlashcards} known
-                    </span>
-                  </div>
-                  <div className="h-2 w-full overflow-hidden rounded-full bg-brand-gray-800">
-                    <div
-                      className="h-full rounded-full bg-teal-500 transition-all"
-                      style={{ width: `${division.progressPercent}%` }}
-                    />
-                  </div>
-                </div>
+              {currentQ < questions.length - 1 ? (
+                <button
+                  onClick={() => setCurrentQ((i) => i + 1)}
+                  className="btn-primary px-5 py-2 text-sm"
+                >
+                  Next &rarr;
+                </button>
+              ) : (
+                <button
+                  onClick={submitExam}
+                  disabled={phase === 'submitting'}
+                  className="btn-primary px-5 py-2 text-sm"
+                >
+                  {phase === 'submitting' ? 'Submitting...' : unansweredCount > 0
+                    ? `Submit (${unansweredCount} unanswered)`
+                    : 'Submit Exam'}
+                </button>
+              )}
+            </div>
 
-                {/* Mini Exam Attempts */}
-                <div className="mb-2 flex items-center justify-between text-sm">
-                  <span className="text-brand-gray-400">Mini Exam Attempts</span>
-                  <span className="font-medium text-brand-gray-300">
-                    {division.miniExamAttempts}
-                  </span>
-                </div>
-
-                {/* Full Exam Best Score */}
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-brand-gray-400">Full Exam Best Score</span>
-                  <span className="font-medium text-teal-400">
-                    {division.bestFullExamScore !== null
-                      ? `${Math.round(division.bestFullExamScore)}%`
-                      : '—'}
-                  </span>
-                </div>
-              </Link>
-            ))}
+            {/* Question grid */}
+            <div className="mt-6 flex flex-wrap gap-2">
+              {questions.map((qq, i) => (
+                <button
+                  key={qq.id}
+                  onClick={() => setCurrentQ(i)}
+                  className={`h-8 w-8 rounded text-xs font-bold transition-colors ${
+                    i === currentQ
+                      ? 'bg-white text-black'
+                      : answers[qq.id]
+                      ? 'bg-teal-500 text-white'
+                      : 'bg-brand-gray-800 text-brand-gray-500'
+                  }`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+        </main>
+        <Footer />
+      </div>
+    </ContentProtection>
+  )
 }

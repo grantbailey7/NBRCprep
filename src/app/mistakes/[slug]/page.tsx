@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://nbrcprep.app/mistakes/${page.slug}`,
       type: 'article',
       siteName: 'NBRCprep',
+      images: [`https://nbrcprep.app/api/og?title=${encodeURIComponent(page.title)}&type=resource`],
     },
   }
 }

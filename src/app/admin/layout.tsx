@@ -5,7 +5,7 @@ import Link from 'next/link';
 const ADMIN_EMAIL = 'grantbailey2019@gmail.com';
 
 const navLinks = [
-  { href: '/admin', label: 'Dashboard' },
+  { href: '/admin/overview', label: 'Overview' },
   { href: '/admin/flashcards', label: 'Flashcards' },
   { href: '/admin/exams', label: 'Mini Exams' },
   { href: '/admin/full-exams', label: 'Full Exams' },

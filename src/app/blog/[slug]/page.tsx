@@ -27,12 +27,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://nbrcprep.app/blog/${post.slug}`,
       type: 'article',
       siteName: 'NBRCprep',
+      images: [`https://nbrcprep.app/api/og?title=${encodeURIComponent(post.title)}&type=blog`],
       ...(post.publishedAt && { publishedTime: post.publishedAt.toISOString() }),
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title: post.title,
       description: post.description,
+      images: [`https://nbrcprep.app/api/og?title=${encodeURIComponent(post.title)}&type=blog`],
     },
   }
 }

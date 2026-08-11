@@ -162,13 +162,13 @@ export default function MiniExamPage() {
                       })}
                     </div>
 
-                    {!ga.isCorrect && ga.explanationCorrect && (
+                    {ga.explanationCorrect && (
                       <div className="ml-9 mt-3 space-y-2">
                         <div className="rounded-lg border border-green-500/30 bg-green-500/10 p-3 text-sm text-brand-gray-600">
                           <span className="font-semibold text-green-400">Why {ga.correctChoice} is correct: </span>
                           {ga.explanationCorrect}
                         </div>
-                        {ga.explanationWrong && (
+                        {!ga.isCorrect && ga.explanationWrong && (
                           <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-sm text-brand-gray-600">
                             <span className="font-semibold text-red-400">Why your answer was wrong: </span>
                             {ga.explanationWrong}

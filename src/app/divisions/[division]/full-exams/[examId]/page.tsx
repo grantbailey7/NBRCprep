@@ -191,13 +191,13 @@ export default function FullExamPage() {
                         })}
                       </div>
 
-                      {!gr.correct && gr.explanationCorrect && (
+                      {gr.explanationCorrect && (
                         <div className="ml-9 space-y-2">
                           <div className="rounded-lg border border-green-500/30 bg-green-500/10 p-3 text-sm text-brand-gray-600">
                             <span className="font-semibold text-green-400">Why {gr.correctAnswer} is correct: </span>
                             {gr.explanationCorrect}
                           </div>
-                          {gr.explanationWrong && (
+                          {!gr.correct && gr.explanationWrong && (
                             <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-sm text-brand-gray-600">
                               <span className="font-semibold text-red-400">Why your answer was wrong: </span>
                               {gr.explanationWrong}

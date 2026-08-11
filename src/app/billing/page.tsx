@@ -38,10 +38,11 @@ export default function BillingPage() {
     setLoading(plan)
 
     try {
+      const planType = plan.toUpperCase()
       const res = await fetch('/api/stripe/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ plan }),
+        body: JSON.stringify({ planType }),
       })
 
       const data = await res.json()

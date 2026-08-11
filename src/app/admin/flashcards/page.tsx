@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 
 interface Flashcard {
   id: string;
-  division: string;
+  division: { slug: string; name: string } | null;
   question: string;
   answer: string;
   choices: any;
@@ -197,7 +197,7 @@ export default function FlashcardsPage() {
                 flashcards.map((card) => (
                   <tr key={card.id} className="border-b border-gray-700 hover:bg-gray-750">
                     <td className="px-4 py-3 max-w-xs truncate">{card.question}</td>
-                    <td className="px-4 py-3 text-gray-300">{card.division}</td>
+                    <td className="px-4 py-3 text-gray-300">{card.division?.slug || '—'}</td>
                     <td className="px-4 py-3 text-gray-300">{card.difficulty}</td>
                     <td className="px-4 py-3 text-gray-300">{card.topic}</td>
                     <td className="px-4 py-3">

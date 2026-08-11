@@ -23,16 +23,24 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  const miniExams = await prisma.miniExam.findMany({
-    where,
-    include: {
-      division: true,
-      _count: { select: { questions: true } },
-    },
-    orderBy: { examIndex: 'asc' },
-  })
+  const [miniExams, total] = await Promise.all([
+    prisma.miniExam.findMany({
+      where,
+      include: {
+        division: { select: { slug: true, name: true } },
+        _count: { select: { questions: true } },
+      },
+      orderBy: { examIndex: 'asc' },
+    }),
+    prisma.miniExam.count({ where }),
+  ])
 
-  return NextResponse.json(miniExams)
+  const exams = miniExams.map((e) => ({
+    ...e,
+    division: e.division?.slug || '—',
+  }))
+
+  return NextResponse.json({ exams, total })
 }
 
 export async function POST(request: NextRequest) {

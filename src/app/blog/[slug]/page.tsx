@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
+import { RelatedResources } from '@/components/seo/RelatedResources'
 import { prisma } from '@/lib/prisma'
 
 interface Props {
@@ -100,6 +101,8 @@ export default async function BlogPostPage({ params }: Props) {
               prose-hr:border-brand-gray-200"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+
+          <RelatedResources currentSlug={post.slug} />
 
           <div className="mt-12 pt-8 border-t border-brand-gray-200">
             <div className="card p-6 bg-teal-500/10 border-teal-400/30 text-center">

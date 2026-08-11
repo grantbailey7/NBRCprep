@@ -14,6 +14,7 @@ interface SeoPageContentProps {
   categoryLabel: string
   ctaText?: string
   breadcrumbs: BreadcrumbItem[]
+  relatedContent?: React.ReactNode
 }
 
 export function SeoPageContent({
@@ -27,6 +28,7 @@ export function SeoPageContent({
   categoryLabel,
   ctaText = 'Start Studying Free',
   breadcrumbs,
+  relatedContent,
 }: SeoPageContentProps) {
   return (
     <div className="min-h-screen flex flex-col">
@@ -70,6 +72,8 @@ export function SeoPageContent({
               prose-td:text-brand-gray-600"
             dangerouslySetInnerHTML={{ __html: content }}
           />
+
+          {relatedContent}
 
           <div className="mt-12 pt-8 border-t border-brand-gray-200">
             <div className="card p-6 bg-teal-500/10 border-teal-400/30 text-center">

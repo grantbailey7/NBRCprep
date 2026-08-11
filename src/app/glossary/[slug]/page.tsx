@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import { SeoPageContent } from '@/components/seo/SeoPageContent'
+import { RelatedResources } from '@/components/seo/RelatedResources'
 
 interface Props {
   params: { slug: string }
@@ -55,6 +56,7 @@ export default async function GlossaryDetailPage({ params }: Props) {
         backLink={{ href: '/glossary', label: 'All Glossaries' }}
         categoryLabel="Glossary"
         breadcrumbs={[{ label: 'Glossary', href: '/glossary' }, { label: page.title }]}
+        relatedContent={<RelatedResources currentSlug={page.slug} division={page.division} currentType="GLOSSARY" />}
       />
     </>
   )

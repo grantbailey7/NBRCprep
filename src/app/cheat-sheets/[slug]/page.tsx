@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import { SeoPageContent } from '@/components/seo/SeoPageContent'
+import { RelatedResources } from '@/components/seo/RelatedResources'
 
 interface Props {
   params: { slug: string }
@@ -57,6 +58,7 @@ export default async function CheatSheetPage({ params }: Props) {
         backLink={{ href: '/cheat-sheets', label: 'All Cheat Sheets' }}
         categoryLabel="Cheat Sheet"
         breadcrumbs={[{ label: 'Cheat Sheets', href: '/cheat-sheets' }, { label: page.title }]}
+        relatedContent={<RelatedResources currentSlug={page.slug} division={page.division} currentType="CHEAT_SHEET" />}
       />
     </>
   )

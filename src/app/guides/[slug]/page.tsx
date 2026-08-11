@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import { SeoPageContent } from '@/components/seo/SeoPageContent'
+import { RelatedResources } from '@/components/seo/RelatedResources'
 
 interface Props {
   params: { slug: string }
@@ -57,6 +58,7 @@ export default async function GuidePage({ params }: Props) {
         backLink={{ href: '/guides', label: 'All Exam Guides' }}
         categoryLabel="Exam Guide"
         breadcrumbs={[{ label: 'Exam Guides', href: '/guides' }, { label: page.title }]}
+        relatedContent={<RelatedResources currentSlug={page.slug} division={page.division} currentType="GUIDE" />}
       />
     </>
   )

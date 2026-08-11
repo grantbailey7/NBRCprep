@@ -5,6 +5,18 @@ import { useState, useEffect, useCallback } from 'react';
 interface Flashcard {
   id: string;
   division: { slug: string; name: string } | null;
+  divisionId: string;
+  question: string;
+  answer: string;
+  choices: any;
+  correctChoice: string;
+  difficulty: number;
+  topic: string;
+  isFree: boolean;
+}
+
+interface FlashcardForm {
+  division: string;
   question: string;
   answer: string;
   choices: any;
@@ -17,7 +29,7 @@ interface Flashcard {
 const DIVISIONS = ['TMC', 'NPS', 'ACCS', 'SDS', 'CPFT', 'RPFT'];
 const PER_PAGE = 25;
 
-const emptyForm: Omit<Flashcard, 'id'> = {
+const emptyForm: FlashcardForm = {
   division: 'TMC',
   question: '',
   answer: '',
@@ -36,7 +48,7 @@ export default function FlashcardsPage() {
   const [loading, setLoading] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
   const [editing, setEditing] = useState<Flashcard | null>(null);
-  const [form, setForm] = useState(emptyForm);
+  const [form, setForm] = useState<FlashcardForm>(emptyForm);
   const [choicesJson, setChoicesJson] = useState('[]');
   const [saving, setSaving] = useState(false);
 
@@ -75,7 +87,7 @@ export default function FlashcardsPage() {
   const openEdit = (card: Flashcard) => {
     setEditing(card);
     setForm({
-      division: card.division,
+      division: card.division?.slug || 'TMC',
       question: card.question,
       answer: card.answer,
       choices: card.choices,

@@ -74,6 +74,7 @@ export const authOptions: NextAuthOptions = {
           select: { planType: true, email: true },
         })
         if (dbUser) {
+          token.email = dbUser.email
           if (dbUser.email === 'grantbailey2019@gmail.com' && dbUser.planType === 'FREE') {
             await prisma.user.update({
               where: { id: token.id as string },
@@ -89,6 +90,7 @@ export const authOptions: NextAuthOptions = {
       if (token) {
         session.user.id = token.id as string
         session.user.planType = token.planType as string
+        if (token.email) session.user.email = token.email as string
       }
       return session
     },

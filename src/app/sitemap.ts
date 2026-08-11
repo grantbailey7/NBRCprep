@@ -46,5 +46,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }))
 
-  return [...staticPages, ...divisionPages, ...blogPages]
+  const typeToPath: Record<string, string> = {
+    GUIDE: 'guides',
+    TOPIC: 'topics',
+    CHEAT_SHEET: 'cheat-sheets',
+    MISTAKES: 'mistakes',
+    TIPS: 'tips',
+    EXAM_DAY: 'exam-day',
+    GLOSSARY: 'glossary',
+  }
+
+  const seoPages = await prisma.seoPage.findMany({
+    select: { slug: true, type: true, updatedAt: true },
+  })
+
+  const seoIndexPages: MetadataRoute.Sitemap = Object.values(typeToPath).map((path) => ({
+    url: `${baseUrl}/${path}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  const seoDetailPages: MetadataRoute.Sitemap = seoPages.map((page) => ({
+    url: `${baseUrl}/${typeToPath[page.type]}/${page.slug}`,
+    lastModified: page.updatedAt,
+    changeFrequency: 'monthly' as const,
+    priority: page.type === 'GUIDE' ? 0.8 : 0.6,
+  }))
+
+  return [...staticPages, ...divisionPages, ...blogPages, ...seoIndexPages, ...seoDetailPages]
 }

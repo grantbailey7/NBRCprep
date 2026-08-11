@@ -13,19 +13,34 @@ const DIVISIONS = [
   { slug: 'rpft', label: 'RPFT' },
 ]
 
+const RESOURCES = [
+  { href: '/guides', label: 'Exam Guides' },
+  { href: '/topics', label: 'Study Topics' },
+  { href: '/cheat-sheets', label: 'Cheat Sheets' },
+  { href: '/tips', label: 'Exam Tips' },
+  { href: '/mistakes', label: 'Common Mistakes' },
+  { href: '/exam-day', label: 'Exam Day' },
+  { href: '/glossary', label: 'Glossary' },
+]
+
 export function Navbar() {
   const { data: session, status } = useSession()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [divisionsOpen, setDivisionsOpen] = useState(false)
+  const [resourcesOpen, setResourcesOpen] = useState(false)
   const [profileOpen, setProfileOpen] = useState(false)
 
   const divisionsRef = useRef<HTMLDivElement>(null)
+  const resourcesRef = useRef<HTMLDivElement>(null)
   const profileRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (divisionsRef.current && !divisionsRef.current.contains(e.target as Node)) {
         setDivisionsOpen(false)
+      }
+      if (resourcesRef.current && !resourcesRef.current.contains(e.target as Node)) {
+        setResourcesOpen(false)
       }
       if (profileRef.current && !profileRef.current.contains(e.target as Node)) {
         setProfileOpen(false)
@@ -82,6 +97,31 @@ export function Navbar() {
                 </div>
               </>
             )}
+            <div className="relative" ref={resourcesRef}>
+              <button
+                onClick={() => setResourcesOpen((o) => !o)}
+                className="text-sm font-medium text-brand-gray-600 hover:text-black transition-colors flex items-center gap-1"
+              >
+                Resources
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {resourcesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-44 bg-white border border-brand-gray-200 rounded-lg shadow-lg">
+                  {RESOURCES.map((r) => (
+                    <Link
+                      key={r.href}
+                      href={r.href}
+                      onClick={() => setResourcesOpen(false)}
+                      className="block px-4 py-2 text-sm text-brand-gray-700 hover:bg-brand-gray-50 hover:text-black first:rounded-t-lg last:rounded-b-lg"
+                    >
+                      {r.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
             <Link
               href="/blog"
               className="text-sm font-medium text-brand-gray-600 hover:text-black transition-colors"
@@ -185,6 +225,9 @@ export function Navbar() {
             </>
           ) : (
             <>
+              {RESOURCES.map((r) => (
+                <Link key={r.href} href={r.href} className="block text-sm text-brand-gray-600">{r.label}</Link>
+              ))}
               <Link href="/blog" className="block text-sm font-medium text-brand-gray-700">Blog</Link>
               <Link href="/pricing" className="block text-sm font-medium text-brand-gray-700">Pricing</Link>
               <Link href="/login" className="block text-sm font-medium text-brand-gray-700">Sign In</Link>

@@ -41,6 +41,16 @@ enum SeoMode {
   NORMAL
 }
 
+enum SeoPageType {
+  GUIDE
+  TOPIC
+  CHEAT_SHEET
+  MISTAKES
+  TIPS
+  EXAM_DAY
+  GLOSSARY
+}
+
 model Account {
   id                String  @id @default(cuid())
   userId            String
@@ -300,6 +310,23 @@ model BlogPost {
 
   @@index([status])
   @@index([publishAt])
+}
+
+model SeoPage {
+  id          String      @id @default(cuid())
+  slug        String      @unique
+  type        SeoPageType
+  title       String
+  description String
+  content     String      @db.Text
+  division    String?
+  readTime    String      @default("5 min read")
+  publishedAt DateTime?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([type])
+  @@index([division])
 }
 
 model SiteSettings {

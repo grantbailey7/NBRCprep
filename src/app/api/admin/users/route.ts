@@ -34,7 +34,14 @@ export async function GET(request: NextRequest) {
         planType: true,
         createdAt: true,
         stripeCustomerId: true,
-        _count: { select: { studyStreaks: true } },
+        _count: {
+          select: {
+            studyStreaks: true,
+            flashcardProgress: true,
+            miniExamResults: true,
+            fullExamResults: true,
+          },
+        },
       },
       orderBy: { createdAt: 'desc' },
       skip: (page - 1) * limit,
@@ -49,7 +56,10 @@ export async function GET(request: NextRequest) {
     name: u.name,
     planType: u.planType,
     createdAt: u.createdAt,
-    lastActivity: u._count.studyStreaks > 0 ? 'Active' : null,
+    flashcardsDone: u._count.flashcardProgress,
+    miniExamsTaken: u._count.miniExamResults,
+    fullExamsTaken: u._count.fullExamResults,
+    studyDays: u._count.studyStreaks,
   }))
 
   return NextResponse.json({ users: formattedUsers, total })

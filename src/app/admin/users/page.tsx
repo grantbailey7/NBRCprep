@@ -8,7 +8,10 @@ interface User {
   name: string | null;
   planType: string;
   createdAt: string;
-  lastActivity?: string;
+  flashcardsDone: number;
+  miniExamsTaken: number;
+  fullExamsTaken: number;
+  studyDays: number;
 }
 
 const PLAN_TYPES = ['FREE', 'MONTHLY', 'FULL_ACCESS', 'FULL_BUNDLE'];
@@ -115,20 +118,23 @@ export default function UsersPage() {
                 <th className="px-4 py-3 text-gray-300 font-medium">Email</th>
                 <th className="px-4 py-3 text-gray-300 font-medium">Name</th>
                 <th className="px-4 py-3 text-gray-300 font-medium">Plan</th>
+                <th className="px-4 py-3 text-gray-300 font-medium">Flashcards</th>
+                <th className="px-4 py-3 text-gray-300 font-medium">Mini Exams</th>
+                <th className="px-4 py-3 text-gray-300 font-medium">Full Exams</th>
+                <th className="px-4 py-3 text-gray-300 font-medium">Study Days</th>
                 <th className="px-4 py-3 text-gray-300 font-medium">Created</th>
-                <th className="px-4 py-3 text-gray-300 font-medium">Last Activity</th>
               </tr>
             </thead>
             <tbody>
               {loading ? (
                 <tr>
-                  <td colSpan={5} className="px-4 py-8 text-center text-gray-400">
+                  <td colSpan={8} className="px-4 py-8 text-center text-gray-400">
                     Loading...
                   </td>
                 </tr>
               ) : users.length === 0 ? (
                 <tr>
-                  <td colSpan={5} className="px-4 py-8 text-center text-gray-400">
+                  <td colSpan={8} className="px-4 py-8 text-center text-gray-400">
                     No users found.
                   </td>
                 </tr>
@@ -150,11 +156,12 @@ export default function UsersPage() {
                         ))}
                       </select>
                     </td>
+                    <td className="px-4 py-3 text-gray-300 text-center">{user.flashcardsDone}</td>
+                    <td className="px-4 py-3 text-gray-300 text-center">{user.miniExamsTaken}</td>
+                    <td className="px-4 py-3 text-gray-300 text-center">{user.fullExamsTaken}</td>
+                    <td className="px-4 py-3 text-gray-300 text-center">{user.studyDays}</td>
                     <td className="px-4 py-3 text-gray-300 text-xs">
                       {formatDate(user.createdAt)}
-                    </td>
-                    <td className="px-4 py-3 text-gray-300 text-xs">
-                      {user.lastActivity ? formatDate(user.lastActivity) : '—'}
                     </td>
                   </tr>
                 ))

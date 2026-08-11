@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { prisma } from '@/lib/prisma'
 
 interface Props {
@@ -62,12 +63,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <main className="flex-1 bg-brand-gray-50">
         <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-          <Link
-            href="/blog"
-            className="mb-8 inline-flex items-center gap-1 text-sm text-brand-gray-500 hover:text-black"
-          >
-            &larr; Back to Blog
-          </Link>
+          <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }, { label: post.title }]} />
 
           <header className="mb-8">
             <div className="flex items-center gap-3 mb-4">

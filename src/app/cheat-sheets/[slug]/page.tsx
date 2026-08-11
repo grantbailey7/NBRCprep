@@ -56,6 +56,7 @@ export default async function CheatSheetPage({ params }: Props) {
         division={page.division}
         backLink={{ href: '/cheat-sheets', label: 'All Cheat Sheets' }}
         categoryLabel="Cheat Sheet"
+        breadcrumbs={[{ label: 'Cheat Sheets', href: '/cheat-sheets' }, { label: page.title }]}
       />
     </>
   )

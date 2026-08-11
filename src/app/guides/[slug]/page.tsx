@@ -56,6 +56,7 @@ export default async function GuidePage({ params }: Props) {
         division={page.division}
         backLink={{ href: '/guides', label: 'All Exam Guides' }}
         categoryLabel="Exam Guide"
+        breadcrumbs={[{ label: 'Exam Guides', href: '/guides' }, { label: page.title }]}
       />
     </>
   )

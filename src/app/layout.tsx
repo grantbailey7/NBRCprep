@@ -71,6 +71,26 @@ const websiteSchema = {
   },
 }
 
+const courseSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: 'NBRC Respiratory Therapy Exam Prep',
+  description: '2,400 flashcards, 180 mini exams, and 18 full-length simulations across all 6 NBRC divisions.',
+  provider: { '@type': 'Organization', name: 'NBRCprep', url: 'https://nbrcprep.app' },
+  url: 'https://nbrcprep.app',
+  hasCourseInstance: {
+    '@type': 'CourseInstance',
+    courseMode: 'online',
+    courseWorkload: 'Self-paced',
+  },
+  offers: [
+    { '@type': 'Offer', price: '0', priceCurrency: 'USD', name: 'Free', url: 'https://nbrcprep.app/signup' },
+    { '@type': 'Offer', price: '29', priceCurrency: 'USD', name: 'Monthly (TMC)', url: 'https://nbrcprep.app/pricing' },
+    { '@type': 'Offer', price: '149', priceCurrency: 'USD', name: 'Full Access (TMC)', url: 'https://nbrcprep.app/pricing' },
+    { '@type': 'Offer', price: '249', priceCurrency: 'USD', name: 'Full Bundle (All Divisions)', url: 'https://nbrcprep.app/pricing' },
+  ],
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -81,6 +101,7 @@ export default function RootLayout({
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       </head>
       <body className={inter.className}>
         <Providers>{children}</Providers>

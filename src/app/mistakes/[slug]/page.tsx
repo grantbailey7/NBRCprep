@@ -56,6 +56,7 @@ export default async function MistakesDetailPage({ params }: Props) {
         division={page.division}
         backLink={{ href: '/mistakes', label: 'All Common Mistakes' }}
         categoryLabel="Common Mistakes"
+        breadcrumbs={[{ label: 'Common Mistakes', href: '/mistakes' }, { label: page.title }]}
       />
     </>
   )

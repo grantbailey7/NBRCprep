@@ -225,8 +225,9 @@ export function Navbar() {
             </>
           ) : (
             <>
+              <Link href="/resources" className="block text-sm font-medium text-brand-gray-700">Resources</Link>
               {RESOURCES.map((r) => (
-                <Link key={r.href} href={r.href} className="block text-sm text-brand-gray-600">{r.label}</Link>
+                <Link key={r.href} href={r.href} className="block text-sm text-brand-gray-600 pl-3">{r.label}</Link>
               ))}
               <Link href="/blog" className="block text-sm font-medium text-brand-gray-700">Blog</Link>
               <Link href="/pricing" className="block text-sm font-medium text-brand-gray-700">Pricing</Link>

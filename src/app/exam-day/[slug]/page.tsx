@@ -56,6 +56,7 @@ export default async function ExamDayDetailPage({ params }: Props) {
         division={page.division}
         backLink={{ href: '/exam-day', label: 'All Exam Day Guides' }}
         categoryLabel="Exam Day"
+        breadcrumbs={[{ label: 'Exam Day', href: '/exam-day' }, { label: page.title }]}
       />
     </>
   )

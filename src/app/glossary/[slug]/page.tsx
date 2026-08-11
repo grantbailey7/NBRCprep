@@ -54,6 +54,7 @@ export default async function GlossaryDetailPage({ params }: Props) {
         division={page.division}
         backLink={{ href: '/glossary', label: 'All Glossaries' }}
         categoryLabel="Glossary"
+        breadcrumbs={[{ label: 'Glossary', href: '/glossary' }, { label: page.title }]}
       />
     </>
   )

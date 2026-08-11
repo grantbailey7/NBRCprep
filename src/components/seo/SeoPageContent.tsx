@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { Breadcrumbs, BreadcrumbItem } from '@/components/seo/Breadcrumbs'
 
 interface SeoPageContentProps {
   title: string
@@ -12,6 +13,7 @@ interface SeoPageContentProps {
   backLink: { href: string; label: string }
   categoryLabel: string
   ctaText?: string
+  breadcrumbs: BreadcrumbItem[]
 }
 
 export function SeoPageContent({
@@ -24,6 +26,7 @@ export function SeoPageContent({
   backLink,
   categoryLabel,
   ctaText = 'Start Studying Free',
+  breadcrumbs,
 }: SeoPageContentProps) {
   return (
     <div className="min-h-screen flex flex-col">
@@ -31,12 +34,7 @@ export function SeoPageContent({
 
       <main className="flex-1 bg-brand-gray-50">
         <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-          <Link
-            href={backLink.href}
-            className="mb-8 inline-flex items-center gap-1 text-sm text-brand-gray-500 hover:text-black"
-          >
-            &larr; {backLink.label}
-          </Link>
+          <Breadcrumbs items={breadcrumbs} />
 
           <header className="mb-8">
             <div className="flex items-center gap-3 mb-4">

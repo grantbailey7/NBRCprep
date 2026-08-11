@@ -56,6 +56,7 @@ export default async function TipsDetailPage({ params }: Props) {
         division={page.division}
         backLink={{ href: '/tips', label: 'All Exam Tips' }}
         categoryLabel="Exam Tips"
+        breadcrumbs={[{ label: 'Exam Tips', href: '/tips' }, { label: page.title }]}
       />
     </>
   )

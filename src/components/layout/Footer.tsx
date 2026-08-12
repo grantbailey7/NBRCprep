@@ -9,7 +9,7 @@ export function Footer() {
             <span className="text-2xl font-black tracking-tight">
               NBRC<span className="text-teal-400">prep</span>
             </span>
-            <span className="text-xs font-medium text-brand-gray-500 tracking-wide mt-0.5 block">By Certin</span>
+            <a href="https://certinhq.com" className="text-xs font-medium text-brand-gray-500 tracking-wide mt-0.5 block hover:text-brand-gray-300 transition-colors">By Certin</a>
             <p className="mt-3 text-brand-gray-400 text-sm leading-relaxed max-w-sm">
               The most comprehensive study platform for NBRC Respiratory Therapy credentialing exams.
               Built by respiratory professionals, for respiratory professionals.

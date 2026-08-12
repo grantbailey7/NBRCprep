@@ -9,6 +9,7 @@ import { Footer } from '@/components/layout/Footer'
 import { prisma } from '@/lib/prisma'
 import { PlanType, DivisionSlug } from '@prisma/client'
 import { canAccessFullExams, FREE_MINI_EXAM_DIVISIONS } from '@/lib/access-control'
+import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 
 const SLUG_TO_ENUM: Record<string, string> = {
   tmc: 'TMC',
@@ -118,6 +119,7 @@ export default async function DivisionPage({ params }: { params: { division: str
       <Navbar />
       <main className="min-h-screen bg-brand-gray-50 px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
+          <Breadcrumbs items={[{ label: 'Dashboard', href: '/dashboard' }, { label: division.name }]} />
           {/* Header */}
           <div className="mb-8">
             <Link href="/dashboard" className="mb-3 flex items-center gap-1 text-sm text-brand-gray-500 hover:text-black">

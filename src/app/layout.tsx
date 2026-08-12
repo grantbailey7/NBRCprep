@@ -1,9 +1,15 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Providers } from '@/components/Providers'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0D9488',
+}
 
 export const metadata: Metadata = {
   title: {
@@ -50,12 +56,14 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': ['Organization', 'EducationalOrganization'],
   name: 'NBRCprep',
   url: 'https://nbrcprep.app',
   logo: 'https://nbrcprep.app/icon.png',
   description: 'The most comprehensive study platform for NBRC Respiratory Therapy credentialing exams.',
+  parentOrganization: { '@type': 'Organization', name: 'Certin LLC', url: 'https://certinhq.com' },
   contactPoint: { '@type': 'ContactPoint', email: 'certinhq@outlook.com', contactType: 'customer support' },
+  sameAs: ['https://certinhq.com'],
 }
 
 const websiteSchema = {
@@ -76,8 +84,14 @@ const courseSchema = {
   '@type': 'Course',
   name: 'NBRC Respiratory Therapy Exam Prep',
   description: '2,400 flashcards, 180 mini exams, and 18 full-length simulations across all 6 NBRC divisions.',
-  provider: { '@type': 'Organization', name: 'NBRCprep', url: 'https://nbrcprep.app' },
+  provider: { '@type': 'EducationalOrganization', name: 'NBRCprep', url: 'https://nbrcprep.app' },
   url: 'https://nbrcprep.app',
+  educationalLevel: 'Professional Certification',
+  about: [
+    { '@type': 'Thing', name: 'Respiratory Therapy' },
+    { '@type': 'Thing', name: 'NBRC Credentialing Exams' },
+    { '@type': 'Thing', name: 'TMC Exam' },
+  ],
   hasCourseInstance: {
     '@type': 'CourseInstance',
     courseMode: 'online',

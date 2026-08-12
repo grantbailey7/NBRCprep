@@ -14,6 +14,9 @@ export function Footer() {
               The most comprehensive study platform for NBRC Respiratory Therapy credentialing exams.
               Built by respiratory professionals, for respiratory professionals.
             </p>
+            <p className="mt-3 text-brand-gray-400 text-sm">
+              Contact: <a href="mailto:certinhq@outlook.com" className="text-teal-400 hover:text-teal-300 transition-colors">certinhq@outlook.com</a>
+            </p>
           </div>
 
           <div>

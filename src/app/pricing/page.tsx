@@ -7,9 +7,9 @@ import { Footer } from '@/components/layout/Footer'
 import { getAuthSession } from '@/lib/auth'
 
 export const metadata: Metadata = {
-  title: 'Pricing',
+  title: 'Pricing — NBRC Exam Prep Plans',
   description:
-    'NBRCprep pricing plans — start free, upgrade to Monthly ($29/mo), Full Access ($149 one-time), or Full Bundle ($249 one-time) for all 6 NBRC divisions.',
+    'Affordable NBRC exam prep starting free. Monthly TMC access at $29/mo, lifetime TMC access at $149, or all 6 divisions for $249. Practice tests, flashcards, and full-length exam simulations.',
   alternates: { canonical: 'https://nbrcprep.app/pricing' },
 }
 
@@ -62,6 +62,54 @@ const faqSchema = {
       text: item.answer,
     },
   })),
+}
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'NBRCprep — NBRC Exam Prep Platform',
+  description: 'Comprehensive study platform for NBRC respiratory therapy credentialing exams with flashcards, timed practice exams, and full-length simulations.',
+  brand: { '@type': 'Brand', name: 'NBRCprep' },
+  url: 'https://nbrcprep.app/pricing',
+  category: 'Educational Software',
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Free Tier',
+      price: '0',
+      priceCurrency: 'USD',
+      url: 'https://nbrcprep.app/signup',
+      description: '20 flashcards per division + 1 sample TMC mini exam',
+      availability: 'https://schema.org/InStock',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Monthly (TMC)',
+      price: '29',
+      priceCurrency: 'USD',
+      url: 'https://nbrcprep.app/pricing',
+      description: 'Full TMC access — 400 flashcards, 30 mini exams, 3 full exams. Cancel anytime.',
+      availability: 'https://schema.org/InStock',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Full Access (TMC)',
+      price: '149',
+      priceCurrency: 'USD',
+      url: 'https://nbrcprep.app/pricing',
+      description: 'Lifetime TMC access — 400 flashcards, 30 mini exams, 3 full-length exams.',
+      availability: 'https://schema.org/InStock',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Full Bundle (All 6 Divisions)',
+      price: '249',
+      priceCurrency: 'USD',
+      url: 'https://nbrcprep.app/pricing',
+      description: 'Lifetime access to all 6 NBRC divisions — 2,400 flashcards, 180 mini exams, 18 full-length exams.',
+      availability: 'https://schema.org/InStock',
+    },
+  ],
 }
 
 export default async function PricingPage() {
@@ -126,6 +174,10 @@ export default async function PricingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
       <Navbar />
 

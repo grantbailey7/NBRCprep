@@ -1,5 +1,6 @@
 export const dynamic = 'force-dynamic'
 
+import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getAuthSession } from '@/lib/auth'
@@ -16,6 +17,55 @@ const SLUG_TO_ENUM: Record<string, string> = {
   sds: 'SDS',
   cpft: 'CPFT',
   rpft: 'RPFT',
+}
+
+const DIVISION_META: Record<string, { title: string; description: string; longName: string }> = {
+  tmc: {
+    title: 'TMC Exam Prep — Practice Tests & Flashcards',
+    description: 'Prepare for the TMC exam with 400 flashcards, 30 timed mini exams, and 3 full-length simulations. Master patient assessment, ventilator management, and pharmacology.',
+    longName: 'Therapist Multiple-Choice (TMC)',
+  },
+  nps: {
+    title: 'NPS Exam Prep — Neonatal/Pediatric Specialist',
+    description: 'NPS exam prep with 400 flashcards and 30 practice exams covering neonatal resuscitation, pediatric ventilation, surfactant therapy, and developmental physiology.',
+    longName: 'Neonatal/Pediatric Specialist (NPS)',
+  },
+  accs: {
+    title: 'ACCS Exam Prep — Adult Critical Care',
+    description: 'ACCS exam prep with 400 flashcards and 30 practice exams covering advanced ventilator management, hemodynamic monitoring, ARDS, and critical care protocols.',
+    longName: 'Adult Critical Care Specialist (ACCS)',
+  },
+  sds: {
+    title: 'SDS Exam Prep — Sleep Disorders Specialist',
+    description: 'SDS exam prep with 400 flashcards and 30 practice exams covering polysomnography, CPAP/BiPAP titration, sleep-disordered breathing, and scoring criteria.',
+    longName: 'Sleep Disorders Specialist (SDS)',
+  },
+  cpft: {
+    title: 'CPFT Exam Prep — Pulmonary Function Tech',
+    description: 'CPFT exam prep with 400 flashcards and 30 practice exams covering spirometry, lung volumes, diffusion capacity, and quality assurance in PFT labs.',
+    longName: 'Certified Pulmonary Function Technologist (CPFT)',
+  },
+  rpft: {
+    title: 'RPFT Exam Prep — Registered PFT',
+    description: 'RPFT exam prep with 400 flashcards and 30 practice exams covering advanced PFT interpretation, bronchial provocation, exercise testing, and research methodology.',
+    longName: 'Registered Pulmonary Function Technologist (RPFT)',
+  },
+}
+
+export async function generateMetadata({ params }: { params: { division: string } }): Promise<Metadata> {
+  const slug = params.division.toLowerCase()
+  const meta = DIVISION_META[slug]
+  if (!meta) return {}
+  return {
+    title: meta.title,
+    description: meta.description,
+    alternates: { canonical: `https://nbrcprep.app/divisions/${slug}` },
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      url: `https://nbrcprep.app/divisions/${slug}`,
+    },
+  }
 }
 
 export default async function DivisionPage({ params }: { params: { division: string } }) {

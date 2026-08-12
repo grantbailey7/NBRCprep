@@ -11,6 +11,41 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://nbrcprep.app' },
 }
 
+const HOMEPAGE_FAQ = [
+  {
+    question: 'How hard is the TMC exam?',
+    answer: 'The TMC (Therapist Multiple-Choice) exam is considered moderately difficult. It has 160 questions (140 scored, 20 pretest) covering patient assessment, airway management, ventilator management, and pharmacology. The national pass rate is around 90% for first-time test-takers from accredited programs, but thorough preparation is essential.',
+  },
+  {
+    question: 'How many questions are on the NBRC exam?',
+    answer: 'The TMC exam has 160 multiple-choice questions (140 scored). The Clinical Simulation Exam (CSE) for RRT has 22 clinical scenarios. Specialty exams vary: NPS has 115 questions, ACCS has 115, SDS has 135, CPFT has 200, and RPFT has 200.',
+  },
+  {
+    question: 'What is a passing score on the TMC?',
+    answer: 'The TMC uses a scaled scoring system. A score at or above the CRT cut score earns the CRT credential. A higher score at or above the RRT cut score qualifies you to take the Clinical Simulation Exam (CSE) for the RRT credential. Exact cut scores are set by the NBRC and may be adjusted periodically.',
+  },
+  {
+    question: 'How long should I study for the NBRC?',
+    answer: 'Most successful candidates study 4 to 8 weeks for the TMC exam, dedicating 1 to 3 hours per day. NBRCprep is designed for efficient daily study sessions using flashcards for foundational knowledge, mini exams for targeted practice, and full-length simulations to build test-day stamina.',
+  },
+  {
+    question: "What's the difference between CRT and RRT?",
+    answer: 'CRT (Certified Respiratory Therapist) and RRT (Registered Respiratory Therapist) are both earned through the TMC exam. A lower passing score earns the CRT credential, while a higher score qualifies you for the Clinical Simulation Exam (CSE). Passing the CSE earns the RRT credential, which is preferred by most employers.',
+  },
+  {
+    question: 'What are the NBRC exams?',
+    answer: 'The NBRC (National Board for Respiratory Care) administers credentialing exams for respiratory therapists. The TMC exam is the entry-level exam required for CRT and RRT credentials. Specialty exams include NPS (Neonatal/Pediatric), ACCS (Adult Critical Care), SDS (Sleep Disorders), CPFT (Certified Pulmonary Function Tech), and RPFT (Registered Pulmonary Function Tech).',
+  },
+  {
+    question: 'How many NBRC practice questions does NBRCprep have?',
+    answer: 'NBRCprep has 2,400 original flashcards (400 per division), 3,600 mini exam questions (180 exams x 20 questions), and 18 full-length simulations across all 6 NBRC divisions.',
+  },
+  {
+    question: 'Is NBRCprep free?',
+    answer: 'Yes. NBRCprep has a free tier with 20 flashcards per division and a sample mini exam. No credit card required. Monthly access starts at $29/month, and one-time lifetime access starts at $149.',
+  },
+]
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -30,23 +65,11 @@ const jsonLd = {
     },
     {
       '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What are the NBRC exams?',
-          acceptedAnswer: { '@type': 'Answer', text: 'The NBRC (National Board for Respiratory Care) administers credentialing exams for respiratory therapists. The TMC exam is the entry-level exam required for CRT and RRT credentials. Specialty exams include NPS, ACCS, SDS, CPFT, and RPFT.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'How many NBRC practice questions does NBRCprep have?',
-          acceptedAnswer: { '@type': 'Answer', text: 'NBRCprep has 2,400 original flashcards (400 per division), 3,600 mini exam questions (180 exams x 20 questions), and 18 full-length simulations across all 6 NBRC divisions.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is NBRCprep free?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes. NBRCprep has a free tier with 20 flashcards per division and a sample mini exam. No credit card required. Monthly access starts at $29/month.' },
-        },
-      ],
+      mainEntity: HOMEPAGE_FAQ.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      })),
     },
   ],
 }
@@ -343,6 +366,23 @@ export default async function HomePage() {
                 </div>
                 <p className="text-sm text-black font-medium leading-relaxed">&ldquo;{t.text}&rdquo;</p>
                 <p className="mt-2 text-xs text-brand-gray-400">{t.author}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-gray-50 py-20 px-4">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="section-title">NBRC Exam FAQ</h2>
+            <p className="section-subtitle">Answers to the most common questions about the NBRC exams</p>
+          </div>
+          <div className="space-y-6">
+            {HOMEPAGE_FAQ.map((item) => (
+              <div key={item.question} className="border-b border-brand-gray-100 pb-6">
+                <h3 className="font-bold text-black text-base">{item.question}</h3>
+                <p className="mt-2 text-sm text-brand-gray-500 leading-relaxed">{item.answer}</p>
               </div>
             ))}
           </div>

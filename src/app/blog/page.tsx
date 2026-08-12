@@ -8,9 +8,22 @@ import { prisma } from '@/lib/prisma'
 
 
 export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'Tips, strategies, and guides for passing NBRC respiratory therapy credentialing exams.',
+  title: 'NBRC Exam Blog — Study Tips & Strategies',
+  description: 'Free NBRC exam tips, TMC study strategies, and respiratory therapy board prep guides. Expert advice on passing the TMC, CRT, RRT, and specialty NBRC exams.',
   alternates: { canonical: 'https://nbrcprep.app/blog' },
+}
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'NBRCprep Blog',
+  description: 'Study tips, exam strategies, and respiratory therapy guides for NBRC credentialing exams.',
+  url: 'https://nbrcprep.app/blog',
+  publisher: {
+    '@type': 'Organization',
+    name: 'NBRCprep',
+    url: 'https://nbrcprep.app',
+  },
 }
 
 export default async function BlogPage() {
@@ -35,12 +48,21 @@ export default async function BlogPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
       <Navbar />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h1 className="section-title">NBRCprep Blog</h1>
           <p className="section-subtitle">Tips, strategies, and insights for respiratory therapy exam success</p>
+          <p className="mt-4 text-sm text-brand-gray-500 max-w-2xl mx-auto leading-relaxed">
+            Whether you are preparing for the TMC, studying for a specialty NBRC credential like the NPS or ACCS,
+            or looking for general respiratory therapy exam strategies, our blog covers study techniques, content
+            breakdowns, and test-day advice to help you pass on your first attempt.
+          </p>
         </div>
 
         {featured && (

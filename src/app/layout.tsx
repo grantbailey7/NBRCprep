@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | NBRCprep',
   },
   description:
-    'The most comprehensive study platform for NBRC Respiratory Therapy credentialing exams. 2,400 original flashcards, 180 mini exams, and 18 full-length simulations across all 6 NBRC divisions.',
+    'Pass the NBRC exam on your first try. 2,400+ flashcards, 180 timed practice tests, and full-length TMC exam simulations. The #1 respiratory therapy exam prep and NBRC study guide — start free today.',
   keywords: [
     'NBRC exam prep',
     'respiratory therapy exam',

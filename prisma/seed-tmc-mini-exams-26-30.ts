@@ -512,9 +512,9 @@ async function main() {
         questionText:
           'A respiratory therapist is reviewing the results of a tuberculin skin test (TST) for a healthcare worker. The induration measures 12 mm. What is the correct interpretation?',
         choices: {
-          A: 'Positive result — the healthcare worker should be evaluated for active TB',
-          B: 'Negative result — no further testing is needed',
-          C: 'Indeterminate — the test should be repeated in 2 weeks',
+          A: 'Positive result - the healthcare worker should be evaluated for active TB',
+          B: 'Negative result - no further testing is needed',
+          C: 'Indeterminate - the test should be repeated in 2 weeks',
           D: 'Positive only if the worker is immunocompromised',
         },
         correctChoice: 'A',

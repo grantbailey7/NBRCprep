@@ -104,7 +104,7 @@ async function main() {
         choices: { A: 'Eosinophilic airway inflammation responsive to corticosteroids', B: 'Gastroesophageal reflux disease', C: 'Chronic obstructive pulmonary disease', D: 'Cough-variant asthma with neutrophilic inflammation' },
         correctChoice: 'A',
         explanationCorrect: 'FeNO values > 50 ppb in adults indicate high probability of eosinophilic airway inflammation and predict a favorable response to inhaled corticosteroids. This is particularly useful in patients with normal spirometry where asthma is suspected.',
-        explanationWrong: 'COPD (C) typically shows normal or low FeNO. GERD (B) is not associated with elevated FeNO. Neutrophilic inflammation (D) does not elevate FeNO — only eosinophilic inflammation does.',
+        explanationWrong: 'COPD (C) typically shows normal or low FeNO. GERD (B) is not associated with elevated FeNO. Neutrophilic inflammation (D) does not elevate FeNO - only eosinophilic inflammation does.',
         topic: 'Exhaled nitric oxide (FeNO) measurement and interpretation',
       },
       {
@@ -359,7 +359,7 @@ async function main() {
         miniExamId: exam7.id,
         questionIndex: 13,
         questionText: 'A biological control subject\'s FEV1 shows a downward trend on a Levy-Jennings chart over 10 consecutive sessions, though all values remain within 2 standard deviations. According to Westgard rules, this represents:',
-        choices: { A: 'A systematic error requiring investigation (10x rule violation)', B: 'Acceptable performance — all values within control limits', C: 'Random error with acceptable range', D: 'A calibration shift that is clinically insignificant' },
+        choices: { A: 'A systematic error requiring investigation (10x rule violation)', B: 'Acceptable performance - all values within control limits', C: 'Random error with acceptable range', D: 'A calibration shift that is clinically insignificant' },
         correctChoice: 'A',
         explanationCorrect: 'The Westgard 10x rule states that if 10 consecutive control values fall on the same side of the mean, a systematic error is present even though individual values are within 2 SD. This trend suggests instrument drift requiring investigation.',
         explanationWrong: 'While individual values are within limits (B), the trend pattern violates QC rules. A consistent directional trend is systematic, not random (C). Any systematic shift requires investigation regardless of magnitude (D).',

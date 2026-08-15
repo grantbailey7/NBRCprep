@@ -46,7 +46,7 @@ async function main() {
       },
       {
         question: 'What is the tidal breathing rapid thoracoabdominal compression (RTC) technique, and what parameter does it primarily yield?',
-        answer: 'The tidal RTC technique applies a rapid squeeze via an inflatable jacket around the infant\'s chest and abdomen at end-inspiration during tidal breathing (without prior lung inflation). The primary parameter is V\'maxFRC — the maximal flow at functional residual capacity. This reflects airway function at resting lung volumes but has a limited range due to flow limitation at low lung volumes.',
+        answer: 'The tidal RTC technique applies a rapid squeeze via an inflatable jacket around the infant\'s chest and abdomen at end-inspiration during tidal breathing (without prior lung inflation). The primary parameter is V\'maxFRC - the maximal flow at functional residual capacity. This reflects airway function at resting lung volumes but has a limited range due to flow limitation at low lung volumes.',
         difficulty: 3,
         topic: 'Infant Pulmonary Function Testing',
         isFree: false,
@@ -84,7 +84,7 @@ async function main() {
       },
       {
         question: 'What is the difference between resistance (Rrs) and reactance (Xrs) in oscillometry?',
-        answer: 'Resistance (Rrs) is the real (in-phase) component of impedance, reflecting energy dissipation primarily due to airway friction. Reactance (Xrs) is the imaginary (out-of-phase) component, reflecting energy storage in the respiratory system — determined by the balance between the inertia of the air column (inertance) and the elastic recoil of the lung and chest wall (compliance). At low frequencies, compliance dominates and Xrs is negative; at higher frequencies, inertance dominates and Xrs becomes positive.',
+        answer: 'Resistance (Rrs) is the real (in-phase) component of impedance, reflecting energy dissipation primarily due to airway friction. Reactance (Xrs) is the imaginary (out-of-phase) component, reflecting energy storage in the respiratory system - determined by the balance between the inertia of the air column (inertance) and the elastic recoil of the lung and chest wall (compliance). At low frequencies, compliance dominates and Xrs is negative; at higher frequencies, inertance dominates and Xrs becomes positive.',
         difficulty: 2,
         topic: 'Advanced Oscillometry and IOS',
         isFree: false,
@@ -93,7 +93,7 @@ async function main() {
       },
       {
         question: 'What does the resonant frequency (Fres) represent in oscillometry, and what does an elevated Fres suggest?',
-        answer: 'The resonant frequency (Fres) is the frequency at which reactance equals zero — where the elastic and inertive components of the respiratory system are equal and opposite. In healthy adults, Fres is typically between 7-12 Hz. An elevated Fres indicates increased peripheral airway obstruction or decreased lung compliance, as the compliance-dominated negative reactance extends to higher frequencies before being balanced by inertance.',
+        answer: 'The resonant frequency (Fres) is the frequency at which reactance equals zero - where the elastic and inertive components of the respiratory system are equal and opposite. In healthy adults, Fres is typically between 7-12 Hz. An elevated Fres indicates increased peripheral airway obstruction or decreased lung compliance, as the compliance-dominated negative reactance extends to higher frequencies before being balanced by inertance.',
         difficulty: 2,
         topic: 'Advanced Oscillometry and IOS',
         isFree: false,
@@ -230,7 +230,7 @@ async function main() {
       },
       {
         question: 'What are the standardization challenges for exhaled breath condensate collection?',
-        answer: 'Key standardization challenges include: (1) variable dilution factor — the ratio of respiratory lining fluid to condensed water vapor is unknown and variable, making absolute concentration comparisons difficult; (2) no validated normalization method — proposed approaches include urea, conductivity, and total protein but none is universally accepted; (3) device-dependent collection efficiency; (4) salivary contamination detection (amylase assay); (5) sample storage instability for some analytes; and (6) lack of consensus on deaeration protocols for pH measurement.',
+        answer: 'Key standardization challenges include: (1) variable dilution factor - the ratio of respiratory lining fluid to condensed water vapor is unknown and variable, making absolute concentration comparisons difficult; (2) no validated normalization method - proposed approaches include urea, conductivity, and total protein but none is universally accepted; (3) device-dependent collection efficiency; (4) salivary contamination detection (amylase assay); (5) sample storage instability for some analytes; and (6) lack of consensus on deaeration protocols for pH measurement.',
         difficulty: 3,
         topic: 'Exhaled Biomarkers',
         isFree: false,
@@ -248,7 +248,7 @@ async function main() {
       },
       {
         question: 'What breathing maneuver is required for exhaled breath condensate collection, and how is salivary contamination prevented?',
-        answer: 'EBC collection requires 10-15 minutes of relaxed tidal breathing through a mouthpiece connected to a cooled condenser (typically at -10 to -20 degrees Celsius). A saliva trap or one-way valve in the mouthpiece prevents salivary contamination. Patients should rinse their mouth with water before collection. The amylase concentration in the condensate can be measured as a quality check — levels above a threshold indicate salivary contamination. A nose clip is worn to ensure exclusive oral breathing.',
+        answer: 'EBC collection requires 10-15 minutes of relaxed tidal breathing through a mouthpiece connected to a cooled condenser (typically at -10 to -20 degrees Celsius). A saliva trap or one-way valve in the mouthpiece prevents salivary contamination. Patients should rinse their mouth with water before collection. The amylase concentration in the condensate can be measured as a quality check - levels above a threshold indicate salivary contamination. A nose clip is worn to ensure exclusive oral breathing.',
         difficulty: 1,
         topic: 'Exhaled Biomarkers',
         isFree: false,
@@ -259,7 +259,7 @@ async function main() {
       // --- Lung Clearance Index and Multiple Breath Washout (10 cards) ---
       {
         question: 'What does the lung clearance index (LCI) measure, and why is it clinically useful?',
-        answer: 'LCI measures ventilation inhomogeneity — how unevenly air distributes throughout the lungs. It is calculated as the cumulative expired volume needed to clear an inert tracer gas to 1/40th of its starting concentration, divided by the functional residual capacity. A higher LCI indicates more uneven ventilation. LCI is clinically useful because it detects early small airway disease (particularly in cystic fibrosis) with greater sensitivity than spirometry, even when FEV1 is still normal.',
+        answer: 'LCI measures ventilation inhomogeneity - how unevenly air distributes throughout the lungs. It is calculated as the cumulative expired volume needed to clear an inert tracer gas to 1/40th of its starting concentration, divided by the functional residual capacity. A higher LCI indicates more uneven ventilation. LCI is clinically useful because it detects early small airway disease (particularly in cystic fibrosis) with greater sensitivity than spirometry, even when FEV1 is still normal.',
         difficulty: 1,
         topic: 'Lung Clearance Index and MBW',
         isFree: false,
@@ -268,7 +268,7 @@ async function main() {
       },
       {
         question: 'What tracer gases are used for multiple breath washout testing, and what are the advantages of each?',
-        answer: 'The two main tracer gases are: (1) Sulfur hexafluoride (SF6) — an exogenous gas washed in and then washed out; advantage is a true wash-in/washout that avoids assumptions about resident gas, but requires specialized analyzers and has environmental concerns as a greenhouse gas. (2) Nitrogen (N2) — the resident gas washed out using 100% oxygen; advantage is simpler setup without needing exogenous gas supply, but requires correction for tissue nitrogen excretion and is affected by changes in oxygen-induced atelectasis. LCI values are not interchangeable between gases.',
+        answer: 'The two main tracer gases are: (1) Sulfur hexafluoride (SF6) - an exogenous gas washed in and then washed out; advantage is a true wash-in/washout that avoids assumptions about resident gas, but requires specialized analyzers and has environmental concerns as a greenhouse gas. (2) Nitrogen (N2) - the resident gas washed out using 100% oxygen; advantage is simpler setup without needing exogenous gas supply, but requires correction for tissue nitrogen excretion and is affected by changes in oxygen-induced atelectasis. LCI values are not interchangeable between gases.',
         difficulty: 2,
         topic: 'Lung Clearance Index and MBW',
         isFree: false,
@@ -304,7 +304,7 @@ async function main() {
       },
       {
         question: 'What are the key quality control requirements for a valid multiple breath washout (MBW) test?',
-        answer: 'Key quality requirements include: (1) stable end-expiratory level (FRC) during the pre-washout tidal breathing phase, (2) relaxed tidal breathing without sighs, swallows, or irregular breaths during washout, (3) no leaks at the mouthpiece or around the nose clip, (4) at least three valid washout trials with FRC values within 10% of each other, (5) adequate washout endpoint — tracer gas concentration below 1/40th of starting concentration for three consecutive breaths, and (6) tidal volume within the normal range without breath-holding.',
+        answer: 'Key quality requirements include: (1) stable end-expiratory level (FRC) during the pre-washout tidal breathing phase, (2) relaxed tidal breathing without sighs, swallows, or irregular breaths during washout, (3) no leaks at the mouthpiece or around the nose clip, (4) at least three valid washout trials with FRC values within 10% of each other, (5) adequate washout endpoint - tracer gas concentration below 1/40th of starting concentration for three consecutive breaths, and (6) tidal volume within the normal range without breath-holding.',
         difficulty: 2,
         topic: 'Lung Clearance Index and MBW',
         isFree: false,
@@ -340,7 +340,7 @@ async function main() {
       },
       {
         question: 'What is moment ratio analysis in the context of MBW testing?',
-        answer: 'Moment ratio analysis examines the shape of the washout curve by calculating the ratio of the first and second moments (weighted averages) of the tracer gas concentration over cumulative expired volume to the zeroth moment. The moment ratios M1/M0 and M2/M0 quantify different aspects of ventilation inhomogeneity — M1/M0 is analogous to LCI, while M2/M0 emphasizes the tail of the washout curve and is more sensitive to slowly ventilating units. These indices provide additional information about the distribution pattern and severity of ventilation inhomogeneity beyond what LCI alone provides.',
+        answer: 'Moment ratio analysis examines the shape of the washout curve by calculating the ratio of the first and second moments (weighted averages) of the tracer gas concentration over cumulative expired volume to the zeroth moment. The moment ratios M1/M0 and M2/M0 quantify different aspects of ventilation inhomogeneity - M1/M0 is analogous to LCI, while M2/M0 emphasizes the tail of the washout curve and is more sensitive to slowly ventilating units. These indices provide additional information about the distribution pattern and severity of ventilation inhomogeneity beyond what LCI alone provides.',
         difficulty: 3,
         topic: 'Lung Clearance Index and MBW',
         isFree: false,
@@ -461,7 +461,7 @@ async function main() {
       // --- Thoracic Gas Volume and Specific Airway Conductance (6 cards) ---
       {
         question: 'What is specific airway conductance (sGaw), and why is it preferred over raw airway resistance in some clinical situations?',
-        answer: 'Specific airway conductance (sGaw) is airway conductance (Gaw = 1/Raw) divided by the thoracic gas volume (TGV) at which it is measured: sGaw = Gaw/TGV. It is preferred because airway resistance and conductance are volume-dependent — airways dilate at higher lung volumes, decreasing resistance. By normalizing to lung volume, sGaw accounts for this volume dependency, allowing valid comparisons between patients with different lung volumes and within the same patient at different time points (e.g., before and after bronchodilator). Normal sGaw is approximately 0.12-0.25 per second per cmH2O.',
+        answer: 'Specific airway conductance (sGaw) is airway conductance (Gaw = 1/Raw) divided by the thoracic gas volume (TGV) at which it is measured: sGaw = Gaw/TGV. It is preferred because airway resistance and conductance are volume-dependent - airways dilate at higher lung volumes, decreasing resistance. By normalizing to lung volume, sGaw accounts for this volume dependency, allowing valid comparisons between patients with different lung volumes and within the same patient at different time points (e.g., before and after bronchodilator). Normal sGaw is approximately 0.12-0.25 per second per cmH2O.',
         difficulty: 2,
         topic: 'Thoracic Gas Volume and sGaw',
         isFree: false,
@@ -598,7 +598,7 @@ async function main() {
       },
       {
         question: 'What is the role of PFTs in evaluating patients with systemic sclerosis (scleroderma)?',
-        answer: 'PFT monitoring is essential in systemic sclerosis because interstitial lung disease (ILD) and pulmonary arterial hypertension (PAH) are leading causes of death. ILD produces restriction with reduced FVC and DLCO. Isolated PAH causes reduced DLCO with preserved FVC — an FVC/DLCO ratio greater than 1.6-1.8 suggests coexistent pulmonary vascular disease. Serial FVC and DLCO measurements every 3-6 months detect disease progression. An FVC decline greater than 10% or DLCO decline greater than 15% from baseline is clinically significant and may prompt treatment escalation. Baseline and serial PFTs guide decisions about immunosuppressive therapy initiation.',
+        answer: 'PFT monitoring is essential in systemic sclerosis because interstitial lung disease (ILD) and pulmonary arterial hypertension (PAH) are leading causes of death. ILD produces restriction with reduced FVC and DLCO. Isolated PAH causes reduced DLCO with preserved FVC - an FVC/DLCO ratio greater than 1.6-1.8 suggests coexistent pulmonary vascular disease. Serial FVC and DLCO measurements every 3-6 months detect disease progression. An FVC decline greater than 10% or DLCO decline greater than 15% from baseline is clinically significant and may prompt treatment escalation. Baseline and serial PFTs guide decisions about immunosuppressive therapy initiation.',
         difficulty: 3,
         topic: 'PFT in Specific Diseases',
         isFree: false,
@@ -616,7 +616,7 @@ async function main() {
       },
       {
         question: 'What PFT findings are expected in myasthenia gravis, and how do they help guide clinical management?',
-        answer: 'Myasthenia gravis produces a restrictive pattern with reduced VC and preserved DLCO/KCO, similar to other neuromuscular diseases. MIP and MEP are reduced, often disproportionately to the VC decline. A key feature is variability — VC can fluctuate significantly with disease activity, medication timing, and fatigue. Serial VC measurements (including supine VC) help monitor respiratory muscle strength. A VC below 20 mL/kg, MIP weaker than -30 cmH2O, or MEP less than 40 cmH2O suggests impending respiratory failure (the "20/30/40 rule") and need for ICU admission during myasthenic crisis. Peak cough flow assessment guides cough augmentation needs.',
+        answer: 'Myasthenia gravis produces a restrictive pattern with reduced VC and preserved DLCO/KCO, similar to other neuromuscular diseases. MIP and MEP are reduced, often disproportionately to the VC decline. A key feature is variability - VC can fluctuate significantly with disease activity, medication timing, and fatigue. Serial VC measurements (including supine VC) help monitor respiratory muscle strength. A VC below 20 mL/kg, MIP weaker than -30 cmH2O, or MEP less than 40 cmH2O suggests impending respiratory failure (the "20/30/40 rule") and need for ICU admission during myasthenic crisis. Peak cough flow assessment guides cough augmentation needs.',
         difficulty: 1,
         topic: 'PFT in Specific Diseases',
         isFree: false,
@@ -625,7 +625,7 @@ async function main() {
       },
       {
         question: 'How does the PFT pattern in hypersensitivity pneumonitis (HP) differ between acute/subacute and chronic forms?',
-        answer: 'Acute and subacute HP typically show a restrictive pattern with reduced TLC, reduced FVC, preserved or elevated FEV1/FVC ratio, and reduced DLCO, reflecting diffuse alveolar and interstitial inflammation. Chronic HP (especially fibrotic) may show either restriction, obstruction, or a mixed pattern depending on the predominant pathology — fibrosis causes restriction while bronchiolar involvement and air trapping cause obstruction. DLCO is reduced in both forms. The presence of obstruction and air trapping in chronic HP helps differentiate it from IPF. Treatment response monitoring relies on serial FVC and DLCO changes after allergen avoidance.',
+        answer: 'Acute and subacute HP typically show a restrictive pattern with reduced TLC, reduced FVC, preserved or elevated FEV1/FVC ratio, and reduced DLCO, reflecting diffuse alveolar and interstitial inflammation. Chronic HP (especially fibrotic) may show either restriction, obstruction, or a mixed pattern depending on the predominant pathology - fibrosis causes restriction while bronchiolar involvement and air trapping cause obstruction. DLCO is reduced in both forms. The presence of obstruction and air trapping in chronic HP helps differentiate it from IPF. Treatment response monitoring relies on serial FVC and DLCO changes after allergen avoidance.',
         difficulty: 2,
         topic: 'PFT in Specific Diseases',
         isFree: false,
@@ -634,7 +634,7 @@ async function main() {
       },
       {
         question: 'What PFT parameters are most useful for monitoring disease progression in amyotrophic lateral sclerosis (ALS)?',
-        answer: 'The most useful parameters are: seated and supine FVC (decline rate predicts survival), MIP (often first parameter to decline), SNIP (sniff nasal inspiratory pressure — correlates with diaphragm strength and predicts ventilatory failure), MEP (guides cough effectiveness assessment), and peak cough flow. FVC below 50% predicted is a threshold for noninvasive ventilation initiation. SNIP below 40 cmH2O predicts nocturnal hypoventilation. Peak cough flow below 270 L/min indicates the need for cough augmentation. Serial measurements every 2-3 months track progression rate and guide respiratory support decisions.',
+        answer: 'The most useful parameters are: seated and supine FVC (decline rate predicts survival), MIP (often first parameter to decline), SNIP (sniff nasal inspiratory pressure - correlates with diaphragm strength and predicts ventilatory failure), MEP (guides cough effectiveness assessment), and peak cough flow. FVC below 50% predicted is a threshold for noninvasive ventilation initiation. SNIP below 40 cmH2O predicts nocturnal hypoventilation. Peak cough flow below 270 L/min indicates the need for cough augmentation. Serial measurements every 2-3 months track progression rate and guide respiratory support decisions.',
         difficulty: 1,
         topic: 'PFT in Specific Diseases',
         isFree: false,
@@ -681,7 +681,7 @@ async function main() {
       },
       {
         question: 'What are the Westgard rules, and how are they applied to PFT quality control?',
-        answer: 'Westgard rules are a set of statistical decision criteria applied to quality control data on Levey-Jennings charts. Common rules include: 1-2s (warning: one QC value exceeds 2 SD), 1-3s (reject: one value exceeds 3 SD), 2-2s (reject: two consecutive values exceed 2 SD in the same direction), R-4s (reject: two consecutive values differ by more than 4 SD), 4-1s (reject: four consecutive values exceed 1 SD in the same direction — detects systematic shift), and 10x (reject: ten consecutive values on one side of the mean — detects systematic bias). In PFT, these rules are applied to bio-QC data and calibration verification results to detect random error, systematic bias, and trends.',
+        answer: 'Westgard rules are a set of statistical decision criteria applied to quality control data on Levey-Jennings charts. Common rules include: 1-2s (warning: one QC value exceeds 2 SD), 1-3s (reject: one value exceeds 3 SD), 2-2s (reject: two consecutive values exceed 2 SD in the same direction), R-4s (reject: two consecutive values differ by more than 4 SD), 4-1s (reject: four consecutive values exceed 1 SD in the same direction - detects systematic shift), and 10x (reject: ten consecutive values on one side of the mean - detects systematic bias). In PFT, these rules are applied to bio-QC data and calibration verification results to detect random error, systematic bias, and trends.',
         difficulty: 2,
         topic: 'Advanced Quality Management',
         isFree: false,
@@ -690,7 +690,7 @@ async function main() {
       },
       {
         question: 'What is the difference between calibration and calibration verification in PFT equipment management?',
-        answer: 'Calibration is the process of adjusting the measurement system to match known reference standards — for example, adjusting a spirometer\'s flow-volume algorithm using a 3-liter calibration syringe to ensure accurate volume and flow measurements. Calibration verification is the process of testing the equipment with a known standard to confirm it continues to measure accurately WITHOUT making adjustments — simply verifying that the existing calibration remains valid. Calibration verification is typically performed daily (pre-session) while full recalibration is performed when verification fails, after repairs, or at manufacturer-recommended intervals.',
+        answer: 'Calibration is the process of adjusting the measurement system to match known reference standards - for example, adjusting a spirometer\'s flow-volume algorithm using a 3-liter calibration syringe to ensure accurate volume and flow measurements. Calibration verification is the process of testing the equipment with a known standard to confirm it continues to measure accurately WITHOUT making adjustments - simply verifying that the existing calibration remains valid. Calibration verification is typically performed daily (pre-session) while full recalibration is performed when verification fails, after repairs, or at manufacturer-recommended intervals.',
         difficulty: 1,
         topic: 'Advanced Quality Management',
         isFree: false,
@@ -699,7 +699,7 @@ async function main() {
       },
       {
         question: 'What are the ISO 15189 requirements relevant to PFT laboratory accreditation?',
-        answer: 'ISO 15189 (Medical laboratories — Requirements for quality and competence) requires: a quality management system with documented procedures, method validation, internal QC (including bio-QC), participation in external quality assessment (proficiency testing), staff competency assessment and continuing education, equipment maintenance and calibration programs, measurement uncertainty estimation, document control, corrective and preventive action processes, internal audits, management review, and patient sample (test result) quality assurance. For PFT specifically, this translates to calibration verification protocols, technologist competency assessment, interpretation oversight, and systematic quality metrics monitoring.',
+        answer: 'ISO 15189 (Medical laboratories - Requirements for quality and competence) requires: a quality management system with documented procedures, method validation, internal QC (including bio-QC), participation in external quality assessment (proficiency testing), staff competency assessment and continuing education, equipment maintenance and calibration programs, measurement uncertainty estimation, document control, corrective and preventive action processes, internal audits, management review, and patient sample (test result) quality assurance. For PFT specifically, this translates to calibration verification protocols, technologist competency assessment, interpretation oversight, and systematic quality metrics monitoring.',
         difficulty: 3,
         topic: 'Advanced Quality Management',
         isFree: false,
@@ -737,7 +737,7 @@ async function main() {
       // --- Surgical Lung Volume Reduction and Transplant Evaluation (8 cards) ---
       {
         question: 'What PFT criteria are used to select candidates for lung volume reduction surgery (LVRS)?',
-        answer: 'Ideal LVRS candidates have: FEV1 20-45% predicted (below 20% only if heterogeneous disease with upper lobe predominance and low exercise capacity), TLC >100% predicted (confirming hyperinflation), RV >150-200% predicted (significant air trapping), DLCO >20% predicted (below 20% with FEV1 below 20% is a contraindication due to high mortality — the NETT trial findings), and upper lobe predominant emphysema on CT. Low post-rehabilitation exercise capacity combined with upper lobe disease identifies the subgroup with greatest survival and functional benefit from LVRS.',
+        answer: 'Ideal LVRS candidates have: FEV1 20-45% predicted (below 20% only if heterogeneous disease with upper lobe predominance and low exercise capacity), TLC >100% predicted (confirming hyperinflation), RV >150-200% predicted (significant air trapping), DLCO >20% predicted (below 20% with FEV1 below 20% is a contraindication due to high mortality - the NETT trial findings), and upper lobe predominant emphysema on CT. Low post-rehabilitation exercise capacity combined with upper lobe disease identifies the subgroup with greatest survival and functional benefit from LVRS.',
         difficulty: 2,
         topic: 'Surgical Lung Reduction and Transplant',
         isFree: false,
@@ -746,7 +746,7 @@ async function main() {
       },
       {
         question: 'What is the role of quantitative CT analysis in conjunction with PFTs for LVRS planning?',
-        answer: 'Quantitative CT analysis complements PFTs by mapping the regional distribution and severity of emphysema using densitometry (voxels below -950 HU at full inspiration represent emphysematous tissue). This identifies target zones for surgical resection and predicts post-operative lung function improvement. Patients with heterogeneous upper lobe predominant disease (confirmed by CT) plus low baseline exercise capacity benefit most from LVRS. PFTs provide the global functional assessment while CT provides the anatomical characterization — both are essential for patient selection, and the combination predicts outcomes better than either alone.',
+        answer: 'Quantitative CT analysis complements PFTs by mapping the regional distribution and severity of emphysema using densitometry (voxels below -950 HU at full inspiration represent emphysematous tissue). This identifies target zones for surgical resection and predicts post-operative lung function improvement. Patients with heterogeneous upper lobe predominant disease (confirmed by CT) plus low baseline exercise capacity benefit most from LVRS. PFTs provide the global functional assessment while CT provides the anatomical characterization - both are essential for patient selection, and the combination predicts outcomes better than either alone.',
         difficulty: 2,
         topic: 'Surgical Lung Reduction and Transplant',
         isFree: false,
@@ -773,7 +773,7 @@ async function main() {
       },
       {
         question: 'What is bronchoscopic lung volume reduction (BLVR), and what PFT criteria guide patient selection?',
-        answer: 'BLVR uses endobronchial valves, coils, or thermal vapor ablation to achieve volume reduction without surgery. Patient selection for endobronchial valve placement requires: FEV1 15-45% predicted, RV >175-200% predicted (severe hyperinflation), TLC >100% predicted, DLCO >20% predicted, heterogeneous emphysema with an intact interlobar fissure (no collateral ventilation to the target lobe — assessed by Chartis catheter measurement), and post-rehabilitation 6MWD >140 meters. Success is defined as an FEV1 improvement of at least 100 mL or 12% and a reduction in RV, and is dependent on achieving lobar atelectasis.',
+        answer: 'BLVR uses endobronchial valves, coils, or thermal vapor ablation to achieve volume reduction without surgery. Patient selection for endobronchial valve placement requires: FEV1 15-45% predicted, RV >175-200% predicted (severe hyperinflation), TLC >100% predicted, DLCO >20% predicted, heterogeneous emphysema with an intact interlobar fissure (no collateral ventilation to the target lobe - assessed by Chartis catheter measurement), and post-rehabilitation 6MWD >140 meters. Success is defined as an FEV1 improvement of at least 100 mL or 12% and a reduction in RV, and is dependent on achieving lobar atelectasis.',
         difficulty: 3,
         topic: 'Surgical Lung Reduction and Transplant',
         isFree: false,
@@ -782,7 +782,7 @@ async function main() {
       },
       {
         question: 'What PFT monitoring is recommended after lung transplantation, and what changes indicate chronic lung allograft dysfunction (CLAD)?',
-        answer: 'Post-transplant PFT monitoring includes spirometry (FEV1 and FVC) at every clinic visit, typically weekly for the first month, then monthly for the first year, then every 2-3 months. DLCO and lung volumes are measured periodically. CLAD is defined as a sustained decline in FEV1 to less than 80% of the post-transplant baseline (best FEV1 from two measurements at least 3 weeks apart, at least 3 months post-transplant). CLAD phenotypes include BOS (obstructive — FEV1/FVC decline) and restrictive allograft syndrome (RAS — FVC decline with or without FEV1/FVC decline, plus restrictive imaging changes). RAS has a worse prognosis than BOS.',
+        answer: 'Post-transplant PFT monitoring includes spirometry (FEV1 and FVC) at every clinic visit, typically weekly for the first month, then monthly for the first year, then every 2-3 months. DLCO and lung volumes are measured periodically. CLAD is defined as a sustained decline in FEV1 to less than 80% of the post-transplant baseline (best FEV1 from two measurements at least 3 weeks apart, at least 3 months post-transplant). CLAD phenotypes include BOS (obstructive - FEV1/FVC decline) and restrictive allograft syndrome (RAS - FVC decline with or without FEV1/FVC decline, plus restrictive imaging changes). RAS has a worse prognosis than BOS.',
         difficulty: 3,
         topic: 'Surgical Lung Reduction and Transplant',
         isFree: false,
@@ -811,7 +811,7 @@ async function main() {
       // --- Integration of Imaging with PFT Findings (10 cards) ---
       {
         question: 'How can high-resolution CT (HRCT) findings help explain discordant PFT results?',
-        answer: 'HRCT can explain discordance between PFT parameters by revealing the anatomical basis. Examples: (1) Normal spirometry but low DLCO — HRCT may show early emphysema or pulmonary vascular disease. (2) Obstruction on spirometry but normal FEV1/FVC — HRCT may show air trapping on expiratory images despite large airway patency. (3) Mixed obstructive-restrictive pattern — HRCT may reveal combined fibrosis and emphysema (CPFE). (4) Preserved volumes but severe gas exchange impairment — HRCT may show diffuse ground-glass opacity (alveolar process) or extensive cystic disease. Imaging provides the structural context that makes sense of physiological measurements.',
+        answer: 'HRCT can explain discordance between PFT parameters by revealing the anatomical basis. Examples: (1) Normal spirometry but low DLCO - HRCT may show early emphysema or pulmonary vascular disease. (2) Obstruction on spirometry but normal FEV1/FVC - HRCT may show air trapping on expiratory images despite large airway patency. (3) Mixed obstructive-restrictive pattern - HRCT may reveal combined fibrosis and emphysema (CPFE). (4) Preserved volumes but severe gas exchange impairment - HRCT may show diffuse ground-glass opacity (alveolar process) or extensive cystic disease. Imaging provides the structural context that makes sense of physiological measurements.',
         difficulty: 2,
         topic: 'Integration of Imaging with PFT',
         isFree: false,
@@ -829,7 +829,7 @@ async function main() {
       },
       {
         question: 'How does parametric response mapping (PRM) from paired inspiratory/expiratory CT scans provide information beyond standard PFTs?',
-        answer: 'PRM is a voxel-by-voxel analysis of co-registered inspiratory and expiratory CT images that classifies each voxel as normal, emphysema (low density on both inspiratory and expiratory scans), or functional small airway disease (fSAD — normal density on inspiration but abnormally low on expiration, indicating air trapping without parenchymal destruction). PRM quantifies the relative contributions of emphysema versus small airway disease to overall obstruction, which standard PFTs cannot separate. fSAD measured by PRM correlates with FEF25-75 decline and may represent a treatable component of COPD that is invisible to routine spirometry.',
+        answer: 'PRM is a voxel-by-voxel analysis of co-registered inspiratory and expiratory CT images that classifies each voxel as normal, emphysema (low density on both inspiratory and expiratory scans), or functional small airway disease (fSAD - normal density on inspiration but abnormally low on expiration, indicating air trapping without parenchymal destruction). PRM quantifies the relative contributions of emphysema versus small airway disease to overall obstruction, which standard PFTs cannot separate. fSAD measured by PRM correlates with FEF25-75 decline and may represent a treatable component of COPD that is invisible to routine spirometry.',
         difficulty: 3,
         topic: 'Integration of Imaging with PFT',
         isFree: false,
@@ -838,7 +838,7 @@ async function main() {
       },
       {
         question: 'What information does hyperpolarized gas MRI provide that conventional PFTs cannot?',
-        answer: 'Hyperpolarized gas MRI (using helium-3 or xenon-129) provides direct visualization of ventilation distribution in the lungs, showing ventilation defects as signal voids. It provides: (1) regional ventilation maps showing the spatial pattern of ventilation inhomogeneity (versus LCI which gives a single global number), (2) apparent diffusion coefficient (ADC) maps quantifying acinar airspace enlargement regionally, (3) xenon-129 dissolved-phase imaging showing gas transfer from airspace to tissue and blood, enabling regional DLCO-like assessment, and (4) ventilation defect percentage — a quantitative measure of the fraction of lung that is poorly ventilated. These regional assessments complement global PFT measurements.',
+        answer: 'Hyperpolarized gas MRI (using helium-3 or xenon-129) provides direct visualization of ventilation distribution in the lungs, showing ventilation defects as signal voids. It provides: (1) regional ventilation maps showing the spatial pattern of ventilation inhomogeneity (versus LCI which gives a single global number), (2) apparent diffusion coefficient (ADC) maps quantifying acinar airspace enlargement regionally, (3) xenon-129 dissolved-phase imaging showing gas transfer from airspace to tissue and blood, enabling regional DLCO-like assessment, and (4) ventilation defect percentage - a quantitative measure of the fraction of lung that is poorly ventilated. These regional assessments complement global PFT measurements.',
         difficulty: 3,
         topic: 'Integration of Imaging with PFT',
         isFree: false,
@@ -874,7 +874,7 @@ async function main() {
       },
       {
         question: 'What is the significance of mosaic attenuation on inspiratory HRCT, and how does it correlate with PFT findings?',
-        answer: 'Mosaic attenuation is a pattern of alternating regions of different lung density on inspiratory CT. It has three causes with different PFT correlations: (1) Small airway disease (obliterative bronchiolitis) — low-density regions represent air trapping with reduced perfusion; PFTs show obstruction and air trapping (elevated RV/TLC). (2) Pulmonary vascular disease — low-density regions reflect oligemia; PFTs show reduced DLCO with preserved volumes. (3) Ground-glass opacity from infiltrative disease — high-density regions are abnormal; PFTs show restriction or mixed pattern with reduced DLCO. Expiratory CT helps differentiate: air trapping accentuates mosaic pattern in airway disease but not in vascular disease.',
+        answer: 'Mosaic attenuation is a pattern of alternating regions of different lung density on inspiratory CT. It has three causes with different PFT correlations: (1) Small airway disease (obliterative bronchiolitis) - low-density regions represent air trapping with reduced perfusion; PFTs show obstruction and air trapping (elevated RV/TLC). (2) Pulmonary vascular disease - low-density regions reflect oligemia; PFTs show reduced DLCO with preserved volumes. (3) Ground-glass opacity from infiltrative disease - high-density regions are abnormal; PFTs show restriction or mixed pattern with reduced DLCO. Expiratory CT helps differentiate: air trapping accentuates mosaic pattern in airway disease but not in vascular disease.',
         difficulty: 3,
         topic: 'Integration of Imaging with PFT',
         isFree: false,
@@ -892,7 +892,7 @@ async function main() {
       },
       {
         question: 'What is electrical impedance tomography (EIT), and how does it relate to pulmonary function assessment?',
-        answer: 'EIT is a radiation-free, bedside imaging technique that measures regional ventilation distribution by detecting changes in thoracic electrical impedance during breathing via an electrode belt placed around the chest. It provides real-time regional ventilation maps showing tidal ventilation distribution, end-expiratory lung impedance changes (correlating with regional FRC changes), and ventilation inhomogeneity indices. EIT relates to PFT assessment by providing continuous, breath-by-breath regional information analogous to what MBW measures globally — ventilation distribution and inhomogeneity. It is particularly valuable in mechanically ventilated patients and for titrating ventilator settings where standard PFTs cannot be performed.',
+        answer: 'EIT is a radiation-free, bedside imaging technique that measures regional ventilation distribution by detecting changes in thoracic electrical impedance during breathing via an electrode belt placed around the chest. It provides real-time regional ventilation maps showing tidal ventilation distribution, end-expiratory lung impedance changes (correlating with regional FRC changes), and ventilation inhomogeneity indices. EIT relates to PFT assessment by providing continuous, breath-by-breath regional information analogous to what MBW measures globally - ventilation distribution and inhomogeneity. It is particularly valuable in mechanically ventilated patients and for titrating ventilator settings where standard PFTs cannot be performed.',
         difficulty: 2,
         topic: 'Integration of Imaging with PFT',
         isFree: false,
@@ -912,7 +912,7 @@ async function main() {
       },
       {
         question: 'What is the role of xenon-129 MRI dissolved-phase imaging in assessing gas transfer, and how does it compare to traditional DLCO?',
-        answer: 'Xenon-129 dissolved-phase MRI exploits the chemical shift of xenon as it moves from the airspace into the alveolar membrane (tissue phase) and then into the red blood cells (RBC phase). The ratio of RBC signal to tissue signal reflects regional gas transfer efficiency. A low RBC/tissue ratio indicates impaired transfer from the alveolar-capillary membrane to the blood — analogous to a reduced DLCO but with regional specificity. Unlike DLCO (a single global value), xenon-129 dissolved-phase imaging maps gas transfer heterogeneity across the lungs, identifying regions of impaired transfer that may guide targeted therapy or explain disproportionate gas exchange impairment relative to lung volumes.',
+        answer: 'Xenon-129 dissolved-phase MRI exploits the chemical shift of xenon as it moves from the airspace into the alveolar membrane (tissue phase) and then into the red blood cells (RBC phase). The ratio of RBC signal to tissue signal reflects regional gas transfer efficiency. A low RBC/tissue ratio indicates impaired transfer from the alveolar-capillary membrane to the blood - analogous to a reduced DLCO but with regional specificity. Unlike DLCO (a single global value), xenon-129 dissolved-phase imaging maps gas transfer heterogeneity across the lungs, identifying regions of impaired transfer that may guide targeted therapy or explain disproportionate gas exchange impairment relative to lung volumes.',
         difficulty: 3,
         topic: 'Integration of Imaging with PFT',
         isFree: false,

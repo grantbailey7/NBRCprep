@@ -8,7 +8,7 @@ async function main() {
   console.log('Seeding CPFT mini exams 6-10...')
 
   // ──────────────────────────────────────────────
-  // EXAM 6 — Answer key: C A D B A C D B C A D B A C D B A D C B
+  // EXAM 6 - Answer key: C A D B A C D B C A D B A C D B A D C B
   //   A: q2,5,10,13,17  B: q4,8,12,16,20  C: q1,6,9,14,19  D: q3,7,11,15,18
   // ──────────────────────────────────────────────
   const exam6 = await prisma.miniExam.create({
@@ -226,7 +226,7 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 7 — Answer key: D A B C D A C B A D C B D A B C A D B C
+  // EXAM 7 - Answer key: D A B C D A C B A D C B D A B C A D B C
   //   A: q2,6,9,14,17  B: q3,8,11,15,19  C: q4,7,13,16,20  D: q1,5,10,12,18
   // ──────────────────────────────────────────────
   const exam7 = await prisma.miniExam.create({
@@ -444,7 +444,7 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 8 — Answer key: B D C A B D A C B A D C A B D C B A C D
+  // EXAM 8 - Answer key: B D C A B D A C B A D C A B D C B A C D
   //   A: q4,7,10,13,18  B: q1,5,9,14,17  C: q3,8,12,16,19  D: q2,6,11,15,20
   // ──────────────────────────────────────────────
   const exam8 = await prisma.miniExam.create({
@@ -662,7 +662,7 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 9 — Answer key: A C D B A C B D A C D B A C B D A B D C
+  // EXAM 9 - Answer key: A C D B A C B D A C D B A C B D A B D C
   //   A: q1,5,9,13,17  B: q4,7,12,15,18  C: q2,6,10,14,20  D: q3,8,11,16,19
   // ──────────────────────────────────────────────
   const exam9 = await prisma.miniExam.create({
@@ -880,8 +880,8 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 10 — Answer key: D B A C B D C A D B C A B D A C D B A C
-  //   A: q3,8,15,17,19  B: q2,5,10,13,18  C: q4,7,11,16,20  D: q1,6,9,14,17 — wait, let me fix
+  // EXAM 10 - Answer key: D B A C B D C A D B C A B D A C D B A C
+  //   A: q3,8,15,17,19  B: q2,5,10,13,18  C: q4,7,11,16,20  D: q1,6,9,14,17 - wait, let me fix
   //   A: q3,8,12,15,19  B: q2,5,10,13,18  C: q4,7,11,16,20  D: q1,6,9,14,17
   // ──────────────────────────────────────────────
   const exam10 = await prisma.miniExam.create({

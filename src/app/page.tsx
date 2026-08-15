@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/Footer'
 import { getAuthSession } from '@/lib/auth'
 
 export const metadata: Metadata = {
-  title: 'NBRCprep — Pass the NBRC. The First Time.',
+  title: 'NBRCprep - Pass the NBRC. The First Time.',
   description:
     'NBRCprep is the #1 NBRC study platform. 2,400 original flashcards, 180 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
   alternates: { canonical: 'https://nbrcprep.app' },
@@ -78,7 +78,7 @@ const TESTIMONIALS = [
   { text: "NBRCprep made the TMC feel manageable for the first time", author: "Alex M., RRT" },
   { text: "The explanations are better than anything else I've used", author: "Jordan T." },
   { text: "Passed the TMC on my first attempt after 3 weeks", author: "Sam K., CRT" },
-  { text: "The mini exams are brutally hard — exactly what I needed", author: "Morgan L." },
+  { text: "The mini exams are brutally hard - exactly what I needed", author: "Morgan L." },
   { text: "Best value study tool for respiratory therapists. Period.", author: "Taylor B." },
   { text: "Finally passed after failing twice. This site is the difference maker", author: "Riley S., RRT" },
   { text: "The metrics dashboard kept me motivated every single day", author: "Drew F." },
@@ -117,11 +117,11 @@ export default async function HomePage() {
           </h1>
           <p className="mt-6 text-xl text-brand-gray-500 max-w-2xl mx-auto leading-relaxed">
             NBRCprep gives you the sharpest flashcards, the hardest practice exams, and the
-            metrics to track exactly where you stand — across all 6 NBRC divisions.
+            metrics to track exactly where you stand - across all 6 NBRC divisions.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/signup" className="btn-primary text-base px-8 py-4 w-full sm:w-auto">
-              Start Free — No Card Required
+              Start Free - No Card Required
             </Link>
             <Link href="/pricing" className="btn-outline text-base px-8 py-4 w-full sm:w-auto">
               View Plans
@@ -246,7 +246,7 @@ export default async function HomePage() {
               {
                 step: '04',
                 title: 'Track everything on your Dashboard',
-                desc: 'Your Metrics Dashboard shows per-division progress bars, exam history, average scores, and streaks — so you always know where you stand.',
+                desc: 'Your Metrics Dashboard shows per-division progress bars, exam history, average scores, and streaks - so you always know where you stand.',
               },
             ].map((step) => (
               <div key={step.step} className="flex gap-6">
@@ -393,7 +393,7 @@ export default async function HomePage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-black text-white">Ready to pass the NBRC?</h2>
           <p className="mt-3 text-white/80">
-            Start with the free tier today — no credit card required.
+            Start with the free tier today - no credit card required.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/signup" className="btn-secondary text-base px-8 py-4 w-full sm:w-auto">

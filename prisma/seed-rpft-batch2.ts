@@ -19,7 +19,7 @@ async function main() {
       },
       {
         question: 'What does the VE/VCO2 slope represent during CPET, and what value suggests an abnormal ventilatory response?',
-        answer: 'The VE/VCO2 slope represents ventilatory efficiency — how much ventilation is required to eliminate a given amount of CO2. A slope greater than 34 is generally considered abnormal, and values above 45 indicate severe ventilatory inefficiency, often seen in heart failure or pulmonary vascular disease.',
+        answer: 'The VE/VCO2 slope represents ventilatory efficiency - how much ventilation is required to eliminate a given amount of CO2. A slope greater than 34 is generally considered abnormal, and values above 45 indicate severe ventilatory inefficiency, often seen in heart failure or pulmonary vascular disease.',
         difficulty: 2,
         topic: 'Cardiopulmonary Exercise Testing',
         isFree: false,
@@ -293,7 +293,7 @@ async function main() {
       },
       {
         question: 'What is the difference between static and dynamic lung compliance?',
-        answer: 'Static compliance (Cst) is measured at points of zero airflow and reflects only elastic properties of the lung. Dynamic compliance (Cdyn) is measured during tidal breathing and includes both elastic and resistive components. Frequency dependence of compliance — where Cdyn decreases at higher breathing rates — indicates small airway disease because affected regions fill and empty with longer time constants.',
+        answer: 'Static compliance (Cst) is measured at points of zero airflow and reflects only elastic properties of the lung. Dynamic compliance (Cdyn) is measured during tidal breathing and includes both elastic and resistive components. Frequency dependence of compliance - where Cdyn decreases at higher breathing rates - indicates small airway disease because affected regions fill and empty with longer time constants.',
         difficulty: 2,
         topic: 'Respiratory Mechanics',
         isFree: false,
@@ -484,7 +484,7 @@ async function main() {
       },
       {
         question: 'What is the oxygen extraction ratio (O2ER), and what does an elevated value indicate?',
-        answer: 'O2ER = (CaO2 - CvO2) / CaO2, or approximately (SaO2 - SvO2) / SaO2. Normal O2ER is 22-30%. An elevated O2ER (greater than 30%) indicates that tissues are extracting a greater-than-normal fraction of delivered oxygen, suggesting inadequate oxygen delivery relative to metabolic demand — as seen in low cardiac output states, severe anemia, or shock.',
+        answer: 'O2ER = (CaO2 - CvO2) / CaO2, or approximately (SaO2 - SvO2) / SaO2. Normal O2ER is 22-30%. An elevated O2ER (greater than 30%) indicates that tissues are extracting a greater-than-normal fraction of delivered oxygen, suggesting inadequate oxygen delivery relative to metabolic demand - as seen in low cardiac output states, severe anemia, or shock.',
         difficulty: 2,
         topic: 'Advanced Blood Gas Analysis',
         isFree: false,
@@ -512,7 +512,7 @@ async function main() {
       },
       {
         question: 'What statistical test is most appropriate for comparing FEV1 values before and after an intervention in the same group of patients?',
-        answer: 'A paired t-test (if data are normally distributed) or a Wilcoxon signed-rank test (if data are not normally distributed). These are used because the measurements are paired — each subject serves as their own control, and the analysis examines within-subject differences. An unpaired t-test would be incorrect because it ignores the paired structure.',
+        answer: 'A paired t-test (if data are normally distributed) or a Wilcoxon signed-rank test (if data are not normally distributed). These are used because the measurements are paired - each subject serves as their own control, and the analysis examines within-subject differences. An unpaired t-test would be incorrect because it ignores the paired structure.',
         difficulty: 2,
         topic: 'Research Methodology and Statistics',
         isFree: false,
@@ -521,7 +521,7 @@ async function main() {
       },
       {
         question: 'What is a Bland-Altman plot, and how is it used in PFT research?',
-        answer: 'A Bland-Altman plot graphs the difference between two measurements (or two methods) against their mean. It is used to assess agreement between methods — for example, comparing DLCO values from two different devices. The plot shows systematic bias (mean difference), limits of agreement (mean difference plus or minus 1.96 SD), and whether discrepancies vary with the magnitude of measurement. It is preferred over correlation for method comparison.',
+        answer: 'A Bland-Altman plot graphs the difference between two measurements (or two methods) against their mean. It is used to assess agreement between methods - for example, comparing DLCO values from two different devices. The plot shows systematic bias (mean difference), limits of agreement (mean difference plus or minus 1.96 SD), and whether discrepancies vary with the magnitude of measurement. It is preferred over correlation for method comparison.',
         difficulty: 3,
         topic: 'Research Methodology and Statistics',
         isFree: false,
@@ -566,7 +566,7 @@ async function main() {
       },
       {
         question: 'What is the minimal clinically important difference (MCID) for FEV1 in COPD?',
-        answer: 'The MCID for FEV1 in COPD is generally accepted as 100-140 mL (absolute change). This represents the smallest change that is perceived as meaningful by patients and clinicians, beyond statistical significance. The MCID helps interpret treatment effects in clinical trials — a statistically significant change smaller than the MCID may not be clinically relevant.',
+        answer: 'The MCID for FEV1 in COPD is generally accepted as 100-140 mL (absolute change). This represents the smallest change that is perceived as meaningful by patients and clinicians, beyond statistical significance. The MCID helps interpret treatment effects in clinical trials - a statistically significant change smaller than the MCID may not be clinically relevant.',
         difficulty: 2,
         topic: 'Research Methodology and Statistics',
         isFree: false,
@@ -658,7 +658,7 @@ async function main() {
       },
       {
         question: 'What is the significance of a reduced DLCO with increased KCO (DLCO/VA)?',
-        answer: 'A reduced DLCO with elevated KCO occurs when lung volume is reduced but the remaining lung parenchyma is normal or hyperperfused — classically seen in pneumonectomy, lobectomy, neuromuscular disease with low TLC, chest wall restriction, or suboptimal inspiration during testing. The high KCO indicates that the available alveolar-capillary membrane functions normally or has increased capillary blood volume per unit of ventilated lung.',
+        answer: 'A reduced DLCO with elevated KCO occurs when lung volume is reduced but the remaining lung parenchyma is normal or hyperperfused - classically seen in pneumonectomy, lobectomy, neuromuscular disease with low TLC, chest wall restriction, or suboptimal inspiration during testing. The high KCO indicates that the available alveolar-capillary membrane functions normally or has increased capillary blood volume per unit of ventilated lung.',
         difficulty: 3,
         topic: 'Complex Case Interpretation',
         isFree: false,
@@ -667,7 +667,7 @@ async function main() {
       },
       {
         question: 'How does the pattern of DLCO change in pulmonary hemorrhage compared to other causes of reduced DLCO?',
-        answer: 'In acute pulmonary hemorrhage (e.g., Goodpasture syndrome, DAH), DLCO is paradoxically increased because free hemoglobin in the alveolar space avidly binds carbon monoxide, increasing CO uptake. This is the opposite of most parenchymal diseases that reduce DLCO. Serial DLCO measurements can track hemorrhage activity — rising DLCO suggests active bleeding, falling DLCO suggests resolution.',
+        answer: 'In acute pulmonary hemorrhage (e.g., Goodpasture syndrome, DAH), DLCO is paradoxically increased because free hemoglobin in the alveolar space avidly binds carbon monoxide, increasing CO uptake. This is the opposite of most parenchymal diseases that reduce DLCO. Serial DLCO measurements can track hemorrhage activity - rising DLCO suggests active bleeding, falling DLCO suggests resolution.',
         difficulty: 2,
         topic: 'Complex Case Interpretation',
         isFree: false,
@@ -713,7 +713,7 @@ async function main() {
       },
       {
         question: 'How does dynamic hyperinflation during exercise affect CPET results in COPD patients?',
-        answer: 'During exercise in COPD, expiratory flow limitation prevents complete exhalation, causing progressive air trapping (increased EELV). This reduces inspiratory capacity (IC), limits tidal volume expansion, increases the work of breathing, and contributes to dyspnea and exercise limitation. Serial IC measurements during exercise quantify dynamic hyperinflation — a decrease in IC greater than 150 mL or 10% from baseline is considered significant.',
+        answer: 'During exercise in COPD, expiratory flow limitation prevents complete exhalation, causing progressive air trapping (increased EELV). This reduces inspiratory capacity (IC), limits tidal volume expansion, increases the work of breathing, and contributes to dyspnea and exercise limitation. Serial IC measurements during exercise quantify dynamic hyperinflation - a decrease in IC greater than 150 mL or 10% from baseline is considered significant.',
         difficulty: 2,
         topic: 'Cardiopulmonary Exercise Testing',
         isFree: false,
@@ -722,7 +722,7 @@ async function main() {
       },
       {
         question: 'What is the heart rate reserve (HRR) at peak exercise, and what does an abnormally high HRR indicate?',
-        answer: 'HRR = (predicted max HR - peak exercise HR) / predicted max HR x 100, where predicted max HR = 220 - age. Normal subjects achieve greater than 80% of predicted max HR, yielding HRR less than 20%. An abnormally high HRR (greater than 20%) at peak exercise with low peak VO2 suggests non-cardiovascular limitation — either ventilatory limitation, deconditioning, musculoskeletal limitation, or poor effort. A very low HRR with low peak VO2 supports chronotropic incompetence if beta-blockers have been excluded.',
+        answer: 'HRR = (predicted max HR - peak exercise HR) / predicted max HR x 100, where predicted max HR = 220 - age. Normal subjects achieve greater than 80% of predicted max HR, yielding HRR less than 20%. An abnormally high HRR (greater than 20%) at peak exercise with low peak VO2 suggests non-cardiovascular limitation - either ventilatory limitation, deconditioning, musculoskeletal limitation, or poor effort. A very low HRR with low peak VO2 supports chronotropic incompetence if beta-blockers have been excluded.',
         difficulty: 2,
         topic: 'Cardiopulmonary Exercise Testing',
         isFree: false,
@@ -741,7 +741,7 @@ async function main() {
       },
       {
         question: 'How do you interpret a blood gas showing pH 7.28, PaCO2 22 mmHg, HCO3- 10 mEq/L, and an anion gap of 24?',
-        answer: 'Primary disorder: high anion gap metabolic acidosis (low pH, low HCO3-, elevated anion gap). Expected respiratory compensation: PaCO2 = (1.5 x 10) + 8 = 23 (+/- 2). The measured PaCO2 of 22 is within the expected range, so respiratory compensation is appropriate — no additional respiratory disorder. The delta-delta calculation: delta AG = 24-12 = 12, delta HCO3- = 24-10 = 14. Delta ratio = 12/14 = 0.86, suggesting a concurrent non-anion-gap metabolic acidosis.',
+        answer: 'Primary disorder: high anion gap metabolic acidosis (low pH, low HCO3-, elevated anion gap). Expected respiratory compensation: PaCO2 = (1.5 x 10) + 8 = 23 (+/- 2). The measured PaCO2 of 22 is within the expected range, so respiratory compensation is appropriate - no additional respiratory disorder. The delta-delta calculation: delta AG = 24-12 = 12, delta HCO3- = 24-10 = 14. Delta ratio = 12/14 = 0.86, suggesting a concurrent non-anion-gap metabolic acidosis.',
         difficulty: 3,
         topic: 'Advanced Blood Gas Analysis',
         isFree: false,
@@ -862,7 +862,7 @@ async function main() {
       },
       {
         question: 'A patient has a DLCO of 40% predicted but a KCO of 110% predicted. TLC is 55% predicted. What does this suggest?',
-        answer: 'This pattern — low DLCO, high KCO, low TLC — is characteristic of extraparenchymal restriction. The lung tissue itself is healthy (high KCO indicates normal gas transfer per unit of ventilated alveolar volume), but accessible lung volume is reduced. Causes include neuromuscular disease (e.g., ALS, myasthenia gravis), chest wall deformity (kyphoscoliosis), pleural disease, or obesity. This contrasts with parenchymal restriction (ILD) where both DLCO and KCO are reduced.',
+        answer: 'This pattern - low DLCO, high KCO, low TLC - is characteristic of extraparenchymal restriction. The lung tissue itself is healthy (high KCO indicates normal gas transfer per unit of ventilated alveolar volume), but accessible lung volume is reduced. Causes include neuromuscular disease (e.g., ALS, myasthenia gravis), chest wall deformity (kyphoscoliosis), pleural disease, or obesity. This contrasts with parenchymal restriction (ILD) where both DLCO and KCO are reduced.',
         difficulty: 2,
         topic: 'Complex Case Interpretation',
         isFree: false,
@@ -881,7 +881,7 @@ async function main() {
       // --- Additional Advanced Topics ---
       {
         question: 'What is the diffusing capacity for nitric oxide (DLNO), and how does combining DLNO with DLCO separate membrane and vascular components?',
-        answer: 'DLNO uses nitric oxide instead of CO. Because NO has approximately 280 times greater affinity for hemoglobin than CO, the capillary blood resistance to NO uptake is negligible — DLNO reflects primarily the alveolar membrane diffusing capacity (Dm). By measuring both DLCO and DLNO simultaneously, one can partition diffusing capacity into membrane (Dm) and capillary blood volume (Vc) components without needing two different FIO2 levels as in the classic Roughton-Forster method.',
+        answer: 'DLNO uses nitric oxide instead of CO. Because NO has approximately 280 times greater affinity for hemoglobin than CO, the capillary blood resistance to NO uptake is negligible - DLNO reflects primarily the alveolar membrane diffusing capacity (Dm). By measuring both DLCO and DLNO simultaneously, one can partition diffusing capacity into membrane (Dm) and capillary blood volume (Vc) components without needing two different FIO2 levels as in the classic Roughton-Forster method.',
         difficulty: 3,
         topic: 'Advanced Diffusing Capacity',
         isFree: false,

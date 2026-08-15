@@ -551,7 +551,7 @@ async function main() {
       },
       {
         question: 'A patient on 40% FiO2 has an ABG showing PaO2 of 250 mmHg. What pre-analytical error should be suspected?',
-        answer: 'A PaO2 of 250 mmHg on 40% FiO2 is physiologically implausible (expected maximum ~235 mmHg even with perfect gas exchange). Air contamination of the sample is the most likely cause — a large air bubble equilibrated the PaO2 toward room air levels, or the sample was exposed to air during collection or handling. The sample should be redrawn with careful attention to air exclusion.',
+        answer: 'A PaO2 of 250 mmHg on 40% FiO2 is physiologically implausible (expected maximum ~235 mmHg even with perfect gas exchange). Air contamination of the sample is the most likely cause - a large air bubble equilibrated the PaO2 toward room air levels, or the sample was exposed to air during collection or handling. The sample should be redrawn with careful attention to air exclusion.',
         difficulty: 3,
         topic: 'Arterial Blood Gas Quality',
         isFree: false,
@@ -589,7 +589,7 @@ async function main() {
       },
       {
         question: 'Why is specific airway conductance (sGaw) preferred over Raw for comparing results between patients?',
-        answer: 'Airway resistance is inversely related to lung volume — at higher lung volumes, airways are more distended and resistance is lower. sGaw corrects for this volume dependence by dividing conductance (1/Raw) by the thoracic gas volume at which it was measured. This allows meaningful comparisons between patients of different sizes and lung volumes.',
+        answer: 'Airway resistance is inversely related to lung volume - at higher lung volumes, airways are more distended and resistance is lower. sGaw corrects for this volume dependence by dividing conductance (1/Raw) by the thoracic gas volume at which it was measured. This allows meaningful comparisons between patients of different sizes and lung volumes.',
         difficulty: 2,
         topic: 'Body Plethysmography Airway Resistance',
         isFree: false,
@@ -726,7 +726,7 @@ async function main() {
       },
       {
         question: 'What is the VE/VCO2 slope and what does an elevated value indicate?',
-        answer: 'The VE/VCO2 slope represents the ventilatory efficiency — how many liters of ventilation are required to eliminate one liter of CO2. Normal values are approximately 25-30. An elevated slope (>34-36) indicates ventilatory inefficiency, commonly seen in heart failure, pulmonary hypertension, and increased dead space ventilation.',
+        answer: 'The VE/VCO2 slope represents the ventilatory efficiency - how many liters of ventilation are required to eliminate one liter of CO2. Normal values are approximately 25-30. An elevated slope (>34-36) indicates ventilatory inefficiency, commonly seen in heart failure, pulmonary hypertension, and increased dead space ventilation.',
         difficulty: 3,
         topic: 'Cardiopulmonary Exercise Testing',
         isFree: false,
@@ -791,7 +791,7 @@ async function main() {
       },
       {
         question: 'What role does the pulmonary function technologist play in disability evaluations?',
-        answer: 'The technologist ensures tests are performed to the highest quality standards, documents patient effort and cooperation, notes any factors affecting test validity, maintains equipment calibration records, and provides complete technical quality information. The technologist does NOT make impairment or disability determinations — that is the role of the physician and/or administrative body.',
+        answer: 'The technologist ensures tests are performed to the highest quality standards, documents patient effort and cooperation, notes any factors affecting test validity, maintains equipment calibration records, and provides complete technical quality information. The technologist does NOT make impairment or disability determinations - that is the role of the physician and/or administrative body.',
         difficulty: 1,
         topic: 'Disability and Impairment Evaluation',
         isFree: false,
@@ -874,7 +874,7 @@ async function main() {
       },
       {
         question: 'During CPET, a patient achieves 95% of predicted max heart rate, breathing reserve of 40%, but VO2max is only 60% predicted. Oxygen pulse plateaus at 8 mL/beat. What is the most likely cause of exercise limitation?',
-        answer: 'The normal breathing reserve (40%) excludes pulmonary limitation. Achieving 95% predicted max heart rate indicates adequate effort. The reduced VO2max with an early oxygen pulse plateau suggests cardiovascular limitation — specifically impaired stroke volume response (possible left ventricular dysfunction, ischemia, or valvular disease). The cardiac output cannot increase sufficiently to meet metabolic demand.',
+        answer: 'The normal breathing reserve (40%) excludes pulmonary limitation. Achieving 95% predicted max heart rate indicates adequate effort. The reduced VO2max with an early oxygen pulse plateau suggests cardiovascular limitation - specifically impaired stroke volume response (possible left ventricular dysfunction, ischemia, or valvular disease). The cardiac output cannot increase sufficiently to meet metabolic demand.',
         difficulty: 3,
         topic: 'Board-Style Integration',
         isFree: false,

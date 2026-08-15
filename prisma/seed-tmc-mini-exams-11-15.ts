@@ -8,7 +8,7 @@ async function main() {
   console.log('Seeding TMC mini exams 11-15...')
 
   // ──────────────────────────────────────────────
-  // EXAM 11 — Answer key: C B A D C A B D A C D B A D B C D A B C
+  // EXAM 11 - Answer key: C B A D C A B D A C D B A D B C D A B C
   //   A: q3,6,9,13,18  B: q2,7,12,15,19  C: q1,5,10,16,20  D: q4,8,11,14,17
   // ──────────────────────────────────────────────
   const exam11 = await prisma.miniExam.create({
@@ -228,7 +228,7 @@ async function main() {
   console.log('  ✓ Exam 11 seeded (20 questions)')
 
   // ──────────────────────────────────────────────
-  // EXAM 12 — Answer key: D A C B A D B C D A B C A D C B D A C B
+  // EXAM 12 - Answer key: D A C B A D B C D A B C A D C B D A C B
   //   A: q2,5,10,13,18  B: q4,7,11,16,20  C: q3,8,12,15,19  D: q1,6,9,14,17
   // ──────────────────────────────────────────────
   const exam12 = await prisma.miniExam.create({
@@ -448,7 +448,7 @@ async function main() {
   console.log('  ✓ Exam 12 seeded (20 questions)')
 
   // ──────────────────────────────────────────────
-  // EXAM 13 — Answer key: B C D A C B D D C A D B C D A B A C B D
+  // EXAM 13 - Answer key: B C D A C B D D C A D B C D A B A C B D
   //   A: q4,10,15,17,19 → wait, let me recount
   //   Actually: q1=B, q2=C, q3=D, q4=A, q5=C, q6=B, q7=D, q8=D, q9=C, q10=A, q11=D, q12=B, q13=C, q14=D, q15=A, q16=B, q17=A, q18=C, q19=B → wait that's only 4 B before 19
   //   Let me recount: B: q1,6,12,16,19 = 5. But q19=B means I need q20=D
@@ -674,7 +674,7 @@ async function main() {
   console.log('  ✓ Exam 13 seeded (20 questions)')
 
   // ──────────────────────────────────────────────
-  // EXAM 14 — Answer key: C A B D B D A C D B A C D B D A C B A C
+  // EXAM 14 - Answer key: C A B D B D A C D B A C D B D A C B A C
   //   A: q2,7,11,16,19  B: q3,5,10,14,18  C: q1,8,12,17,20  D: q4,6,9,13,15
   // ──────────────────────────────────────────────
   const exam14 = await prisma.miniExam.create({
@@ -894,7 +894,7 @@ async function main() {
   console.log('  ✓ Exam 14 seeded (20 questions)')
 
   // ──────────────────────────────────────────────
-  // EXAM 15 — Answer key: B D A C D B C A B D C A D B A C B D C A
+  // EXAM 15 - Answer key: B D A C D B C A B D C A D B A C B D C A
   //   A: q3,8,12,15,20  B: q1,6,9,14,17  C: q4,7,11,16,19  D: q2,5,10,13,18
   // ──────────────────────────────────────────────
   const exam15 = await prisma.miniExam.create({

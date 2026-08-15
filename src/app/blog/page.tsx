@@ -8,7 +8,7 @@ import { prisma } from '@/lib/prisma'
 
 
 export const metadata: Metadata = {
-  title: 'NBRC Exam Blog — Study Tips & Strategies',
+  title: 'NBRC Exam Blog - Study Tips & Strategies',
   description: 'Free NBRC exam tips, TMC study strategies, and respiratory therapy board prep guides. Expert advice on passing the TMC, CRT, RRT, and specialty NBRC exams.',
   alternates: { canonical: 'https://nbrcprep.app/blog' },
 }

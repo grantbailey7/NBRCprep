@@ -13,11 +13,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'NBRCprep — Pass the NBRC with Confidence',
+    default: 'NBRCprep - Pass the NBRC with Confidence',
     template: '%s | NBRCprep',
   },
   description:
-    'Pass the NBRC exam on your first try. 2,400+ flashcards, 180 timed practice tests, and full-length TMC exam simulations. The #1 respiratory therapy exam prep and NBRC study guide — start free today.',
+    'Pass the NBRC exam on your first try. 2,400+ flashcards, 180 timed practice tests, and full-length TMC exam simulations. The #1 respiratory therapy exam prep and NBRC study guide - start free today.',
   keywords: [
     'NBRC exam prep',
     'respiratory therapy exam',
@@ -39,16 +39,16 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://nbrcprep.app' },
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'NBRCprep — Pass the NBRC with Confidence',
+    title: 'NBRCprep - Pass the NBRC with Confidence',
     description: '2,400 original flashcards and 180 practice exams for all 6 NBRC divisions. Start free, no card required.',
     type: 'website',
     url: 'https://nbrcprep.app',
     siteName: 'NBRCprep',
-    images: [{ url: '/api/og', width: 1200, height: 630, alt: 'NBRCprep — NBRC Study Platform' }],
+    images: [{ url: '/api/og', width: 1200, height: 630, alt: 'NBRCprep - NBRC Study Platform' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NBRCprep — Pass the NBRC with Confidence',
+    title: 'NBRCprep - Pass the NBRC with Confidence',
     description: '2,400 original flashcards and 180 practice exams for all 6 NBRC divisions.',
     images: ['/api/og'],
   },
@@ -71,7 +71,7 @@ const websiteSchema = {
   '@type': 'WebSite',
   name: 'NBRCprep',
   url: 'https://nbrcprep.app',
-  description: 'NBRC exam prep — flashcards, mini exams, and full-length simulations for all 6 divisions.',
+  description: 'NBRC exam prep - flashcards, mini exams, and full-length simulations for all 6 divisions.',
   potentialAction: {
     '@type': 'SearchAction',
     target: { '@type': 'EntryPoint', urlTemplate: 'https://nbrcprep.app/divisions/{division}' },

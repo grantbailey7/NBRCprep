@@ -8,7 +8,7 @@ async function main() {
   console.log('Seeding TMC mini exams 6-10...')
 
   // ──────────────────────────────────────────────
-  // EXAM 6 — Answer key: B D A C A D B C A D C B D A C B A D C B
+  // EXAM 6 - Answer key: B D A C A D B C A D C B D A C B A D C B
   //   A: q3,5,9,14,17  B: q1,7,12,16,20  C: q4,8,11,15,19  D: q2,6,10,13,18
   // ──────────────────────────────────────────────
   const exam6 = await prisma.miniExam.create({
@@ -226,7 +226,7 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 7 — Answer key: C A D B C A D B A C D B A D B C A B D C
+  // EXAM 7 - Answer key: C A D B C A D B A C D B A D B C A B D C
   //   A: q2,6,9,13,17  B: q4,8,12,15,18  C: q1,5,10,16,20  D: q3,7,11,14,19
   // ──────────────────────────────────────────────
   const exam7 = await prisma.miniExam.create({
@@ -444,7 +444,7 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 8 — Answer key: D B C A B C A D B A D C A B D C D A B C
+  // EXAM 8 - Answer key: D B C A B C A D B A D C A B D C D A B C
   //   A: q4,7,10,13,18  B: q2,5,9,14,19  C: q3,6,12,16,20  D: q1,8,11,15,17
   // ──────────────────────────────────────────────
   const exam8 = await prisma.miniExam.create({
@@ -662,7 +662,7 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 9 — Answer key: A C B D C B D A C B A D B C A D B A D C
+  // EXAM 9 - Answer key: A C B D C B D A C B A D B C A D B A D C
   //   A: q1,8,11,15,18  B: q3,6,10,13,17  C: q2,5,9,14,20  D: q4,7,12,16,19
   // ──────────────────────────────────────────────
   const exam9 = await prisma.miniExam.create({
@@ -880,7 +880,7 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 10 — Answer key: C D A B D A C B D A B C D A B C A D B C
+  // EXAM 10 - Answer key: C D A B D A C B D A B C D A B C A D B C
   //   A: q3,6,10,14,17  B: q4,8,11,15,19  C: q1,7,12,16,20  D: q2,5,9,13,18
   // ──────────────────────────────────────────────
   const exam10 = await prisma.miniExam.create({

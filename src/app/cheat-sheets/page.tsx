@@ -6,7 +6,7 @@ import { SeoIndexPage } from '@/components/seo/SeoIndexPage'
 
 export const metadata: Metadata = {
   title: 'Respiratory Therapy Cheat Sheets',
-  description: 'Quick-reference cheat sheets for NBRC exams — ABG interpretation, ventilator modes, pharmacology, PFT values, and more.',
+  description: 'Quick-reference cheat sheets for NBRC exams - ABG interpretation, ventilator modes, pharmacology, PFT values, and more.',
   alternates: { canonical: 'https://nbrcprep.app/cheat-sheets' },
 }
 

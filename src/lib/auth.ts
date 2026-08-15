@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs'
 import { prisma } from './prisma'
 
 export const authOptions: NextAuthOptions = {
-  // @ts-ignore — PrismaAdapter type compatibility
+  // @ts-ignore - PrismaAdapter type compatibility
   adapter: PrismaAdapter(prisma),
   session: {
     strategy: 'jwt',

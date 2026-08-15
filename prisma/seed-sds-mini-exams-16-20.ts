@@ -286,7 +286,7 @@ async function main() {
         },
         correctChoice: 'A',
         explanationCorrect:
-          'Severe sleep inertia (also called sleep drunkenness) — prolonged difficulty transitioning to full alertness upon awakening — is a hallmark feature of idiopathic hypersomnia that is not typically seen in insufficient sleep syndrome. In insufficient sleep syndrome, extending sleep duration typically resolves the excessive sleepiness.',
+          'Severe sleep inertia (also called sleep drunkenness) - prolonged difficulty transitioning to full alertness upon awakening - is a hallmark feature of idiopathic hypersomnia that is not typically seen in insufficient sleep syndrome. In insufficient sleep syndrome, extending sleep duration typically resolves the excessive sleepiness.',
         explanationWrong:
           'Improvement with extended sleep is characteristic of insufficient sleep syndrome, not IH. Excessive caffeine use is nonspecific and seen in many conditions. A normal MSLT with extended sleep would suggest insufficient sleep syndrome rather than IH.',
         topic: 'Idiopathic hypersomnia',

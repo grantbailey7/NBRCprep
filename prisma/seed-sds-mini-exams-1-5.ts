@@ -62,10 +62,10 @@ async function main() {
         questionText:
           'A patient undergoes a diagnostic PSG and has 45 obstructive apneas, 30 obstructive hypopneas, and 5 central apneas during 400 minutes of total sleep time. What is the patient\'s AHI and OSA severity classification?',
         choices: {
-          A: '12.0 events/hour — moderate OSA',
-          B: '18.75 events/hour — moderate OSA',
-          C: '12.0 events/hour — moderate OSA',
-          D: '20.0 events/hour — severe OSA',
+          A: '12.0 events/hour - moderate OSA',
+          B: '18.75 events/hour - moderate OSA',
+          C: '12.0 events/hour - moderate OSA',
+          D: '20.0 events/hour - severe OSA',
         },
         correctChoice: 'C',
         explanationCorrect:
@@ -125,7 +125,7 @@ async function main() {
         explanationCorrect:
           'In healthy young adults, the first and second sleep cycles of the night contain the largest amount of stage N3 (slow-wave) sleep. As the night progresses, N3 diminishes and REM periods become longer and more frequent.',
         explanationWrong:
-          'The first REM period is typically the shortest, not the longest — REM periods lengthen as the night progresses. Stage N2 normally occupies approximately 45–55% of total sleep time, not 5%. Normal REM sleep latency is typically 70–100 minutes, but stating 60–120 minutes is a broader range that overlaps with the description of the first cycle having the most slow-wave sleep being the more definitive answer.',
+          'The first REM period is typically the shortest, not the longest - REM periods lengthen as the night progresses. Stage N2 normally occupies approximately 45–55% of total sleep time, not 5%. Normal REM sleep latency is typically 70–100 minutes, but stating 60–120 minutes is a broader range that overlaps with the description of the first cycle having the most slow-wave sleep being the more definitive answer.',
         topic: 'Sleep architecture and normal sleep patterns',
       },
       {
@@ -429,7 +429,7 @@ async function main() {
         explanationCorrect:
           'According to AASM rules, once stage N2 is established, scoring continues as N2 until an arousal or major body movement occurs, followed by an epoch of low-amplitude mixed-frequency EEG without K-complexes or sleep spindles, at which point the stage reverts to N1.',
         explanationWrong:
-          'Simply having an epoch without K-complexes is not sufficient to revert to N1 — N2 continues in the absence of an arousal even if spindles and K-complexes are not present in a given epoch. Reappearance of alpha rhythm would indicate a transition to wake, not N1. Slow eye movements alone without an arousal would not cause a stage change from N2.',
+          'Simply having an epoch without K-complexes is not sufficient to revert to N1 - N2 continues in the absence of an arousal even if spindles and K-complexes are not present in a given epoch. Reappearance of alpha rhythm would indicate a transition to wake, not N1. Slow eye movements alone without an arousal would not cause a stage change from N2.',
         topic: 'Sleep staging rules (AASM scoring manual)',
       },
       {
@@ -447,7 +447,7 @@ async function main() {
         explanationCorrect:
           'HSAT devices calculate REI using total recording time as the denominator rather than total sleep time. If the patient spends significant time awake during the recording, this dilutes the REI, making it appear lower than the true AHI. The significant desaturations suggest more severe disease than the REI indicates.',
         explanationWrong:
-          'While oximeter malfunction is possible, repetitive desaturations occurring 35 times per hour in a consistent pattern are unlikely to be artifactual. Periodic limb movements do not typically cause oxygen desaturations. While REI does use recording time, saying it "always" produces lower numbers is not accurate — it depends on sleep efficiency during the recording.',
+          'While oximeter malfunction is possible, repetitive desaturations occurring 35 times per hour in a consistent pattern are unlikely to be artifactual. Periodic limb movements do not typically cause oxygen desaturations. While REI does use recording time, saying it "always" produces lower numbers is not accurate - it depends on sleep efficiency during the recording.',
         topic: 'Home sleep apnea testing (HSAT)',
       },
       {
@@ -627,7 +627,7 @@ async function main() {
         explanationCorrect:
           'The AASM recommends placing surface EMG electrodes on the anterior tibialis muscle of each leg for detection of periodic limb movements during sleep (PLMS). Two electrodes are placed longitudinally on each leg, 2–3 cm apart on the middle of the muscle belly.',
         explanationWrong:
-          'Masseter muscle electrodes would detect bruxism, not limb movements. The extensor digitorum muscle of the forearm is not a standard placement for PLMS detection. The gastrocnemius (calf) muscle is not the recommended site — the anterior tibialis is the standard placement per AASM guidelines.',
+          'Masseter muscle electrodes would detect bruxism, not limb movements. The extensor digitorum muscle of the forearm is not a standard placement for PLMS detection. The gastrocnemius (calf) muscle is not the recommended site - the anterior tibialis is the standard placement per AASM guidelines.',
         topic: 'Polysomnography (PSG) setup and electrode placement',
       },
       {
@@ -663,7 +663,7 @@ async function main() {
         explanationCorrect:
           'A central apnea is distinguished from an obstructive apnea by the absence of inspiratory effort throughout the entire duration of the event. In obstructive apnea, respiratory effort is present or increases despite the absence of airflow. Both require at least a 90% drop in airflow for at least 10 seconds.',
         explanationWrong:
-          'Event duration of 20 seconds is not a distinguishing factor — both types require a minimum of 10 seconds. Oxygen desaturation criteria do not differentiate between central and obstructive apneas. Paradoxical thoracoabdominal movement indicates obstructive events, not central events.',
+          'Event duration of 20 seconds is not a distinguishing factor - both types require a minimum of 10 seconds. Oxygen desaturation criteria do not differentiate between central and obstructive apneas. Paradoxical thoracoabdominal movement indicates obstructive events, not central events.',
         topic: 'Respiratory event scoring (apneas, hypopneas, RERAs)',
       },
       {
@@ -1039,7 +1039,7 @@ async function main() {
         explanationCorrect:
           'ASV continuously monitors the patient\'s minute ventilation and provides pressure support that varies inversely with the patient\'s own respiratory effort. When effort decreases (as in a central apnea), the device increases pressure support; when effort normalizes, it reduces support. This stabilizes ventilation and prevents central apneas.',
         explanationWrong:
-          'ASV does not simply deliver a fixed high pressure — it dynamically adjusts support. ASV does not provide supplemental oxygen; it is a ventilation therapy. ASV does not switch between CPAP and bilevel modes; it uses a unique servo-controlled algorithm distinct from both.',
+          'ASV does not simply deliver a fixed high pressure - it dynamically adjusts support. ASV does not provide supplemental oxygen; it is a ventilation therapy. ASV does not switch between CPAP and bilevel modes; it uses a unique servo-controlled algorithm distinct from both.',
         topic: 'Central sleep apnea and Cheyne-Stokes respiration',
       },
       {
@@ -1075,7 +1075,7 @@ async function main() {
         explanationCorrect:
           'In ST (spontaneous/timed) mode, the device supports the patient\'s spontaneous breaths with IPAP/EPAP. When the respiratory rate falls below the set backup rate, the device delivers mandatory (timed) breaths at the IPAP pressure to maintain the minimum rate of 12 breaths per minute. This ensures adequate ventilation.',
         explanationWrong:
-          'The device does not revert to CPAP mode — it maintains bilevel pressure delivery. In spontaneous-only mode the device waits for patient triggering, but ST mode adds backup breaths. PAP devices do not alarm and shut down for low respiratory rates; the backup rate feature is designed for this scenario.',
+          'The device does not revert to CPAP mode - it maintains bilevel pressure delivery. In spontaneous-only mode the device waits for patient triggering, but ST mode adds backup breaths. PAP devices do not alarm and shut down for low respiratory rates; the backup rate feature is designed for this scenario.',
         topic: 'PAP device types and mask interfaces',
       },
       {
@@ -1181,7 +1181,7 @@ async function main() {
         explanationCorrect:
           'An arousal is scored when there is an abrupt shift of EEG frequency including alpha, theta, or frequencies greater than 16 Hz (but not spindles) lasting at least 3 seconds, with at least 10 seconds of stable sleep preceding the change. During REM sleep, a concurrent increase in chin EMG lasting at least 1 second is also required.',
         explanationWrong:
-          '5 seconds of alpha activity exceeds the minimum 3-second requirement. A 1-second EMG increase is an additional requirement during REM only, not a standalone arousal definition. 10 seconds of mixed-frequency activity does not define an arousal — the key criterion is an abrupt frequency shift.',
+          '5 seconds of alpha activity exceeds the minimum 3-second requirement. A 1-second EMG increase is an additional requirement during REM only, not a standalone arousal definition. 10 seconds of mixed-frequency activity does not define an arousal - the key criterion is an abrupt frequency shift.',
         topic: 'Sleep staging rules (AASM scoring manual)',
       },
       {
@@ -1307,7 +1307,7 @@ async function main() {
         explanationCorrect:
           'Expiratory pressure relief (EPR, C-Flex, or similar proprietary features) reduces the delivered pressure by 1–3 cmH2O during expiration. This mimics a more natural breathing pattern by decreasing the resistance to exhalation, improving comfort without significantly compromising therapeutic efficacy.',
         explanationWrong:
-          'Increasing pressure during expiration would increase the work of breathing, worsening discomfort. Heated humidity is delivered continuously by the humidifier, not selectively during expiration. EPR does not pause airflow — it continuously reduces pressure during the expiratory phase.',
+          'Increasing pressure during expiration would increase the work of breathing, worsening discomfort. Heated humidity is delivered continuously by the humidifier, not selectively during expiration. EPR does not pause airflow - it continuously reduces pressure during the expiratory phase.',
         topic: 'PAP device types and mask interfaces',
       },
       {
@@ -1343,7 +1343,7 @@ async function main() {
         explanationCorrect:
           'Alcohol is a central nervous system depressant that reduces the tone of the upper airway dilator muscles (particularly the genioglossus) and increases pharyngeal collapsibility. It also suppresses the arousal response to airway obstruction, leading to longer and more severe apneas.',
         explanationWrong:
-          'Alcohol depresses the central respiratory drive, it does not increase it. While alcohol may increase early N3 sleep, the worsening of OSA is primarily due to upper airway muscle relaxation, not sleep architecture changes. Alcohol affects more than just nasal resistance — its primary OSA-worsening effect is on pharyngeal muscle tone.',
+          'Alcohol depresses the central respiratory drive, it does not increase it. While alcohol may increase early N3 sleep, the worsening of OSA is primarily due to upper airway muscle relaxation, not sleep architecture changes. Alcohol affects more than just nasal resistance - its primary OSA-worsening effect is on pharyngeal muscle tone.',
         topic: 'Obstructive sleep apnea diagnosis and severity',
       },
       {
@@ -1415,7 +1415,7 @@ async function main() {
         explanationCorrect:
           'Treatment-emergent central sleep apnea is defined by the emergence or persistence of central apneas and hypopneas during PAP therapy that are not present (or not predominant) on the diagnostic sleep study. The obstructive events resolve with PAP, but central events appear. Primary CSA exists independently of PAP therapy.',
         explanationWrong:
-          'Treatment-emergent CSA can occur with CPAP, bilevel, or any PAP modality. Primary CSA is not always associated with heart failure — it can be idiopathic. There is no specific higher CAI threshold for treatment-emergent CSA versus primary CSA.',
+          'Treatment-emergent CSA can occur with CPAP, bilevel, or any PAP modality. Primary CSA is not always associated with heart failure - it can be idiopathic. There is no specific higher CAI threshold for treatment-emergent CSA versus primary CSA.',
         topic: 'Central sleep apnea and Cheyne-Stokes respiration',
       },
       {
@@ -1539,7 +1539,7 @@ async function main() {
         explanationCorrect:
           'The ground electrode provides a common reference voltage that allows the differential amplifier to identify and reject common-mode signals (signals that appear equally at both the active and reference electrodes), such as 60 Hz electrical interference. It is essential for reducing environmental noise in the recording.',
         explanationWrong:
-          'EEG channels do not measure absolute voltage — they measure the voltage difference between two electrodes. The reference electrode (such as M1 or M2) is the reference point for referential derivations, not the ground. The ground electrode does not measure individual electrode impedances; impedance testing uses a separate measurement circuit.',
+          'EEG channels do not measure absolute voltage - they measure the voltage difference between two electrodes. The reference electrode (such as M1 or M2) is the reference point for referential derivations, not the ground. The ground electrode does not measure individual electrode impedances; impedance testing uses a separate measurement circuit.',
         topic: 'Polysomnography (PSG) setup and electrode placement',
       },
       {
@@ -1557,7 +1557,7 @@ async function main() {
         explanationCorrect:
           'A K-complex is defined as a well-delineated negative sharp wave immediately followed by a positive component that stands out from the background EEG. The total duration must be 0.5 seconds or greater. K-complexes are maximal over frontal derivations and are a hallmark of stage N2 sleep.',
         explanationWrong:
-          'A burst of 12–14 Hz rhythmic activity describes a sleep spindle, not a K-complex. An isolated delta wave during N1 does not define a K-complex — K-complexes are specific biphasic waveforms. A triphasic waveform of 0.2 seconds does not match the K-complex definition, which requires at least 0.5 seconds duration.',
+          'A burst of 12–14 Hz rhythmic activity describes a sleep spindle, not a K-complex. An isolated delta wave during N1 does not define a K-complex - K-complexes are specific biphasic waveforms. A triphasic waveform of 0.2 seconds does not match the K-complex definition, which requires at least 0.5 seconds duration.',
         topic: 'Sleep staging rules (AASM scoring manual)',
       },
       {
@@ -1681,9 +1681,9 @@ async function main() {
         },
         correctChoice: 'D',
         explanationCorrect:
-          'The EPAP on bilevel PAP serves the same function as CPAP — it maintains upper airway patency by providing a pneumatic splint. A high EPAP of 16 cmH2O indicates the patient requires significant pressure to prevent obstructive events, while the IPAP of 22 provides additional ventilatory support.',
+          'The EPAP on bilevel PAP serves the same function as CPAP - it maintains upper airway patency by providing a pneumatic splint. A high EPAP of 16 cmH2O indicates the patient requires significant pressure to prevent obstructive events, while the IPAP of 22 provides additional ventilatory support.',
         explanationWrong:
-          'Central sleep apnea treatment typically uses ASV or bilevel ST mode with a backup rate, not simply high EPAP. High EPAP can actually worsen aerophagia. The purpose of high EPAP is airway maintenance, not comfort — lower EPAP would be more comfortable.',
+          'Central sleep apnea treatment typically uses ASV or bilevel ST mode with a backup rate, not simply high EPAP. High EPAP can actually worsen aerophagia. The purpose of high EPAP is airway maintenance, not comfort - lower EPAP would be more comfortable.',
         topic: 'PAP device types and mask interfaces',
       },
       {
@@ -1791,7 +1791,7 @@ async function main() {
         explanationCorrect:
           'The SCN is the master circadian pacemaker located in the anterior hypothalamus. It receives direct photic (light) input from specialized retinal ganglion cells via the retinohypothalamic tract and generates an endogenous ~24-hour rhythmic output that synchronizes peripheral clocks and regulates the timing of sleep, hormone secretion, and body temperature.',
         explanationWrong:
-          'The SCN does not directly secrete melatonin — it signals the pineal gland to produce melatonin via a polysynaptic pathway. The SCN does not primarily respond to blood glucose levels. While the SCN influences body temperature rhythm, it does not monitor temperature as its primary input — light is the primary zeitgeber.',
+          'The SCN does not directly secrete melatonin - it signals the pineal gland to produce melatonin via a polysynaptic pathway. The SCN does not primarily respond to blood glucose levels. While the SCN influences body temperature rhythm, it does not monitor temperature as its primary input - light is the primary zeitgeber.',
         topic: 'Insomnia and circadian rhythm disorders',
       },
       {

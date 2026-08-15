@@ -355,7 +355,7 @@ async function main() {
         },
         correctChoice: "C",
         explanationCorrect:
-          "A type II (beta) error occurs when a study fails to reject a false null hypothesis — meaning a real difference exists but the study fails to detect it. This is also called a false negative. The probability of a type II error is denoted by beta, and statistical power (1 − beta) is the probability of correctly detecting a true effect.",
+          "A type II (beta) error occurs when a study fails to reject a false null hypothesis - meaning a real difference exists but the study fails to detect it. This is also called a false negative. The probability of a type II error is denoted by beta, and statistical power (1 − beta) is the probability of correctly detecting a true effect.",
         explanationWrong:
           "Rejecting a true null hypothesis is a type I (alpha) error, not type II. An excessively large sample size actually reduces type II error by increasing statistical power. Using an inappropriate statistical test is a methodological flaw but not the definition of a type II error.",
         topic: "Research methodology in pulmonary function",
@@ -1075,7 +1075,7 @@ async function main() {
         },
         correctChoice: "B",
         explanationCorrect:
-          "ATS/ERS 2019 standards require the back-extrapolated volume to be less than 5% of FVC or 150 mL, whichever is greater. BEV assesses the quality of the start of the forced expiratory maneuver — an excessive BEV indicates a hesitant or slow start that may underestimate PEF and FEV1.",
+          "ATS/ERS 2019 standards require the back-extrapolated volume to be less than 5% of FVC or 150 mL, whichever is greater. BEV assesses the quality of the start of the forced expiratory maneuver - an excessive BEV indicates a hesitant or slow start that may underestimate PEF and FEV1.",
         explanationWrong:
           "100 mL or 5% was an older criterion. A fixed 200 mL without percentage consideration is not the standard. A fixed 50 mL threshold is too stringent, especially for patients with larger lung volumes.",
         topic: "Advanced spirometry interpretation and quality grading (ATS/ERS standards)",
@@ -1131,7 +1131,7 @@ async function main() {
         explanationCorrect:
           "In variable intrathoracic obstruction (e.g., tracheomalacia below the thoracic inlet, intrathoracic tracheal tumor), positive intrathoracic pressure during forced expiration compresses the airway at the lesion site, causing flow limitation and a plateau on the expiratory limb. During inspiration, negative intrathoracic pressure tends to stent the airway open, preserving inspiratory flow.",
         explanationWrong:
-          "Equal involvement of both phases would indicate a fixed obstruction, not variable. Significant flow limitation does occur — that is the diagnostic finding. Inspiration in variable intrathoracic obstruction is relatively preserved because negative pleural pressure supports airway patency.",
+          "Equal involvement of both phases would indicate a fixed obstruction, not variable. Significant flow limitation does occur - that is the diagnostic finding. Inspiration in variable intrathoracic obstruction is relatively preserved because negative pleural pressure supports airway patency.",
         topic: "Advanced flow-volume loop analysis",
       },
     ],
@@ -1671,7 +1671,7 @@ async function main() {
         explanationCorrect:
           "Both the low hemoglobin (anemia) and elevated COHb reduce the measured DLCO below the patient's true diffusing capacity. Correcting for both factors adjusts the DLCO upward, resulting in a corrected value higher than the uncorrected 60% predicted. The hemoglobin correction alone could increase the value by 10-20% depending on the correction formula used.",
         explanationWrong:
-          "The correction would not lower the value — both anemia and elevated COHb cause underestimation of DLCO. The corrections are additive in the upward direction, so the corrected value cannot remain unchanged. Standard correction formulas exist for both hemoglobin and COHb, making the correction determinable.",
+          "The correction would not lower the value - both anemia and elevated COHb cause underestimation of DLCO. The corrections are additive in the upward direction, so the corrected value cannot remain unchanged. Standard correction formulas exist for both hemoglobin and COHb, making the correction determinable.",
         topic: "Advanced DLCO interpretation (corrections for hemoglobin, COHb, altitude)",
       },
       {
@@ -1797,7 +1797,7 @@ async function main() {
         explanationCorrect:
           "Despite the normal pH of 7.40, this is a mixed disorder. The elevated anion gap (20) indicates a primary metabolic acidosis. The PaCO2 of 25 mmHg is lower than expected by Winter's formula (expected PaCO2 = 1.5 × 15 + 8 ± 2 = 28.5-32.5 mmHg), indicating a concurrent primary respiratory alkalosis superimposed on the metabolic acidosis. The two opposing processes normalize the pH.",
         explanationWrong:
-          "A normal pH does not exclude acid-base disorders — opposing disorders can normalize the pH. Simple metabolic acidosis would have a PaCO2 matching Winter's formula (approximately 30.5 mmHg), not 25 mmHg. Simple respiratory alkalosis would not have an elevated anion gap.",
+          "A normal pH does not exclude acid-base disorders - opposing disorders can normalize the pH. Simple metabolic acidosis would have a PaCO2 matching Winter's formula (approximately 30.5 mmHg), not 25 mmHg. Simple respiratory alkalosis would not have an elevated anion gap.",
         topic: "Advanced ABG interpretation (mixed acid-base disorders)",
       },
       {

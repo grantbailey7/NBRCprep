@@ -11,14 +11,14 @@ const pages = [
     readTime: '7 min read',
     publishedAt: new Date('2026-08-10'),
     content: `<h2>TMC Exam Tips and Strategies</h2>
-<p>The Therapist Multiple-Choice (TMC) Examination is your first NBRC credential exam and the gateway to the RRT. With 160 questions in 3 hours — 140 scored and 20 unscored pretest items mixed in — you need a disciplined approach. These tips go beyond "study harder" and give you specific, actionable strategies to maximize your score.</p>
+<p>The Therapist Multiple-Choice (TMC) Examination is your first NBRC credential exam and the gateway to the RRT. With 160 questions in 3 hours - 140 scored and 20 unscored pretest items mixed in - you need a disciplined approach. These tips go beyond "study harder" and give you specific, actionable strategies to maximize your score.</p>
 
 <h3>Master Your Time Budget</h3>
 <p>At 160 questions in 180 minutes, you have roughly <strong>1 minute and 7 seconds per question</strong>. That sounds tight, but most recall-level questions take 30-45 seconds, which banks time for application and analysis items. Use this to your advantage:</p>
 <ul>
 <li><strong>Set checkpoint goals:</strong> Aim to reach question 40 by the 45-minute mark, question 80 by 90 minutes, and question 120 by 135 minutes. This leaves a full 45 minutes for the final 40 questions and review.</li>
 <li><strong>Flag and move:</strong> If a question takes more than 90 seconds and you're stuck, flag it and move on. Spending 3 minutes on one question steals time from two others you might answer correctly.</li>
-<li><strong>Don't change answers without reason:</strong> Research consistently shows that first instincts are correct more often than changed answers — unless you find concrete evidence in another question that changes your reasoning.</li>
+<li><strong>Don't change answers without reason:</strong> Research consistently shows that first instincts are correct more often than changed answers - unless you find concrete evidence in another question that changes your reasoning.</li>
 </ul>
 
 <h3>Attack Question Stems Strategically</h3>
@@ -26,7 +26,7 @@ const pages = [
 <ol>
 <li><strong>Recall items:</strong> You either know it or you don't. Spend no more than 30 seconds. If unsure, eliminate one or two options and make your best choice.</li>
 <li><strong>Application items:</strong> These present a clinical scenario and ask what to do. Read the last sentence first to understand what's being asked, then scan the scenario for relevant data (ABGs, vitals, ventilator settings).</li>
-<li><strong>Analysis items:</strong> These require you to interpret data and make clinical decisions. Write down key values on your scratch paper — especially ABG values and ventilator parameters — before looking at answer choices.</li>
+<li><strong>Analysis items:</strong> These require you to interpret data and make clinical decisions. Write down key values on your scratch paper - especially ABG values and ventilator parameters - before looking at answer choices.</li>
 </ol>
 
 <h3>Prioritize High-Yield Content Areas</h3>
@@ -49,19 +49,19 @@ const pages = [
 
 <h3>TMC-Specific Pitfalls to Avoid</h3>
 <ul>
-<li><strong>Don't overthink recall questions.</strong> If they ask for the normal PaO2 range, they want the textbook answer — not a nuanced clinical discussion.</li>
+<li><strong>Don't overthink recall questions.</strong> If they ask for the normal PaO2 range, they want the textbook answer - not a nuanced clinical discussion.</li>
 <li><strong>Remember the 20 pretest questions are unidentifiable.</strong> You cannot tell which questions are scored and which are pretest. Treat every question as if it counts.</li>
-<li><strong>Use the Pearson VUE calculator</strong> for any math — never do dosage calculations or A-a gradient math in your head during the exam.</li>
+<li><strong>Use the Pearson VUE calculator</strong> for any math - never do dosage calculations or A-a gradient math in your head during the exam.</li>
 </ul>
 
 <h3>Continue Your Preparation</h3>
 <p>Pair these strategies with targeted practice to build speed and confidence:</p>
 <ul>
-<li><a href="/guides/nbrc-tmc-exam-guide">Complete TMC Exam Guide</a> — full breakdown of content areas and exam format</li>
-<li><a href="/cheat-sheets/tmc-cheat-sheet">TMC Cheat Sheet</a> — quick-reference formulas and normal values</li>
-<li><a href="/mistakes/common-tmc-exam-mistakes">Common TMC Exam Mistakes</a> — pitfalls other candidates fall into</li>
-<li><a href="/exam-day/tmc-exam-day-walkthrough">TMC Exam Day Walkthrough</a> — what to expect at Pearson VUE</li>
-<li><a href="/pricing">Start Practicing with NBRCprep</a> — timed practice exams that mirror the real TMC</li>
+<li><a href="/guides/nbrc-tmc-exam-guide">Complete TMC Exam Guide</a> - full breakdown of content areas and exam format</li>
+<li><a href="/cheat-sheets/tmc-cheat-sheet">TMC Cheat Sheet</a> - quick-reference formulas and normal values</li>
+<li><a href="/mistakes/common-tmc-exam-mistakes">Common TMC Exam Mistakes</a> - pitfalls other candidates fall into</li>
+<li><a href="/exam-day/tmc-exam-day-walkthrough">TMC Exam Day Walkthrough</a> - what to expect at Pearson VUE</li>
+<li><a href="/pricing">Start Practicing with NBRCprep</a> - timed practice exams that mirror the real TMC</li>
 </ul>`,
   },
   {
@@ -73,7 +73,7 @@ const pages = [
     readTime: '7 min read',
     publishedAt: new Date('2026-08-10'),
     content: `<h2>NPS Exam Tips and Strategies</h2>
-<p>The Neonatal/Pediatric Specialty (NPS) exam uses the Clinical Simulation Exam (CSE) format — 22 clinical simulation problems over 4 hours. Unlike multiple-choice exams, the CSE presents evolving patient scenarios where your choices determine what information you see next. This format rewards clinical thinking over memorization, and it requires a fundamentally different preparation strategy.</p>
+<p>The Neonatal/Pediatric Specialty (NPS) exam uses the Clinical Simulation Exam (CSE) format - 22 clinical simulation problems over 4 hours. Unlike multiple-choice exams, the CSE presents evolving patient scenarios where your choices determine what information you see next. This format rewards clinical thinking over memorization, and it requires a fundamentally different preparation strategy.</p>
 
 <h3>Understand the CSE Format Before Exam Day</h3>
 <p>Each of the 22 problems presents a neonatal or pediatric patient scenario that unfolds across multiple sections. At each decision point, you choose from a list of options (assessments, treatments, tests). Key rules to internalize:</p>
@@ -102,7 +102,7 @@ const pages = [
 <h3>High-Yield NPS Content Areas</h3>
 <p>The NPS exam heavily emphasizes certain topics. Prioritize these in your final weeks of study:</p>
 <ul>
-<li><strong>Neonatal resuscitation (NRP algorithm):</strong> Know the steps cold — initial steps, PPV, intubation criteria, chest compressions, and epinephrine. Multiple simulations will test this sequence.</li>
+<li><strong>Neonatal resuscitation (NRP algorithm):</strong> Know the steps cold - initial steps, PPV, intubation criteria, chest compressions, and epinephrine. Multiple simulations will test this sequence.</li>
 <li><strong>Surfactant therapy:</strong> Indications, dosing, administration technique (INSURE vs. LISA), and complications. Know when to redose.</li>
 <li><strong>Congenital anomalies:</strong> Diaphragmatic hernia (bag-mask contraindicated), choanal atresia, tracheoesophageal fistula, and meconium aspiration management.</li>
 <li><strong>Pediatric airway emergencies:</strong> Croup vs. epiglottitis management, foreign body aspiration, and status asthmaticus escalation.</li>
@@ -119,11 +119,11 @@ const pages = [
 
 <h3>Continue Your Preparation</h3>
 <ul>
-<li><a href="/guides/nbrc-nps-exam-guide">Complete NPS Exam Guide</a> — detailed breakdown of the CSE format and content areas</li>
-<li><a href="/cheat-sheets/nps-cheat-sheet">NPS Cheat Sheet</a> — neonatal normal values and key algorithms</li>
-<li><a href="/mistakes/common-nps-exam-mistakes">Common NPS Exam Mistakes</a> — CSE-specific pitfalls to avoid</li>
-<li><a href="/exam-day/nps-exam-day-walkthrough">NPS Exam Day Walkthrough</a> — what to expect at Pearson VUE for a CSE</li>
-<li><a href="/pricing">Practice with NBRCprep</a> — build clinical reasoning with realistic practice simulations</li>
+<li><a href="/guides/nbrc-nps-exam-guide">Complete NPS Exam Guide</a> - detailed breakdown of the CSE format and content areas</li>
+<li><a href="/cheat-sheets/nps-cheat-sheet">NPS Cheat Sheet</a> - neonatal normal values and key algorithms</li>
+<li><a href="/mistakes/common-nps-exam-mistakes">Common NPS Exam Mistakes</a> - CSE-specific pitfalls to avoid</li>
+<li><a href="/exam-day/nps-exam-day-walkthrough">NPS Exam Day Walkthrough</a> - what to expect at Pearson VUE for a CSE</li>
+<li><a href="/pricing">Practice with NBRCprep</a> - build clinical reasoning with realistic practice simulations</li>
 </ul>`,
   },
   {
@@ -138,7 +138,7 @@ const pages = [
 <p>The Adult Critical Care Specialty (ACCS) exam challenges you with 22 clinical simulation problems over 4 hours, all using the NBRC's Clinical Simulation Exam (CSE) format. Each simulation places you in an evolving adult critical care scenario where your decisions shape the patient's trajectory. Success requires sharp clinical reasoning, efficient time use, and familiarity with the CSE mechanics.</p>
 
 <h3>CSE Mechanics You Must Know</h3>
-<p>Before diving into content strategies, understand how the CSE works — it is fundamentally different from multiple-choice exams:</p>
+<p>Before diving into content strategies, understand how the CSE works - it is fundamentally different from multiple-choice exams:</p>
 <ul>
 <li><strong>Sections unfold sequentially.</strong> Each simulation has multiple sections. You select actions from a list, view the results, then proceed. You cannot revisit previous sections.</li>
 <li><strong>Scoring rewards precision.</strong> You earn points for selecting correct/beneficial actions and lose points for selecting harmful or unnecessary ones. "Select everything" is a losing strategy.</li>
@@ -182,11 +182,11 @@ const pages = [
 
 <h3>Continue Your Preparation</h3>
 <ul>
-<li><a href="/guides/nbrc-accs-exam-guide">Complete ACCS Exam Guide</a> — full breakdown of CSE format and critical care content areas</li>
-<li><a href="/cheat-sheets/accs-cheat-sheet">ACCS Cheat Sheet</a> — hemodynamic values, ventilator settings, and ABG interpretation at a glance</li>
-<li><a href="/mistakes/common-accs-exam-mistakes">Common ACCS Exam Mistakes</a> — the most frequent errors on the ACCS CSE</li>
-<li><a href="/exam-day/accs-exam-day-walkthrough">ACCS Exam Day Walkthrough</a> — what to expect at Pearson VUE for a CSE</li>
-<li><a href="/pricing">Practice with NBRCprep</a> — realistic adult critical care simulations to sharpen your skills</li>
+<li><a href="/guides/nbrc-accs-exam-guide">Complete ACCS Exam Guide</a> - full breakdown of CSE format and critical care content areas</li>
+<li><a href="/cheat-sheets/accs-cheat-sheet">ACCS Cheat Sheet</a> - hemodynamic values, ventilator settings, and ABG interpretation at a glance</li>
+<li><a href="/mistakes/common-accs-exam-mistakes">Common ACCS Exam Mistakes</a> - the most frequent errors on the ACCS CSE</li>
+<li><a href="/exam-day/accs-exam-day-walkthrough">ACCS Exam Day Walkthrough</a> - what to expect at Pearson VUE for a CSE</li>
+<li><a href="/pricing">Practice with NBRCprep</a> - realistic adult critical care simulations to sharpen your skills</li>
 </ul>`,
   },
   {
@@ -237,18 +237,18 @@ const pages = [
 
 <h3>SDS-Specific Test-Taking Strategies</h3>
 <ul>
-<li><strong>When in doubt about event type, look at effort channels.</strong> Thoracic and abdominal effort bands distinguish obstructive from central events — this is the most common distinguishing feature tested.</li>
+<li><strong>When in doubt about event type, look at effort channels.</strong> Thoracic and abdominal effort bands distinguish obstructive from central events - this is the most common distinguishing feature tested.</li>
 <li><strong>Patient safety questions have clear correct answers.</strong> If a question involves a patient emergency during a sleep study (seizure, cardiac event, severe desaturation), the answer involves patient safety first, study integrity second.</li>
 <li><strong>AASM guidelines are the standard.</strong> If your clinical experience conflicts with AASM manual recommendations, go with the AASM standard on this exam.</li>
 </ul>
 
 <h3>Continue Your Preparation</h3>
 <ul>
-<li><a href="/guides/nbrc-sds-exam-guide">Complete SDS Exam Guide</a> — comprehensive overview of SDS content areas and exam structure</li>
-<li><a href="/cheat-sheets/sds-cheat-sheet">SDS Cheat Sheet</a> — sleep staging criteria, event scoring rules, and PAP protocols</li>
-<li><a href="/mistakes/common-sds-exam-mistakes">Common SDS Exam Mistakes</a> — scoring and interpretation errors to avoid</li>
-<li><a href="/exam-day/sds-exam-day-walkthrough">SDS Exam Day Walkthrough</a> — Pearson VUE experience for the SDS</li>
-<li><a href="/pricing">Start Practicing with NBRCprep</a> — SDS practice exams with detailed explanations</li>
+<li><a href="/guides/nbrc-sds-exam-guide">Complete SDS Exam Guide</a> - comprehensive overview of SDS content areas and exam structure</li>
+<li><a href="/cheat-sheets/sds-cheat-sheet">SDS Cheat Sheet</a> - sleep staging criteria, event scoring rules, and PAP protocols</li>
+<li><a href="/mistakes/common-sds-exam-mistakes">Common SDS Exam Mistakes</a> - scoring and interpretation errors to avoid</li>
+<li><a href="/exam-day/sds-exam-day-walkthrough">SDS Exam Day Walkthrough</a> - Pearson VUE experience for the SDS</li>
+<li><a href="/pricing">Start Practicing with NBRCprep</a> - SDS practice exams with detailed explanations</li>
 </ul>`,
   },
   {
@@ -260,12 +260,12 @@ const pages = [
     readTime: '6 min read',
     publishedAt: new Date('2026-08-10'),
     content: `<h2>CPFT Exam Tips and Strategies</h2>
-<p>The Certified Pulmonary Function Technologist (CPFT) exam has 100 questions in 2 hours — 85 scored and 15 unscored pretest items. This is a tighter time budget than it might seem, especially when questions require interpreting flow-volume loops and spirometry data. Here are specific strategies to maximize your performance.</p>
+<p>The Certified Pulmonary Function Technologist (CPFT) exam has 100 questions in 2 hours - 85 scored and 15 unscored pretest items. This is a tighter time budget than it might seem, especially when questions require interpreting flow-volume loops and spirometry data. Here are specific strategies to maximize your performance.</p>
 
 <h3>Time Budget: 100 Questions in 120 Minutes</h3>
 <p>At <strong>1 minute and 12 seconds per question</strong>, the CPFT gives you slightly more time per question than the TMC but fewer total questions. Use this structure:</p>
 <ul>
-<li><strong>Rapid-fire recall questions in under 45 seconds.</strong> Equipment calibration procedures, normal values, and contraindication lists are either known or not — don't deliberate.</li>
+<li><strong>Rapid-fire recall questions in under 45 seconds.</strong> Equipment calibration procedures, normal values, and contraindication lists are either known or not - don't deliberate.</li>
 <li><strong>Allow 2 minutes for interpretation questions.</strong> When you see spirometry data, a flow-volume loop, or a set of lung volumes, take the time to systematically analyze the values before looking at the answer choices.</li>
 <li><strong>Checkpoint pace:</strong> Question 25 by 30 minutes, question 50 by 60 minutes, question 75 by 90 minutes. The final 30 minutes handles the last 25 questions plus review.</li>
 </ul>
@@ -284,26 +284,26 @@ const pages = [
 <ul>
 <li><strong>Quality control and calibration:</strong> Daily volume calibration (3-liter syringe, within 3.5% or 3%), linearity checks, biologic controls, and leak testing procedures. Know ATS/ERS acceptability and repeatability criteria.</li>
 <li><strong>Test acceptability criteria:</strong> Good starts (back-extrapolated volume below 5% of FVC or 150 mL), adequate effort duration (at least 6 seconds for adults or 3 seconds for children, with a plateau), and freedom from artifacts (cough, glottic closure, leak).</li>
-<li><strong>Lung volume measurement:</strong> Understand the differences between body plethysmography, nitrogen washout, and helium dilution — when each is preferred and what errors each is susceptible to.</li>
+<li><strong>Lung volume measurement:</strong> Understand the differences between body plethysmography, nitrogen washout, and helium dilution - when each is preferred and what errors each is susceptible to.</li>
 <li><strong>Diffusion capacity (DLCO):</strong> Single-breath technique, correction for hemoglobin, adjustments for altitude, and common causes of increased or decreased DLCO.</li>
 <li><strong>Infection control:</strong> Filter usage, equipment decontamination between patients, and contraindications to testing (active hemoptysis, pneumothorax, recent surgery).</li>
 </ul>
 
 <h3>CPFT-Specific Strategies</h3>
 <ul>
-<li><strong>When interpreting data, always compare to predicted values.</strong> Raw numbers without context are meaningless — a FEV1 of 2.5 L could be normal for a small woman or severely reduced for a tall man.</li>
+<li><strong>When interpreting data, always compare to predicted values.</strong> Raw numbers without context are meaningless - a FEV1 of 2.5 L could be normal for a small woman or severely reduced for a tall man.</li>
 <li><strong>Patient coaching questions are common.</strong> Know proper instructions for spirometry (blast it out and keep going), MVV (breathe as hard and fast as you can), and DLCO (breathe in all the way, hold for 10 seconds, breathe out smoothly).</li>
 <li><strong>ATS/ERS guidelines are your reference standard.</strong> When in doubt, the answer that aligns with current ATS/ERS technical standards is correct.</li>
-<li><strong>Don't confuse restrictive patterns with restriction.</strong> A reduced FVC with normal FEV1/FVC on spirometry alone is a "restrictive pattern" — confirming true restriction requires lung volume measurement.</li>
+<li><strong>Don't confuse restrictive patterns with restriction.</strong> A reduced FVC with normal FEV1/FVC on spirometry alone is a "restrictive pattern" - confirming true restriction requires lung volume measurement.</li>
 </ul>
 
 <h3>Continue Your Preparation</h3>
 <ul>
-<li><a href="/guides/nbrc-cpft-exam-guide">Complete CPFT Exam Guide</a> — full content outline and exam structure breakdown</li>
-<li><a href="/cheat-sheets/cpft-cheat-sheet">CPFT Cheat Sheet</a> — normal PFT values, severity classifications, and calibration specs</li>
-<li><a href="/mistakes/common-cpft-exam-mistakes">Common CPFT Exam Mistakes</a> — interpretation and procedural errors to watch for</li>
-<li><a href="/exam-day/cpft-exam-day-walkthrough">CPFT Exam Day Walkthrough</a> — what to expect at Pearson VUE</li>
-<li><a href="/pricing">Start Practicing with NBRCprep</a> — CPFT practice exams with spirometry interpretation</li>
+<li><a href="/guides/nbrc-cpft-exam-guide">Complete CPFT Exam Guide</a> - full content outline and exam structure breakdown</li>
+<li><a href="/cheat-sheets/cpft-cheat-sheet">CPFT Cheat Sheet</a> - normal PFT values, severity classifications, and calibration specs</li>
+<li><a href="/mistakes/common-cpft-exam-mistakes">Common CPFT Exam Mistakes</a> - interpretation and procedural errors to watch for</li>
+<li><a href="/exam-day/cpft-exam-day-walkthrough">CPFT Exam Day Walkthrough</a> - what to expect at Pearson VUE</li>
+<li><a href="/pricing">Start Practicing with NBRCprep</a> - CPFT practice exams with spirometry interpretation</li>
 </ul>`,
   },
   {
@@ -315,7 +315,7 @@ const pages = [
     readTime: '7 min read',
     publishedAt: new Date('2026-08-10'),
     content: `<h2>RPFT Exam Tips and Strategies</h2>
-<p>The Registered Pulmonary Function Technologist (RPFT) exam is the advanced PFT credential with 130 questions in 3 hours — 115 scored and 15 unscored pretest items. It covers everything on the CPFT plus advanced testing procedures, complex interpretation, and laboratory management. This exam rewards deep understanding over surface-level memorization.</p>
+<p>The Registered Pulmonary Function Technologist (RPFT) exam is the advanced PFT credential with 130 questions in 3 hours - 115 scored and 15 unscored pretest items. It covers everything on the CPFT plus advanced testing procedures, complex interpretation, and laboratory management. This exam rewards deep understanding over surface-level memorization.</p>
 
 <h3>Time Management: 130 Questions in 180 Minutes</h3>
 <p>At approximately <strong>1 minute and 23 seconds per question</strong>, the RPFT time budget mirrors the SDS exam. However, RPFT questions often involve multi-step data interpretation:</p>
@@ -328,8 +328,8 @@ const pages = [
 <h3>Advanced Interpretation Strategies</h3>
 <p>The RPFT tests complex pattern recognition that goes beyond basic obstruction vs. restriction:</p>
 <ul>
-<li><strong>Mixed obstructive-restrictive patterns:</strong> Reduced FEV1/FVC ratio AND reduced TLC. Spirometry alone cannot confirm this — you need lung volumes. When both are present, report both.</li>
-<li><strong>Upper airway obstruction:</strong> Know the three patterns — variable extrathoracic (flattened inspiratory loop), variable intrathoracic (flattened expiratory loop), and fixed (both flattened). Calculate FEF50/FIF50 ratio when available.</li>
+<li><strong>Mixed obstructive-restrictive patterns:</strong> Reduced FEV1/FVC ratio AND reduced TLC. Spirometry alone cannot confirm this - you need lung volumes. When both are present, report both.</li>
+<li><strong>Upper airway obstruction:</strong> Know the three patterns - variable extrathoracic (flattened inspiratory loop), variable intrathoracic (flattened expiratory loop), and fixed (both flattened). Calculate FEF50/FIF50 ratio when available.</li>
 <li><strong>Gas trapping vs. hyperinflation:</strong> An elevated RV/TLC ratio indicates gas trapping. Elevated TLC indicates hyperinflation. Both commonly occur together in emphysema but can appear independently.</li>
 <li><strong>DLCO interpretation in context:</strong> A low DLCO with obstruction suggests emphysema. A low DLCO with restriction suggests interstitial lung disease. A low DLCO with normal spirometry and lung volumes suggests pulmonary vascular disease or anemia.</li>
 </ul>
@@ -341,7 +341,7 @@ const pages = [
 <li><strong>Bronchial challenge testing:</strong> Methacholine challenge procedure, PC20 calculation and interpretation, contraindications (FEV1 below 60% predicted or below 1.5 L), and medication withholding schedules.</li>
 <li><strong>Blood gas analysis and quality control:</strong> Tonometry, Levy-Jennings charts, Westgard rules (1-2s, 2-2s, R-4s, 4-1s, 10x), proficiency testing requirements, and pre-analytical errors.</li>
 <li><strong>Laboratory management:</strong> Staff competency assessment, procedure manual development, accreditation requirements, cost analysis, and quality improvement processes. These administrative questions are unique to the RPFT.</li>
-<li><strong>Advanced lung volume techniques:</strong> Understanding the limitations of each method — plethysmography overestimates in severe obstruction (panting frequency effect), helium dilution underestimates with trapped gas, nitrogen washout requires complete washout verification.</li>
+<li><strong>Advanced lung volume techniques:</strong> Understanding the limitations of each method - plethysmography overestimates in severe obstruction (panting frequency effect), helium dilution underestimates with trapped gas, nitrogen washout requires complete washout verification.</li>
 </ul>
 
 <h3>RPFT Calculation Tips</h3>
@@ -355,11 +355,11 @@ const pages = [
 
 <h3>Continue Your Preparation</h3>
 <ul>
-<li><a href="/guides/nbrc-rpft-exam-guide">Complete RPFT Exam Guide</a> — advanced PFT content areas and exam structure</li>
-<li><a href="/cheat-sheets/rpft-cheat-sheet">RPFT Cheat Sheet</a> — advanced formulas, Westgard rules, and exercise testing values</li>
-<li><a href="/mistakes/common-rpft-exam-mistakes">Common RPFT Exam Mistakes</a> — advanced interpretation and calculation pitfalls</li>
-<li><a href="/exam-day/rpft-exam-day-walkthrough">RPFT Exam Day Walkthrough</a> — what to expect at Pearson VUE</li>
-<li><a href="/pricing">Start Practicing with NBRCprep</a> — RPFT-level practice exams with complex PFT scenarios</li>
+<li><a href="/guides/nbrc-rpft-exam-guide">Complete RPFT Exam Guide</a> - advanced PFT content areas and exam structure</li>
+<li><a href="/cheat-sheets/rpft-cheat-sheet">RPFT Cheat Sheet</a> - advanced formulas, Westgard rules, and exercise testing values</li>
+<li><a href="/mistakes/common-rpft-exam-mistakes">Common RPFT Exam Mistakes</a> - advanced interpretation and calculation pitfalls</li>
+<li><a href="/exam-day/rpft-exam-day-walkthrough">RPFT Exam Day Walkthrough</a> - what to expect at Pearson VUE</li>
+<li><a href="/pricing">Start Practicing with NBRCprep</a> - RPFT-level practice exams with complex PFT scenarios</li>
 </ul>`,
   },
   {
@@ -377,16 +377,16 @@ const pages = [
 <p>Set yourself up for success before you even walk into the testing center:</p>
 <ul>
 <li><strong>Sleep matters more than last-minute cramming.</strong> Research consistently shows that sleep deprivation impairs cognitive performance more than incomplete studying. Get 7-8 hours the night before. If you don't know it by the night before, a 2 AM study session won't fix it.</li>
-<li><strong>Eat a balanced meal</strong> with protein and complex carbohydrates 1-2 hours before your appointment. Avoid heavy meals that cause sluggishness and skip excessive caffeine if you're not a regular coffee drinker — anxiety plus unfamiliar caffeine equals shaky hands and racing thoughts.</li>
+<li><strong>Eat a balanced meal</strong> with protein and complex carbohydrates 1-2 hours before your appointment. Avoid heavy meals that cause sluggishness and skip excessive caffeine if you're not a regular coffee drinker - anxiety plus unfamiliar caffeine equals shaky hands and racing thoughts.</li>
 <li><strong>Prepare your IDs the night before.</strong> You need two forms of identification, with the primary being a government-issued photo ID. Your name must match your NBRC registration exactly. If there's any discrepancy, contact Pearson VUE before exam day.</li>
-<li><strong>Know your route and parking.</strong> Do a dry run to the testing center if possible, or check traffic patterns for your appointment time. Arrive 30 minutes early — late arrivals may be turned away and forfeit their exam fee.</li>
+<li><strong>Know your route and parking.</strong> Do a dry run to the testing center if possible, or check traffic patterns for your appointment time. Arrive 30 minutes early - late arrivals may be turned away and forfeit their exam fee.</li>
 </ul>
 
 <h3>At the Testing Center</h3>
 <p>Pearson VUE procedures are standardized but can feel intimidating if you're not prepared:</p>
 <ul>
 <li><strong>You'll store everything in a locker.</strong> Your phone, watch, wallet, notes, and any personal items go in a locker. You cannot access them during the exam or during breaks unless you end your exam session.</li>
-<li><strong>You'll receive a dry-erase notepad or scratch paper.</strong> Use it. Write down key formulas, normal values, or mnemonics immediately when you sit down — before starting the exam. This "brain dump" frees up working memory for actual questions.</li>
+<li><strong>You'll receive a dry-erase notepad or scratch paper.</strong> Use it. Write down key formulas, normal values, or mnemonics immediately when you sit down - before starting the exam. This "brain dump" frees up working memory for actual questions.</li>
 <li><strong>The testing room has cameras and monitoring.</strong> This is normal. Focus on your screen and ignore other test-takers and any ambient noise. If something is disruptive, raise your hand for the proctor.</li>
 <li><strong>Read the tutorial carefully.</strong> Even if you've taken computer-based exams before, the tutorial time does not count against your exam time. Use it to familiarize yourself with the interface, especially the flag/review features.</li>
 </ul>
@@ -394,7 +394,7 @@ const pages = [
 <h3>During the Exam: Mental Strategies</h3>
 <p>Your psychological state during the exam affects your performance as much as your knowledge:</p>
 <ul>
-<li><strong>Use the first 5 questions as a warm-up.</strong> Don't panic if the first few questions feel hard — they often do because your brain is still shifting into test mode. Answer them, flag any you're unsure about, and move forward.</li>
+<li><strong>Use the first 5 questions as a warm-up.</strong> Don't panic if the first few questions feel hard - they often do because your brain is still shifting into test mode. Answer them, flag any you're unsure about, and move forward.</li>
 <li><strong>Manage anxiety with controlled breathing.</strong> If you feel overwhelmed, close your eyes and take 4 slow breaths (4 seconds in, 4 seconds hold, 4 seconds out). This activates your parasympathetic nervous system and reduces the cortisol spike that impairs recall.</li>
 <li><strong>Reframe difficult questions.</strong> Instead of "I don't know this," think "Let me eliminate what I know is wrong." Shifting from recall mode to analytical mode engages different cognitive pathways.</li>
 <li><strong>Don't track your perceived performance.</strong> Candidates routinely feel they are failing while actually passing. The pretest items (which don't count) are often the hardest questions because the NBRC is evaluating them for future use. Feeling uncertain is normal.</li>
@@ -404,23 +404,23 @@ const pages = [
 <p>Most NBRC exams allow optional breaks, but break time counts against your exam time:</p>
 <ul>
 <li><strong>Plan one strategic break</strong> at the halfway point if your exam is 3+ hours. Stand up, stretch, use the restroom, and take a few deep breaths. Two minutes of physical movement restores focus.</li>
-<li><strong>Don't take a break when frustrated.</strong> If you're struggling with a question, flag it and continue — don't use a break as an escape. Break when you feel good, not when you feel stuck.</li>
+<li><strong>Don't take a break when frustrated.</strong> If you're struggling with a question, flag it and continue - don't use a break as an escape. Break when you feel good, not when you feel stuck.</li>
 <li><strong>Hydrate during your break.</strong> Dehydration causes fatigue and reduced concentration. Have water available outside the testing room.</li>
 </ul>
 
 <h3>End-of-Exam Review Strategy</h3>
 <p>If you finish with time remaining, use it wisely:</p>
 <ul>
-<li><strong>Only review flagged questions.</strong> Do not re-read every question — this leads to second-guessing correct answers.</li>
-<li><strong>Only change an answer if you have a specific reason</strong> — such as realizing you misread the question or finding contradictory information in another question. "This doesn't feel right" is not a reason to change.</li>
+<li><strong>Only review flagged questions.</strong> Do not re-read every question - this leads to second-guessing correct answers.</li>
+<li><strong>Only change an answer if you have a specific reason</strong> - such as realizing you misread the question or finding contradictory information in another question. "This doesn't feel right" is not a reason to change.</li>
 <li><strong>Check for unmarked questions.</strong> Make sure every question has an answer selected. There is no penalty for guessing on NBRC exams.</li>
 </ul>
 
 <h3>Related Resources</h3>
 <ul>
-<li><a href="/exam-day/tmc-exam-day-walkthrough">TMC Exam Day Walkthrough</a> — TMC-specific exam day details</li>
-<li><a href="/mistakes/common-tmc-exam-mistakes">Common Exam Mistakes</a> — avoid the most frequent exam pitfalls</li>
-<li><a href="/pricing">Practice with NBRCprep</a> — build confidence with timed practice exams before the real thing</li>
+<li><a href="/exam-day/tmc-exam-day-walkthrough">TMC Exam Day Walkthrough</a> - TMC-specific exam day details</li>
+<li><a href="/mistakes/common-tmc-exam-mistakes">Common Exam Mistakes</a> - avoid the most frequent exam pitfalls</li>
+<li><a href="/pricing">Practice with NBRCprep</a> - build confidence with timed practice exams before the real thing</li>
 </ul>`,
   },
   {
@@ -440,15 +440,15 @@ const pages = [
 <li><strong>Map out 6-8 weeks of dedicated study time.</strong> Shorter timelines lead to cramming, which produces short-term recall but poor retention. Longer timelines risk losing momentum.</li>
 <li><strong>Divide your content into weekly themes.</strong> Week 1: Patient Assessment. Week 2: Airway Management. Week 3: Mechanical Ventilation. And so on. Dedicate each week to mastering one content area rather than skipping between topics randomly.</li>
 <li><strong>Front-load your weakest areas.</strong> Take a diagnostic practice exam in week 1 to identify your weakest content areas. Study those first while your motivation is highest. Save your strongest areas for the final weeks when fatigue sets in.</li>
-<li><strong>Plan for review weeks.</strong> Dedicate weeks 7-8 exclusively to practice exams and reviewing missed questions. No new content — only reinforcement and gap-filling.</li>
+<li><strong>Plan for review weeks.</strong> Dedicate weeks 7-8 exclusively to practice exams and reviewing missed questions. No new content - only reinforcement and gap-filling.</li>
 </ul>
 
 <h3>Use Active Recall, Not Passive Review</h3>
-<p>Reading notes and highlighting textbooks feel productive but produce weak learning. Active recall — forcing your brain to retrieve information — builds durable memory:</p>
+<p>Reading notes and highlighting textbooks feel productive but produce weak learning. Active recall - forcing your brain to retrieve information - builds durable memory:</p>
 <ul>
 <li><strong>Practice questions are your primary study tool.</strong> For every hour of content review, spend at least 30 minutes answering practice questions on that topic. The act of retrieving answers strengthens neural pathways far more than re-reading.</li>
 <li><strong>Use the "close the book" test.</strong> After studying a topic, close your materials and write down everything you can remember. The gaps you discover are exactly what you need to restudy.</li>
-<li><strong>Teach the material to someone else.</strong> Explaining a concept out loud — to a study partner, a family member, or even an empty room — forces you to organize your knowledge and reveals gaps you didn't know existed.</li>
+<li><strong>Teach the material to someone else.</strong> Explaining a concept out loud - to a study partner, a family member, or even an empty room - forces you to organize your knowledge and reveals gaps you didn't know existed.</li>
 <li><strong>Create your own questions.</strong> Writing practice questions about a topic requires deeper processing than answering them. For each chapter you study, write 5-10 questions you think could appear on the exam.</li>
 </ul>
 
@@ -463,10 +463,10 @@ const pages = [
 </ul>
 
 <h3>Practice Exam Strategy</h3>
-<p>Practice exams are not just assessment tools — they are the single most effective study method when used correctly:</p>
+<p>Practice exams are not just assessment tools - they are the single most effective study method when used correctly:</p>
 <ul>
 <li><strong>Simulate real conditions.</strong> Take practice exams timed, in a quiet room, without notes. The closer your practice conditions match the real exam, the less anxiety you'll feel on test day.</li>
-<li><strong>Review every question — right and wrong.</strong> For correct answers, confirm your reasoning was sound (you might have gotten it right for the wrong reason). For wrong answers, write down why each distractor was wrong and why the correct answer was right.</li>
+<li><strong>Review every question - right and wrong.</strong> For correct answers, confirm your reasoning was sound (you might have gotten it right for the wrong reason). For wrong answers, write down why each distractor was wrong and why the correct answer was right.</li>
 <li><strong>Track your performance by content area.</strong> Don't just look at your overall score. Break down your accuracy by topic. If you consistently score below 70% in pharmacology, that's where your next study session should focus.</li>
 <li><strong>Take at least 3 full-length practice exams</strong> in the final two weeks. Space them 3-4 days apart to allow time for targeted review between each one.</li>
 </ul>
@@ -476,24 +476,24 @@ const pages = [
 <ul>
 <li><strong>Limit groups to 3-4 people.</strong> Larger groups devolve into social time. Smaller groups maintain focus and ensure everyone participates.</li>
 <li><strong>Assign teaching roles.</strong> Each person prepares a 15-minute presentation on a topic. Teaching forces deep processing and benefits the entire group.</li>
-<li><strong>Quiz each other using practice questions.</strong> Take turns asking questions and explaining the reasoning behind correct answers. Debate is productive — it surfaces misunderstandings.</li>
+<li><strong>Quiz each other using practice questions.</strong> Take turns asking questions and explaining the reasoning behind correct answers. Debate is productive - it surfaces misunderstandings.</li>
 <li><strong>Set ground rules:</strong> phones away, specific start/end times, prepared materials required. A study group without structure is just a group.</li>
 </ul>
 
 <h3>Manage Study Fatigue</h3>
 <ul>
 <li><strong>Study in 45-50 minute blocks</strong> with 10-minute breaks. Sustained attention degrades after roughly 50 minutes, and pushing through produces diminishing returns.</li>
-<li><strong>Exercise during study periods.</strong> Even a 20-minute walk improves memory consolidation and reduces cortisol. Study, walk, review — this cycle outperforms 3 straight hours at a desk.</li>
+<li><strong>Exercise during study periods.</strong> Even a 20-minute walk improves memory consolidation and reduces cortisol. Study, walk, review - this cycle outperforms 3 straight hours at a desk.</li>
 <li><strong>Take one full day off per week.</strong> Your brain consolidates learning during rest. Studying 7 days a week leads to burnout and plateau, not faster progress.</li>
 </ul>
 
 <h3>Related Resources</h3>
 <ul>
-<li><a href="/guides/nbrc-tmc-exam-guide">TMC Exam Guide</a> — content areas and format for the TMC</li>
-<li><a href="/guides/nbrc-nps-exam-guide">NPS Exam Guide</a> — CSE format details for the NPS</li>
-<li><a href="/guides/nbrc-accs-exam-guide">ACCS Exam Guide</a> — CSE format details for the ACCS</li>
-<li><a href="/cheat-sheets/tmc-cheat-sheet">Cheat Sheets</a> — quick-reference materials for every NBRC exam</li>
-<li><a href="/pricing">Start Practicing with NBRCprep</a> — timed practice exams with detailed answer explanations</li>
+<li><a href="/guides/nbrc-tmc-exam-guide">TMC Exam Guide</a> - content areas and format for the TMC</li>
+<li><a href="/guides/nbrc-nps-exam-guide">NPS Exam Guide</a> - CSE format details for the NPS</li>
+<li><a href="/guides/nbrc-accs-exam-guide">ACCS Exam Guide</a> - CSE format details for the ACCS</li>
+<li><a href="/cheat-sheets/tmc-cheat-sheet">Cheat Sheets</a> - quick-reference materials for every NBRC exam</li>
+<li><a href="/pricing">Start Practicing with NBRCprep</a> - timed practice exams with detailed answer explanations</li>
 </ul>`,
   },
 ]

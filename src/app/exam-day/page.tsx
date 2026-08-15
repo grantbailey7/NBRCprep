@@ -6,7 +6,7 @@ import { SeoIndexPage } from '@/components/seo/SeoIndexPage'
 
 export const metadata: Metadata = {
   title: 'NBRC Exam Day Walkthroughs',
-  description: 'Step-by-step walkthroughs for exam day — what to expect, timing, question types, pacing, and strategies for every NBRC exam.',
+  description: 'Step-by-step walkthroughs for exam day - what to expect, timing, question types, pacing, and strategies for every NBRC exam.',
   alternates: { canonical: 'https://nbrcprep.app/exam-day' },
 }
 

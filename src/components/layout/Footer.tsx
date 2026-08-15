@@ -59,7 +59,7 @@ export function Footer() {
 
         <div className="mt-10 pt-6 border-t border-brand-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-brand-gray-500">
-            © {new Date().getFullYear()} NBRCprep.app — All rights reserved.
+            © {new Date().getFullYear()} NBRCprep.app - All rights reserved.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a href="mailto:certinhq@outlook.com" className="text-xs text-brand-gray-400 hover:text-white transition-colors">

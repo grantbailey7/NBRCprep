@@ -535,7 +535,7 @@ async function main() {
         },
         correctChoice: "D",
         explanationCorrect:
-          "While the question asks what does NOT affect DLCO, actually pulmonary capillary blood volume DOES affect DLCO. The correct answer is patient height — while height is used to predict normal DLCO values, height itself does not directly affect the actual measured gas transfer across the membrane.",
+          "While the question asks what does NOT affect DLCO, actually pulmonary capillary blood volume DOES affect DLCO. The correct answer is patient height - while height is used to predict normal DLCO values, height itself does not directly affect the actual measured gas transfer across the membrane.",
         explanationWrong:
           "Hemoglobin concentration directly affects CO uptake. Membrane thickness affects diffusion distance. Pulmonary capillary blood volume affects the available surface area for gas exchange. All three directly alter the measured DLCO.",
         topic: "Diffusion capacity (DLCO) testing",
@@ -817,7 +817,7 @@ async function main() {
           "A patient undergoing mannitol bronchoprovocation testing develops a 15% decline in FEV1 after cumulative dose of 635 mg. How is this result classified?",
         choices: {
           A: "Positive test indicating bronchial hyperresponsiveness",
-          B: "Positive test — a 15% decline in FEV1 at ≤635 mg is the threshold for mannitol challenge",
+          B: "Positive test - a 15% decline in FEV1 at ≤635 mg is the threshold for mannitol challenge",
           C: "Negative test requiring progression to the next dose",
           D: "Inconclusive result requiring repeat testing",
         },
@@ -1201,7 +1201,7 @@ async function main() {
         },
         correctChoice: "C",
         explanationCorrect:
-          "A Valsalva maneuver during breath-hold increases intrathoracic pressure, which can redistribute blood into the pulmonary vasculature and transiently increase pulmonary capillary blood volume, resulting in a falsely elevated DLCO. Actually, Valsalva reduces capillary blood — a Mueller maneuver would increase it. However, the key clinical point is that maneuvers altering intrathoracic pressure affect DLCO accuracy.",
+          "A Valsalva maneuver during breath-hold increases intrathoracic pressure, which can redistribute blood into the pulmonary vasculature and transiently increase pulmonary capillary blood volume, resulting in a falsely elevated DLCO. Actually, Valsalva reduces capillary blood - a Mueller maneuver would increase it. However, the key clinical point is that maneuvers altering intrathoracic pressure affect DLCO accuracy.",
         explanationWrong:
           "Anemia decreases DLCO. Elevated COHb reduces available hemoglobin binding sites, decreasing DLCO. Pulmonary embolism reduces capillary blood volume, decreasing DLCO.",
         topic: "Diffusion capacity (DLCO) testing",
@@ -1419,7 +1419,7 @@ async function main() {
         explanationCorrect:
           "In healthy individuals, VD/VT decreases during exercise because tidal volume increases more than dead space. The larger tidal volume dilutes the relatively fixed anatomic dead space. A VD/VT that fails to decrease or increases during exercise suggests ventilation-perfusion mismatch.",
         explanationWrong:
-          "An increase in VD/VT during exercise is abnormal and suggests pulmonary vascular disease or V/Q mismatch. VD/VT does not remain constant — it changes predictably with exercise. The response is consistent, not unpredictable.",
+          "An increase in VD/VT during exercise is abnormal and suggests pulmonary vascular disease or V/Q mismatch. VD/VT does not remain constant - it changes predictably with exercise. The response is consistent, not unpredictable.",
         topic: "Cardiopulmonary exercise testing",
       },
       {
@@ -1554,10 +1554,10 @@ async function main() {
         questionText:
           "A patient's pre-bronchodilator spirometry shows FEV1 2.50 L (70% predicted) and FEV1/FVC 0.60. After bronchodilator, FEV1 is 2.85 L. What is the absolute change and is this a positive response?",
         choices: {
-          A: "350 mL increase and 14% change — positive response (meets both criteria of ≥200 mL and ≥12%)",
-          B: "350 mL increase but only 10% change — not a positive response",
-          C: "250 mL increase and 14% change — positive response",
-          D: "350 mL increase and 8% change — negative response",
+          A: "350 mL increase and 14% change - positive response (meets both criteria of ≥200 mL and ≥12%)",
+          B: "350 mL increase but only 10% change - not a positive response",
+          C: "250 mL increase and 14% change - positive response",
+          D: "350 mL increase and 8% change - negative response",
         },
         correctChoice: "A",
         explanationCorrect:
@@ -1813,7 +1813,7 @@ async function main() {
         },
         correctChoice: "B",
         explanationCorrect:
-          "Byssinosis (caused by cotton, flax, or hemp dust) classically presents with 'Monday morning syndrome' — chest tightness and airflow obstruction worst on the first day back at work after a break, improving with continued exposure during the week.",
+          "Byssinosis (caused by cotton, flax, or hemp dust) classically presents with 'Monday morning syndrome' - chest tightness and airflow obstruction worst on the first day back at work after a break, improving with continued exposure during the week.",
         explanationWrong:
           "Asbestosis causes progressive restrictive disease without Monday variation. Silicosis causes progressive nodular fibrosis. Berylliosis causes granulomatous disease. None of these show the characteristic Monday pattern.",
         topic: "Occupational lung disease screening",

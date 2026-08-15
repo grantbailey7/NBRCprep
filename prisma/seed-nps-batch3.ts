@@ -948,7 +948,7 @@ async function main() {
 
   console.log(`Found division: ${division.name}`)
 
-  // Insert all flashcards (do NOT clear existing cards — previous batch data must remain)
+  // Insert all flashcards (do NOT clear existing cards - previous batch data must remain)
   const result = await prisma.flashcard.createMany({
     data: flashcards,
     skipDuplicates: true,

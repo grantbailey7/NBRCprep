@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'NBRC Study Resources',
-  description: 'Free respiratory therapy study resources — exam guides, cheat sheets, topic deep dives, glossaries, tips, and exam day walkthroughs for all 6 NBRC divisions.',
+  description: 'Free respiratory therapy study resources - exam guides, cheat sheets, topic deep dives, glossaries, tips, and exam day walkthroughs for all 6 NBRC divisions.',
   alternates: { canonical: 'https://nbrcprep.app/resources' },
 }
 
@@ -14,25 +14,25 @@ const CATEGORIES = [
   {
     title: 'Exam Guides',
     href: '/guides',
-    description: 'Comprehensive authority guides for each NBRC exam — content domains, scoring, clinical scenarios, and strategies.',
+    description: 'Comprehensive authority guides for each NBRC exam - content domains, scoring, clinical scenarios, and strategies.',
     count: 6,
   },
   {
     title: 'Study Topics',
     href: '/topics',
-    description: 'Deep-dive guides on high-yield clinical topics — ABG interpretation, ventilator modes, airway management, and more.',
+    description: 'Deep-dive guides on high-yield clinical topics - ABG interpretation, ventilator modes, airway management, and more.',
     count: 45,
   },
   {
     title: 'Cheat Sheets',
     href: '/cheat-sheets',
-    description: 'Quick-reference sheets with key values, formulas, and normal ranges — designed to be bookmarked and shared.',
+    description: 'Quick-reference sheets with key values, formulas, and normal ranges - designed to be bookmarked and shared.',
     count: 15,
   },
   {
     title: 'Common Mistakes',
     href: '/mistakes',
-    description: 'The most frequent errors students make on each NBRC exam — and how to avoid them.',
+    description: 'The most frequent errors students make on each NBRC exam - and how to avoid them.',
     count: 12,
   },
   {
@@ -44,13 +44,13 @@ const CATEGORIES = [
   {
     title: 'Exam Day Walkthroughs',
     href: '/exam-day',
-    description: 'Step-by-step guides for test day at Pearson VUE — what to expect, pacing, and anxiety management.',
+    description: 'Step-by-step guides for test day at Pearson VUE - what to expect, pacing, and anxiety management.',
     count: 6,
   },
   {
     title: 'Glossary',
     href: '/glossary',
-    description: 'Comprehensive terminology glossaries for respiratory therapy — ventilator terms, ABG, PFT, pharmacology, and more.',
+    description: 'Comprehensive terminology glossaries for respiratory therapy - ventilator terms, ABG, PFT, pharmacology, and more.',
     count: 12,
   },
 ]
@@ -67,7 +67,7 @@ export default function ResourcesPage() {
           <div className="text-center mb-12">
             <h1 className="section-title">NBRC Study Resources</h1>
             <p className="section-subtitle">
-              104 free study resources across 7 categories — everything you need to pass your NBRC exam
+              104 free study resources across 7 categories - everything you need to pass your NBRC exam
             </p>
           </div>
 

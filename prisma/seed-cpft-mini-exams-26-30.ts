@@ -85,7 +85,7 @@ async function main() {
         },
         correctChoice: "D",
         explanationCorrect:
-          "A 3.08 L reading from a 3.00 L syringe represents a 2.7% error, which exceeds the ATS/ERS tolerance of ±3.5% (±105 mL for a 3 L syringe). Wait — 80 mL is within ±105 mL. However, the technologist should still investigate the discrepancy. Actually, 3.08 L is within the ±3.5% range (2.895–3.105 L), so it barely passes. Best practice is still to investigate any consistent over-reading to ensure accuracy.",
+          "A 3.08 L reading from a 3.00 L syringe represents a 2.7% error, which exceeds the ATS/ERS tolerance of ±3.5% (±105 mL for a 3 L syringe). Wait - 80 mL is within ±105 mL. However, the technologist should still investigate the discrepancy. Actually, 3.08 L is within the ±3.5% range (2.895–3.105 L), so it barely passes. Best practice is still to investigate any consistent over-reading to ensure accuracy.",
         explanationWrong:
           "While the reading may technically be within tolerance, a consistent over-reading warrants investigation. Replacing the syringe is premature without verifying it is the source. Warming the syringe does not address spirometer calibration issues.",
         topic: "Quality control and calibration",
@@ -105,7 +105,7 @@ async function main() {
         explanationCorrect:
           "A methacholine challenge test is considered positive when FEV1 falls by 20% or more from the post-saline baseline. A 22% drop at 4 mg/mL confirms airway hyperresponsiveness and the test should be stopped with bronchodilator administered.",
         explanationWrong:
-          "A 25% threshold is not the standard criterion; 20% is the accepted cutoff. The result is definitive, not equivocal. Symptoms are not required for a positive test — the FEV1 decline alone is the objective criterion.",
+          "A 25% threshold is not the standard criterion; 20% is the accepted cutoff. The result is definitive, not equivocal. Symptoms are not required for a positive test - the FEV1 decline alone is the objective criterion.",
         topic: "Bronchoprovocation testing",
       },
       {
@@ -319,7 +319,7 @@ async function main() {
         },
         correctChoice: "D",
         explanationCorrect:
-          "An elevated VE/VCO2 slope (>34) indicates ventilatory inefficiency — the patient requires excessive ventilation relative to CO2 production. This is a hallmark of pulmonary vascular disease (pulmonary hypertension, pulmonary embolism) where increased dead space ventilation drives compensatory hyperventilation.",
+          "An elevated VE/VCO2 slope (>34) indicates ventilatory inefficiency - the patient requires excessive ventilation relative to CO2 production. This is a hallmark of pulmonary vascular disease (pulmonary hypertension, pulmonary embolism) where increased dead space ventilation drives compensatory hyperventilation.",
         explanationWrong:
           "Normal VE/VCO2 slopes are typically below 30. Deconditioning reduces peak VO2 but does not typically elevate the VE/VCO2 slope above 34. Peripheral muscle weakness limits exercise capacity but does not cause ventilatory inefficiency.",
         topic: "Cardiopulmonary exercise testing",
@@ -483,7 +483,7 @@ async function main() {
         explanationCorrect:
           "The primary outcome measure of the 6MWT is the total distance walked in 6 minutes, measured in meters. While SpO2, heart rate, dyspnea, and fatigue ratings are important supplemental data, the 6-minute walk distance (6MWD) is the principal reported result.",
         explanationWrong:
-          "Maximum heart rate and SpO2 nadir are secondary measurements that provide additional clinical information. The 6MWT is not designed to achieve a target heart rate — that is a feature of formal cardiopulmonary exercise testing.",
+          "Maximum heart rate and SpO2 nadir are secondary measurements that provide additional clinical information. The 6MWT is not designed to achieve a target heart rate - that is a feature of formal cardiopulmonary exercise testing.",
         topic: "Exercise testing and 6-minute walk test",
       },
       {
@@ -699,7 +699,7 @@ async function main() {
         explanationCorrect:
           "The change is 150 mL (1.95 - 1.80) and 8.3% ((0.15/1.80) × 100). ATS/ERS criteria require BOTH ≥12% improvement AND ≥200 mL absolute increase. This patient meets neither threshold, so the response is not significant.",
         explanationWrong:
-          "Not any measurable change is significant — clinical criteria exist for a reason. A 100 mL threshold is below the minimum 200 mL requirement. A 400 mL threshold is too stringent and not the standard criterion.",
+          "Not any measurable change is significant - clinical criteria exist for a reason. A 100 mL threshold is below the minimum 200 mL requirement. A 400 mL threshold is too stringent and not the standard criterion.",
         topic: "Pre/post bronchodilator testing",
       },
       {
@@ -931,7 +931,7 @@ async function main() {
         },
         correctChoice: "D",
         explanationCorrect:
-          "A cough during forced expiration produces a characteristic spike or interruption in the flow-volume loop — a sudden reduction in flow followed by a brief burst of flow and then return to the expected pattern. This is one of the most common artifacts in spirometry and renders the maneuver unacceptable.",
+          "A cough during forced expiration produces a characteristic spike or interruption in the flow-volume loop - a sudden reduction in flow followed by a brief burst of flow and then return to the expected pattern. This is one of the most common artifacts in spirometry and renders the maneuver unacceptable.",
         explanationWrong:
           "Glottic closure would cause a sustained cessation of flow, not a brief interruption. Complete bronchospasm would show progressive flow reduction, not a sudden transient artifact. A mouthpiece leak would show a gradual decline rather than a sudden interruption and recovery.",
         topic: "Flow-volume loop interpretation",
@@ -1203,7 +1203,7 @@ async function main() {
         explanationCorrect:
           "With anemia (low hemoglobin), fewer CO binding sites are available, so the uncorrected DLCO will be lower than it would be with normal hemoglobin. Correcting for hemoglobin adjusts the DLCO upward to reflect what it would be at a normal hemoglobin level, isolating the membrane component.",
         explanationWrong:
-          "The uncorrected value cannot be higher than the corrected value in anemia — correction adjusts upward. They would only be equal if hemoglobin were normal. DLCO is clearly affected by hemoglobin, as CO must bind to hemoglobin to be removed from alveolar gas.",
+          "The uncorrected value cannot be higher than the corrected value in anemia - correction adjusts upward. They would only be equal if hemoglobin were normal. DLCO is clearly affected by hemoglobin, as CO must bind to hemoglobin to be removed from alveolar gas.",
         topic: "Diffusion capacity (DLCO) testing",
       },
       {
@@ -1275,7 +1275,7 @@ async function main() {
         explanationCorrect:
           "Standard precautions mandate hand hygiene before and after every patient contact, after removing gloves (hands may become contaminated during glove removal), and after touching potentially contaminated equipment. Alcohol-based hand rub or soap and water should be used.",
         explanationWrong:
-          "PFT testing does not involve sterile technique — hand hygiene is required regardless. Waiting until hands are visibly soiled misses most contamination events. Once per shift is grossly inadequate for preventing cross-contamination.",
+          "PFT testing does not involve sterile technique - hand hygiene is required regardless. Waiting until hands are visibly soiled misses most contamination events. Once per shift is grossly inadequate for preventing cross-contamination.",
         topic: "Infection control in PFT lab",
       },
       {
@@ -1345,7 +1345,7 @@ async function main() {
         },
         correctChoice: "C",
         explanationCorrect:
-          "A Fleisch pneumotachometer contains a bundle of capillary tubes that create a laminar flow resistance element. Flow is calculated from the pressure differential across this resistance using Poiseuille's law — the pressure drop is proportional to flow rate when flow is laminar.",
+          "A Fleisch pneumotachometer contains a bundle of capillary tubes that create a laminar flow resistance element. Flow is calculated from the pressure differential across this resistance using Poiseuille's law - the pressure drop is proportional to flow rate when flow is laminar.",
         explanationWrong:
           "Ultrasonic transit time is used in ultrasonic flow sensors. Thermal mass flow uses heated wire elements. Turbine-based sensors measure vane rotation. The Fleisch type specifically uses differential pressure across a resistive element.",
         topic: "Equipment maintenance and troubleshooting",
@@ -1383,7 +1383,7 @@ async function main() {
         explanationCorrect:
           "Phase IV of the single-breath nitrogen washout test begins when the nitrogen concentration shows an abrupt upward deflection near the end of exhalation. This indicates closure of dependent airways, trapping nitrogen-rich gas in the bases and allowing nitrogen-enriched gas from the apices to predominate.",
         explanationWrong:
-          "Phase IV does not begin at TLC — that is the start of the test. Nitrogen concentration never reaches zero during the test. FRC is the resting lung volume and does not mark the onset of Phase IV. The abrupt N2 rise is the defining feature.",
+          "Phase IV does not begin at TLC - that is the start of the test. Nitrogen concentration never reaches zero during the test. FRC is the resting lung volume and does not mark the onset of Phase IV. The abrupt N2 rise is the defining feature.",
         topic: "Nitrogen washout and helium dilution",
       },
       {
@@ -1401,7 +1401,7 @@ async function main() {
         explanationCorrect:
           "A weak or erratic plethysmographic waveform indicates poor pulsatile blood flow at the sensor site, which can result from peripheral vasoconstriction, hypotension, hypothermia, or peripheral vascular disease. The SpO2 reading may be inaccurate or absent under these conditions.",
         explanationWrong:
-          "High COHb does not affect the plethysmographic waveform quality — the pulse signal remains strong. A correctly placed sensor should show a strong waveform. An erratic waveform is never normal and always indicates a signal quality issue.",
+          "High COHb does not affect the plethysmographic waveform quality - the pulse signal remains strong. A correctly placed sensor should show a strong waveform. An erratic waveform is never normal and always indicates a signal quality issue.",
         topic: "Pulse oximetry and capnography",
       },
       {
@@ -1507,7 +1507,7 @@ async function main() {
         },
         correctChoice: "B",
         explanationCorrect:
-          "A reduced FEV1/FVC ratio confirms obstruction, while an elevated RV/TLC ratio indicates air trapping — gas that remains in the lungs after maximal expiration due to premature airway closure. This combination is the hallmark of obstructive diseases such as COPD and severe asthma.",
+          "A reduced FEV1/FVC ratio confirms obstruction, while an elevated RV/TLC ratio indicates air trapping - gas that remains in the lungs after maximal expiration due to premature airway closure. This combination is the hallmark of obstructive diseases such as COPD and severe asthma.",
         explanationWrong:
           "Restrictive disease shows a normal or elevated FEV1/FVC ratio with reduced TLC. While aging does increase RV/TLC slightly, a reduced FEV1/FVC ratio combined with significantly elevated RV/TLC exceeds normal aging. Neuromuscular weakness reduces VC but does not typically cause airflow obstruction.",
         topic: "Obstructive vs restrictive pattern recognition",
@@ -1723,9 +1723,9 @@ async function main() {
         },
         correctChoice: "A",
         explanationCorrect:
-          "When FRCpleth significantly exceeds FRCHe, it indicates trapped gas — lung regions that contain gas but do not communicate freely with the airways during tidal breathing. Plethysmography measures all thoracic gas regardless of communication, while helium dilution only measures communicating gas volumes.",
+          "When FRCpleth significantly exceeds FRCHe, it indicates trapped gas - lung regions that contain gas but do not communicate freely with the airways during tidal breathing. Plethysmography measures all thoracic gas regardless of communication, while helium dilution only measures communicating gas volumes.",
         explanationWrong:
-          "A higher plethysmographic value does not mean helium dilution is more accurate — each measures something different. They are not equally valid for the same purpose in obstructive disease. A consistent discrepancy is pathologically meaningful, not a malfunction.",
+          "A higher plethysmographic value does not mean helium dilution is more accurate - each measures something different. They are not equally valid for the same purpose in obstructive disease. A consistent discrepancy is pathologically meaningful, not a malfunction.",
         topic: "Body plethysmography",
       },
       {

@@ -164,7 +164,7 @@ export default async function DashboardPage() {
                   <div>
                     <p className="font-bold text-teal-700">{milestone.label}</p>
                     <p className="text-sm text-teal-600">
-                      {streak} day study streak — keep it going!
+                      {streak} day study streak - keep it going!
                     </p>
                   </div>
                 </div>

@@ -64,7 +64,7 @@ async function main() {
       },
       {
         question: 'In the ATS/ERS quality grading system, what distinguishes a grade D from a grade F?',
-        answer: 'Grade D indicates that usable results were obtained but they did not meet repeatability criteria. Grade F means no usable results were obtained — the maneuvers were unacceptable due to poor effort, leaks, obstruction of the mouthpiece, or other technical failures.',
+        answer: 'Grade D indicates that usable results were obtained but they did not meet repeatability criteria. Grade F means no usable results were obtained - the maneuvers were unacceptable due to poor effort, leaks, obstruction of the mouthpiece, or other technical failures.',
         difficulty: 3,
         topic: 'Advanced Spirometry Interpretation',
         isFree: false,
@@ -589,7 +589,7 @@ async function main() {
       },
       {
         question: 'Describe the flow-volume loop pattern seen in a patient with a restrictive lung disease such as pulmonary fibrosis.',
-        answer: 'The loop appears as a miniature version of a normal loop — it retains a normal shape but is compressed with reduced volumes. Peak expiratory flow may be normal or slightly reduced, FVC is reduced, and the FEV1/FVC ratio is normal or elevated. The expiratory limb descends steeply due to increased elastic recoil.',
+        answer: 'The loop appears as a miniature version of a normal loop - it retains a normal shape but is compressed with reduced volumes. Peak expiratory flow may be normal or slightly reduced, FVC is reduced, and the FEV1/FVC ratio is normal or elevated. The expiratory limb descends steeply due to increased elastic recoil.',
         difficulty: 2,
         topic: 'Flow-Volume Loop Patterns',
         isFree: false,

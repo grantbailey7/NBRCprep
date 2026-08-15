@@ -6,7 +6,7 @@ import { SeoIndexPage } from '@/components/seo/SeoIndexPage'
 
 export const metadata: Metadata = {
   title: 'NBRC Exam Guides',
-  description: 'Comprehensive guides for all 6 NBRC respiratory therapy credentialing exams — TMC, NPS, ACCS, SDS, CPFT, and RPFT.',
+  description: 'Comprehensive guides for all 6 NBRC respiratory therapy credentialing exams - TMC, NPS, ACCS, SDS, CPFT, and RPFT.',
   alternates: { canonical: 'https://nbrcprep.app/guides' },
 }
 

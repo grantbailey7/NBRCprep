@@ -61,7 +61,7 @@ export default function SignupPage() {
       })
 
       if (result?.error) {
-        // Registration succeeded but auto sign-in failed — redirect to login
+        // Registration succeeded but auto sign-in failed - redirect to login
         router.push('/login')
       } else {
         router.push('/dashboard')
@@ -83,7 +83,7 @@ export default function SignupPage() {
           <div className="text-center mb-8">
             <h1 className="text-3xl font-black text-black">Create your account</h1>
             <p className="mt-2 text-brand-gray-500">
-              Start studying for the NBRC — free, no card required
+              Start studying for the NBRC - free, no card required
             </p>
           </div>
 

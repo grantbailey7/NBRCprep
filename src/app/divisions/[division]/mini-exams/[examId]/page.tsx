@@ -117,7 +117,7 @@ export default function MiniExamPage() {
                 <div className={`mt-3 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-bold ${
                   passed ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                 }`}>
-                  {passed ? '✓ Passed (≥90%)' : '✗ Not passed — keep studying!'}
+                  {passed ? '✓ Passed (≥90%)' : '✗ Not passed - keep studying!'}
                 </div>
               </div>
 

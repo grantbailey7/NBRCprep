@@ -7,7 +7,7 @@ import { Footer } from '@/components/layout/Footer'
 import { getAuthSession } from '@/lib/auth'
 
 export const metadata: Metadata = {
-  title: 'Pricing — NBRC Exam Prep Plans',
+  title: 'Pricing - NBRC Exam Prep Plans',
   description:
     'Affordable NBRC exam prep starting free. Monthly TMC access at $29/mo, lifetime TMC access at $149, or all 6 divisions for $249. Practice tests, flashcards, and full-length exam simulations.',
   alternates: { canonical: 'https://nbrcprep.app/pricing' },
@@ -22,7 +22,7 @@ const FAQ_ITEMS = [
   {
     question: 'What is the difference between Full Access and Full Bundle?',
     answer:
-      'Full Access ($149 one-time) unlocks all TMC content — 400 flashcards, 30 mini exams, and 3 full-length exams. Full Bundle ($249 one-time) unlocks all content across all 6 NBRC divisions (TMC, NPS, ACCS, SDS, CPFT, RPFT).',
+      'Full Access ($149 one-time) unlocks all TMC content - 400 flashcards, 30 mini exams, and 3 full-length exams. Full Bundle ($249 one-time) unlocks all content across all 6 NBRC divisions (TMC, NPS, ACCS, SDS, CPFT, RPFT).',
   },
   {
     question: 'Can I cancel my Monthly plan?',
@@ -37,7 +37,7 @@ const FAQ_ITEMS = [
   {
     question: 'What does "lifetime access" mean?',
     answer:
-      'Full Access and Full Bundle are one-time purchases. Once you pay, you have access to the included content forever — no recurring charges.',
+      'Full Access and Full Bundle are one-time purchases. Once you pay, you have access to the included content forever - no recurring charges.',
   },
   {
     question: 'Can I upgrade from Monthly to Full Access later?',
@@ -67,7 +67,7 @@ const faqSchema = {
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'NBRCprep — NBRC Exam Prep Platform',
+  name: 'NBRCprep - NBRC Exam Prep Platform',
   description: 'Comprehensive study platform for NBRC respiratory therapy credentialing exams with flashcards, timed practice exams, and full-length simulations.',
   brand: { '@type': 'Brand', name: 'NBRCprep' },
   url: 'https://nbrcprep.app/pricing',
@@ -88,7 +88,7 @@ const productSchema = {
       price: '29',
       priceCurrency: 'USD',
       url: 'https://nbrcprep.app/pricing',
-      description: 'Full TMC access — 400 flashcards, 30 mini exams, 3 full exams. Cancel anytime.',
+      description: 'Full TMC access - 400 flashcards, 30 mini exams, 3 full exams. Cancel anytime.',
       availability: 'https://schema.org/InStock',
     },
     {
@@ -97,7 +97,7 @@ const productSchema = {
       price: '149',
       priceCurrency: 'USD',
       url: 'https://nbrcprep.app/pricing',
-      description: 'Lifetime TMC access — 400 flashcards, 30 mini exams, 3 full-length exams.',
+      description: 'Lifetime TMC access - 400 flashcards, 30 mini exams, 3 full-length exams.',
       availability: 'https://schema.org/InStock',
     },
     {
@@ -106,7 +106,7 @@ const productSchema = {
       price: '249',
       priceCurrency: 'USD',
       url: 'https://nbrcprep.app/pricing',
-      description: 'Lifetime access to all 6 NBRC divisions — 2,400 flashcards, 180 mini exams, 18 full-length exams.',
+      description: 'Lifetime access to all 6 NBRC divisions - 2,400 flashcards, 180 mini exams, 18 full-length exams.',
       availability: 'https://schema.org/InStock',
     },
   ],

@@ -8,7 +8,7 @@ async function main() {
   console.log('Seeding SDS mini exams 26-30...')
 
   // ─── EXAM 26 ───────────────────────────────────────────
-  // Topics: Comprehensive SDS review — mixed PSG interpretation, PAP titration, clinical decision-making
+  // Topics: Comprehensive SDS review - mixed PSG interpretation, PAP titration, clinical decision-making
   // Correct answer distribution: A=5(Q2,Q5,Q10,Q14,Q18) B=5(Q1,Q8,Q11,Q16,Q20) C=5(Q3,Q6,Q13,Q17,Q19) D=5(Q4,Q7,Q9,Q12,Q15)
   const exam26 = await prisma.miniExam.create({
     data: {
@@ -385,7 +385,7 @@ async function main() {
   })
 
   // ─── EXAM 27 ───────────────────────────────────────────
-  // Topics: Comprehensive SDS review — advanced PAP management, pediatric sleep, regulatory and safety
+  // Topics: Comprehensive SDS review - advanced PAP management, pediatric sleep, regulatory and safety
   // Correct answer distribution: A=5(Q3,Q7,Q12,Q15,Q19) B=5(Q2,Q5,Q9,Q14,Q17) C=5(Q1,Q6,Q11,Q16,Q20) D=5(Q4,Q8,Q10,Q13,Q18)
   const exam27 = await prisma.miniExam.create({
     data: {
@@ -519,7 +519,7 @@ async function main() {
         },
         correctChoice: 'A',
         explanationCorrect:
-          'PAP device flow signals (pneumotachograph-derived) are highly sensitive and can detect cardiogenic oscillations — small flow changes caused by cardiac contraction transmitted through the chest. These oscillations can be misinterpreted as flow reductions. The thermal airflow sensor, being less sensitive to small flow changes, does not register these cardiac-related oscillations. This discrepancy indicates artifact rather than true respiratory events.',
+          'PAP device flow signals (pneumotachograph-derived) are highly sensitive and can detect cardiogenic oscillations - small flow changes caused by cardiac contraction transmitted through the chest. These oscillations can be misinterpreted as flow reductions. The thermal airflow sensor, being less sensitive to small flow changes, does not register these cardiac-related oscillations. This discrepancy indicates artifact rather than true respiratory events.',
         explanationWrong:
           'Thermal sensor malfunction would not selectively miss events that correspond to the cardiac cycle. True central apneas would show absent flow on both the PAP device signal and the thermal sensor. PAP device motor cycling occurs at a different frequency and does not produce the pattern described.',
         topic: 'PSG interpretation and troubleshooting',
@@ -762,7 +762,7 @@ async function main() {
   })
 
   // ─── EXAM 28 ───────────────────────────────────────────
-  // Topics: Comprehensive SDS review — scoring nuances, complex clinical scenarios, patient management
+  // Topics: Comprehensive SDS review - scoring nuances, complex clinical scenarios, patient management
   // Correct answer distribution: A=5(Q1,Q6,Q10,Q15,Q18) B=5(Q4,Q7,Q12,Q16,Q19) C=5(Q2,Q8,Q13,Q17,Q20) D=5(Q3,Q5,Q9,Q11,Q14)
   const exam28 = await prisma.miniExam.create({
     data: {
@@ -1139,7 +1139,7 @@ async function main() {
   })
 
   // ─── EXAM 29 ───────────────────────────────────────────
-  // Topics: Comprehensive SDS review — advanced diagnostics, special populations, treatment algorithms
+  // Topics: Comprehensive SDS review - advanced diagnostics, special populations, treatment algorithms
   // Correct answer distribution: A=5(Q4,Q8,Q11,Q16,Q20) B=5(Q1,Q5,Q9,Q13,Q18) C=5(Q3,Q7,Q14,Q17,Q19) D=5(Q2,Q6,Q10,Q12,Q15)
   const exam29 = await prisma.miniExam.create({
     data: {
@@ -1516,7 +1516,7 @@ async function main() {
   })
 
   // ─── EXAM 30 ───────────────────────────────────────────
-  // Topics: Comprehensive SDS final review — integration of all domains, complex clinical reasoning
+  // Topics: Comprehensive SDS final review - integration of all domains, complex clinical reasoning
   // Correct answer distribution: A=5(Q2,Q7,Q11,Q14,Q19) B=5(Q3,Q6,Q10,Q15,Q20) C=5(Q1,Q5,Q9,Q13,Q18) D=5(Q4,Q8,Q12,Q16,Q17)
   const exam30 = await prisma.miniExam.create({
     data: {

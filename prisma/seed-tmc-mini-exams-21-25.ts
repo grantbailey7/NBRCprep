@@ -8,7 +8,7 @@ async function main() {
   console.log('Seeding TMC mini exams 21-25...')
 
   // ──────────────────────────────────────────────
-  // EXAM 21 — Answer key: B A C D A D B C D A B C D A D B C A B C
+  // EXAM 21 - Answer key: B A C D A D B C D A B C D A D B C A B C
   //   A: q2,5,10,14,18  B: q1,7,11,16,19  C: q3,8,12,17,20  D: q4,6,9,13,15
   // ──────────────────────────────────────────────
   const exam21 = await prisma.miniExam.create({
@@ -228,7 +228,7 @@ async function main() {
   console.log('  ✓ Exam 21 seeded (20 questions)')
 
   // ──────────────────────────────────────────────
-  // EXAM 22 — Answer key: A D B C D A D B C D A B C D A B C C B A
+  // EXAM 22 - Answer key: A D B C D A D B C D A B C D A B C C B A
   //   A: q1,6,11,15,20  B: q3,8,12,16,19  C: q4,9,13,17,18  D: q2,5,7,10,14
   // ──────────────────────────────────────────────
   const exam22 = await prisma.miniExam.create({
@@ -448,7 +448,7 @@ async function main() {
   console.log('  ✓ Exam 22 seeded (20 questions)')
 
   // ──────────────────────────────────────────────
-  // EXAM 23 — Answer key: C B D A C B A D D B C A C D A B C C A B
+  // EXAM 23 - Answer key: C B D A C B A D D B C A C D A B C C A B
   //   A: q4,7,12,15,19  B: q2,6,10,16,20  C: q1,5,11,13,17,18 → wait, need exactly 5
   // Recalculate:
   //   A: q4,7,12,15,19  B: q2,6,10,16,20  C: q1,5,11,13,18  D: q3,8,9,14,17
@@ -675,7 +675,7 @@ async function main() {
   console.log('  ✓ Exam 23 seeded (20 questions)')
 
   // ──────────────────────────────────────────────
-  // EXAM 24 — Answer key: B C A D B D A C A D A B D B C A B C D C
+  // EXAM 24 - Answer key: B C A D B D A C A D A B D B C A B C D C
   //   A: q3,7,9,11,16  B: q1,5,12,14,17  C: q2,8,15,18,20  D: q4,6,10,13,19
   // ──────────────────────────────────────────────
   const exam24 = await prisma.miniExam.create({
@@ -895,7 +895,7 @@ async function main() {
   console.log('  ✓ Exam 24 seeded (20 questions)')
 
   // ──────────────────────────────────────────────
-  // EXAM 25 — Answer key: C A D B C A D B A D C B A D A B C D C B
+  // EXAM 25 - Answer key: C A D B C A D B A D C B A D A B C D C B
   //   A: q2,6,9,13,15  B: q4,8,12,16,20  C: q1,5,11,17,19  D: q3,7,10,14,18
   // ──────────────────────────────────────────────
   const exam25 = await prisma.miniExam.create({

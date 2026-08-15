@@ -3,6 +3,7 @@ export const dynamic = 'force-dynamic'
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { stripe } from '@/lib/stripe'
+import { sendUpgradeThankYouEmail } from '@/lib/email'
 import Stripe from 'stripe'
 
 export async function POST(request: NextRequest) {
@@ -46,10 +47,15 @@ export async function POST(request: NextRequest) {
           updateData.stripePriceId = subscription.items.data[0]?.price.id
         }
 
-        await prisma.user.update({
+        const user = await prisma.user.update({
           where: { id: userId },
           data: updateData,
         })
+
+        if (user.email) {
+          const label = planType === 'FULL_BUNDLE' ? 'Lifetime Access' : 'Full Access'
+          sendUpgradeThankYouEmail(user.email, label, user.name).catch(console.error)
+        }
       }
       break
     }

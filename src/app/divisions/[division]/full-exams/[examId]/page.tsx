@@ -152,7 +152,7 @@ export default function FullExamPage() {
                 <div className={`mt-3 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-bold ${
                   passed ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                 }`}>
-                  {passed ? '✓ PASSED — Full Exam Complete!' : '✗ Not passed — 70% required'}
+                  {passed ? '✓ PASSED - Full Exam Complete!' : '✗ Not passed - 70% required'}
                 </div>
               </div>
 

@@ -6,7 +6,7 @@ import { SeoIndexPage } from '@/components/seo/SeoIndexPage'
 
 export const metadata: Metadata = {
   title: 'NBRC Study Topics',
-  description: 'Deep-dive study guides for high-yield NBRC exam topics — ABG interpretation, ventilator modes, airway management, and more.',
+  description: 'Deep-dive study guides for high-yield NBRC exam topics - ABG interpretation, ventilator modes, airway management, and more.',
   alternates: { canonical: 'https://nbrcprep.app/topics' },
 }
 

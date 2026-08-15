@@ -8,7 +8,7 @@ async function main() {
   console.log('Seeding SDS mini exams 6-10...')
 
   // ──────────────────────────────────────────────
-  // EXAM 6 — Narcolepsy, MSLT, Parasomnias
+  // EXAM 6 - Narcolepsy, MSLT, Parasomnias
   // Answer key: C A D B A D C B D A B C A D C B D A C B
   //   A: q2,5,10,13,18  B: q4,8,11,16,20  C: q1,7,12,15,19  D: q3,6,9,14,17
   // ──────────────────────────────────────────────
@@ -117,7 +117,7 @@ async function main() {
         miniExamId: exam6.id,
         questionIndex: 10,
         questionText: 'During a PSG recording, the technologist notes that a single EEG channel shows intermittent, abrupt high-amplitude deflections that do not correlate with any cerebral activity or patient movement. What is the most likely cause and appropriate corrective action?',
-        choices: { A: 'Electrode pop artifact — check and reapply the affected electrode', B: 'ECG artifact — add a reference near the mastoid', C: 'Movement artifact — restrain the patient', D: 'Sweat artifact — lower the room temperature' },
+        choices: { A: 'Electrode pop artifact - check and reapply the affected electrode', B: 'ECG artifact - add a reference near the mastoid', C: 'Movement artifact - restrain the patient', D: 'Sweat artifact - lower the room temperature' },
         correctChoice: 'A',
         explanationCorrect: 'Electrode pop artifact produces sudden, sharp deflections in a single channel due to poor electrode contact. The corrective action is to check impedance and reapply the electrode with fresh paste or gel.',
         explanationWrong: 'ECG artifact appears as periodic QRS complexes. Movement artifact typically affects multiple channels. Sweat artifact produces slow rolling baseline shifts, not abrupt deflections.',
@@ -197,7 +197,7 @@ async function main() {
         miniExamId: exam6.id,
         questionIndex: 18,
         questionText: 'In a child with suspected obstructive sleep apnea, an obstructive apnea-hypopnea index of 2 events per hour is considered which of the following?',
-        choices: { A: 'Abnormal — pediatric OSA is diagnosed at an AHI of 1 or more events per hour', B: 'Normal for a child under age 12', C: 'Diagnostic of severe pediatric OSA', D: 'Borderline — requiring repeat testing in 6 months' },
+        choices: { A: 'Abnormal - pediatric OSA is diagnosed at an AHI of 1 or more events per hour', B: 'Normal for a child under age 12', C: 'Diagnostic of severe pediatric OSA', D: 'Borderline - requiring repeat testing in 6 months' },
         correctChoice: 'A',
         explanationCorrect: 'In pediatric populations, an obstructive AHI of 1 or more events per hour is considered abnormal. An AHI of 2 supports a diagnosis of pediatric OSA and warrants evaluation for treatment, commonly adenotonsillectomy.',
         explanationWrong: 'An AHI of 2 is not normal in children. It does not indicate severe OSA (typically AHI >10 in children). Repeat testing is not the standard approach when the result is clearly abnormal.',
@@ -227,7 +227,7 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 7 — RLS/PLMD, Split-Night, Oral Appliances, Surgical Options
+  // EXAM 7 - RLS/PLMD, Split-Night, Oral Appliances, Surgical Options
   // Answer key: D C A B D A C B A D B C D A C B D A B C
   //   A: q3,6,9,14,18  B: q4,8,11,16,19  C: q2,7,12,15,20  D: q1,5,10,13,17
   // ──────────────────────────────────────────────
@@ -426,7 +426,7 @@ async function main() {
         miniExamId: exam7.id,
         questionIndex: 19,
         questionText: 'A child with severe obstructive sleep apnea (AHI 15) and tonsillar hypertrophy grade 3+ has not responded to adenotonsillectomy. Post-surgical PSG shows a residual AHI of 8. Which treatment should be considered next?',
-        choices: { A: 'Repeat adenotonsillectomy', B: 'CPAP therapy', C: 'Oral corticosteroids', D: 'No treatment — the residual AHI is acceptable' },
+        choices: { A: 'Repeat adenotonsillectomy', B: 'CPAP therapy', C: 'Oral corticosteroids', D: 'No treatment - the residual AHI is acceptable' },
         correctChoice: 'B',
         explanationCorrect: 'When pediatric OSA persists after adenotonsillectomy (residual AHI >1), CPAP therapy is the recommended next-line treatment. An AHI of 8 remains significantly abnormal in pediatric patients.',
         explanationWrong: 'Repeat adenotonsillectomy is rarely performed. Oral corticosteroids are not a standard treatment for residual OSA. An AHI of 8 is not acceptable in a child.',
@@ -446,7 +446,7 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 8 — PAP Adherence, Shift Work, Occupational Sleep Medicine
+  // EXAM 8 - PAP Adherence, Shift Work, Occupational Sleep Medicine
   // Answer key: B D C A B C D A C B A D B C A D C B D A
   //   A: q4,8,11,15,20  B: q1,5,9,13,18  C: q3,6,10,14,17  D: q2,7,12,16,19
   // ──────────────────────────────────────────────
@@ -587,7 +587,7 @@ async function main() {
         questionText: 'A patient reports claustrophobia when wearing a CPAP mask. Which strategy is most appropriate as an initial intervention?',
         choices: { A: 'Prescribing anxiolytic medication', B: 'Desensitization therapy with gradual mask wearing during waking hours', C: 'Recommending the patient discontinue PAP permanently', D: 'Switching to an oral appliance immediately' },
         correctChoice: 'B',
-        explanationCorrect: 'Systematic desensitization — wearing the mask while awake, then with pressure on, then during naps, and gradually increasing to full-night use — is the recommended first-line approach for claustrophobia-related PAP intolerance.',
+        explanationCorrect: 'Systematic desensitization - wearing the mask while awake, then with pressure on, then during naps, and gradually increasing to full-night use - is the recommended first-line approach for claustrophobia-related PAP intolerance.',
         explanationWrong: 'Anxiolytics are not first-line and may worsen sleep-disordered breathing. Permanent discontinuation abandons effective therapy. An oral appliance may be considered later but desensitization should be attempted first.',
         topic: 'PAP Adherence Strategies',
       },
@@ -665,7 +665,7 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 9 — Pediatric Sleep, Advanced Parasomnias, EEG Patterns
+  // EXAM 9 - Pediatric Sleep, Advanced Parasomnias, EEG Patterns
   // Answer key: A C D B C A B D C A D B A C B D A C D B
   //   A: q1,6,13,17  -> need 5... let me recount
   //   A: q1,6,11,13,17  B: q4,7,12,15,20  C: q2,5,9,14,18  D: q3,8,10,16,19
@@ -798,7 +798,7 @@ async function main() {
         choices: { A: 'Symptoms worsen during rest or inactivity', B: 'Symptoms are partially or totally relieved by movement', C: 'Symptoms are worse in the evening or at night', D: 'Symptoms are not solely accounted for by another medical condition' },
         correctChoice: 'B',
         explanationCorrect: 'Relief with movement is one of the four essential IRLSSG diagnostic criteria for RLS. The urge to move and associated sensations must be partially or totally relieved by movement such as walking or stretching.',
-        explanationWrong: 'While all four criteria must be met for diagnosis, the specific feature described — relief with walking — corresponds to the movement relief criterion.',
+        explanationWrong: 'While all four criteria must be met for diagnosis, the specific feature described - relief with walking - corresponds to the movement relief criterion.',
         topic: 'Restless Legs Syndrome',
       },
       {
@@ -885,7 +885,7 @@ async function main() {
   })
 
   // ──────────────────────────────────────────────
-  // EXAM 10 — Mixed Advanced Topics Review
+  // EXAM 10 - Mixed Advanced Topics Review
   // Answer key: D B A C B D C A B C D A C B A D B C A D
   //   A: q3,8,15,19  -> need 5...
   //   A: q3,8,12,15,19  B: q2,5,9,14,17  C: q4,7,10,13,18  D: q1,6,11,16,20
@@ -1017,7 +1017,7 @@ async function main() {
         questionText: 'Which of the following is a contraindication to the use of adaptive servo-ventilation (ASV)?',
         choices: { A: 'Heart failure with preserved ejection fraction (HFpEF)', B: 'Treatment-emergent central apnea', C: 'Obesity hypoventilation syndrome', D: 'Central sleep apnea associated with opioid use' },
         correctChoice: 'A',
-        explanationCorrect: 'ASV is contraindicated in patients with symptomatic heart failure with reduced ejection fraction (LVEF ≤45%) based on the SERVE-HF trial which showed increased cardiovascular mortality. While HFpEF was listed as the choice, the key contraindication relates to reduced EF — this tests whether students recognize heart failure as the critical ASV contraindication category.',
+        explanationCorrect: 'ASV is contraindicated in patients with symptomatic heart failure with reduced ejection fraction (LVEF ≤45%) based on the SERVE-HF trial which showed increased cardiovascular mortality. While HFpEF was listed as the choice, the key contraindication relates to reduced EF - this tests whether students recognize heart failure as the critical ASV contraindication category.',
         explanationWrong: 'Treatment-emergent central apnea is actually an indication for ASV. Opioid-related CSA may be treated with ASV in some cases. OHS is typically treated with BiPAP or volume-assured pressure support, not ASV, but it is not the primary contraindication.',
         topic: 'Advanced PAP Therapy',
       },
@@ -1058,7 +1058,7 @@ async function main() {
         choices: { A: 'The tendency to fall asleep during the day (similar to MSLT)', B: 'Sleep architecture during overnight polysomnography', C: 'Circadian phase timing', D: 'The ability to stay awake under soporific conditions, often for occupational or safety assessments' },
         correctChoice: 'D',
         explanationCorrect: 'The MWT measures the ability to remain awake in a quiet, dimly lit, sedating environment. It is commonly used for occupational assessments (e.g., commercial drivers, pilots) to determine whether a patient can maintain wakefulness for safety-critical tasks.',
-        explanationWrong: 'The MSLT measures sleep tendency. The MWT measures the opposite — wakefulness maintenance. It is not an overnight test or a circadian assessment tool.',
+        explanationWrong: 'The MSLT measures sleep tendency. The MWT measures the opposite - wakefulness maintenance. It is not an overnight test or a circadian assessment tool.',
         topic: 'Sleep Testing',
       },
       {

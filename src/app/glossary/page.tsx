@@ -6,7 +6,7 @@ import { SeoIndexPage } from '@/components/seo/SeoIndexPage'
 
 export const metadata: Metadata = {
   title: 'Respiratory Therapy Glossary',
-  description: 'Comprehensive glossaries of respiratory therapy terms for NBRC exams — ventilator, ABG, PFT, pharmacology, sleep study, and neonatal terminology.',
+  description: 'Comprehensive glossaries of respiratory therapy terms for NBRC exams - ventilator, ABG, PFT, pharmacology, sleep study, and neonatal terminology.',
   alternates: { canonical: 'https://nbrcprep.app/glossary' },
 }
 

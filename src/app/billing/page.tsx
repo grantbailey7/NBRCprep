@@ -14,10 +14,10 @@ const PLAN_LABELS: Record<string, string> = {
 }
 
 const PLAN_DESCRIPTIONS: Record<string, string> = {
-  FREE: 'Limited access — 20 flashcards per division and 1 sample TMC mini exam.',
-  MONTHLY: 'Full TMC access — 400 flashcards, 30 mini exams, 3 full exams. Billed monthly.',
-  FULL_ACCESS: 'Full TMC access — 400 flashcards, 30 mini exams, 3 full exams. Lifetime access.',
-  FULL_BUNDLE: 'All 6 divisions — 2,400 flashcards, 180 mini exams, 18 full exams. Lifetime access.',
+  FREE: 'Limited access - 20 flashcards per division and 1 sample TMC mini exam.',
+  MONTHLY: 'Full TMC access - 400 flashcards, 30 mini exams, 3 full exams. Billed monthly.',
+  FULL_ACCESS: 'Full TMC access - 400 flashcards, 30 mini exams, 3 full exams. Lifetime access.',
+  FULL_BUNDLE: 'All 6 divisions - 2,400 flashcards, 180 mini exams, 18 full exams. Lifetime access.',
 }
 
 export default function BillingPage() {
@@ -262,7 +262,7 @@ export default function BillingPage() {
                   $249<span className="text-sm font-normal text-brand-gray-400"> one-time</span>
                 </p>
                 <p className="text-xs text-brand-gray-500 mt-2">
-                  Unlock all 6 divisions — 2,400 flashcards, 180 mini exams, 18 full exams.
+                  Unlock all 6 divisions - 2,400 flashcards, 180 mini exams, 18 full exams.
                 </p>
                 <button
                   onClick={() => handleUpgrade('full_bundle')}
@@ -278,7 +278,7 @@ export default function BillingPage() {
           {isFullBundle && (
             <div className="card p-6 bg-teal-500/10 border-teal-400">
               <p className="text-sm text-black font-medium">
-                You have the Full Bundle — lifetime access to all 6 NBRC divisions. Nothing more to unlock.
+                You have the Full Bundle - lifetime access to all 6 NBRC divisions. Nothing more to unlock.
               </p>
             </div>
           )}

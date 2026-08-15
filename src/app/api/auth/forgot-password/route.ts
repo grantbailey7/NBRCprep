@@ -40,7 +40,7 @@ export async function POST(request: Request) {
 
     const resetUrl = `https://nbrcprep.app/reset-password?token=${token}`
 
-    sendPasswordResetEmail(email, resetUrl).catch(() => {})
+    sendPasswordResetEmail(email, resetUrl, user.name).catch((err) => console.error('Password reset email failed:', err))
 
     return NextResponse.json({
       message: 'If an account with that email exists, a password reset link has been sent.',

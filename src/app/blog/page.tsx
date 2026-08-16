@@ -26,25 +26,57 @@ const blogSchema = {
   },
 }
 
-export default async function BlogPage() {
-  const posts = await prisma.blogPost.findMany({
-    where: {
-      status: 'PUBLISHED',
-      publishedAt: { lte: new Date() },
-    },
-    orderBy: { publishedAt: 'desc' },
-    select: {
-      slug: true,
-      title: true,
-      description: true,
-      category: true,
-      readTime: true,
-      publishedAt: true,
-    },
-  })
+const POSTS_PER_PAGE = 24
 
-  const featured = posts[0]
-  const rest = posts.slice(1)
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams: { page?: string; category?: string }
+}) {
+  const currentPage = Math.max(1, parseInt(searchParams.page || '1', 10) || 1)
+  const selectedCategory = searchParams.category || null
+
+  const where = {
+    status: 'PUBLISHED' as const,
+    publishedAt: { lte: new Date() },
+    ...(selectedCategory && { category: selectedCategory }),
+  }
+
+  const [posts, totalCount, categories] = await Promise.all([
+    prisma.blogPost.findMany({
+      where,
+      orderBy: { publishedAt: 'desc' },
+      skip: (currentPage - 1) * POSTS_PER_PAGE,
+      take: POSTS_PER_PAGE,
+      select: {
+        slug: true,
+        title: true,
+        description: true,
+        category: true,
+        readTime: true,
+        publishedAt: true,
+      },
+    }),
+    prisma.blogPost.count({ where }),
+    prisma.blogPost.findMany({
+      where: { status: 'PUBLISHED', publishedAt: { lte: new Date() } },
+      select: { category: true },
+      distinct: ['category'],
+      orderBy: { category: 'asc' },
+    }),
+  ])
+
+  const totalPages = Math.ceil(totalCount / POSTS_PER_PAGE)
+  const featured = currentPage === 1 && !selectedCategory ? posts[0] : null
+  const gridPosts = featured ? posts.slice(1) : posts
+
+  function pageUrl(page: number) {
+    const params = new URLSearchParams()
+    if (page > 1) params.set('page', String(page))
+    if (selectedCategory) params.set('category', selectedCategory)
+    const qs = params.toString()
+    return `/blog${qs ? `?${qs}` : ''}`
+  }
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -64,6 +96,34 @@ export default async function BlogPage() {
             breakdowns, and test-day advice to help you pass on your first attempt.
           </p>
         </div>
+
+        {categories.length > 1 && (
+          <div className="flex flex-wrap gap-2 justify-center mb-8">
+            <Link
+              href="/blog"
+              className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
+                !selectedCategory
+                  ? 'bg-teal-500 text-black'
+                  : 'bg-brand-gray-100 text-brand-gray-600 hover:bg-brand-gray-200'
+              }`}
+            >
+              All
+            </Link>
+            {categories.map(({ category }) => (
+              <Link
+                key={category}
+                href={`/blog?category=${encodeURIComponent(category)}`}
+                className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
+                  selectedCategory === category
+                    ? 'bg-teal-500 text-black'
+                    : 'bg-brand-gray-100 text-brand-gray-600 hover:bg-brand-gray-200'
+                }`}
+              >
+                {category}
+              </Link>
+            ))}
+          </div>
+        )}
 
         {featured && (
           <Link
@@ -88,9 +148,9 @@ export default async function BlogPage() {
           </Link>
         )}
 
-        {rest.length > 0 && (
+        {gridPosts.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {rest.map((post) => (
+            {gridPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
@@ -118,8 +178,58 @@ export default async function BlogPage() {
 
         {posts.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-brand-gray-400 text-lg">No blog posts yet. Check back soon!</p>
+            <p className="text-brand-gray-400 text-lg">No blog posts found.</p>
+            {selectedCategory && (
+              <Link href="/blog" className="text-teal-600 hover:text-teal-700 text-sm mt-2 inline-block">
+                View all posts
+              </Link>
+            )}
           </div>
+        )}
+
+        {totalPages > 1 && (
+          <nav className="mt-12 flex justify-center items-center gap-2" aria-label="Blog pagination">
+            {currentPage > 1 && (
+              <Link
+                href={pageUrl(currentPage - 1)}
+                className="px-4 py-2 text-sm font-medium text-brand-gray-600 bg-brand-gray-100 rounded-lg hover:bg-brand-gray-200 transition-colors"
+              >
+                Previous
+              </Link>
+            )}
+            {Array.from({ length: totalPages }, (_, i) => i + 1)
+              .filter(p => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 2)
+              .reduce<(number | string)[]>((acc, p, i, arr) => {
+                if (i > 0 && p - (arr[i - 1] as number) > 1) acc.push('...')
+                acc.push(p)
+                return acc
+              }, [])
+              .map((p, i) =>
+                typeof p === 'string' ? (
+                  <span key={`ellipsis-${i}`} className="px-2 text-brand-gray-400">...</span>
+                ) : (
+                  <Link
+                    key={p}
+                    href={pageUrl(p)}
+                    className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                      p === currentPage
+                        ? 'bg-teal-500 text-black'
+                        : 'text-brand-gray-600 bg-brand-gray-100 hover:bg-brand-gray-200'
+                    }`}
+                  >
+                    {p}
+                  </Link>
+                )
+              )}
+            {currentPage < totalPages && (
+              <Link
+                href={pageUrl(currentPage + 1)}
+                className="px-4 py-2 text-sm font-medium text-brand-gray-600 bg-brand-gray-100 rounded-lg hover:bg-brand-gray-200 transition-colors"
+              >
+                Next
+              </Link>
+            )}
+          </nav>
         )}
       </div>
 

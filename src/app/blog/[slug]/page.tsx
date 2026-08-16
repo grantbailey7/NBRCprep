@@ -1,3 +1,5 @@
+export const revalidate = 3600
+
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -14,7 +16,7 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await prisma.blogPost.findUnique({
     where: { slug: params.slug },
-    select: { title: true, description: true, slug: true, publishedAt: true },
+    select: { title: true, description: true, slug: true, publishedAt: true, updatedAt: true },
   })
   if (!post) return { title: 'Post Not Found' }
   return {
@@ -29,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'NBRCprep',
       images: [`https://nbrcprep.app/api/og?title=${encodeURIComponent(post.title)}&type=blog`],
       ...(post.publishedAt && { publishedTime: post.publishedAt.toISOString() }),
+      ...(post.updatedAt && { modifiedTime: post.updatedAt.toISOString() }),
     },
     twitter: {
       card: 'summary_large_image',
@@ -54,6 +57,8 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.description,
     url: `https://nbrcprep.app/blog/${post.slug}`,
     ...(post.publishedAt && { datePublished: post.publishedAt.toISOString() }),
+    dateModified: post.updatedAt.toISOString(),
+    image: `https://nbrcprep.app/api/og?title=${encodeURIComponent(post.title)}&type=blog`,
     author: { '@type': 'Organization', name: 'NBRCprep', url: 'https://nbrcprep.app' },
     publisher: { '@type': 'Organization', name: 'NBRCprep', url: 'https://nbrcprep.app' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `https://nbrcprep.app/blog/${post.slug}` },

@@ -5,6 +5,8 @@ import { Footer } from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
+  description: 'Terms of Service for NBRCprep, the NBRC respiratory therapy exam prep platform by Certin LLC.',
+  alternates: { canonical: 'https://nbrcprep.app/terms' },
 }
 
 export default function TermsOfServicePage() {

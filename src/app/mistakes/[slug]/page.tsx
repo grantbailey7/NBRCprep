@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -13,7 +13,7 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = await prisma.seoPage.findUnique({
     where: { slug: params.slug },
-    select: { title: true, description: true, slug: true },
+    select: { title: true, description: true, slug: true, updatedAt: true },
   })
   if (!page) return { title: 'Not Found' }
   return {
@@ -45,6 +45,8 @@ export default async function MistakesDetailPage({ params }: Props) {
     url: `https://nbrcprep.app/mistakes/${page.slug}`,
     author: { '@type': 'Organization', name: 'NBRCprep', url: 'https://nbrcprep.app' },
     publisher: { '@type': 'Organization', name: 'NBRCprep', url: 'https://nbrcprep.app' },
+    dateModified: page.updatedAt.toISOString(),
+    image: `https://nbrcprep.app/api/og?title=${encodeURIComponent(page.title)}&type=mistakes`,
   }
 
   return (

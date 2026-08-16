@@ -5,6 +5,8 @@ import { Footer } from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
   title: 'Refund Policy',
+  description: 'Refund Policy for NBRCprep. Details on our satisfaction guarantee and refund process for paid exam prep plans.',
+  alternates: { canonical: 'https://nbrcprep.app/refund' },
 }
 
 export default function RefundPolicyPage() {

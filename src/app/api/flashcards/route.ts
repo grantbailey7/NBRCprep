@@ -24,6 +24,7 @@ export async function GET(req: Request) {
   const flashcards = await prisma.flashcard.findMany({
     where: {
       divisionId: division.id,
+      orderIndex: { lte: 100 },
       ...(hasAccess ? {} : { isFree: true }),
     },
     orderBy: { orderIndex: 'asc' },

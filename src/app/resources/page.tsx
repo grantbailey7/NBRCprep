@@ -98,7 +98,7 @@ export default function ResourcesPage() {
             <div className="card p-8 bg-teal-500/10 border-teal-400/30 max-w-2xl mx-auto">
               <h2 className="text-xl font-bold text-black mb-2">Ready to practice?</h2>
               <p className="text-sm text-brand-gray-500 mb-4">
-                Pair these resources with 2,400+ flashcards, 180 mini exams, and 18 full-length practice tests.
+                Pair these resources with 600+ flashcards, 30 mini exams, and 18 full-length practice tests.
               </p>
               <Link href="/pricing" className="btn-primary px-6 py-2.5 text-sm inline-block">
                 View Plans

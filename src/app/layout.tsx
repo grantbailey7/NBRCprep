@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: '%s | NBRCprep',
   },
   description:
-    'Pass the NBRC exam on your first try. 2,400+ flashcards, 180 timed practice tests, and full-length TMC exam simulations. The #1 respiratory therapy exam prep and NBRC study guide - start free today.',
+    'Pass the NBRC exam on your first try. 600+ flashcards, 30 timed practice tests, and full-length TMC exam simulations. The #1 respiratory therapy exam prep and NBRC study guide - start free today.',
   keywords: [
     'NBRC exam prep',
     'respiratory therapy exam',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title: 'NBRCprep - Pass the NBRC with Confidence',
-    description: '2,400 original flashcards and 180 practice exams for all 6 NBRC divisions. Start free, no card required.',
+    description: '600 original flashcards and 30 practice exams for all 6 NBRC divisions. Start free, no card required.',
     type: 'website',
     url: 'https://nbrcprep.app',
     siteName: 'NBRCprep',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NBRCprep - Pass the NBRC with Confidence',
-    description: '2,400 original flashcards and 180 practice exams for all 6 NBRC divisions.',
+    description: '600 original flashcards and 30 practice exams for all 6 NBRC divisions.',
     images: ['/api/og'],
   },
 }
@@ -83,7 +83,7 @@ const courseSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
   name: 'NBRC Respiratory Therapy Exam Prep',
-  description: '2,400 flashcards, 180 mini exams, and 18 full-length simulations across all 6 NBRC divisions.',
+  description: '600 flashcards, 30 mini exams, and 18 full-length simulations across all 6 NBRC divisions.',
   provider: { '@type': 'EducationalOrganization', name: 'NBRCprep', url: 'https://nbrcprep.app' },
   url: 'https://nbrcprep.app',
   educationalLevel: 'Professional Certification',

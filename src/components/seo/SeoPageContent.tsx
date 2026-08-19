@@ -79,7 +79,7 @@ export function SeoPageContent({
             <div className="card p-6 bg-teal-500/10 border-teal-400/30 text-center">
               <h3 className="text-lg font-bold text-black mb-2">Ready to pass your NBRC exam?</h3>
               <p className="text-sm text-brand-gray-500 mb-4">
-                NBRCprep offers 2,400+ flashcards, 180 mini exams, and 18 full-length practice tests across all 6 NBRC divisions.
+                NBRCprep offers 600+ flashcards, 30 mini exams, and 18 full-length practice tests across all 6 NBRC divisions.
               </p>
               <Link href="/pricing" className="btn-primary px-6 py-2.5 text-sm inline-block">
                 {ctaText}

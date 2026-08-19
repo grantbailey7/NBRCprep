@@ -22,7 +22,7 @@ const FAQ_ITEMS = [
   {
     question: 'What is the difference between Full Access and Full Bundle?',
     answer:
-      'Full Access ($149 one-time) unlocks all TMC content - 400 flashcards, 30 mini exams, and 3 full-length exams. Full Bundle ($249 one-time) unlocks all content across all 6 NBRC divisions (TMC, NPS, ACCS, SDS, CPFT, RPFT).',
+      'Full Access ($149 one-time) unlocks all TMC content - 100 flashcards, 5 mini exams, and 3 full-length exams. Full Bundle ($249 one-time) unlocks all content across all 6 NBRC divisions (TMC, NPS, ACCS, SDS, CPFT, RPFT).',
   },
   {
     question: 'Can I cancel my Monthly plan?',
@@ -88,7 +88,7 @@ const productSchema = {
       price: '29',
       priceCurrency: 'USD',
       url: 'https://nbrcprep.app/pricing',
-      description: 'Full TMC access - 400 flashcards, 30 mini exams, 3 full exams. Cancel anytime.',
+      description: 'Full TMC access - 100 flashcards, 5 mini exams, 3 full exams. Cancel anytime.',
       availability: 'https://schema.org/InStock',
     },
     {
@@ -97,7 +97,7 @@ const productSchema = {
       price: '149',
       priceCurrency: 'USD',
       url: 'https://nbrcprep.app/pricing',
-      description: 'Lifetime TMC access - 400 flashcards, 30 mini exams, 3 full-length exams.',
+      description: 'Lifetime TMC access - 100 flashcards, 5 mini exams, 3 full-length exams.',
       availability: 'https://schema.org/InStock',
     },
     {
@@ -106,7 +106,7 @@ const productSchema = {
       price: '249',
       priceCurrency: 'USD',
       url: 'https://nbrcprep.app/pricing',
-      description: 'Lifetime access to all 6 NBRC divisions - 2,400 flashcards, 180 mini exams, 18 full-length exams.',
+      description: 'Lifetime access to all 6 NBRC divisions - 600 flashcards, 30 mini exams, 18 full-length exams.',
       availability: 'https://schema.org/InStock',
     },
   ],
@@ -123,8 +123,8 @@ export default async function PricingPage() {
       price: '$29',
       period: 'per month',
       features: [
-        'TMC flashcards (400)',
-        'TMC mini exams (30)',
+        'TMC flashcards (100)',
+        'TMC mini exams (5)',
         'TMC full exams (3)',
         'Metrics dashboard',
         'Cancel anytime',
@@ -140,8 +140,8 @@ export default async function PricingPage() {
       period: 'one-time',
       features: [
         'All TMC content',
-        '400 flashcards',
-        '30 mini exams',
+        '100 flashcards',
+        '5 mini exams',
         '3 full-length exams',
         'Metrics dashboard',
         'Lifetime access',
@@ -157,8 +157,8 @@ export default async function PricingPage() {
       period: 'one-time',
       features: [
         'All 6 divisions',
-        '2,400 flashcards',
-        '180 mini exams',
+        '600 flashcards',
+        '30 mini exams',
         '18 full-length exams',
         'Metrics dashboard',
         'Lifetime access',
@@ -276,10 +276,10 @@ export default async function PricingPage() {
               </thead>
               <tbody className="divide-y divide-brand-gray-100">
                 {[
-                  ['TMC Flashcards', '20', '400', '400', '400'],
-                  ['Other Division Flashcards', '20 each', '—', '—', '400 each'],
-                  ['TMC Mini Exams', '1 sample', '30', '30', '30'],
-                  ['Other Division Mini Exams', '—', '—', '—', '30 each'],
+                  ['TMC Flashcards', '20', '100', '100', '100'],
+                  ['Other Division Flashcards', '20 each', '—', '—', '100 each'],
+                  ['TMC Mini Exams', '1 sample', '5', '5', '5'],
+                  ['Other Division Mini Exams', '—', '—', '—', '5 each'],
                   ['TMC Full Exams', '—', '3', '3', '3'],
                   ['Other Division Full Exams', '—', '—', '—', '3 each'],
                   ['Metrics Dashboard', 'Yes', 'Yes', 'Yes', 'Yes'],

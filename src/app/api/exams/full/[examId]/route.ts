@@ -28,7 +28,7 @@ export async function GET(req: Request, { params }: { params: { examId: string }
     id: q.id,
     questionIndex: q.questionIndex,
     questionText: q.questionText,
-    choices: q.choices,
+    choices: typeof q.choices === 'string' ? JSON.parse(q.choices) : q.choices,
   }))
 
   return NextResponse.json({

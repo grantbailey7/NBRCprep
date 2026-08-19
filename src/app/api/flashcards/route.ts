@@ -41,8 +41,13 @@ export async function GET(req: Request) {
     })
   }
 
+  const parsed = flashcards.map((f) => ({
+    ...f,
+    choices: f.choices && typeof f.choices === 'string' ? JSON.parse(f.choices) : f.choices,
+  }))
+
   return NextResponse.json({
-    flashcards,
+    flashcards: parsed,
     progress,
     hasAccess,
     divisionName: division.name,

@@ -64,12 +64,12 @@ async function main() {
         questionText:
           'A 7-year-old child presents to the emergency department with acute-onset wheezing, tachypnea, and accessory muscle use. SpO2 is 90% on room air. After three rounds of continuous nebulized albuterol, there is no significant improvement. What is the most appropriate next intervention?',
         choices: {
-          A: 'Administer intravenous magnesium sulfate',
-          B: 'Begin helium-oxygen therapy immediately',
+          A: 'Begin helium-oxygen therapy immediately',
+          B: 'Administer intravenous magnesium sulfate',
           C: 'Perform endotracheal intubation',
           D: 'Administer inhaled nitric oxide',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'In status asthmaticus refractory to continuous nebulized beta-agonists, intravenous magnesium sulfate is the recommended next step. It acts as a smooth muscle relaxant and can reduce bronchospasm in severe asthma exacerbations.',
         explanationWrong:
@@ -334,12 +334,12 @@ async function main() {
         questionText:
           'During ventilation of a sedated and paralyzed pediatric patient, the respiratory therapist notices the set tidal volume is 6 mL/kg but the exhaled tidal volume is only 4 mL/kg. The most likely cause is:',
         choices: {
-          A: 'Patient triggering additional breaths',
-          B: 'A significant air leak around the endotracheal tube',
+          A: 'A significant air leak around the endotracheal tube',
+          B: 'Patient triggering additional breaths',
           C: 'Ventilator auto-cycling',
           D: 'Excessive PEEP',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'A discrepancy between set and exhaled tidal volume in a sedated, paralyzed patient most commonly indicates an air leak around the endotracheal tube. The leak allows gas to escape during inspiration, so less volume returns during exhalation.',
         explanationWrong:
@@ -605,11 +605,11 @@ async function main() {
           'A 5-year-old child presents with inspiratory stridor that worsens with crying. The stridor has been present since infancy and has not changed. Which condition is most likely?',
         choices: {
           A: 'Acute epiglottitis',
-          B: 'Viral croup',
-          C: 'Laryngomalacia',
+          B: 'Laryngomalacia',
+          C: 'Viral croup',
           D: 'Foreign body aspiration',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'Laryngomalacia is the most common cause of chronic inspiratory stridor in infants and young children. It is caused by collapse of supraglottic structures during inspiration and typically worsens with crying, feeding, or supine positioning. Most cases are self-limiting.',
         explanationWrong:
@@ -695,11 +695,11 @@ async function main() {
           'A premature neonate at 32 weeks gestation is receiving phototherapy. The nurse notices the infant\'s temperature is 37.8 degrees C. What is the most likely cause?',
         choices: {
           A: 'Neonatal sepsis',
-          B: 'Radiant heat from the phototherapy unit',
-          C: 'Bilirubin encephalopathy',
+          B: 'Bilirubin encephalopathy',
+          C: 'Radiant heat from the phototherapy unit',
           D: 'Dehydration from insensible water loss',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'Phototherapy units generate heat that can cause hyperthermia in neonates, particularly premature infants with immature thermoregulation. The distance between the light source and the infant should be checked, and the infant\'s temperature should be monitored closely.',
         explanationWrong:
@@ -946,12 +946,12 @@ async function main() {
         questionText:
           'During pediatric CPR, at what depth should chest compressions be delivered for a child (1 year to puberty)?',
         choices: {
-          A: 'At least one-third the anterior-posterior diameter of the chest (approximately 2 inches or 5 cm)',
-          B: 'At least 2.4 inches (6 cm)',
+          A: 'At least 2.4 inches (6 cm)',
+          B: 'At least one-third the anterior-posterior diameter of the chest (approximately 2 inches or 5 cm)',
           C: 'Approximately 0.5 inches (1.5 cm)',
           D: 'At least one-half the anterior-posterior diameter of the chest',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'PALS guidelines recommend compressing the chest at least one-third the anterior-posterior (AP) diameter, which is approximately 2 inches (5 cm) for children. This depth provides adequate cardiac output while minimizing injury.',
         explanationWrong:
@@ -1036,12 +1036,12 @@ async function main() {
         questionText:
           'A 5-year-old child in the emergency department has a pulseless ventricular tachycardia rhythm on the cardiac monitor. According to PALS, what is the first intervention?',
         choices: {
-          A: 'Administer amiodarone 5 mg/kg IV',
-          B: 'Deliver an unsynchronized shock (defibrillation) at 2 J/kg',
+          A: 'Deliver an unsynchronized shock (defibrillation) at 2 J/kg',
+          B: 'Administer amiodarone 5 mg/kg IV',
           C: 'Begin CPR for 2 minutes before attempting defibrillation',
           D: 'Administer epinephrine 0.01 mg/kg IV',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'For pulseless ventricular tachycardia (a shockable rhythm), the first intervention is immediate defibrillation at 2 J/kg. Early defibrillation is the most important intervention for shockable rhythms to restore an organized cardiac rhythm.',
         explanationWrong:
@@ -1198,12 +1198,12 @@ async function main() {
         questionText:
           'A 6-year-old child with 40% total body surface area burns develops progressive respiratory distress 24 hours after injury. The chest radiograph shows bilateral diffuse infiltrates. What is the most likely diagnosis?',
         choices: {
-          A: 'Pneumonia from bacterial superinfection',
-          B: 'Acute respiratory distress syndrome (ARDS)',
+          A: 'Acute respiratory distress syndrome (ARDS)',
+          B: 'Pneumonia from bacterial superinfection',
           C: 'Cardiogenic pulmonary edema',
           D: 'Pulmonary contusion',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'ARDS commonly develops 24-72 hours after significant burn injury. The systemic inflammatory response from major burns releases inflammatory mediators that damage the alveolar-capillary membrane, causing bilateral infiltrates, impaired gas exchange, and decreased compliance.',
         explanationWrong:
@@ -1306,12 +1306,12 @@ async function main() {
         questionText:
           'Which complication is unique to venoarterial ECMO compared to venovenous ECMO?',
         choices: {
-          A: 'Circuit-related hemolysis',
+          A: 'Risk of systemic air embolism and stroke from arterial cannulation',
           B: 'Infection risk',
-          C: 'Risk of systemic air embolism and stroke from arterial cannulation',
+          C: 'Circuit-related hemolysis',
           D: 'Need for anticoagulation',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'VA ECMO carries a unique risk of systemic air embolism and stroke because oxygenated blood is returned directly to the arterial system. Any air or thrombus in the return circuit can travel to the brain or other vital organs. This risk is not present in VV ECMO, where blood returns to the venous system.',
         explanationWrong:
@@ -1414,12 +1414,12 @@ async function main() {
         questionText:
           'What is the typical minimum weight requirement for a neonate to be considered a candidate for ECMO?',
         choices: {
-          A: '2.0 kg (approximately 2000 grams)',
+          A: '3.5 kg',
           B: '1.0 kg',
-          C: '3.5 kg',
+          C: '2.0 kg (approximately 2000 grams)',
           D: '500 grams',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'The generally accepted minimum weight for neonatal ECMO is approximately 2.0 kg (2000 grams). Below this weight, the risk of intracranial hemorrhage with systemic anticoagulation is unacceptably high, and the small vessel size makes cannulation technically difficult.',
         explanationWrong:
@@ -1468,12 +1468,12 @@ async function main() {
         questionText:
           'Cyanide toxicity should be suspected in a pediatric burn patient when:',
         choices: {
-          A: 'The patient has persistent lactic acidosis despite adequate oxygenation and perfusion',
-          B: 'The patient develops a dry cough',
+          A: 'The patient develops a dry cough',
+          B: 'The patient has persistent lactic acidosis despite adequate oxygenation and perfusion',
           C: 'The carboxyhemoglobin level is elevated',
           D: 'The patient has superficial burns only',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'Cyanide is released from the combustion of synthetic materials (plastics, nylon, polyurethane). Cyanide inhibits cytochrome oxidase, preventing cellular oxygen utilization. Persistent lactic acidosis despite adequate oxygen delivery (PaO2 and hemoglobin are normal) suggests cyanide toxicity.',
         explanationWrong:
@@ -1739,11 +1739,11 @@ async function main() {
           'Palliative care in the NICU is most accurately described as:',
         choices: {
           A: 'Care provided only when death is imminent',
-          B: 'Specialized care focused on relief of suffering, quality of life, and support for families, which can occur alongside curative treatment',
+          B: 'Care provided only after parents request it',
           C: 'Withdrawal of all medical interventions',
-          D: 'Care provided only after parents request it',
+          D: 'Specialized care focused on relief of suffering, quality of life, and support for families, which can occur alongside curative treatment',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
           'Palliative care is specialized care focused on providing relief from symptoms, managing pain, and supporting quality of life for patients and their families. In the NICU, it can be provided alongside curative treatment and does not equate to withdrawing care or giving up.',
         explanationWrong:
@@ -1847,11 +1847,11 @@ async function main() {
           'What is the primary rationale for cycled lighting (dimming lights at night) in the NICU?',
         choices: {
           A: 'To reduce electricity costs',
-          B: 'To make charting easier for staff',
+          B: 'To support the development of circadian rhythms in premature infants',
           C: 'To reduce staff fatigue',
-          D: 'To support the development of circadian rhythms in premature infants',
+          D: 'To make charting easier for staff',
         },
-        correctChoice: 'D',
+        correctChoice: 'B',
         explanationCorrect:
           'Cycled lighting in the NICU (dimming lights during nighttime hours and providing low-level lighting during the day) supports the development of circadian rhythms in premature infants. Evidence shows that cycled lighting can improve weight gain, shorten hospital stays, and promote sleep-wake cycle maturation.',
         explanationWrong:

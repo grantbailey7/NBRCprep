@@ -620,12 +620,12 @@ async function main() {
         questionText:
           'A critically ill patient develops abdominal compartment syndrome with an intra-abdominal pressure of 28 mmHg. How does this condition affect mechanical ventilation?',
         choices: {
-          A: 'It decreases airway resistance',
+          A: 'It increases plateau pressure and decreases respiratory system compliance due to diaphragmatic elevation',
           B: 'It improves respiratory system compliance',
-          C: 'It increases plateau pressure and decreases respiratory system compliance due to diaphragmatic elevation',
+          C: 'It decreases airway resistance',
           D: 'It has no effect on pulmonary mechanics',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Abdominal compartment syndrome causes cephalad displacement of the diaphragm, which reduces thoracic volume, decreases respiratory system compliance (particularly chest wall compliance), and increases plateau pressures. Higher PEEP and ventilator pressures may be required, and the patient may tolerate plateau pressures above 30 cmH2O because the elevated pressure is from the chest wall, not the lung.',
         explanationWrong:
@@ -710,12 +710,12 @@ async function main() {
         questionText:
           'A patient in the ICU is receiving dexmedetomidine for sedation during mechanical ventilation. Which of the following is a unique advantage of dexmedetomidine compared to benzodiazepines and propofol?',
         choices: {
-          A: 'Patients can be easily aroused for neurologic assessments while maintaining sedation',
+          A: 'It eliminates the need for pain management',
           B: 'It provides superior neuromuscular blockade',
-          C: 'It eliminates the need for pain management',
+          C: 'Patients can be easily aroused for neurologic assessments while maintaining sedation',
           D: 'It is safe at any dose for prolonged infusion',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Dexmedetomidine produces "cooperative sedation" where patients can be easily aroused for neurologic assessments and follow commands, then return to a sedated state when undisturbed. This is particularly valuable in neurocritical care and for daily sedation interruptions.',
         explanationWrong:

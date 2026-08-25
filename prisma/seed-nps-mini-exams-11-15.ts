@@ -226,12 +226,12 @@ async function main() {
         questionText:
           'A blood gas from a critically ill 8-year-old shows pH 7.35, PaCO2 24 mmHg, PaO2 68 mmHg, HCO3 13 mEq/L, lactate 6.2 mmol/L. The PaO2/FiO2 ratio is 136 on FiO2 0.50. Which interpretation is most accurate?',
         choices: {
-          A: 'The normal pH indicates no significant acid-base disturbance',
+          A: 'The patient has a fully compensated metabolic acidosis with elevated lactate suggesting tissue hypoperfusion, and the P/F ratio indicates moderate ARDS',
           B: 'The low PaCO2 confirms a primary respiratory alkalosis',
-          C: 'The patient has a fully compensated metabolic acidosis with elevated lactate suggesting tissue hypoperfusion, and the P/F ratio indicates moderate ARDS',
+          C: 'The normal pH indicates no significant acid-base disturbance',
           D: 'The elevated lactate is insignificant because the pH is within normal limits',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Despite a normal pH of 7.35, the low HCO3 of 13 mEq/L indicates a primary metabolic acidosis that has been fully compensated by respiratory alkalosis (PaCO2 24 mmHg). The elevated lactate of 6.2 mmol/L suggests significant tissue hypoperfusion or shock. The P/F ratio of 136 meets criteria for moderate ARDS (100-200).',
         explanationWrong:
@@ -262,12 +262,12 @@ async function main() {
         questionText:
           'A pediatric patient is receiving oxygen via a simple face mask at 8 L/min. The child\'s respiratory rate increases significantly. What effect will this have on the delivered FiO2?',
         choices: {
-          A: 'The delivered FiO2 will decrease because inspiratory flow will exceed the mask flow, entraining more room air',
+          A: 'The delivered FiO2 will decrease only if the respiratory rate exceeds 40 breaths per minute',
           B: 'The delivered FiO2 will increase because faster breathing draws more oxygen from the mask',
           C: 'The delivered FiO2 will remain constant because the flow rate is fixed',
-          D: 'The delivered FiO2 will decrease only if the respiratory rate exceeds 40 breaths per minute',
+          D: 'The delivered FiO2 will decrease because inspiratory flow will exceed the mask flow, entraining more room air',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'Simple face masks are variable-performance devices. When the patient\'s inspiratory flow demand increases (due to tachypnea), it exceeds the oxygen flow from the mask, causing entrainment of room air through the mask ports and around the mask seal. This dilutes the inspired oxygen and decreases the effective FiO2.',
         explanationWrong:
@@ -316,12 +316,12 @@ async function main() {
         questionText:
           'A blood gas from a ventilated neonate shows pH 7.52, PaCO2 25 mmHg, PaO2 110 mmHg, HCO3 20 mEq/L. Which ventilator adjustment is most appropriate?',
         choices: {
-          A: 'Decrease the ventilator rate to allow PaCO2 to rise',
+          A: 'Increase the ventilator rate to further lower PaCO2',
           B: 'Increase PEEP to improve oxygenation',
-          C: 'Increase the ventilator rate to further lower PaCO2',
+          C: 'Decrease the ventilator rate to allow PaCO2 to rise',
           D: 'Administer sodium bicarbonate',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'The blood gas shows respiratory alkalosis (pH 7.52, PaCO2 25 mmHg) with hyperoxia (PaO2 110 mmHg). The neonate is being over-ventilated. Decreasing the ventilator rate will reduce minute ventilation, allowing PaCO2 to rise toward normal, which will correct the alkalosis. The FiO2 should also be reduced to target appropriate PaO2.',
         explanationWrong:
@@ -352,12 +352,12 @@ async function main() {
         questionText:
           'A preterm neonate on mechanical ventilation has arterial blood gas results: pH 7.38, PaCO2 42 mmHg, PaO2 70 mmHg, HCO3 24 mEq/L. The respiratory therapist calculates the oxygen index (OI) using a mean airway pressure of 12 cmH2O and FiO2 of 0.60. What is the OI and its clinical significance?',
         choices: {
-          A: 'OI = 5, indicating mild lung disease',
+          A: 'OI = 10.3, indicating significant oxygenation impairment that should prompt consideration of surfactant or therapy escalation',
           B: 'OI = 7, indicating no need for changes',
           C: 'OI = 15, indicating moderate lung disease not requiring escalation',
-          D: 'OI = 10.3, indicating significant oxygenation impairment that should prompt consideration of surfactant or therapy escalation',
+          D: 'OI = 5, indicating mild lung disease',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'The Oxygen Index is calculated as (MAP x FiO2 x 100) / PaO2 = (12 x 0.60 x 100) / 70 = 10.3. An OI greater than 10 indicates significant oxygenation impairment. OI values above 15-25 may warrant consideration of high-frequency ventilation, and OI above 25-40 may indicate need for ECMO evaluation. An OI of 10.3 warrants close monitoring and possible therapy escalation.',
         explanationWrong:
@@ -407,11 +407,11 @@ async function main() {
           'A newborn with tetralogy of Fallot experiences a hypercyanotic ("tet") spell with severe cyanosis and agitation. Which immediate intervention should the respiratory therapist recommend?',
         choices: {
           A: 'Administer 100% oxygen via non-rebreather mask and lay the infant flat',
-          B: 'Place the infant in a knee-chest position and administer morphine as ordered',
-          C: 'Begin continuous nebulized albuterol therapy',
+          B: 'Begin continuous nebulized albuterol therapy',
+          C: 'Place the infant in a knee-chest position and administer morphine as ordered',
           D: 'Immediately intubate and hyperventilate the infant',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'During a hypercyanotic spell in tetralogy of Fallot, the knee-chest position increases systemic vascular resistance (SVR), which reduces the right-to-left shunt across the ventricular septal defect. Morphine helps calm the infant, reducing oxygen consumption and sympathetic tone. These are the recommended first-line interventions.',
         explanationWrong:
@@ -460,12 +460,12 @@ async function main() {
         questionText:
           'A neonate with suspected early-onset sepsis has blood cultures drawn. Which empiric antibiotic regimen is the standard first-line treatment for early-onset neonatal sepsis?',
         choices: {
-          A: 'Vancomycin and gentamicin',
+          A: 'Ampicillin and gentamicin',
           B: 'Ceftriaxone alone',
-          C: 'Ampicillin and gentamicin',
+          C: 'Vancomycin and gentamicin',
           D: 'Piperacillin-tazobactam and fluconazole',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'The standard empiric antibiotic regimen for early-onset neonatal sepsis (occurring within the first 72 hours of life) is ampicillin and gentamicin. Ampicillin covers Group B Streptococcus and Listeria monocytogenes, while gentamicin provides gram-negative coverage and synergistic bactericidal activity.',
         explanationWrong:
@@ -677,11 +677,11 @@ async function main() {
           'A term neonate born by emergency cesarean section develops respiratory distress at 1 hour of life. Physical examination reveals diminished breath sounds on the right, scaphoid abdomen, and heart sounds displaced to the right. Chest radiograph shows bowel loops in the left hemithorax. Which congenital anomaly is present?',
         choices: {
           A: 'Right-sided pneumothorax',
-          B: 'Tracheoesophageal fistula',
-          C: 'Left congenital diaphragmatic hernia',
+          B: 'Left congenital diaphragmatic hernia',
+          C: 'Tracheoesophageal fistula',
           D: 'Congenital lobar emphysema',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'The classic presentation of a left congenital diaphragmatic hernia (CDH) includes respiratory distress, scaphoid abdomen (due to abdominal contents herniated into the chest), diminished or absent breath sounds on the affected side, mediastinal shift to the opposite side, and bowel loops visible in the chest on radiograph. The heart and mediastinum are displaced to the right.',
         explanationWrong:
@@ -712,12 +712,12 @@ async function main() {
         questionText:
           'A pediatric cardiologist performs a hyperoxia test on a cyanotic newborn. After exposure to 100% oxygen for 10 minutes, the PaO2 remains at 45 mmHg. This result most strongly suggests:',
         choices: {
-          A: 'Cyanotic congenital heart disease with fixed right-to-left shunting',
+          A: 'Normal neonatal transition with expected response',
           B: 'Primary pulmonary disease such as RDS',
-          C: 'Normal neonatal transition with expected response',
+          C: 'Cyanotic congenital heart disease with fixed right-to-left shunting',
           D: 'Persistent pulmonary hypertension that will respond to inhaled nitric oxide',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'In the hyperoxia test, a PaO2 that fails to rise above 100 mmHg (and especially remains below 50 mmHg) on 100% oxygen strongly suggests cyanotic congenital heart disease with a fixed anatomic right-to-left shunt. The deoxygenated blood bypasses the lungs entirely, so increasing the FiO2 has minimal effect on oxygenation.',
         explanationWrong:
@@ -804,10 +804,10 @@ async function main() {
         choices: {
           A: 'Increase the ventilator rate to override the patient\'s spontaneous efforts',
           B: 'Apply physical restraints to prevent self-extubation',
-          C: 'Assess for pain and recommend appropriate analgesia before adjusting ventilator settings',
-          D: 'Switch to a neuromuscular blocking agent to eliminate patient effort',
+          C: 'Switch to a neuromuscular blocking agent to eliminate patient effort',
+          D: 'Assess for pain and recommend appropriate analgesia before adjusting ventilator settings',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'An elevated COMFORT-B pain score with grimacing, muscle tension, and ventilator asynchrony suggests uncontrolled pain. The first action should be to assess for and treat pain with appropriate analgesia. Untreated pain causes ventilator asynchrony, increased oxygen consumption, and hemodynamic instability. Pain should be addressed before altering ventilator settings.',
         explanationWrong:
@@ -894,10 +894,10 @@ async function main() {
         choices: {
           A: 'Physiologic periodic breathing',
           B: 'Mild nasal congestion',
-          C: 'Hiccups',
-          D: 'Neonatal sepsis',
+          C: 'Neonatal sepsis',
+          D: 'Hiccups',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'Apnea of prematurity is a diagnosis of exclusion. Before attributing apnea to immaturity of the respiratory center, secondary causes must be ruled out. Neonatal sepsis is one of the most important conditions to exclude because apnea may be the initial presenting sign of sepsis in preterm infants. Other causes to exclude include metabolic disturbances, intracranial pathology, NEC, and temperature instability.',
         explanationWrong:
@@ -1000,12 +1000,12 @@ async function main() {
         questionText:
           'A preterm neonate at 29 weeks gestation is on nasal CPAP for apnea of prematurity. What is the primary mechanism by which CPAP helps reduce apneic episodes?',
         choices: {
-          A: 'CPAP increases PaCO2 to stimulate the respiratory center',
+          A: 'CPAP splints the upper airway open, preventing the obstructive component of mixed apnea, and stabilizes chest wall mechanics',
           B: 'CPAP delivers additional oxygen to prevent hypoxic apnea',
-          C: 'CPAP splints the upper airway open, preventing the obstructive component of mixed apnea, and stabilizes chest wall mechanics',
+          C: 'CPAP increases PaCO2 to stimulate the respiratory center',
           D: 'CPAP stimulates peripheral chemoreceptors through increased airflow',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'CPAP provides continuous positive pressure that splints the upper airway open, which addresses the obstructive component of mixed apnea. Additionally, CPAP stabilizes the highly compliant preterm chest wall, maintains functional residual capacity (FRC), and reduces chest wall distortion, all of which decrease the frequency and severity of apneic episodes.',
         explanationWrong:
@@ -1090,12 +1090,12 @@ async function main() {
         questionText:
           'Which of the following opioid analgesics is preferred for procedural pain management in neonates due to its rapid onset and short duration of action?',
         choices: {
-          A: 'Fentanyl',
+          A: 'Methadone',
           B: 'Morphine',
-          C: 'Methadone',
+          C: 'Fentanyl',
           D: 'Codeine',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Fentanyl is the preferred opioid for neonatal procedural pain due to its rapid onset (1-2 minutes IV), short duration of action (30-60 minutes), potency (50-100 times more potent than morphine), and relative hemodynamic stability. It causes less histamine release than morphine, resulting in fewer hypotensive episodes.',
         explanationWrong:
@@ -1198,12 +1198,12 @@ async function main() {
         questionText:
           'Prior to neonatal transport, the respiratory therapist must verify that the transport ventilator has an adequate gas supply. For a transport of estimated 2 hours with a ventilator consuming 8 L/min of blended gas, what is the minimum oxygen cylinder volume needed (assuming an E-cylinder with 660 liters when full)?',
         choices: {
-          A: 'One half-full E-cylinder (330 liters)',
+          A: 'Two full E-cylinders (1320 liters) to include a safety margin',
           B: 'One full E-cylinder (660 liters)',
-          C: 'Two full E-cylinders (1320 liters) to include a safety margin',
+          C: 'One half-full E-cylinder (330 liters)',
           D: 'No cylinders needed if wall oxygen is available during loading',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'For a 2-hour transport at 8 L/min consumption, the minimum gas needed is 960 liters (8 x 120 minutes). One E-cylinder holds 660 liters, which is insufficient. Two E-cylinders provide 1320 liters, which covers the 960 liters needed plus a safety margin for unexpected delays, equipment issues, or increased ventilatory demands.',
         explanationWrong:
@@ -1289,11 +1289,11 @@ async function main() {
           'In pediatric pulmonary function testing, what is the minimum age at which most children can reliably perform standard spirometry with acceptable reproducibility?',
         choices: {
           A: 'Age 3 years',
-          B: 'Age 5-6 years',
+          B: 'Age 2 years',
           C: 'Age 10 years',
-          D: 'Age 2 years',
+          D: 'Age 5-6 years',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
           'Most children can reliably perform standard spirometry with acceptable reproducibility by age 5-6 years. At this age, children can typically follow instructions for a forced maximal expiration, coordinate effort, and produce reproducible results. Younger children may require modified techniques or infant pulmonary function testing equipment.',
         explanationWrong:
@@ -1379,11 +1379,11 @@ async function main() {
           'During neonatal transport, the transport isolette alarm indicates the battery power is at 15%. The estimated remaining transport time is 45 minutes. What is the most appropriate action?',
         choices: {
           A: 'Turn off the isolette heater to conserve battery',
-          B: 'Continue transport without concern because 15% is sufficient',
+          B: 'Connect the isolette to the vehicle\'s power supply and verify the connection is functional',
           C: 'Increase speed to reduce transport time',
-          D: 'Connect the isolette to the vehicle\'s power supply and verify the connection is functional',
+          D: 'Continue transport without concern because 15% is sufficient',
         },
-        correctChoice: 'D',
+        correctChoice: 'B',
         explanationCorrect:
           'Transport isolettes should be connected to the vehicle\'s power supply (ambulance or aircraft inverter) whenever possible to conserve battery power. At 15% battery with 45 minutes remaining, connecting to vehicle power is essential to maintain thermoregulation and monitoring capabilities. Battery power should be reserved as backup for loading/unloading.',
         explanationWrong:
@@ -1468,12 +1468,12 @@ async function main() {
         questionText:
           'Exhaled nitric oxide (FeNO) measurement is used in pediatric patients. An elevated FeNO level in a child with chronic cough is most suggestive of:',
         choices: {
-          A: 'Eosinophilic airway inflammation consistent with allergic asthma',
+          A: 'Cystic fibrosis exacerbation',
           B: 'Bacterial pneumonia',
-          C: 'Cystic fibrosis exacerbation',
+          C: 'Eosinophilic airway inflammation consistent with allergic asthma',
           D: 'Vocal cord dysfunction',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Elevated FeNO levels (greater than 35 ppb in children) indicate eosinophilic airway inflammation, which is a hallmark of allergic (atopic) asthma. FeNO measurement is a non-invasive biomarker that helps diagnose asthma, predict steroid responsiveness, and monitor treatment adherence in pediatric patients.',
         explanationWrong:
@@ -1577,11 +1577,11 @@ async function main() {
           'Which pharmacologic agent is approved for prevention (not treatment) of RSV infection in high-risk infants?',
         choices: {
           A: 'Ribavirin',
-          B: 'Oseltamivir',
+          B: 'Palivizumab (Synagis) or nirsevimab (Beyfortus)',
           C: 'Acyclovir',
-          D: 'Palivizumab (Synagis) or nirsevimab (Beyfortus)',
+          D: 'Oseltamivir',
         },
-        correctChoice: 'D',
+        correctChoice: 'B',
         explanationCorrect:
           'Palivizumab is a monoclonal antibody administered monthly during RSV season to high-risk infants (premature infants, those with hemodynamically significant CHD, or chronic lung disease). Nirsevimab is a newer long-acting monoclonal antibody requiring only a single dose per RSV season. Both provide passive immunity to prevent severe RSV disease.',
         explanationWrong:
@@ -1667,11 +1667,11 @@ async function main() {
           'A 3-year-old child with cystic fibrosis has pancreatic insufficiency and steatorrhea. Which nutritional supplement is essential to ensure adequate absorption of fat-soluble vitamins?',
         choices: {
           A: 'Additional fiber supplementation',
-          B: 'Lactase enzyme supplementation',
-          C: 'Pancreatic enzyme replacement therapy (PERT) taken with all meals and snacks',
+          B: 'Pancreatic enzyme replacement therapy (PERT) taken with all meals and snacks',
+          C: 'Lactase enzyme supplementation',
           D: 'Probiotics only',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'Pancreatic enzyme replacement therapy (PERT) provides exogenous lipase, amylase, and protease that the dysfunctional pancreas cannot produce in sufficient quantities. PERT must be taken with all meals and snacks to enable digestion and absorption of fats, proteins, and fat-soluble vitamins (A, D, E, K). Without PERT, severe malabsorption leads to malnutrition and growth failure.',
         explanationWrong:
@@ -1757,11 +1757,11 @@ async function main() {
           'A 2-month-old former 32-week premature infant is seen in clinic at the start of RSV season. The infant has no chronic lung disease and no hemodynamically significant heart disease. According to current AAP guidelines, is this infant eligible for palivizumab prophylaxis?',
         choices: {
           A: 'Yes, all premature infants receive palivizumab regardless of gestational age',
-          B: 'No, infants born at 29 weeks or later without chronic lung disease or CHD are generally not recommended for palivizumab under current AAP guidance',
-          C: 'Yes, but only if the infant is currently hospitalized',
+          B: 'Yes, but only if the infant is currently hospitalized',
+          C: 'No, infants born at 29 weeks or later without chronic lung disease or CHD are generally not recommended for palivizumab under current AAP guidance',
           D: 'Only if the infant has a sibling in daycare',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'Current AAP guidelines (2014 update) narrowed palivizumab eligibility. Infants born at 29 weeks 0 days or later gestation who do not have chronic lung disease of prematurity or hemodynamically significant congenital heart disease are generally NOT recommended to receive palivizumab. The updated guidelines focus prophylaxis on the highest-risk infants.',
         explanationWrong:
@@ -1847,11 +1847,11 @@ async function main() {
           'A premature infant with BPD is being transitioned from parenteral nutrition to enteral feeding. Which feeding approach is recommended to minimize the risk of aspiration while providing adequate nutrition?',
         choices: {
           A: 'Bolus feeding of large volumes every 6 hours',
-          B: 'Continuous slow enteral feeding via nasogastric tube with gradual advancement, with the infant positioned with head of bed elevated 30 degrees',
+          B: 'Withholding all enteral feeding until the infant is off all respiratory support',
           C: 'Exclusive oral feeding from the start regardless of the infant\'s gestational age',
-          D: 'Withholding all enteral feeding until the infant is off all respiratory support',
+          D: 'Continuous slow enteral feeding via nasogastric tube with gradual advancement, with the infant positioned with head of bed elevated 30 degrees',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
           'Continuous slow enteral feeding via nasogastric tube minimizes gastric distension, reduces the risk of aspiration, and allows gradual advancement as the infant tolerates. Positioning with the head elevated 30 degrees reduces gastroesophageal reflux risk. This approach provides adequate nutrition while protecting the airway in infants with respiratory compromise.',
         explanationWrong:

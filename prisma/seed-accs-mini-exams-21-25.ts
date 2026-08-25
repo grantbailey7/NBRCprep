@@ -460,10 +460,10 @@ async function main() {
         choices: {
           A: 'Dopamine at renal dose (2-3 mcg/kg/min)',
           B: 'Furosemide 80 mg IV to increase urine output',
-          C: 'Midodrine, octreotide, and albumin combination therapy',
-          D: 'Mannitol 20% infusion for osmotic diuresis',
+          C: 'Mannitol 20% infusion for osmotic diuresis',
+          D: 'Midodrine, octreotide, and albumin combination therapy',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'Hepatorenal syndrome type 1 is treated with vasoconstrictors to counteract splanchnic vasodilation. The combination of midodrine (alpha-1 agonist), octreotide (inhibits splanchnic vasodilator release), and albumin (volume expansion) is a standard medical therapy. Alternatively, terlipressin or norepinephrine with albumin may be used where available.',
         explanationWrong:
@@ -494,12 +494,12 @@ async function main() {
         questionText:
           'A patient with AKI and metabolic acidosis has the following labs: Na⁺ 140, Cl⁻ 100, HCO3⁻ 10 mEq/L, albumin 2.0 g/dL, measured anion gap 30 mEq/L. After correcting the anion gap for hypoalbuminemia, what is the corrected anion gap?',
         choices: {
-          A: '36 mEq/L',
+          A: '24 mEq/L',
           B: '30 mEq/L',
-          C: '24 mEq/L',
+          C: '36 mEq/L',
           D: '33 mEq/L',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'The anion gap must be corrected for hypoalbuminemia because albumin is an unmeasured anion. The correction formula adds 2.5 mEq/L for each 1 g/dL decrease in albumin below 4.0 g/dL. The albumin deficit is 4.0 - 2.0 = 2.0 g/dL. Correction: 2.0 × 2.5 = 5 mEq/L. Corrected AG = 30 + 5 = 35, closest to 36 mEq/L when accounting for rounding.',
         explanationWrong:
@@ -550,10 +550,10 @@ async function main() {
         choices: {
           A: 'Quaternary ammonium compound-based surface cleaning',
           B: 'Alcohol-based surface disinfection',
-          C: 'Ultraviolet light sterilization alone without manual cleaning',
-          D: 'Sodium hypochlorite (bleach) solution at appropriate concentration with thorough manual cleaning',
+          C: 'Sodium hypochlorite (bleach) solution at appropriate concentration with thorough manual cleaning',
+          D: 'Ultraviolet light sterilization alone without manual cleaning',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'C. difficile spores are resistant to most standard disinfectants including quaternary ammonium compounds and alcohol. Sodium hypochlorite (bleach) at a concentration of at least 1000 ppm (or 1:10 dilution of household bleach) is sporicidal and recommended for environmental decontamination during C. difficile outbreaks. Thorough manual cleaning before disinfection is essential.',
         explanationWrong:
@@ -584,12 +584,12 @@ async function main() {
         questionText:
           'A patient with a known empyema has a chest CT showing multiple loculations despite chest tube placement and 3 days of intrapleural fibrinolytic therapy. Ongoing fevers and elevated WBC persist. What is the next most appropriate intervention?',
         choices: {
-          A: 'Continue fibrinolytic therapy for an additional 7 days',
+          A: 'Video-assisted thoracoscopic surgery (VATS) for debridement and decortication',
           B: 'Insert a second chest tube in a different location',
-          C: 'Video-assisted thoracoscopic surgery (VATS) for debridement and decortication',
+          C: 'Continue fibrinolytic therapy for an additional 7 days',
           D: 'Initiate systemic thrombolytic therapy',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'When intrapleural fibrinolytic therapy fails to adequately drain a multiloculated empyema after an appropriate trial (typically 3-6 days), surgical intervention with VATS is indicated. VATS allows direct visualization, breakdown of loculations, debridement of fibrinous material, and decortication if necessary, with lower morbidity than open thoracotomy.',
         explanationWrong:
@@ -1180,10 +1180,10 @@ async function main() {
         choices: {
           A: 'Normal oxygen extraction with adequate delivery',
           B: 'Adequate cardiac output with low hemoglobin',
-          C: 'Oxygen supply-demand imbalance with increased tissue extraction suggesting inadequate DO2 relative to VO2',
-          D: 'Cyanide poisoning with impaired cellular oxygen utilization',
+          C: 'Cyanide poisoning with impaired cellular oxygen utilization',
+          D: 'Oxygen supply-demand imbalance with increased tissue extraction suggesting inadequate DO2 relative to VO2',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'An SvO2 of 50% (normal 60-80%) indicates that tissues are extracting a higher-than-normal proportion of delivered oxygen, signifying that oxygen delivery (DO2) is inadequate relative to oxygen consumption (VO2). This patient has both low cardiac output (3.5 L/min) and anemia (Hb 8 g/dL), both contributing to reduced DO2 and increased oxygen extraction.',
         explanationWrong:
@@ -1270,10 +1270,10 @@ async function main() {
         choices: {
           A: 'Increasing dead space ventilation to improve CO2 elimination',
           B: 'Reducing cardiac output to improve ventilation-perfusion matching',
-          C: 'Increasing chest wall rigidity to prevent lung collapse',
-          D: 'Diaphragmatic contraction preferentially ventilates dependent, well-perfused lung regions improving V/Q matching',
+          C: 'Diaphragmatic contraction preferentially ventilates dependent, well-perfused lung regions improving V/Q matching',
+          D: 'Increasing chest wall rigidity to prevent lung collapse',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'Spontaneous breathing during APRV generates negative pleural pressure swings through diaphragmatic contraction, which preferentially expands dependent lung regions where perfusion is gravity-dependent and highest. This recruits atelectatic dependent zones and improves ventilation-perfusion matching, unlike controlled ventilation where gas distributes preferentially to non-dependent, less perfused regions.',
         explanationWrong:
@@ -1754,12 +1754,12 @@ async function main() {
         questionText:
           'A patient with acute liver failure has an arterial ammonia level of 200 mcmol/L and is at high risk for cerebral herniation. Which non-pharmacologic intervention can rapidly reduce serum ammonia levels?',
         choices: {
-          A: 'Therapeutic hypothermia to 36°C',
+          A: 'Continuous renal replacement therapy with high-flux dialysis membrane',
           B: 'Plasmapheresis',
-          C: 'Continuous renal replacement therapy with high-flux dialysis membrane',
+          C: 'Therapeutic hypothermia to 36°C',
           D: 'Hyperbaric oxygen therapy',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'CRRT with high-flux membranes effectively removes ammonia from the blood because ammonia (molecular weight 17 Da) is a small molecule easily cleared by hemofiltration. CRRT provides continuous ammonia removal and can lower serum levels more rapidly and sustainably than intermittent hemodialysis. This is an important bridge therapy in acute liver failure with severe hyperammonemia.',
         explanationWrong:
@@ -1844,12 +1844,12 @@ async function main() {
         questionText:
           'A burn ICU patient develops invasive wound infection with Acinetobacter baumannii that is resistant to carbapenems, aminoglycosides, fluoroquinolones, and polymyxins but susceptible only to minocycline. What therapeutic approach is most appropriate?',
         choices: {
-          A: 'High-dose IV minocycline as part of a combination regimen, potentially with a carbapenem despite in-vitro resistance, guided by infectious disease consultation',
+          A: 'Standard cephalosporin therapy is adequate',
           B: 'Standard-dose oral doxycycline monotherapy',
-          C: 'Standard cephalosporin therapy is adequate',
+          C: 'High-dose IV minocycline as part of a combination regimen, potentially with a carbapenem despite in-vitro resistance, guided by infectious disease consultation',
           D: 'This pattern suggests laboratory error requiring repeat cultures',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'When Acinetobacter is resistant to nearly all agents including polymyxins, IV minocycline becomes a critical salvage option. High-dose IV minocycline (200 mg every 12 hours) is used as the backbone of combination therapy, often with a second agent such as a carbapenem (synergy may exist despite in-vitro resistance), rifampin, or colistin inhaled for pulmonary involvement. Infectious disease consultation is essential for these complex cases.',
         explanationWrong:

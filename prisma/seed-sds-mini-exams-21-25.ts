@@ -63,12 +63,12 @@ async function main() {
         questionText:
           'A pregnant patient with newly diagnosed moderate OSA is being started on CPAP therapy. Which of the following is the most appropriate approach to CPAP titration in this population?',
         choices: {
-          A: 'Use auto-CPAP set at a fixed pressure of 12 cmH2O throughout pregnancy',
+          A: 'Use auto-CPAP with periodic pressure reassessment as pregnancy progresses',
           B: 'Perform a single in-lab titration and use that pressure for the remainder of pregnancy',
           C: 'Start with an oral appliance and switch to CPAP only if symptoms persist postpartum',
-          D: 'Use auto-CPAP with periodic pressure reassessment as pregnancy progresses',
+          D: 'Use auto-CPAP set at a fixed pressure of 12 cmH2O throughout pregnancy',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'Auto-CPAP is preferred during pregnancy because pressure requirements may change as the pregnancy progresses due to ongoing weight gain, fluid shifts, and progressive upper airway edema. Regular follow-up and reassessment of pressure adequacy are important since the therapeutic pressure may need adjustment across trimesters.',
         explanationWrong:
@@ -333,12 +333,12 @@ async function main() {
         questionText:
           'A patient with known heart failure and an ejection fraction of 25% is being evaluated for nocturnal dyspnea. PSG reveals an AHI of 42 with 80% of events being central apneas in a Cheyne-Stokes pattern. Based on current evidence, which of the following PAP therapies is contraindicated in this patient?',
         choices: {
-          A: 'Adaptive servo-ventilation',
+          A: 'Supplemental nocturnal oxygen therapy',
           B: 'CPAP at a low fixed pressure',
           C: 'Bilevel PAP in spontaneous mode without a backup rate',
-          D: 'Supplemental nocturnal oxygen therapy',
+          D: 'Adaptive servo-ventilation',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'The SERVE-HF trial demonstrated that adaptive servo-ventilation (ASV) increased all-cause and cardiovascular mortality in patients with heart failure and reduced ejection fraction (EF 45% or less) with predominantly central sleep apnea. Based on this landmark trial, ASV is contraindicated in this population despite its effectiveness at normalizing AHI.',
         explanationWrong:
@@ -1535,12 +1535,12 @@ async function main() {
         questionText:
           'A CPAP data download report shows the following: average daily usage 5.2 hours, residual AHI 4, 90th percentile pressure 12 cmH2O, large leak 8% of the time. Based on CMS (Medicare) adherence criteria, does this patient meet compliance requirements?',
         choices: {
-          A: 'No, because the residual AHI is too high',
+          A: 'Yes, if the device is used for 4 or more hours on at least 70% of nights during a consecutive 30-day period within the first 90 days of use',
           B: 'No, because the leak percentage exceeds the allowable limit',
           C: 'No, because the usage must be at least 6 hours per night',
-          D: 'Yes, if the device is used for 4 or more hours on at least 70% of nights during a consecutive 30-day period within the first 90 days of use',
+          D: 'No, because the residual AHI is too high',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'CMS adherence criteria require that the PAP device be used for 4 or more hours per night on at least 70% of nights (21 out of 30 consecutive nights) during the first 90 days of use. The average usage of 5.2 hours meets the minimum hourly requirement, but the clinician must verify that the 70% of nights criterion is also met by reviewing the detailed nightly usage data.',
         explanationWrong:
@@ -1770,11 +1770,11 @@ async function main() {
           'A National Guard soldier who works as a civilian law enforcement officer (dual-role first responder) presents with chronic insomnia, fatigue, and poor concentration. He works rotating 12-hour shifts as a police officer and deploys for military training one weekend per month plus two weeks annually. Which sleep disorder is this patient at highest risk for, given his unique occupational demands?',
         choices: {
           A: 'Restless legs syndrome from physical demands of both roles',
-          B: 'Klein-Levin syndrome from chronic cumulative sleep debt',
-          C: 'Shift work disorder compounded by circadian disruption from military deployment schedules, creating a chronic circadian desynchrony that prevents adequate recovery between schedule changes',
+          B: 'Shift work disorder compounded by circadian disruption from military deployment schedules, creating a chronic circadian desynchrony that prevents adequate recovery between schedule changes',
+          C: 'Klein-Levin syndrome from chronic cumulative sleep debt',
           D: 'Non-24-hour sleep-wake rhythm disorder',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'This dual-role service member faces compounded circadian disruption from rotating civilian shifts superimposed on military training schedules. The result is chronic circadian desynchrony with insufficient time for circadian re-entrainment between schedule changes. This creates a particularly severe form of shift work disorder with greater impairment than either schedule alone would produce.',
         explanationWrong:
@@ -1805,12 +1805,12 @@ async function main() {
         questionText:
           'Military deployment to high-altitude environments (above 8,000 feet) can unmask or worsen which of the following sleep disorders?',
         choices: {
-          A: 'Central sleep apnea due to hypoxia-induced periodic breathing, as the lowered PaO2 at altitude drives hyperventilation and creates PaCO2 fluctuations around the apneic threshold',
+          A: 'REM sleep behavior disorder from altitude-related neurological changes',
           B: 'Obstructive sleep apnea due to upper airway edema from altitude',
           C: 'Narcolepsy triggered by hypoxic stress on hypocretin neurons',
-          D: 'REM sleep behavior disorder from altitude-related neurological changes',
+          D: 'Central sleep apnea due to hypoxia-induced periodic breathing, as the lowered PaO2 at altitude drives hyperventilation and creates PaCO2 fluctuations around the apneic threshold',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'High altitude causes hypoxic stimulation of peripheral chemoreceptors, which drives hyperventilation. The resulting hypocapnia brings PaCO2 closer to or below the apneic threshold, producing periodic breathing with central apneas, particularly during NREM sleep. This is a well-recognized phenomenon in military personnel deployed to mountainous regions and can significantly impair sleep quality and operational performance.',
         explanationWrong:
@@ -1860,11 +1860,11 @@ async function main() {
           'A PAP data download shows an unusual pattern where the device records exactly 4 hours of use on most nights, with the device being turned on at approximately the same time each night and turned off exactly 4 hours later. Residual AHI is low. What should this usage pattern raise concern about?',
         choices: {
           A: 'Normal patient behavior showing excellent compliance discipline',
-          B: 'The patient may be using the device for the minimum required compliance hours to meet insurance requirements but removing it for the remainder of the night, indicating an adherence barrier that should be explored',
-          C: 'The device timer is malfunctioning and the patient is actually using it all night',
+          B: 'The device timer is malfunctioning and the patient is actually using it all night',
+          C: 'The patient may be using the device for the minimum required compliance hours to meet insurance requirements but removing it for the remainder of the night, indicating an adherence barrier that should be explored',
           D: 'The patient has a sleep disorder causing exactly 4 hours of sleep per night',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'A pattern of exactly 4 hours of use nightly is a well-recognized "gaming" pattern where patients use the device just long enough to meet CMS compliance criteria (4 hours per night) but remove it for the remainder of the sleep period. This pattern suggests the patient has a significant adherence barrier (discomfort, claustrophobia, or preference) that should be addressed through counseling, mask fitting, pressure adjustment, or exploring alternative treatments.',
         explanationWrong:

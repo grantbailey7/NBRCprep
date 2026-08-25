@@ -422,12 +422,12 @@ async function main() {
         questionText:
           'A neonate receiving inhaled nitric oxide therapy has a methemoglobin level of 7%. What action should the respiratory therapist take?',
         choices: {
-          A: 'Reduce the iNO dose and continue monitoring methemoglobin levels',
+          A: 'Switch to heliox therapy immediately',
           B: 'Increase the iNO dose to compensate for reduced oxygen delivery',
-          C: 'Switch to heliox therapy immediately',
+          C: 'Reduce the iNO dose and continue monitoring methemoglobin levels',
           D: 'No action is needed as this level is within normal limits',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Methemoglobin levels above 5% during iNO therapy are concerning and warrant dose reduction. Methemoglobin is formed when NO oxidizes hemoglobin iron from the ferrous to the ferric state, reducing oxygen-carrying capacity. Levels should be maintained below 5%.',
         explanationWrong:
@@ -674,12 +674,12 @@ async function main() {
         questionText:
           'A home care patient on a liquid oxygen system reports that the unit is frosting excessively around the fill connector. What is the most likely explanation?',
         choices: {
-          A: 'The room temperature is set too high',
+          A: 'The fill connector gasket is worn or damaged, causing an oxygen leak',
           B: 'The flow rate is set below the minimum',
-          C: 'The fill connector gasket is worn or damaged, causing an oxygen leak',
+          C: 'The room temperature is set too high',
           D: 'The humidifier bottle is overfilled',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Excessive frosting around the fill connector of a liquid oxygen system typically indicates a leak at the connection point, usually caused by a worn or damaged gasket. The extremely cold liquid oxygen causes moisture in the air to freeze at the leak site.',
         explanationWrong:
@@ -801,10 +801,10 @@ async function main() {
         choices: {
           A: 'The neonate will develop hyperoxia',
           B: 'The ventilator will begin delivering excessive tidal volumes',
-          C: 'The FiO2 will automatically increase to 1.0',
-          D: 'Rebound pulmonary hypertension may occur from abrupt iNO withdrawal',
+          C: 'Rebound pulmonary hypertension may occur from abrupt iNO withdrawal',
+          D: 'The FiO2 will automatically increase to 1.0',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'Abrupt discontinuation of iNO can cause severe rebound pulmonary hypertension because the pulmonary vasculature has become dependent on the exogenous nitric oxide. A backup iNO delivery system should always be immediately available.',
         explanationWrong:
@@ -943,12 +943,12 @@ async function main() {
         questionText:
           'During ACLS resuscitation, end-tidal CO2 (PETCO2) monitoring is being used. A sudden increase in PETCO2 from 12 mmHg to 40 mmHg during CPR most likely indicates what?',
         choices: {
-          A: 'The endotracheal tube has migrated into the esophagus',
-          B: 'Return of spontaneous circulation (ROSC)',
+          A: 'Return of spontaneous circulation (ROSC)',
+          B: 'The endotracheal tube has migrated into the esophagus',
           C: 'The ventilation rate is too low',
           D: 'The patient has developed a tension pneumothorax',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'A sudden, sustained increase in PETCO2 during CPR is one of the earliest and most reliable indicators of return of spontaneous circulation (ROSC). The restored cardiac output delivers accumulated CO2 from the tissues to the lungs for exhalation.',
         explanationWrong:
@@ -1033,12 +1033,12 @@ async function main() {
         questionText:
           'Which of the following is an advantage of pneumatically powered transport ventilators over electrically powered models?',
         choices: {
-          A: 'They do not require battery power and can operate solely on compressed gas',
-          B: 'They provide more precise tidal volume delivery',
+          A: 'They provide more precise tidal volume delivery',
+          B: 'They do not require battery power and can operate solely on compressed gas',
           C: 'They are lighter and more compact than any electric ventilator',
           D: 'They can deliver a wider range of FiO2 settings',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'Pneumatically powered transport ventilators operate using the driving pressure of compressed gas and do not require battery or electrical power. This makes them reliable in situations where electrical power is unavailable, though they do consume gas more rapidly.',
         explanationWrong:
@@ -1071,10 +1071,10 @@ async function main() {
         choices: {
           A: 'By adjusting the clamp on the chest tube itself',
           B: 'By changing the height of water in the water-seal chamber',
-          C: 'By adjusting the water level in the suction control chamber to -20 cm',
-          D: 'By increasing the flow rate of the wall suction until bubbling stops',
+          C: 'By increasing the flow rate of the wall suction until bubbling stops',
+          D: 'By adjusting the water level in the suction control chamber to -20 cm',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'In a traditional wet three-chamber chest drainage system, the suction level is determined by the height of the water column in the suction control chamber. Filling the suction control chamber to the -20 cm mark sets the maximum suction at -20 cmH2O, regardless of the wall suction pressure.',
         explanationWrong:
@@ -1194,12 +1194,12 @@ async function main() {
         questionText:
           'A patient with vocal cord dysfunction is being evaluated. Heliox therapy may be beneficial because it addresses which specific aspect of this condition?',
         choices: {
-          A: 'Heliox relaxes the vocal cord muscles directly',
-          B: 'Heliox reduces the turbulent airflow through the narrowed glottic opening, decreasing the work of breathing',
+          A: 'Heliox reduces the turbulent airflow through the narrowed glottic opening, decreasing the work of breathing',
+          B: 'Heliox relaxes the vocal cord muscles directly',
           C: 'Heliox provides anti-inflammatory effects on the vocal cords',
           D: 'Heliox humidifies the upper airway more effectively than air',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'Vocal cord dysfunction creates a narrowed glottic opening that generates turbulent flow. Heliox reduces gas density, converting turbulent flow to more laminar flow through the narrowed area, thereby reducing airway resistance and the work of breathing.',
         explanationWrong:
@@ -1464,12 +1464,12 @@ async function main() {
         questionText:
           'A home care respiratory therapist discovers that a patient\'s apnea monitor has been alarming frequently due to loose leads rather than true apneic events. What is the best course of action?',
         choices: {
-          A: 'Educate the caregiver on proper lead placement and skin preparation to reduce false alarms',
-          B: 'Disable the apnea monitor alarms to prevent caregiver anxiety',
+          A: 'Disable the apnea monitor alarms to prevent caregiver anxiety',
+          B: 'Educate the caregiver on proper lead placement and skin preparation to reduce false alarms',
           C: 'Remove the apnea monitor from the home permanently',
           D: 'Increase the alarm delay time to 30 seconds',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'False alarms from loose leads are best addressed through caregiver education on proper electrode placement, skin preparation, and lead wire management. This maintains monitor safety while reducing unnecessary alarms that can cause alarm fatigue.',
         explanationWrong:

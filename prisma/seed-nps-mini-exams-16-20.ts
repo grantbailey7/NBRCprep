@@ -63,12 +63,12 @@ async function main() {
         questionText:
           'A 6-year-old child with a cuffed tracheostomy tube is on home mechanical ventilation for neuromuscular weakness. The caregiver reports frequent high-pressure alarms. What should the respiratory therapist assess first?',
         choices: {
-          A: 'Ventilator circuit for malfunction',
-          B: 'Tracheostomy tube for mucus plugging or obstruction',
+          A: 'Tracheostomy tube for mucus plugging or obstruction',
+          B: 'Ventilator circuit for malfunction',
           C: 'Cuff pressure for overinflation',
           D: 'Patient compliance with the ventilator',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'The most common cause of high-pressure alarms in a tracheostomy patient on home ventilation is mucus plugging or partial obstruction of the tracheostomy tube. Suctioning the airway should be the first intervention. If suctioning does not resolve the alarm, the tube may need to be replaced.',
         explanationWrong:
@@ -117,12 +117,12 @@ async function main() {
         questionText:
           'A chest radiograph of a neonate shows a large, air-filled structure in the left hemithorax with mediastinal shift to the right and absence of visible left lung parenchyma. Which condition is most consistent with these findings?',
         choices: {
-          A: 'Congenital pulmonary airway malformation (CPAM)',
-          B: 'Left-sided pneumothorax',
+          A: 'Left-sided pneumothorax',
+          B: 'Congenital pulmonary airway malformation (CPAM)',
           C: 'Left-sided congenital diaphragmatic hernia',
           D: 'Congenital lobar emphysema',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'A large, air-filled cystic structure occupying the left hemithorax with mediastinal shift is characteristic of congenital pulmonary airway malformation (CPAM), formerly called congenital cystic adenomatoid malformation (CCAM). Type 1 CPAM presents with large cysts that can mimic pneumothorax on radiograph.',
         explanationWrong:
@@ -155,10 +155,10 @@ async function main() {
         choices: {
           A: 'Right lower lobe pneumonia',
           B: 'Right-sided atelectasis',
-          C: 'Right-sided pleural effusion',
-          D: 'Right-sided pneumothorax',
+          C: 'Right-sided pneumothorax',
+          D: 'Right-sided pleural effusion',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'Opacification of a hemithorax with a meniscus sign (a curved upper border that is higher laterally than medially) is the classic radiographic appearance of a pleural effusion. The absence of air bronchograms helps distinguish effusion from consolidation.',
         explanationWrong:
@@ -207,12 +207,12 @@ async function main() {
         questionText:
           'A 4-year-old with a tracheostomy is being evaluated for decannulation readiness. Which assessment is essential before removing the tracheostomy tube?',
         choices: {
-          A: 'Confirming the child can tolerate oral feedings without aspiration',
-          B: 'Performing a capping trial to assess the ability to breathe around and above the tube',
+          A: 'Performing a capping trial to assess the ability to breathe around and above the tube',
+          B: 'Confirming the child can tolerate oral feedings without aspiration',
           C: 'Verifying the child has outgrown the need for nighttime ventilation only',
           D: 'Ensuring the child can speak clearly with the tracheostomy tube in place',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'A capping trial (or downsizing and capping) is essential before decannulation. The tracheostomy tube is capped to occlude it, forcing the child to breathe through the upper airway around and above the tube. This confirms upper airway patency and the ability to maintain adequate ventilation and oxygenation without the artificial airway.',
         explanationWrong:
@@ -245,10 +245,10 @@ async function main() {
         choices: {
           A: 'Wait for power to be restored while monitoring the child',
           B: 'Remove the tracheostomy tube to allow the child to breathe spontaneously',
-          C: 'Attempt to restart the ventilator by rapidly cycling the power switch',
-          D: 'Provide manual ventilation with a self-inflating resuscitation bag connected to the tracheostomy',
+          C: 'Provide manual ventilation with a self-inflating resuscitation bag connected to the tracheostomy',
+          D: 'Attempt to restart the ventilator by rapidly cycling the power switch',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'When the ventilator fails and backup battery is depleted, the caregiver must immediately provide manual ventilation using a self-inflating resuscitation bag connected directly to the tracheostomy tube. This is a core competency for all caregivers of ventilator-dependent children at home.',
         explanationWrong:
@@ -333,12 +333,12 @@ async function main() {
         questionText:
           'A neonatal chest radiograph obtained after intubation shows the endotracheal tube tip at the level of T1. The infant\'s head is in a neutral position. What action should the respiratory therapist take?',
         choices: {
-          A: 'Advance the ETT approximately 1-2 cm to position the tip at the mid-trachea',
-          B: 'No adjustment needed; the tube is properly positioned',
+          A: 'No adjustment needed; the tube is properly positioned',
+          B: 'Advance the ETT approximately 1-2 cm to position the tip at the mid-trachea',
           C: 'Withdraw the ETT 1 cm to position it above the thoracic inlet',
           D: 'Remove the ETT and reintubate with a larger size',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'In neonates, the ETT tip at T1 is positioned too high (at the thoracic inlet) and risks accidental extubation with head movement. The ideal position is mid-trachea at T2-T3, midway between the thoracic inlet and the carina. The tube should be advanced 1-2 cm to achieve proper positioning.',
         explanationWrong:
@@ -622,12 +622,12 @@ async function main() {
         questionText:
           'A child with a severe traumatic brain injury is being mechanically ventilated. The respiratory therapist notes a pattern of irregular breathing with clusters of breaths separated by apneic pauses. This pattern is most consistent with which type of abnormal breathing?',
         choices: {
-          A: 'Cheyne-Stokes respiration',
+          A: 'Biot (cluster) breathing',
           B: 'Apneustic breathing',
-          C: 'Biot (cluster) breathing',
+          C: 'Cheyne-Stokes respiration',
           D: 'Central neurogenic hyperventilation',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Biot breathing (also called cluster breathing or ataxic breathing) consists of irregular clusters of breaths of variable depth separated by irregular apneic periods. It is associated with damage to the medullary respiratory center and is a sign of severe brainstem dysfunction.',
         explanationWrong:
@@ -730,12 +730,12 @@ async function main() {
         questionText:
           'A 13-year-old with a high cervical spinal cord injury has been on chronic invasive mechanical ventilation via tracheostomy. During a routine visit, the patient expresses a desire to speak. Which device should the respiratory therapist recommend to enable speech?',
         choices: {
-          A: 'A one-way speaking valve (e.g., Passy-Muir) used with a deflated or uncuffed tracheostomy tube',
+          A: 'A tracheoesophageal prosthesis',
           B: 'An electrolarynx held against the neck',
-          C: 'A tracheoesophageal prosthesis',
+          C: 'A one-way speaking valve (e.g., Passy-Muir) used with a deflated or uncuffed tracheostomy tube',
           D: 'Text-to-speech software only, as speech is not possible with a tracheostomy',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'A one-way speaking valve placed on the tracheostomy tube allows inspired air from the ventilator to enter through the tube but redirects exhaled air around the tube, through the vocal cords, and out the mouth and nose, enabling speech. The cuff must be deflated (or an uncuffed tube used) to allow air to pass around the tube on exhalation.',
         explanationWrong:
@@ -1561,12 +1561,12 @@ async function main() {
         questionText:
           'A pediatric lung transplant recipient is 6 months post-transplant and presents with progressive dyspnea, cough, and a declining FEV1. Transbronchial biopsy shows perivascular and peribronchiolar lymphocytic infiltrates. What is the most likely diagnosis?',
         choices: {
-          A: 'Primary graft dysfunction',
+          A: 'Acute cellular rejection',
           B: 'Bacterial pneumonia',
-          C: 'Acute cellular rejection',
+          C: 'Primary graft dysfunction',
           D: 'Post-transplant lymphoproliferative disorder',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Perivascular and peribronchiolar lymphocytic infiltrates on transbronchial biopsy are the histologic hallmark of acute cellular rejection. This is graded using the ISHLT classification (A0-A4 for acute rejection, B0-B2 for airway inflammation). Treatment involves pulse-dose IV methylprednisolone.',
         explanationWrong:
@@ -1615,12 +1615,12 @@ async function main() {
         questionText:
           'A 6-month-old infant presents with acute respiratory distress, diffuse wheezing, hyperinflation on chest radiograph, and a positive RSV antigen test. The infant is on 2 L/min nasal cannula with an SpO2 of 88%. What is the most appropriate next step?',
         choices: {
-          A: 'Administer systemic corticosteroids and albuterol',
+          A: 'Escalate to heated high-flow nasal cannula (HFNC) at appropriate flow rates for the infant\'s weight',
           B: 'Intubate and mechanically ventilate immediately',
-          C: 'Escalate to heated high-flow nasal cannula (HFNC) at appropriate flow rates for the infant\'s weight',
+          C: 'Administer systemic corticosteroids and albuterol',
           D: 'Start inhaled racemic epinephrine',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'An infant with RSV bronchiolitis on low-flow nasal cannula with persistent hypoxemia should be escalated to heated high-flow nasal cannula (HFNC). HFNC provides higher FiO2, CPAP effect from the high flow, improves work of breathing, and may prevent the need for intubation. Flow rates of 2 L/kg/min are typical starting points.',
         explanationWrong:
@@ -1705,12 +1705,12 @@ async function main() {
         questionText:
           'A pediatric lung transplant recipient is 3 months post-transplant and develops fever, cough, and bilateral interstitial infiltrates. Bronchoalveolar lavage is positive for CMV by PCR. What is the first-line treatment?',
         choices: {
-          A: 'Intravenous ganciclovir',
+          A: 'Inhaled ribavirin',
           B: 'Oral acyclovir',
-          C: 'Inhaled ribavirin',
+          C: 'Intravenous ganciclovir',
           D: 'Intravenous immunoglobulin (IVIG) alone',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Intravenous ganciclovir is the first-line treatment for CMV pneumonitis in immunosuppressed transplant recipients. Ganciclovir is a nucleoside analog that inhibits viral DNA polymerase. Treatment is typically continued for 2-3 weeks, followed by a transition to oral valganciclovir for maintenance prophylaxis.',
         explanationWrong:
@@ -1777,12 +1777,12 @@ async function main() {
         questionText:
           'A lung transplant recipient is being considered for surveillance bronchoscopy with transbronchial biopsy. What is the primary purpose of surveillance bronchoscopy in the post-transplant period?',
         choices: {
-          A: 'To assess bronchial anastomosis healing only',
+          A: 'To detect subclinical acute rejection before it causes symptomatic graft dysfunction',
           B: 'To measure FEV1 directly during the procedure',
-          C: 'To detect subclinical acute rejection before it causes symptomatic graft dysfunction',
+          C: 'To assess bronchial anastomosis healing only',
           D: 'To administer inhaled immunosuppressants directly to the graft',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Surveillance bronchoscopy with transbronchial biopsy is performed at scheduled intervals (typically at 1, 3, 6, 9, and 12 months post-transplant, then annually) to detect subclinical acute rejection. Histologic examination of the biopsy specimens can identify rejection before it becomes clinically apparent, allowing early treatment to preserve graft function.',
         explanationWrong:
@@ -1813,12 +1813,12 @@ async function main() {
         questionText:
           'A child with a lung transplant develops Aspergillus fumigatus isolated from a bronchoalveolar lavage specimen. The patient is asymptomatic. What is the appropriate management?',
         choices: {
-          A: 'Initiate prophylactic antifungal therapy with voriconazole or inhaled amphotericin B, as Aspergillus colonization in a lung transplant recipient carries significant risk for invasive aspergillosis',
+          A: 'Surgical debridement of the affected lobe',
           B: 'No treatment needed; Aspergillus is a normal commensal in transplanted lungs',
-          C: 'Surgical debridement of the affected lobe',
+          C: 'Initiate prophylactic antifungal therapy with voriconazole or inhaled amphotericin B, as Aspergillus colonization in a lung transplant recipient carries significant risk for invasive aspergillosis',
           D: 'Discontinue immunosuppression to allow immune clearance',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Aspergillus isolation from a lung transplant recipient, even if asymptomatic, warrants antifungal prophylaxis or preemptive treatment because immunosuppressed patients are at high risk for progression to invasive aspergillosis, which carries significant morbidity and mortality. Voriconazole or inhaled amphotericin B are commonly used agents.',
         explanationWrong:
@@ -1867,12 +1867,12 @@ async function main() {
         questionText:
           'A 4-year-old child with epiglottitis presents with high fever, drooling, tripod positioning, and a muffled voice. The child appears toxic. What is the most appropriate initial management?',
         choices: {
-          A: 'Keep the child calm in a position of comfort, avoid agitation, prepare for controlled airway management in the operating room with a surgeon present for possible emergency tracheostomy',
+          A: 'Obtain a lateral neck radiograph to confirm the diagnosis before any airway intervention',
           B: 'Immediately perform a blind nasotracheal intubation at the bedside',
-          C: 'Obtain a lateral neck radiograph to confirm the diagnosis before any airway intervention',
+          C: 'Keep the child calm in a position of comfort, avoid agitation, prepare for controlled airway management in the operating room with a surgeon present for possible emergency tracheostomy',
           D: 'Administer nebulized racemic epinephrine to reduce epiglottic swelling',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Acute epiglottitis with a toxic-appearing child is an airway emergency. The child should be kept calm and in a position of comfort. Agitation can precipitate complete airway obstruction. Definitive airway management should occur in a controlled environment (operating room) with an experienced team, including an ENT surgeon prepared for emergency surgical airway if intubation fails.',
         explanationWrong:

@@ -531,11 +531,11 @@ async function main() {
           'A neonate born at 36 weeks gestation develops respiratory distress 2 hours after cesarean section delivery. The chest radiograph shows perihilar streaking and fluid in the minor fissure. The infant improves rapidly over 24 hours. Which diagnosis is most likely?',
         choices: {
           A: 'Respiratory distress syndrome',
-          B: 'Pneumonia',
-          C: 'Transient tachypnea of the newborn',
+          B: 'Transient tachypnea of the newborn',
+          C: 'Pneumonia',
           D: 'Pulmonary hemorrhage',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'Transient tachypnea of the newborn (TTN) is caused by delayed clearance of fetal lung fluid and is most common after cesarean delivery. Classic radiographic findings include perihilar streaking, fluid in the fissures, and the condition typically resolves within 24-72 hours.',
         explanationWrong:
@@ -621,11 +621,11 @@ async function main() {
           'A 3-year-old child is intubated with a 4.5 mm uncuffed endotracheal tube. The respiratory therapist notes a significant air leak around the tube during positive pressure ventilation, with no audible leak below 10 cmH2O. Which action is most appropriate?',
         choices: {
           A: 'Advance the ETT 1 cm deeper',
-          B: 'Replace the ETT with a 5.0 mm cuffed endotracheal tube',
-          C: 'Add PEEP to compensate for the leak',
+          B: 'Add PEEP to compensate for the leak',
+          C: 'Replace the ETT with a 5.0 mm cuffed endotracheal tube',
           D: 'Pack the pharynx with gauze to reduce the leak',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'When a significant air leak exists with an uncuffed ETT, the tube should be replaced with the next half-size up or an appropriately sized cuffed tube. Current guidelines support the use of cuffed ETTs in pediatric patients when cuff pressure is carefully monitored below 20-25 cmH2O.',
         explanationWrong:
@@ -819,11 +819,11 @@ async function main() {
           'A premature infant born at 24 weeks gestation is now 10 days old and requires FiO2 of 0.50, PIP of 20 cmH2O, and PEEP of 5 cmH2O. The chest radiograph shows early cystic changes. Which intervention has the best evidence for reducing the severity of developing BPD?',
         choices: {
           A: 'High-dose parenteral dexamethasone starting on day 1',
-          B: 'Prophylactic antifungal therapy',
-          C: 'Vitamin A supplementation',
+          B: 'Vitamin A supplementation',
+          C: 'Prophylactic antifungal therapy',
           D: 'Immediate extubation to room air',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'Vitamin A supplementation has been shown to reduce the incidence and severity of BPD in extremely low birth weight infants. Vitamin A is essential for normal lung development and repair of damaged epithelial cells. Intramuscular administration is supported by clinical evidence.',
         explanationWrong:
@@ -944,12 +944,12 @@ async function main() {
         questionText:
           'A neonate with a left-sided congenital diaphragmatic hernia has been stabilized and intubated. Which of the following findings would the respiratory therapist expect on physical examination?',
         choices: {
-          A: 'Heart sounds displaced to the right, absent breath sounds on the left, and a scaphoid abdomen',
+          A: 'Normal breath sounds bilaterally with a distended abdomen',
           B: 'Heart sounds in the normal position with bilateral crackles',
           C: 'Barrel-shaped chest with bilateral hyperresonance',
-          D: 'Normal breath sounds bilaterally with a distended abdomen',
+          D: 'Heart sounds displaced to the right, absent breath sounds on the left, and a scaphoid abdomen',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'In a left-sided CDH (the most common type), abdominal organs herniate into the left thorax, pushing the mediastinum and heart to the right. This causes absent or diminished breath sounds on the left, heart sounds displaced to the right, and a scaphoid abdomen.',
         explanationWrong:
@@ -1034,12 +1034,12 @@ async function main() {
         questionText:
           'A premature neonate born at 25 weeks gestation is at highest risk for which type of intracranial hemorrhage?',
         choices: {
-          A: 'Subdural hematoma',
+          A: 'Intraventricular hemorrhage',
           B: 'Epidural hematoma',
           C: 'Subarachnoid hemorrhage',
-          D: 'Intraventricular hemorrhage',
+          D: 'Subdural hematoma',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'Intraventricular hemorrhage (IVH) is the most common type of intracranial hemorrhage in premature infants, originating from the fragile germinal matrix. Infants born before 32 weeks, especially before 28 weeks, are at the highest risk. Fluctuations in cerebral blood flow are a major contributing factor.',
         explanationWrong:
@@ -1089,11 +1089,11 @@ async function main() {
           'A term newborn with PPHN is being treated with iNO at 20 ppm. After 4 hours, the decision is made to wean the iNO. Which approach to weaning is recommended?',
         choices: {
           A: 'Abrupt discontinuation from 20 ppm',
-          B: 'Gradual reduction in increments while monitoring for rebound pulmonary hypertension',
-          C: 'Switch directly to 100% oxygen and discontinue iNO',
+          B: 'Switch directly to 100% oxygen and discontinue iNO',
+          C: 'Gradual reduction in increments while monitoring for rebound pulmonary hypertension',
           D: 'Reduce iNO to 5 ppm and discontinue after 10 minutes',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'Inhaled nitric oxide should be weaned gradually (typically by 5 ppm at a time, then by 1 ppm at lower doses) while monitoring SpO2 and hemodynamics. Abrupt discontinuation can cause severe rebound pulmonary hypertension due to downregulation of endogenous nitric oxide synthase.',
         explanationWrong:
@@ -1196,12 +1196,12 @@ async function main() {
         questionText:
           'A term infant born through meconium-stained amniotic fluid develops progressive respiratory distress with bilateral coarse crackles and chest radiograph showing hyperinflation with patchy bilateral infiltrates. Which treatment is most appropriate?',
         choices: {
-          A: 'Administer aerosolized albuterol',
-          B: 'Intubate and provide mechanical ventilation with careful avoidance of air trapping',
+          A: 'Intubate and provide mechanical ventilation with careful avoidance of air trapping',
+          B: 'Administer aerosolized albuterol',
           C: 'Apply CPAP at 10 cmH2O immediately',
           D: 'Administer IV aminophylline',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'The infant has meconium aspiration syndrome with progressive respiratory failure. Intubation and mechanical ventilation are indicated, with attention to avoiding air trapping by using appropriate inspiratory and expiratory times. Short inspiratory times and longer expiratory times help prevent gas trapping.',
         explanationWrong:
@@ -1304,12 +1304,12 @@ async function main() {
         questionText:
           'A neonate born at 29 weeks gestation weighs 1,200 grams and is being started on caffeine citrate for apnea of prematurity. What is the standard loading dose of caffeine citrate?',
         choices: {
-          A: 'Loading dose of 5 mg/kg',
+          A: 'Loading dose of 20 mg/kg',
           B: 'Loading dose of 10 mg/kg',
-          C: 'Loading dose of 20 mg/kg',
+          C: 'Loading dose of 5 mg/kg',
           D: 'Loading dose of 40 mg/kg',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'The standard loading dose of caffeine citrate for apnea of prematurity is 20 mg/kg administered intravenously over 30 minutes, followed by a maintenance dose of 5-10 mg/kg/day. This provides a caffeine base loading dose of approximately 10 mg/kg.',
         explanationWrong:
@@ -1412,12 +1412,12 @@ async function main() {
         questionText:
           'A 1-day-old term infant has persistent cyanosis that does not improve with administration of 100% oxygen. An echocardiogram reveals a congenital heart defect. This presentation is most consistent with which type of cardiac lesion?',
         choices: {
-          A: 'A cyanotic congenital heart defect with right-to-left shunting',
+          A: 'A ventricular septal defect with pulmonary overcirculation',
           B: 'An acyanotic defect with left-to-right shunting',
-          C: 'A ventricular septal defect with pulmonary overcirculation',
+          C: 'A cyanotic congenital heart defect with right-to-left shunting',
           D: 'A patent ductus arteriosus with left-to-right flow',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Persistent cyanosis unresponsive to 100% oxygen (failed hyperoxia test) is characteristic of cyanotic congenital heart disease with right-to-left shunting (e.g., tetralogy of Fallot, transposition of the great arteries). Deoxygenated blood bypasses the lungs, and supplemental oxygen cannot correct the cyanosis.',
         explanationWrong:
@@ -1466,12 +1466,12 @@ async function main() {
         questionText:
           'A newborn with an omphalocele is being prepared for surgical repair. Prior to surgery, which respiratory consideration is most important?',
         choices: {
-          A: 'Avoid bag-mask ventilation and intubate early to prevent gastric distension that could compromise the defect',
-          B: 'Use high-frequency nasal cannula at maximum flow',
+          A: 'Use high-frequency nasal cannula at maximum flow',
+          B: 'Avoid bag-mask ventilation and intubate early to prevent gastric distension that could compromise the defect',
           C: 'Delay respiratory support until surgical consultation',
           D: 'Apply tight abdominal binders to reduce the size of the omphalocele',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'In neonates with abdominal wall defects like omphalocele, bag-mask ventilation can cause gastric distension which increases abdominal pressure and may compromise the surgical defect or impair ventilation. Early intubation provides a secure airway and allows decompression with an orogastric tube.',
         explanationWrong:

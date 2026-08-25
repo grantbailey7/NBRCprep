@@ -659,11 +659,11 @@ async function main() {
           'A respiratory therapist is called to evaluate a neonate who underwent TEF repair 48 hours ago. The nurse reports increased secretions and a bubbling sound from the chest drain. What should the therapist suspect?',
         choices: {
           A: 'Normal postoperative pleural drainage',
-          B: 'Pneumothorax requiring additional chest tube placement',
-          C: 'Anastomotic leak at the esophageal repair site',
+          B: 'Anastomotic leak at the esophageal repair site',
+          C: 'Pneumothorax requiring additional chest tube placement',
           D: 'Tracheomalacia causing air trapping and chest drain bubbling',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'Increased secretions and bubbling from the chest drain after TEF repair suggest an anastomotic leak at the esophageal repair site. Saliva or feeds can leak through the disrupted anastomosis into the mediastinum and pleural space. This is a surgical emergency requiring immediate evaluation, NPO status, and possible re-exploration.',
         explanationWrong:
@@ -749,11 +749,11 @@ async function main() {
           'A 5-year-old child with severe croup unresponsive to nebulized epinephrine and dexamethasone requires intubation. The airway is known to be edematous. Which ETT selection strategy is MOST appropriate?',
         choices: {
           A: 'Use an age-appropriate cuffed ETT calculated by the formula (age/4) + 3.5',
-          B: 'Select an ETT 0.5 to 1.0 mm smaller than the age-predicted size due to subglottic edema',
-          C: 'Use the largest ETT that will pass through the vocal cords to ensure an adequate seal',
+          B: 'Use the largest ETT that will pass through the vocal cords to ensure an adequate seal',
+          C: 'Select an ETT 0.5 to 1.0 mm smaller than the age-predicted size due to subglottic edema',
           D: 'Use a nasotracheal tube to provide more stability and prevent accidental extubation',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'In severe croup with subglottic edema, the subglottic area is significantly narrowed. Selecting an ETT 0.5 to 1.0 mm smaller than the age-predicted size accounts for the edema and reduces the risk of further mucosal trauma. Having multiple smaller sizes available is essential because the degree of narrowing may be greater than anticipated.',
         explanationWrong:
@@ -1218,12 +1218,12 @@ async function main() {
         questionText:
           'A neonate born at 38 weeks gestation presents with excessive drooling, choking on the first feed, and an inability to pass an orogastric tube. A chest/abdominal radiograph shows the tube coiled in the upper esophagus and gas in the stomach and intestines. What is the MOST likely diagnosis?',
         choices: {
-          A: 'Esophageal web causing partial obstruction',
+          A: 'Laryngeal cleft causing aspiration',
           B: 'Choanal atresia with secondary feeding difficulty',
-          C: 'Laryngeal cleft causing aspiration',
+          C: 'Esophageal web causing partial obstruction',
           D: 'Type C tracheoesophageal fistula with proximal esophageal atresia and distal fistula',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'The findings are classic for type C TEF: the orogastric tube cannot pass into the stomach because the proximal esophagus ends in a blind pouch (atresia), but gas is present in the stomach and intestines because there is a fistula connecting the distal esophagus to the trachea, allowing swallowed air to reach the GI tract. This is the most common type of TEF, accounting for approximately 85% of cases.',
         explanationWrong:
@@ -1326,12 +1326,12 @@ async function main() {
         questionText:
           'A respiratory therapist is setting up HFNC for a 10 kg toddler admitted with bronchiolitis. The available heated humidifier system has a maximum output temperature of 37 degrees C. The therapist sets the temperature to 34 degrees C. Why is adequate heated humidification CRITICAL for HFNC therapy?',
         choices: {
-          A: 'Inadequate humidification at high flow rates causes drying and damage to the nasal mucosa, increases airway resistance from inspissated secretions, and impairs mucociliary clearance',
+          A: 'The primary purpose of humidification is to prevent the HFNC tubing from drying out',
           B: 'Humidification is optional for HFNC as the nasal passages provide sufficient conditioning',
-          C: 'The primary purpose of humidification is to prevent the HFNC tubing from drying out',
+          C: 'Inadequate humidification at high flow rates causes drying and damage to the nasal mucosa, increases airway resistance from inspissated secretions, and impairs mucociliary clearance',
           D: 'Heated humidification is only needed when FiO2 exceeds 0.40',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'High gas flow rates delivered through HFNC exceed the nasal passages\' natural ability to warm and humidify inspired gas. Without adequate heated humidification (targeting 34 to 37 degrees C at 100% relative humidity), the dry gas causes nasal mucosal injury, epistaxis, increased airway resistance from thick secretions, and impaired mucociliary clearance, all of which can worsen the patient\'s respiratory status.',
         explanationWrong:

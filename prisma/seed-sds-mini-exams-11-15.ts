@@ -438,12 +438,12 @@ async function main() {
         questionText:
           'A child with congenital central hypoventilation syndrome requires ventilatory support. During wakefulness the child breathes adequately. Which ventilatory strategy is most appropriate for this patient?',
         choices: {
-          A: 'Continuous bilevel PAP during all waking and sleeping hours',
+          A: 'Nocturnal mechanical ventilation via tracheostomy or noninvasive interface, as hypoventilation in CCHS is most severe during sleep',
           B: 'Daytime-only supplemental oxygen via nasal cannula',
           C: 'Supplemental oxygen only during exercise',
-          D: 'Nocturnal mechanical ventilation via tracheostomy or noninvasive interface, as hypoventilation in CCHS is most severe during sleep',
+          D: 'Continuous bilevel PAP during all waking and sleeping hours',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'In CCHS, the central chemoreceptors are defective and cannot respond normally to CO2, with the most severe hypoventilation occurring during sleep when voluntary breathing control is absent. Children who ventilate adequately while awake typically require mechanical ventilation only during sleep, often via tracheostomy in infancy or noninvasive ventilation as they grow older.',
         explanationWrong:
@@ -547,11 +547,11 @@ async function main() {
           'A patient on ASV therapy has the following settings: EPAP 5 cmH2O, minimum pressure support 0 cmH2O, maximum pressure support 15 cmH2O. During a central apnea, which of the following best describes the device\'s response?',
         choices: {
           A: 'The device delivers a fixed IPAP of 20 cmH2O',
-          B: 'The device drops to CPAP mode at the EPAP setting',
-          C: 'The device increases pressure support and initiates mandatory breaths at an automatically adjusted backup rate to restore ventilation',
+          B: 'The device increases pressure support and initiates mandatory breaths at an automatically adjusted backup rate to restore ventilation',
+          C: 'The device drops to CPAP mode at the EPAP setting',
           D: 'The device alarms and ceases pressure delivery',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'ASV responds to central apneas by increasing pressure support (up to the maximum setting) and delivering mandatory breaths at an automatically adjusted backup rate. The backup rate in ASV is dynamic and is typically set at a percentage below the patient\'s recent average spontaneous rate. This servo-controlled response targets normalized ventilation.',
         explanationWrong:
@@ -637,11 +637,11 @@ async function main() {
           'Suvorexant, a dual orexin receptor antagonist (DORA), is indicated for which type of insomnia?',
         choices: {
           A: 'Insomnia due to circadian rhythm misalignment only',
-          B: 'Insomnia characterized by difficulties with sleep onset and/or sleep maintenance',
-          C: 'Insomnia secondary to restless legs syndrome',
+          B: 'Insomnia secondary to restless legs syndrome',
+          C: 'Insomnia characterized by difficulties with sleep onset and/or sleep maintenance',
           D: 'Insomnia in pediatric patients under age 12',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'Suvorexant blocks both orexin-1 and orexin-2 receptors, suppressing the wake-promoting orexin system. It is FDA-approved for insomnia characterized by difficulties with sleep onset and/or sleep maintenance in adults. By blocking wake-promoting signals rather than enhancing sedation, DORAs offer a mechanistically distinct approach.',
         explanationWrong:
@@ -708,12 +708,12 @@ async function main() {
         questionText:
           'Which standard precaution is most important for a sleep technologist to follow when handling PAP equipment that has been in contact with a patient\'s respiratory secretions?',
         choices: {
-          A: 'Wearing gloves when handling contaminated equipment and performing hand hygiene before and after patient contact',
+          A: 'Only wearing a face shield',
           B: 'No special precautions are needed since PAP equipment is low-risk',
           C: 'Only wearing an N95 respirator',
-          D: 'Only wearing a face shield',
+          D: 'Wearing gloves when handling contaminated equipment and performing hand hygiene before and after patient contact',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'Standard precautions require glove use when there is potential contact with respiratory secretions or other body fluids. Hand hygiene before and after patient contact is the single most important infection prevention measure. PAP equipment that contacts the airway and collects condensate and secretions should be handled with gloves and processed according to infection control protocols.',
         explanationWrong:
@@ -976,12 +976,12 @@ async function main() {
         questionText:
           'Bright light therapy is used as a treatment for circadian rhythm disorders in Alzheimer disease patients. What is the primary target of this intervention?',
         choices: {
-          A: 'To strengthen the circadian signal from the suprachiasmatic nucleus and improve sleep-wake consolidation',
-          B: 'To increase melatonin production during the day',
+          A: 'To increase melatonin production during the day',
+          B: 'To strengthen the circadian signal from the suprachiasmatic nucleus and improve sleep-wake consolidation',
           C: 'To treat comorbid seasonal affective disorder only',
           D: 'To reduce beta-amyloid accumulation in the brain',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'In Alzheimer disease, the suprachiasmatic nucleus (SCN) undergoes neurodegeneration, weakening the circadian signal and leading to fragmented sleep-wake patterns and sundowning. Bright light therapy provides a strong zeitgeber that can partially compensate for the weakened SCN by reinforcing the circadian rhythm and improving sleep-wake consolidation.',
         explanationWrong:
@@ -1084,12 +1084,12 @@ async function main() {
         questionText:
           'A patient with chronic respiratory failure from kyphoscoliosis requires nocturnal ventilation. Nocturnal transcutaneous CO2 monitoring during a bilevel PAP titration shows a PtcCO2 trending down from 62 mmHg to 45 mmHg as the IPAP is increased. What does this trend indicate?',
         choices: {
-          A: 'The patient is developing respiratory alkalosis and the IPAP should be decreased',
-          B: 'The bilevel PAP is effectively augmenting ventilation and reducing CO2 retention',
+          A: 'The bilevel PAP is effectively augmenting ventilation and reducing CO2 retention',
+          B: 'The patient is developing respiratory alkalosis and the IPAP should be decreased',
           C: 'The transcutaneous monitor is malfunctioning',
           D: 'The patient is breath-stacking and needs a lower backup rate',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'A decrease in transcutaneous CO2 from 62 to 45 mmHg during bilevel PAP titration indicates that the device is effectively augmenting alveolar ventilation and reducing CO2 retention. A PtcCO2 of 45 mmHg is approaching normal and suggests successful titration. Transcutaneous CO2 monitoring is valuable for real-time assessment of ventilation adequacy.',
         explanationWrong:
@@ -1208,12 +1208,12 @@ async function main() {
         questionText:
           'Which autonomic nervous system change during REM sleep predisposes patients to cardiac arrhythmias?',
         choices: {
-          A: 'Increased sympathetic surges with unstable autonomic tone, leading to heart rate variability and vulnerability to arrhythmia',
+          A: 'Complete sympathetic withdrawal with no autonomic variability',
           B: 'Steady parasympathetic dominance with stable heart rate',
-          C: 'Complete sympathetic withdrawal with no autonomic variability',
+          C: 'Increased sympathetic surges with unstable autonomic tone, leading to heart rate variability and vulnerability to arrhythmia',
           D: 'Balanced sympathetic and parasympathetic activity identical to wakefulness',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'REM sleep is characterized by autonomic instability with phasic sympathetic surges superimposed on a background of increased parasympathetic tone. This autonomic instability creates fluctuations in heart rate, blood pressure, and coronary blood flow, predisposing to arrhythmias. The phasic components of REM are particularly associated with sudden sympathetic discharges.',
         explanationWrong:
@@ -1298,12 +1298,12 @@ async function main() {
         questionText:
           'A sleep diary reveals that a patient takes 90-120 minutes to fall asleep each night, has frequent nocturnal awakenings totaling 2 hours, and reports significant daytime fatigue. The diary shows a time in bed of 10 hours but only 6 hours of estimated sleep. What is this patient\'s sleep efficiency?',
         choices: {
-          A: 'Approximately 90%',
+          A: 'Approximately 60%',
           B: 'Approximately 75%',
-          C: 'Approximately 60%',
+          C: 'Approximately 90%',
           D: 'Approximately 50%',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Sleep efficiency = (total sleep time / time in bed) x 100 = (6 hours / 10 hours) x 100 = 60%. This is significantly below the normal threshold of 85% and indicates poor sleep quality with excessive time spent awake in bed. This low sleep efficiency is typical of insomnia and would be a target for sleep restriction therapy as part of CBT-I.',
         explanationWrong:

@@ -871,12 +871,12 @@ async function main() {
         questionText:
           'A sleep center implements a new protocol where CPAP devices with wireless modem capability transmit daily compliance data. At the 30-day review, a respiratory therapist notices that a patient has been using the device an average of 5 hours nightly but the leak data shows large leak values exceeding 40 L/min on 60% of nights. The residual AHI is 8. What is the priority intervention?',
         choices: {
-          A: 'Schedule a mask fitting appointment to identify and resolve the leak source, as the elevated leak is likely undermining treatment efficacy and contributing to the elevated residual AHI',
+          A: 'Reassure the patient that 5 hours of use is adequate and the leak will resolve on its own',
           B: 'Increase the CPAP pressure to compensate for the leak',
           C: 'Switch to a different PAP modality since the current therapy is failing',
-          D: 'Reassure the patient that 5 hours of use is adequate and the leak will resolve on its own',
+          D: 'Schedule a mask fitting appointment to identify and resolve the leak source, as the elevated leak is likely undermining treatment efficacy and contributing to the elevated residual AHI',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'Persistent large mask leak undermines PAP therapy in multiple ways: it reduces effective delivered pressure, triggers auto-PAP algorithms to respond inappropriately, causes patient discomfort (eye irritation, dry mouth), and directly contributes to elevated residual AHI. Addressing the leak source through a mask fitting appointment is the priority because it likely resolves both the leak and the elevated residual AHI without requiring pressure or modality changes.',
         explanationWrong:
@@ -909,10 +909,10 @@ async function main() {
         choices: {
           A: 'Pulse oximetry trend showing SpO2 consistently above 90%',
           B: 'Reduction in the AHI to below 5 events per hour',
-          C: 'Transcutaneous CO2 (TcCO2) or end-tidal CO2 (ETCO2) monitoring showing normalization of CO2 levels during sleep',
-          D: 'Respiratory rate maintained between 12 and 20 breaths per minute',
+          C: 'Respiratory rate maintained between 12 and 20 breaths per minute',
+          D: 'Transcutaneous CO2 (TcCO2) or end-tidal CO2 (ETCO2) monitoring showing normalization of CO2 levels during sleep',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'In obesity hypoventilation syndrome, the primary pathology is hypoventilation with CO2 retention. While SpO2 monitoring is important, it does not directly assess ventilation adequacy. Transcutaneous CO2 or end-tidal CO2 monitoring provides direct measurement of the ventilatory response to therapy, making it the best parameter for assessing whether BiPAP settings are adequately supporting ventilation.',
         explanationWrong:
@@ -961,12 +961,12 @@ async function main() {
         questionText:
           'A technologist is performing a multiple sleep latency test (MSLT) following an overnight PSG. On the third nap opportunity, the patient falls asleep within 3 minutes and enters REM sleep at 6 minutes into the nap. According to AASM guidelines, how long should this nap trial continue after sleep onset?',
         choices: {
-          A: 'End the nap immediately after REM sleep is observed to save time',
+          A: 'Continue for 15 minutes from the first epoch of sleep, as the standard protocol requires observation for the full 15 minutes after sleep onset regardless of when REM appears',
           B: 'Continue for 15 minutes from the first epoch of sleep',
           C: 'Continue for 20 minutes from lights out',
-          D: 'Continue for 15 minutes from the first epoch of sleep, as the standard protocol requires observation for the full 15 minutes after sleep onset regardless of when REM appears',
+          D: 'End the nap immediately after REM sleep is observed to save time',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'AASM MSLT protocol states that once sleep onset occurs, the nap opportunity continues for 15 minutes from the first epoch of sleep. This allows adequate time to observe whether REM sleep occurs and to capture sleep latency and SOREMP data accurately. Even if REM appears early in the nap, the full 15 minutes from sleep onset should be completed.',
         explanationWrong:
@@ -1017,10 +1017,10 @@ async function main() {
         choices: {
           A: 'Replace all EEG electrodes with more expensive platinum models',
           B: 'Reduce the number of EEG channels to decrease technical complexity',
-          C: 'Institute double-checks where a second technologist verifies impedances before each study',
-          D: 'Implement a standardized electrode application protocol with mandatory impedance verification below 5 kOhms before starting each recording, combined with periodic competency assessments for technologists',
+          C: 'Implement a standardized electrode application protocol with mandatory impedance verification below 5 kOhms before starting each recording, combined with periodic competency assessments for technologists',
+          D: 'Institute double-checks where a second technologist verifies impedances before each study',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'A systematic quality improvement approach addresses the root cause of high impedance (inadequate skin preparation and electrode application technique) through standardized protocols and competency verification. Mandatory impedance checks below 5 kOhms before recording begins ensures adequate electrode contact, while periodic competency assessments maintain technologist skills over time.',
         explanationWrong:
@@ -1392,12 +1392,12 @@ async function main() {
         questionText:
           'A sleep medicine physician orders a maintenance of wakefulness test (MWT) for a commercial airline pilot being treated for OSA with CPAP. The pilot\'s CPAP compliance data shows adequate adherence (>6 hours nightly, residual AHI 2). The MWT shows a mean sleep latency of 28 minutes across four 40-minute trials. How should this result be interpreted?',
         choices: {
-          A: 'The MWT is abnormal; the pilot cannot fly',
+          A: 'The MWT result of 28 minutes (above the 8-minute threshold for definite abnormality and approaching the normal range of 30-40 minutes) suggests the ability to maintain wakefulness is slightly below normal but not definitively impaired; the result should be interpreted in conjunction with clinical assessment and CPAP compliance data',
           B: 'The MWT is indeterminate and should be repeated in 3 months',
-          C: 'The MWT result of 28 minutes (above the 8-minute threshold for definite abnormality and approaching the normal range of 30-40 minutes) suggests the ability to maintain wakefulness is slightly below normal but not definitively impaired; the result should be interpreted in conjunction with clinical assessment and CPAP compliance data',
+          C: 'The MWT is abnormal; the pilot cannot fly',
           D: 'The MWT is completely normal and no further evaluation is needed',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'MWT interpretation requires clinical context. A mean sleep latency of 28 minutes on the 40-minute protocol is below the normal range (typically 30-40 minutes is normal, below 8 minutes is definitively abnormal, and 8-30 minutes is the indeterminate zone). This borderline result should be interpreted alongside clinical factors including CPAP compliance (which is excellent), subjective sleepiness assessment, and occupational requirements. It does not definitively establish or exclude impairment.',
         explanationWrong:
@@ -1500,12 +1500,12 @@ async function main() {
         questionText:
           'A sleep laboratory performs both diagnostic and titration studies. The laboratory manager wants to implement a system to track and reduce the rate of technically inadequate studies. Which quality metric is most directly relevant to monitoring technical adequacy?',
         choices: {
-          A: 'The percentage of studies with at least 4 hours of interpretable data in all required channels, tracked by technologist and shift to identify patterns',
+          A: 'The number of studies performed per month',
           B: 'Patient satisfaction scores from post-study surveys',
-          C: 'The number of studies performed per month',
+          C: 'The percentage of studies with at least 4 hours of interpretable data in all required channels, tracked by technologist and shift to identify patterns',
           D: 'Average setup time per study',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'The percentage of studies with adequate interpretable data across all required channels directly measures technical quality. Tracking this metric by technologist and shift allows identification of patterns that may indicate training needs, equipment issues, or workflow problems. The 4-hour threshold aligns with the minimum data requirement for split-night studies and provides a meaningful quality benchmark.',
         explanationWrong:
@@ -1608,11 +1608,11 @@ async function main() {
           'A technologist is performing a diagnostic PSG on a patient with suspected REM sleep behavior disorder. To optimize detection of REM without atonia, which additional EMG recording montage should be included beyond the standard chin EMG?',
         choices: {
           A: 'Bilateral deltoid EMG to detect arm movements',
-          B: 'Bilateral intercostal EMG to monitor respiratory effort',
-          C: 'Bilateral anterior tibialis EMG combined with bilateral flexor digitorum superficialis (forearm) EMG to capture both upper and lower extremity phasic EMG activity during REM',
+          B: 'Bilateral anterior tibialis EMG combined with bilateral flexor digitorum superficialis (forearm) EMG to capture both upper and lower extremity phasic EMG activity during REM',
+          C: 'Bilateral intercostal EMG to monitor respiratory effort',
           D: 'A single additional leg EMG channel is sufficient',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'AASM guidelines for RBD evaluation recommend an expanded EMG montage including bilateral anterior tibialis and bilateral upper extremity EMG (typically flexor digitorum superficialis). This expanded montage increases sensitivity for detecting REM without atonia by capturing both upper and lower extremity phasic EMG activity. RBD can manifest with asymmetric or preferentially upper or lower extremity motor activity.',
         explanationWrong:
@@ -1698,11 +1698,11 @@ async function main() {
           'A 12-year-old child with Down syndrome and moderate-to-severe OSA (AHI 15) had an adenotonsillectomy 6 months ago. A post-operative PSG shows a residual AHI of 10 with predominantly obstructive events. CPAP titration is planned. What special consideration is most important when selecting a PAP interface for this patient?',
         choices: {
           A: 'Use the largest available adult mask to ensure adequate seal',
-          B: 'Select a pediatric-sized mask that accommodates the midface hypoplasia characteristic of Down syndrome, and consider a custom-fitted interface if standard masks do not provide an adequate seal due to the flattened nasal bridge',
-          C: 'A nasal pillow interface is preferred for all pediatric patients',
+          B: 'A nasal pillow interface is preferred for all pediatric patients',
+          C: 'Select a pediatric-sized mask that accommodates the midface hypoplasia characteristic of Down syndrome, and consider a custom-fitted interface if standard masks do not provide an adequate seal due to the flattened nasal bridge',
           D: 'The mask selection is not important as long as the pressure is adequate',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'Children with Down syndrome have characteristic midface hypoplasia with a flattened nasal bridge, which makes standard mask fitting challenging. A pediatric-sized mask should be selected, but the facial anatomy may require trying multiple interfaces or considering a custom-fitted mask. Ensuring a proper seal without excessive strap tension (which can cause midface growth restriction in a growing child) is a critical consideration.',
         explanationWrong:

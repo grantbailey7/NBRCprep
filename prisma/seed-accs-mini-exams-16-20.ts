@@ -63,11 +63,11 @@ async function main() {
           'A mechanically ventilated patient develops a new fever on day 5 of ventilation. The ventilator-associated event (VAE) surveillance algorithm from the CDC requires identification of a period of sustained worsening in oxygenation. What is the specific criterion for the initial ventilator-associated condition (VAC) tier?',
         choices: {
           A: 'New infiltrate on chest radiograph with purulent secretions',
-          B: 'An increase in daily minimum PEEP of at least 3 cmH2O or daily minimum FiO2 of at least 20 points sustained for 2 or more calendar days after at least 2 days of stable or improving settings',
-          C: 'Positive quantitative culture from bronchoalveolar lavage',
+          B: 'Positive quantitative culture from bronchoalveolar lavage',
+          C: 'An increase in daily minimum PEEP of at least 3 cmH2O or daily minimum FiO2 of at least 20 points sustained for 2 or more calendar days after at least 2 days of stable or improving settings',
           D: 'Temperature greater than 38.0 C combined with leukocytosis',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'The CDC VAE surveillance framework defines a ventilator-associated condition (VAC) as an increase in daily minimum PEEP of at least 3 cmH2O or daily minimum FiO2 of at least 20 percentage points, sustained for 2 or more calendar days, following a baseline period of at least 2 calendar days of stable or improving ventilator settings.',
         explanationWrong:
@@ -315,11 +315,11 @@ async function main() {
           'During targeted temperature management after cardiac arrest, the patient is being rewarmed at a controlled rate. The patient develops ventricular tachycardia during rewarming. Which electrolyte abnormality is most commonly associated with arrhythmias during the rewarming phase of TTM?',
         choices: {
           A: 'Hypernatremia',
-          B: 'Hypocalcemia',
-          C: 'Hyperkalemia from intracellular potassium shifts during rewarming',
+          B: 'Hyperkalemia from intracellular potassium shifts during rewarming',
+          C: 'Hypocalcemia',
           D: 'Hypermagnesemia',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'During hypothermia, potassium shifts intracellularly, often requiring supplementation to maintain normal serum levels. During rewarming, potassium shifts back out of cells, causing rebound hyperkalemia if supplementation was aggressive. This hyperkalemia is the most common electrolyte-related cause of arrhythmias during the rewarming phase of TTM.',
         explanationWrong:
@@ -550,10 +550,10 @@ async function main() {
         choices: {
           A: 'Pancreatic necrosis on contrast-enhanced CT',
           B: 'Amylase level greater than 3 times the upper limit of normal',
-          C: 'Persistent organ failure lasting greater than 48 hours',
-          D: 'Peripancreatic fluid collection identified on imaging',
+          C: 'Peripancreatic fluid collection identified on imaging',
+          D: 'Persistent organ failure lasting greater than 48 hours',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'The revised Atlanta classification defines severe acute pancreatitis by the presence of persistent organ failure lasting greater than 48 hours. Organ failure is assessed using the modified Marshall scoring system and may involve respiratory, cardiovascular, or renal systems. Transient organ failure resolving within 48 hours classifies the disease as moderately severe.',
         explanationWrong:
@@ -640,10 +640,10 @@ async function main() {
         choices: {
           A: 'Inhaled nitric oxide increases systemic vascular resistance, improving right ventricular perfusion pressure',
           B: 'Inhaled nitric oxide should be started at 80 ppm and maintained at that dose',
-          C: 'Methemoglobin levels do not need to be monitored during iNO therapy',
-          D: 'Inhaled nitric oxide selectively reduces pulmonary vascular resistance without causing systemic hypotension, and must be weaned gradually to prevent rebound pulmonary hypertension',
+          C: 'Inhaled nitric oxide selectively reduces pulmonary vascular resistance without causing systemic hypotension, and must be weaned gradually to prevent rebound pulmonary hypertension',
+          D: 'Methemoglobin levels do not need to be monitored during iNO therapy',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'Inhaled nitric oxide (iNO) is a selective pulmonary vasodilator that reduces PVR without systemic effects because it is rapidly inactivated by hemoglobin in the pulmonary capillaries. It must be weaned gradually because abrupt discontinuation can cause rebound pulmonary hypertension due to downregulation of endogenous nitric oxide production during therapy.',
         explanationWrong:
@@ -782,12 +782,12 @@ async function main() {
         questionText:
           'A patient who underwent tracheostomy 5 days ago is accidentally decannulated during a position change. The stoma tract is not yet mature. What is the most appropriate immediate action?',
         choices: {
-          A: 'Reinsert the tracheostomy tube blindly through the stoma',
-          B: 'Establish orotracheal intubation as the primary airway while covering the stoma site, then reassess the tracheostomy under controlled conditions',
+          A: 'Establish orotracheal intubation as the primary airway while covering the stoma site, then reassess the tracheostomy under controlled conditions',
+          B: 'Reinsert the tracheostomy tube blindly through the stoma',
           C: 'Insert a bougie through the stoma and railroad a new tracheostomy tube',
           D: 'Apply bag-valve-mask ventilation over the stoma',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'In an immature tracheostomy stoma (typically less than 7 to 10 days old), the tract may not be well-formed, and blind reinsertion carries a high risk of creating a false passage into the pretracheal space. The safest approach is to secure the airway from above via orotracheal intubation while occluding the stoma. The tracheostomy can then be replaced under controlled conditions, ideally with bronchoscopic guidance.',
         explanationWrong:
@@ -1052,12 +1052,12 @@ async function main() {
         questionText:
           'A patient with a high cervical spinal cord injury (C2) has been on chronic mechanical ventilation via tracheostomy for 2 years and is being considered for glossopharyngeal breathing (GPB) training as a backup ventilation method. How does glossopharyngeal breathing work?',
         choices: {
-          A: 'The patient uses the tongue, pharyngeal muscles, and larynx to gulp small boluses of air into the lungs in a piston-like fashion, stacking sequential gulps to achieve a functional tidal volume independent of diaphragm function',
-          B: 'The patient breathes through an external negative pressure device',
+          A: 'The patient breathes through an external negative pressure device',
+          B: 'The patient uses the tongue, pharyngeal muscles, and larynx to gulp small boluses of air into the lungs in a piston-like fashion, stacking sequential gulps to achieve a functional tidal volume independent of diaphragm function',
           C: 'The patient uses accessory neck muscles to generate negative intrathoracic pressure',
           D: 'The patient activates the diaphragm through neural plasticity after injury',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'Glossopharyngeal breathing (frog breathing) is a technique in which the patient uses the tongue, pharynx, and larynx as a positive-pressure pump. The glottis acts as a valve while the tongue pistons air into the lungs in sequential gulps (typically 6 to 9 per breath). Each gulp delivers 40 to 200 mL, and stacking multiple gulps achieves a functional tidal volume. This technique can provide ventilator-free time and serves as an emergency backup if mechanical ventilation fails.',
         explanationWrong:
@@ -1178,12 +1178,12 @@ async function main() {
         questionText:
           'A 68-year-old patient in the ICU is being assessed for delirium risk factors. Which of the following is the most significant modifiable risk factor for ICU delirium?',
         choices: {
-          A: 'Patient age greater than 65 years',
-          B: 'Use of benzodiazepine-based sedation protocols',
+          A: 'Use of benzodiazepine-based sedation protocols',
+          B: 'Patient age greater than 65 years',
           C: 'Severity of illness at ICU admission',
           D: 'Pre-existing dementia',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'While age, illness severity, and pre-existing dementia are all risk factors for ICU delirium, they are non-modifiable. Benzodiazepine-based sedation is the most significant modifiable risk factor, with a dose-dependent relationship to delirium incidence. Switching to non-benzodiazepine sedation strategies (such as propofol or dexmedetomidine) significantly reduces delirium risk.',
         explanationWrong:
@@ -1412,12 +1412,12 @@ async function main() {
         questionText:
           'An obese patient (BMI 47 kg/m2) in the ICU is receiving propofol for sedation. After 72 hours, the patient develops unexplained metabolic acidosis, rhabdomyolysis, and cardiac dysfunction. Triglycerides are elevated at 450 mg/dL. What is the most likely diagnosis?',
         choices: {
-          A: 'Diabetic ketoacidosis',
+          A: 'Propofol infusion syndrome (PRIS), which may present earlier and at lower doses in obese patients due to the lipophilic nature of propofol and its extensive distribution into adipose tissue',
           B: 'Malignant hyperthermia',
-          C: 'Propofol infusion syndrome (PRIS), which may present earlier and at lower doses in obese patients due to the lipophilic nature of propofol and its extensive distribution into adipose tissue',
+          C: 'Diabetic ketoacidosis',
           D: 'Acute fatty liver of critical illness',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Propofol infusion syndrome (PRIS) is characterized by metabolic acidosis, rhabdomyolysis, hypertriglyceridemia, cardiac dysfunction, and potentially renal failure. Obese patients may be at increased risk because propofol is highly lipophilic and distributes extensively into adipose tissue, potentially leading to tissue accumulation. The triad of metabolic acidosis, rhabdomyolysis, and cardiac dysfunction in a patient on propofol is highly suggestive of PRIS.',
         explanationWrong:
@@ -1448,12 +1448,12 @@ async function main() {
         questionText:
           'A patient is admitted after an out-of-hospital cardiac arrest with an initial rhythm of pulseless electrical activity. ROSC is achieved after 15 minutes of CPR. Post-ROSC, the patient is hemodynamically unstable requiring vasopressors. An emergent coronary angiogram shows no acute coronary lesion. What should be prioritized in the early post-arrest care for this patient?',
         choices: {
-          A: 'Comprehensive ICU management including TTM, hemodynamic optimization with a mean arterial pressure goal of 65 to 80 mmHg, identification and treatment of the underlying cause of the PEA arrest, seizure monitoring, and targeted glucose management',
-          B: 'Discharge from the catheterization lab to a general ward with telemetry',
+          A: 'Discharge from the catheterization lab to a general ward with telemetry',
+          B: 'Comprehensive ICU management including TTM, hemodynamic optimization with a mean arterial pressure goal of 65 to 80 mmHg, identification and treatment of the underlying cause of the PEA arrest, seizure monitoring, and targeted glucose management',
           C: 'Emergent cardiac surgery for bypass grafting',
           D: 'Immediate prognostic assessment for withdrawal of care',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'Post-arrest care for PEA arrest without an acute coronary lesion requires a systematic approach: TTM for neuroprotection, hemodynamic optimization (MAP 65-80 mmHg to ensure adequate cerebral perfusion), investigation of non-cardiac causes of PEA (pulmonary embolism, hypovolemia, tension pneumothorax, metabolic derangements), seizure monitoring with continuous EEG, and glucose management to avoid both hypo- and hyperglycemia.',
         explanationWrong:
@@ -1502,12 +1502,12 @@ async function main() {
         questionText:
           'A hospital is implementing a pediatric early warning system adapted for its general pediatric wards. Which modification of the adult early warning score is most important when adapting for pediatric patients?',
         choices: {
-          A: 'Age-specific vital sign thresholds must be used because normal physiologic ranges vary significantly across pediatric age groups, and a single set of adult-derived cut-points would miss deterioration in children or generate excessive false alarms',
+          A: 'Use of identical vital sign thresholds as adult MEWS for all pediatric ages',
           B: 'Elimination of respiratory rate from the scoring system',
-          C: 'Use of identical vital sign thresholds as adult MEWS for all pediatric ages',
+          C: 'Age-specific vital sign thresholds must be used because normal physiologic ranges vary significantly across pediatric age groups, and a single set of adult-derived cut-points would miss deterioration in children or generate excessive false alarms',
           D: 'Replacing physiologic parameters with laboratory values',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Pediatric early warning scores must incorporate age-specific vital sign thresholds because normal heart rate, respiratory rate, and blood pressure vary dramatically across age groups. A resting heart rate of 140 bpm is normal in an infant but alarming in an adolescent. Using adult thresholds would either miss deterioration in younger children or generate excessive false alarms, rendering the system ineffective.',
         explanationWrong:
@@ -1593,11 +1593,11 @@ async function main() {
           'A patient with acute right heart failure from massive pulmonary embolism has a patent foramen ovale (PFO) detected on echocardiography with right-to-left shunting. The patient is profoundly hypoxemic with a PaO2 of 42 mmHg despite high-flow oxygen therapy. What is the mechanism of hypoxemia related to the PFO in this context?',
         choices: {
           A: 'The PFO causes increased pulmonary blood flow',
-          B: 'The PFO leads to pulmonary arterial steal',
-          C: 'Right-to-left shunting through the PFO occurs because elevated right atrial pressure from acute right heart failure exceeds left atrial pressure, allowing deoxygenated venous blood to bypass the lungs entirely and enter the systemic arterial circulation, causing refractory hypoxemia unresponsive to supplemental oxygen',
+          B: 'Right-to-left shunting through the PFO occurs because elevated right atrial pressure from acute right heart failure exceeds left atrial pressure, allowing deoxygenated venous blood to bypass the lungs entirely and enter the systemic arterial circulation, causing refractory hypoxemia unresponsive to supplemental oxygen',
+          C: 'The PFO leads to pulmonary arterial steal',
           D: 'The PFO causes left-to-right shunting that increases pulmonary congestion',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'In acute right heart failure from massive PE, right atrial pressure rises above left atrial pressure, opening the flap-like PFO and allowing right-to-left shunting. Deoxygenated blood from the right atrium passes directly into the left atrium, bypassing the lungs. This creates a fixed intracardiac shunt that produces refractory hypoxemia unresponsive to supplemental oxygen, since the shunted blood never participates in gas exchange.',
         explanationWrong:
@@ -1664,12 +1664,12 @@ async function main() {
         questionText:
           'A patient with sickle cell disease receives an exchange transfusion of 8 units of packed red blood cells. Six hours later, the patient develops bilateral pulmonary infiltrates, fever, and hypoxemia. The clinical picture could represent either TRALI or an acute sickle chest crisis. Which laboratory finding would most help distinguish TRALI from acute chest syndrome in this patient?',
         choices: {
-          A: 'Complete blood count showing leukocytosis',
+          A: 'Detection of anti-HLA or anti-neutrophil antibodies in the donor units, combined with a temporal relationship to transfusion and absence of other triggers for acute chest syndrome such as infection or fat embolism',
           B: 'Elevated LDH level',
           C: 'Reticulocyte count',
-          D: 'Detection of anti-HLA or anti-neutrophil antibodies in the donor units, combined with a temporal relationship to transfusion and absence of other triggers for acute chest syndrome such as infection or fat embolism',
+          D: 'Complete blood count showing leukocytosis',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'Distinguishing TRALI from acute chest syndrome is challenging as both present with bilateral infiltrates, hypoxemia, and fever after transfusion. Detection of anti-HLA or anti-neutrophil antibodies in the donor plasma, combined with the temporal relationship to transfusion, provides the strongest evidence for TRALI. Acute chest syndrome is more likely when identifiable triggers (infection, fat embolism from bone marrow infarction) are present.',
         explanationWrong:
@@ -1683,11 +1683,11 @@ async function main() {
           'A patient with severe acute pancreatitis develops early organ failure on day 2 of admission. The Modified Marshall scoring system is used to assess organ failure. Which organ systems are evaluated by the Modified Marshall score, and what score indicates organ failure?',
         choices: {
           A: 'Respiratory, hepatic, and neurological systems with a score greater than 3',
-          B: 'Respiratory (PaO2/FiO2), cardiovascular (systolic blood pressure and response to fluid resuscitation), and renal (serum creatinine) systems, with a score of 2 or more in any system defining organ failure',
-          C: 'Only the respiratory system using the PaO2/FiO2 ratio',
+          B: 'Only the respiratory system using the PaO2/FiO2 ratio',
+          C: 'Respiratory (PaO2/FiO2), cardiovascular (systolic blood pressure and response to fluid resuscitation), and renal (serum creatinine) systems, with a score of 2 or more in any system defining organ failure',
           D: 'All six organ systems in the SOFA score',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'The Modified Marshall scoring system evaluates three organ systems: respiratory (PaO2/FiO2 ratio), cardiovascular (systolic blood pressure), and renal (serum creatinine). Each system is scored from 0 to 4, and a score of 2 or more in any individual system defines organ failure. This scoring system was specifically adopted by the revised Atlanta classification for grading severity of acute pancreatitis.',
         explanationWrong:
@@ -1754,12 +1754,12 @@ async function main() {
         questionText:
           'A mechanically ventilated patient is on a subglottic secretion drainage endotracheal tube. The suction port above the cuff is connected to continuous low-pressure suction. What is the primary mechanism by which subglottic secretion drainage reduces VAP risk?',
         choices: {
-          A: 'It reduces the bacterial load by removing pooled secretions from above the cuff, thereby decreasing the volume and frequency of microaspiration of contaminated material past the cuff folds into the lower respiratory tract',
+          A: 'It eliminates the need for oral care',
           B: 'It sterilizes the upper airway',
           C: 'It directly kills bacteria in the secretions through the suction process',
-          D: 'It eliminates the need for oral care',
+          D: 'It reduces the bacterial load by removing pooled secretions from above the cuff, thereby decreasing the volume and frequency of microaspiration of contaminated material past the cuff folds into the lower respiratory tract',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'Subglottic secretion drainage removes pooled secretions from the subglottic space above the endotracheal tube cuff. These secretions are the primary reservoir for bacteria-laden material that can leak past the cuff folds and be aspirated into the lower respiratory tract. By continuously draining this reservoir, the volume and frequency of microaspiration events is significantly reduced, which is the primary mechanism of VAP prevention.',
         explanationWrong:

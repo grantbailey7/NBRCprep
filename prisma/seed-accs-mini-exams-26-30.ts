@@ -82,10 +82,10 @@ async function main() {
         choices: {
           A: 'Continue the trial for a full 30 minutes before reassessing',
           B: 'Proceed with extubation since the RSBI is below 120',
-          C: 'Reconnect the patient to mechanical ventilation and investigate causes of failure',
-          D: 'Switch to pressure support ventilation at 5 cmH2O and continue weaning',
+          C: 'Switch to pressure support ventilation at 5 cmH2O and continue weaning',
+          D: 'Reconnect the patient to mechanical ventilation and investigate causes of failure',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'This patient is demonstrating clear signs of spontaneous breathing trial failure: tachypnea, tachycardia, desaturation, and accessory muscle use. Despite the RSBI being borderline acceptable (< 105 predicts success, but values up to 120 are sometimes used), the clinical picture of distress overrides a single numerical value. The patient should be returned to full ventilatory support, and causes of weaning failure should be investigated.',
         explanationWrong:
@@ -172,10 +172,10 @@ async function main() {
         choices: {
           A: 'Tension pneumothorax',
           B: 'Worsening ARDS with decreased lung compliance',
-          C: 'Mucus plugging of the left mainstem bronchus',
-          D: 'Endotracheal tube obstruction from secretions',
+          C: 'Endotracheal tube obstruction from secretions',
+          D: 'Mucus plugging of the left mainstem bronchus',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'A significant increase in peak inspiratory pressure with a normal plateau pressure indicates increased airway resistance rather than decreased lung compliance. Endotracheal tube obstruction from secretions increases airway resistance, causing elevated PIP while plateau pressure remains unchanged because the alveolar pressure is not affected. The difference between PIP and Pplat reflects resistive pressure, which increases with airway obstruction.',
         explanationWrong:
@@ -638,12 +638,12 @@ async function main() {
         questionText:
           'A patient with severe community-acquired pneumonia requires intubation. Pre-intubation vitals: BP 88/54 mmHg, HR 118 bpm, SpO2 84% on 15 L non-rebreather. Which induction agent is most appropriate for rapid sequence intubation in this hemodynamically unstable patient?',
         choices: {
-          A: 'Ketamine 1-2 mg/kg IV, which maintains hemodynamic stability through sympathomimetic properties',
-          B: 'Propofol 2 mg/kg IV',
+          A: 'Propofol 2 mg/kg IV',
+          B: 'Ketamine 1-2 mg/kg IV, which maintains hemodynamic stability through sympathomimetic properties',
           C: 'Thiopental 3-5 mg/kg IV',
           D: 'Midazolam 0.3 mg/kg IV',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'Ketamine is the preferred induction agent for rapid sequence intubation in hemodynamically unstable patients because it has sympathomimetic properties that help maintain blood pressure and heart rate. Unlike other induction agents, ketamine stimulates catecholamine release, preserving cardiovascular stability. It also provides excellent analgesia and has bronchodilatory effects, which can be beneficial in patients with respiratory disease.',
         explanationWrong:
@@ -728,12 +728,12 @@ async function main() {
         questionText:
           'A 65-year-old patient with COPD exacerbation has been on invasive mechanical ventilation for 5 days. The patient meets readiness criteria for a spontaneous breathing trial. Which method provides the most reliable assessment of extubation readiness?',
         choices: {
-          A: 'Measurement of maximum inspiratory pressure (MIP) alone',
-          B: 'A 30-120 minute spontaneous breathing trial using T-piece or low-level pressure support (5-8 cmH2O) with monitoring for signs of intolerance',
+          A: 'A 30-120 minute spontaneous breathing trial using T-piece or low-level pressure support (5-8 cmH2O) with monitoring for signs of intolerance',
+          B: 'Measurement of maximum inspiratory pressure (MIP) alone',
           C: 'Measurement of minute ventilation alone',
           D: 'Assessment of the patient cough while still on full ventilatory support',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'A spontaneous breathing trial (SBT) lasting 30-120 minutes using either a T-piece or low-level pressure support (5-8 cmH2O to compensate for ETT resistance) is the gold standard for assessing extubation readiness. During the SBT, the patient is monitored for signs of intolerance including tachypnea, tachycardia, desaturation, diaphoresis, accessory muscle use, and hemodynamic instability. Successful completion of the SBT is the best predictor of extubation success.',
         explanationWrong:
@@ -1378,10 +1378,10 @@ async function main() {
         choices: {
           A: 'Severe tricuspid regurgitation',
           B: 'Cardiac tamponade',
-          C: 'Complete heart block or junctional rhythm, where the atrium contracts against a closed tricuspid valve',
-          D: 'Hypovolemia',
+          C: 'Hypovolemia',
+          D: 'Complete heart block or junctional rhythm, where the atrium contracts against a closed tricuspid valve',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'Cannon A waves in the CVP waveform occur when the atrium contracts against a closed tricuspid valve. This happens in complete (third-degree) heart block, where the atria and ventricles beat independently, causing intermittent simultaneous atrial contraction during ventricular systole. It also occurs with junctional rhythms and ventricular pacing without atrial tracking. The large pressure wave is transmitted retrograde through the venous system and is visible on the CVP tracing as prominent tall waves.',
         explanationWrong:
@@ -1468,10 +1468,10 @@ async function main() {
         choices: {
           A: 'Flumazenil',
           B: 'N-acetylcysteine',
-          C: 'Atropine',
-          D: 'Naloxone, a competitive opioid receptor antagonist',
+          C: 'Naloxone, a competitive opioid receptor antagonist',
+          D: 'Atropine',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'The classic toxidrome of miotic (pinpoint) pupils, respiratory depression, and decreased consciousness is consistent with opioid overdose. Naloxone is a competitive antagonist at opioid receptors that rapidly reverses respiratory depression, sedation, and miosis. It should be titrated in small increments (0.04-0.4 mg) to restore adequate ventilation without precipitating acute withdrawal in opioid-dependent patients. The half-life of naloxone (30-90 minutes) may be shorter than the opioid, requiring repeated dosing or a continuous infusion.',
         explanationWrong:

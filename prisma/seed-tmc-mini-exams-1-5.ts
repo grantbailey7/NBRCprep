@@ -494,10 +494,10 @@ async function main() {
         choices: {
           A: 'Respiratory acidosis',
           B: 'Respiratory alkalosis',
-          C: 'Metabolic acidosis',
-          D: 'Compensated metabolic acidosis',
+          C: 'Compensated metabolic acidosis',
+          D: 'Metabolic acidosis',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'The pH is low (acidotic), PaCO2 is normal, and HCO3 is low. A normal PaCO2 with a low HCO3 and low pH indicates an uncompensated metabolic acidosis. The respiratory system has not yet compensated by decreasing PaCO2.',
         explanationWrong:
@@ -584,10 +584,10 @@ async function main() {
         choices: {
           A: 'Congestive heart failure',
           B: 'Pulmonary fibrosis',
-          C: 'Aortic stenosis',
-          D: 'Severe asthma or cardiac tamponade',
+          C: 'Severe asthma or cardiac tamponade',
+          D: 'Aortic stenosis',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'Pulsus paradoxus (an exaggerated drop in systolic blood pressure greater than 10 mmHg during inspiration) is classically associated with severe asthma (due to large intrathoracic pressure swings) and cardiac tamponade (due to pericardial fluid restricting cardiac filling).',
         explanationWrong:
@@ -1549,11 +1549,11 @@ async function main() {
           'A respiratory therapist is asked to change an inner cannula on a tracheostomy tube. Which type of tracheostomy tube has a removable inner cannula?',
         choices: {
           A: 'Single-cannula cuffed tracheostomy tube',
-          B: 'Fenestrated uncuffed tube without an inner cannula',
-          C: 'Double-cannula tracheostomy tube',
+          B: 'Double-cannula tracheostomy tube',
+          C: 'Fenestrated uncuffed tube without an inner cannula',
           D: 'Olympic tracheostomy tube',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'A double-cannula tracheostomy tube consists of an outer cannula (which stays in the stoma) and a removable inner cannula that can be withdrawn for cleaning or replacement. This design allows maintenance of airway patency without removing the entire tube.',
         explanationWrong:
@@ -1568,10 +1568,10 @@ async function main() {
         choices: {
           A: 'Increase the flow to 20 L/min on the non-rebreather',
           B: 'Add a nasal cannula underneath the non-rebreather',
-          C: 'Switch to a Venturi mask at 50%',
-          D: 'Prepare for non-invasive or invasive ventilation',
+          C: 'Prepare for non-invasive or invasive ventilation',
+          D: 'Switch to a Venturi mask at 50%',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'A non-rebreather mask at 15 L/min delivers the highest FiO2 available from standard oxygen therapy (approximately 70-90%). If the patient remains severely hypoxemic despite maximal oxygen therapy, the next step is to escalate to non-invasive positive-pressure ventilation (NIPPV) or prepare for intubation and invasive mechanical ventilation.',
         explanationWrong:
@@ -1639,11 +1639,11 @@ async function main() {
           'A patient complains of dyspnea and has a reduced total lung capacity (TLC), reduced vital capacity (VC), and a normal FEV1/FVC ratio. Which condition is most consistent with these findings?',
         choices: {
           A: 'Chronic bronchitis',
-          B: 'Pulmonary fibrosis',
-          C: 'Emphysema',
+          B: 'Emphysema',
+          C: 'Pulmonary fibrosis',
           D: 'Asthma',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'Pulmonary fibrosis is a restrictive lung disease characterized by reduced lung volumes (TLC, VC) with a preserved or elevated FEV1/FVC ratio. The stiff, fibrotic lungs cannot expand fully but the airways themselves are not obstructed.',
         explanationWrong:
@@ -1838,10 +1838,10 @@ async function main() {
         choices: {
           A: 'Manual resuscitation bag with oxygen source',
           B: 'Portable pulse oximeter',
-          C: 'Portable chest X-ray machine',
-          D: 'Portable ventilator or transport ventilator',
+          C: 'Portable ventilator or transport ventilator',
+          D: 'Portable chest X-ray machine',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'A portable chest X-ray machine is not essential equipment for transporting a ventilated patient. Essential transport items include a manual resuscitation bag (backup), portable oxygen, pulse oximetry for monitoring, suction equipment, emergency medications, and a transport ventilator.',
         explanationWrong:

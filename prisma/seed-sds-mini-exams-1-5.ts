@@ -226,10 +226,10 @@ async function main() {
         choices: {
           A: 'Advanced sleep-wake phase disorder',
           B: 'Non-24-hour sleep-wake rhythm disorder',
-          C: 'Delayed sleep-wake phase disorder',
-          D: 'Shift work disorder',
+          C: 'Shift work disorder',
+          D: 'Delayed sleep-wake phase disorder',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'Delayed sleep-wake phase disorder (DSWPD) is characterized by a habitual sleep onset and wake time that are significantly later than conventional or desired times. Patients typically cannot fall asleep until 2–6 AM and have difficulty waking for morning obligations, but sleep quality is normal once asleep.',
         explanationWrong:
@@ -316,10 +316,10 @@ async function main() {
         choices: {
           A: 'A sequence of breaths lasting at least 10 seconds with increasing respiratory effort leading to arousal, that does not meet criteria for apnea or hypopnea',
           B: 'Any arousal preceded by a single obstructed breath',
-          C: 'A 3% or greater oxygen desaturation without a change in airflow',
-          D: 'A sequence of breaths with flattening of the inspiratory flow signal lasting at least 10 seconds leading to an arousal from sleep that does not meet criteria for an apnea or hypopnea',
+          C: 'A sequence of breaths with flattening of the inspiratory flow signal lasting at least 10 seconds leading to an arousal from sleep that does not meet criteria for an apnea or hypopnea',
+          D: 'A 3% or greater oxygen desaturation without a change in airflow',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'A RERA is scored when there is a sequence of breaths lasting at least 10 seconds characterized by increasing respiratory effort or flattening of the inspiratory portion of the nasal pressure waveform, leading to an arousal from sleep, and the event does not meet criteria for an apnea or hypopnea.',
         explanationWrong:
@@ -620,10 +620,10 @@ async function main() {
         choices: {
           A: 'Electrodes placed on the masseter muscles bilaterally',
           B: 'Electrodes placed over the extensor digitorum muscle of the forearm',
-          C: 'Electrodes placed over the anterior tibialis muscles of both legs',
-          D: 'Electrodes placed on the gastrocnemius muscles bilaterally',
+          C: 'Electrodes placed on the gastrocnemius muscles bilaterally',
+          D: 'Electrodes placed over the anterior tibialis muscles of both legs',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'The AASM recommends placing surface EMG electrodes on the anterior tibialis muscle of each leg for detection of periodic limb movements during sleep (PLMS). Two electrodes are placed longitudinally on each leg, 2–3 cm apart on the middle of the muscle belly.',
         explanationWrong:
@@ -710,10 +710,10 @@ async function main() {
         choices: {
           A: 'Mean sleep latency of 12 minutes with one sleep-onset REM period',
           B: 'Mean sleep latency of 10 minutes with no sleep-onset REM periods',
-          C: 'Mean sleep latency greater than 15 minutes with two sleep-onset REM periods',
-          D: 'Mean sleep latency of 8 minutes or less with two or more sleep-onset REM periods',
+          C: 'Mean sleep latency of 8 minutes or less with two or more sleep-onset REM periods',
+          D: 'Mean sleep latency greater than 15 minutes with two sleep-onset REM periods',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'The MSLT diagnostic criteria for narcolepsy require a mean sleep latency of 8 minutes or less across the nap opportunities AND the presence of 2 or more sleep-onset REM periods (SOREMPs). A SOREMP on the preceding PSG can count as one of the two required SOREMPs.',
         explanationWrong:
@@ -850,12 +850,12 @@ async function main() {
         questionText:
           'A mixed apnea is characterized by which pattern on polysomnography?',
         choices: {
-          A: 'Absent airflow and absent effort throughout the entire event',
+          A: 'Initial absence of respiratory effort followed by the appearance of obstructive respiratory effort, all during a period of absent airflow',
           B: 'Reduced airflow with paradoxical chest and abdominal movement',
-          C: 'Initial absence of respiratory effort followed by the appearance of obstructive respiratory effort, all during a period of absent airflow',
+          C: 'Absent airflow and absent effort throughout the entire event',
           D: 'Alternating periods of hyperventilation and hypoventilation',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'A mixed apnea begins with a central component (absent airflow and absent respiratory effort) followed by an obstructive component (continued absent airflow with resumption of respiratory effort against the closed airway). The total event duration must be at least 10 seconds.',
         explanationWrong:
@@ -886,12 +886,12 @@ async function main() {
         questionText:
           'A patient with central sleep apnea secondary to chronic opioid use demonstrates an irregular breathing pattern during NREM sleep with variable tidal volumes and frequent central apneas. This pattern is most accurately described as:',
         choices: {
-          A: 'Ataxic (Biot\'s) breathing',
-          B: 'Cheyne-Stokes respiration',
+          A: 'Cheyne-Stokes respiration',
+          B: 'Ataxic (Biot\'s) breathing',
           C: 'Obstructive hypoventilation',
           D: 'Periodic breathing of altitude',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'Ataxic (Biot\'s) breathing is characterized by an irregular pattern of breathing with variable tidal volumes and respiratory rates, interspersed with central apneas. It is commonly associated with opioid-induced central sleep apnea and reflects depressed brainstem respiratory centers.',
         explanationWrong:
@@ -940,12 +940,12 @@ async function main() {
         questionText:
           'Which of the following is a characteristic feature that distinguishes sawtooth waves seen during REM sleep from other EEG waveforms?',
         choices: {
-          A: 'Sharply contoured, triangular waves in the 2–6 Hz range with a serrated appearance, maximal at central and frontal derivations',
+          A: 'Monomorphic sinusoidal 14 Hz oscillations lasting at least 0.5 seconds',
           B: 'High-amplitude biphasic waves followed by a burst of alpha activity',
-          C: 'Monomorphic sinusoidal 14 Hz oscillations lasting at least 0.5 seconds',
+          C: 'Sharply contoured, triangular waves in the 2–6 Hz range with a serrated appearance, maximal at central and frontal derivations',
           D: 'Rhythmic 3 Hz spike-and-wave complexes',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Sawtooth waves are a distinctive feature of REM sleep characterized by sharply contoured or triangular theta-frequency (2–6 Hz) waves with a serrated or notched morphology. They are best seen at vertex and frontal-central derivations and often precede bursts of rapid eye movements.',
         explanationWrong:
@@ -976,12 +976,12 @@ async function main() {
         questionText:
           'During a CPAP titration, the patient is in the supine REM position at a pressure of 12 cmH2O with no residual obstructive events, snoring, or desaturations for the past 30 minutes. According to AASM guidelines, this pressure can be considered:',
         choices: {
-          A: 'An inadequate titration because at least 60 minutes of observation is required',
-          B: 'The optimal titration pressure',
+          A: 'The optimal titration pressure',
+          B: 'An inadequate titration because at least 60 minutes of observation is required',
           C: 'A good titration pressure but not optimal',
           D: 'Acceptable only if the patient also demonstrated N3 sleep at this pressure',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'According to AASM guidelines, the optimal titration pressure is the pressure at which obstructive respiratory events, snoring, and desaturations are eliminated in the supine REM position. A minimum observation period of at least 15 minutes of supine REM without events is generally considered adequate for determining the optimal pressure.',
         explanationWrong:

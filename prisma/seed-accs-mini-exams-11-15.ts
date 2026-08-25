@@ -460,10 +460,10 @@ async function main() {
         choices: {
           A: 'Blood cultures, central line placement, and arterial line insertion',
           B: 'Blood cultures, lactate measurement, and surgical source control',
-          C: 'Obtain blood cultures, measure lactate, administer broad-spectrum antibiotics, begin fluid resuscitation with 30 mL/kg crystalloid for hypotension or lactate >= 4 mmol/L, and start vasopressors if hypotension persists',
-          D: 'Lactate measurement, broad-spectrum antibiotics, and pulmonary artery catheter placement',
+          C: 'Lactate measurement, broad-spectrum antibiotics, and pulmonary artery catheter placement',
+          D: 'Obtain blood cultures, measure lactate, administer broad-spectrum antibiotics, begin fluid resuscitation with 30 mL/kg crystalloid for hypotension or lactate >= 4 mmol/L, and start vasopressors if hypotension persists',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'The Surviving Sepsis Campaign 1-hour bundle includes: obtain blood cultures before antibiotics, measure serum lactate, administer broad-spectrum antibiotics, begin rapid fluid resuscitation with 30 mL/kg crystalloid for hypotension or lactate >= 4 mmol/L, and apply vasopressors if hypotensive during or after fluid resuscitation to maintain MAP >= 65 mmHg.',
         explanationWrong:
@@ -550,10 +550,10 @@ async function main() {
         choices: {
           A: 'Neuromuscular blocking agents to prevent gasping',
           B: 'High-dose vasopressors to maintain blood pressure',
-          C: 'No medications should be administered during withdrawal',
-          D: 'Opioids and benzodiazepines titrated to comfort, addressing dyspnea and anxiety',
+          C: 'Opioids and benzodiazepines titrated to comfort, addressing dyspnea and anxiety',
+          D: 'No medications should be administered during withdrawal',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'During planned ventilator withdrawal, opioids and benzodiazepines should be titrated to relieve dyspnea, pain, and anxiety. The goal is patient comfort, not hastening or delaying death. Doses are titrated to the symptom, consistent with the principle of double effect.',
         explanationWrong:

@@ -206,12 +206,12 @@ async function main() {
         questionText:
           'A patient 12 hours after coronary artery bypass grafting develops a cardiac index of 1.9 L/min/m2 with a PAOP of 8 mmHg. Which intervention is most appropriate?',
         choices: {
-          A: 'Administer a 500 mL crystalloid fluid bolus',
-          B: 'Start dobutamine infusion',
+          A: 'Start dobutamine infusion',
+          B: 'Administer a 500 mL crystalloid fluid bolus',
           C: 'Initiate an intra-aortic balloon pump',
           D: 'Begin norepinephrine infusion',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'A low cardiac index with a low PAOP (8 mmHg) suggests hypovolemia as the cause of low cardiac output. In the post-cardiac surgery patient, volume resuscitation with a crystalloid bolus to optimize preload is the appropriate first intervention before considering inotropic or mechanical support.',
         explanationWrong:
@@ -242,12 +242,12 @@ async function main() {
         questionText:
           'A patient presents with massive hemoptysis estimated at 600 mL in the past 12 hours. The patient is hemodynamically unstable. After intubation, what is the priority airway management strategy?',
         choices: {
-          A: 'Immediate bilateral bronchial lavage with cold saline',
+          A: 'Selective mainstem intubation of the unaffected lung to isolate bleeding',
           B: 'Placement of a double-lumen endotracheal tube for lung isolation',
-          C: 'Selective mainstem intubation of the unaffected lung to isolate bleeding',
+          C: 'Immediate bilateral bronchial lavage with cold saline',
           D: 'Emergent tracheostomy for improved suctioning access',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'In massive hemoptysis with hemodynamic instability, the priority is to protect the unaffected lung from blood aspiration. If the bleeding source is identified, selective mainstem intubation of the unaffected lung using a standard endotracheal tube is a rapid and effective method of lung isolation when a double-lumen tube is not immediately available.',
         explanationWrong:
@@ -296,12 +296,12 @@ async function main() {
         questionText:
           'A patient with inhalation injury is being ventilated and develops progressive hypoxemia 48 hours post-injury. Bronchoscopy reveals cast formation and mucosal sloughing in the major airways. Which intervention is most appropriate?',
         choices: {
-          A: 'High-frequency oscillatory ventilation',
-          B: 'Therapeutic bronchoscopy with cast removal and nebulized heparin',
+          A: 'Therapeutic bronchoscopy with cast removal and nebulized heparin',
+          B: 'High-frequency oscillatory ventilation',
           C: 'Emergent surgical tracheostomy',
           D: 'Prone positioning',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'Airway cast formation is a well-described complication of inhalation injury. Therapeutic bronchoscopy for cast removal combined with nebulized heparin (to prevent further cast formation) and nebulized N-acetylcysteine (to thin secretions) is the standard treatment approach for this complication.',
         explanationWrong:
@@ -332,12 +332,12 @@ async function main() {
         questionText:
           'In an ICU quality improvement initiative, the respiratory care department tracks ventilator liberation rates. Which metric best represents timely ventilator liberation?',
         choices: {
-          A: 'Percentage of patients who pass a spontaneous breathing trial within 24 hours of meeting readiness criteria',
+          A: 'Average tidal volume delivered across all ventilated patients',
           B: 'Total number of ventilator days per month',
-          C: 'Average tidal volume delivered across all ventilated patients',
+          C: 'Percentage of patients who pass a spontaneous breathing trial within 24 hours of meeting readiness criteria',
           D: 'Number of unplanned extubations per quarter',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'The percentage of patients who undergo a spontaneous breathing trial (SBT) within 24 hours of meeting readiness criteria is a process metric that directly measures timely ventilator liberation practices. This metric reflects adherence to evidence-based weaning protocols and identifies delays in liberation assessment.',
         explanationWrong:
@@ -564,12 +564,12 @@ async function main() {
         questionText:
           'A patient who had an aortic valve replacement 6 hours ago develops sudden cardiac tamponade. The respiratory therapist notes elevated peak pressures, hypotension, and jugular venous distension. What is the immediate priority?',
         choices: {
-          A: 'Emergent bedside re-sternotomy for pericardial decompression',
+          A: 'Obtain an emergent echocardiogram to confirm the diagnosis',
           B: 'Increase vasopressor infusion and administer a fluid bolus',
-          C: 'Obtain an emergent echocardiogram to confirm the diagnosis',
+          C: 'Emergent bedside re-sternotomy for pericardial decompression',
           D: 'Initiate chest compressions per ACLS protocol',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'In the post-cardiac surgery patient with clinical signs of cardiac tamponade (Beck triad: hypotension, muffled heart sounds, JVD), emergent bedside re-sternotomy (or subxiphoid pericardiotomy) is the definitive treatment. Post-surgical tamponade is often due to blood clot formation that cannot be drained by pericardiocentesis. Speed is critical as deterioration can be rapid.',
         explanationWrong:
@@ -601,11 +601,11 @@ async function main() {
           'A patient is receiving volume-controlled ventilation. The flow-volume loop shows a leftward shift of the expiratory limb compared to the previous loop. What does this change indicate?',
         choices: {
           A: 'Improved lung compliance',
-          B: 'Decreased airway resistance',
-          C: 'Increased airway resistance during exhalation',
+          B: 'Increased airway resistance during exhalation',
+          C: 'Decreased airway resistance',
           D: 'Development of a pneumothorax',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'A leftward shift (decreased expiratory flow at any given volume) of the expiratory limb on the flow-volume loop indicates increased expiratory airway resistance. This may be caused by bronchospasm, secretion accumulation, or mucosal edema, all of which impede expiratory airflow.',
         explanationWrong:
@@ -654,12 +654,12 @@ async function main() {
         questionText:
           'A patient is intubated following massive hemoptysis. Bronchoscopy identifies the bleeding source as the left lower lobe. A balloon-tipped catheter is advanced into the left lower lobe bronchus. What is the purpose of this intervention?',
         choices: {
-          A: 'To deliver topical antibiotics to the bleeding segment',
+          A: 'To tamponade the bleeding vessel and isolate the affected segment',
           B: 'To measure segmental bronchial pressures',
-          C: 'To tamponade the bleeding vessel and isolate the affected segment',
+          C: 'To deliver topical antibiotics to the bleeding segment',
           D: 'To facilitate bronchoalveolar lavage of the bleeding segment',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'A balloon-tipped catheter (such as a Fogarty catheter) is placed in the bleeding bronchial segment to provide direct tamponade of the bleeding vessel. Balloon inflation compresses the surrounding tissue against the bleeding source and isolates the segment, preventing blood from contaminating the remainder of the tracheobronchial tree.',
         explanationWrong:
@@ -691,11 +691,11 @@ async function main() {
           'A patient requiring mechanical ventilation after CABG surgery has a chest tube in the left pleural space. The respiratory therapist notices the water seal chamber is not fluctuating (tidaling) with respiration. What is the most likely explanation?',
         choices: {
           A: 'The lung has fully re-expanded and the tube can be removed',
-          B: 'The chest tube is kinked, clogged, or there is a dependent fluid collection obstructing the tube',
-          C: 'The suction is set too high',
+          B: 'The suction is set too high',
+          C: 'The chest tube is kinked, clogged, or there is a dependent fluid collection obstructing the tube',
           D: 'The chest tube is in the correct position and functioning normally',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'Absence of tidaling (respiratory fluctuation) in the water seal chamber most commonly indicates that the chest tube is occluded by a kink, clot, or dependent fluid loop. While lung re-expansion can also stop tidaling, obstruction must be ruled out first by checking the tubing from the patient to the collection system.',
         explanationWrong:
@@ -994,12 +994,12 @@ async function main() {
         questionText:
           'A patient with severe TBI and elevated ICP is being treated with osmotic therapy. Serum osmolality is 315 mOsm/kg, and the serum sodium is 152 mEq/L. The ICP remains at 28 mmHg. Which statement is most accurate regarding further osmotic therapy?',
         choices: {
-          A: 'Hypertonic saline (23.4%) may still be administered as the upper serum sodium limit for hypertonic saline therapy is generally 155-160 mEq/L',
-          B: 'Mannitol should be administered as it is safer than hypertonic saline at high serum osmolality',
+          A: 'Mannitol should be administered as it is safer than hypertonic saline at high serum osmolality',
+          B: 'Hypertonic saline (23.4%) may still be administered as the upper serum sodium limit for hypertonic saline therapy is generally 155-160 mEq/L',
           C: 'Both mannitol and hypertonic saline are contraindicated at this serum osmolality',
           D: 'Serum osmolality is irrelevant when treating elevated ICP',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'Hypertonic saline can generally be used up to a serum sodium of 155-160 mEq/L, as the osmotic effect is driven by the sodium gradient. The current sodium of 152 mEq/L still allows for additional hypertonic saline administration. In contrast, mannitol is generally withheld when serum osmolality exceeds 320 mOsm/kg due to the risk of renal failure.',
         explanationWrong:
@@ -1084,12 +1084,12 @@ async function main() {
         questionText:
           'Which finding during clinical examination is NOT required for the determination of brain death?',
         choices: {
-          A: 'Absence of pupillary light reflex',
-          B: 'Absence of deep tendon reflexes',
+          A: 'Absence of deep tendon reflexes',
+          B: 'Absence of pupillary light reflex',
           C: 'Absence of corneal reflex',
           D: 'Absence of gag reflex',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'Deep tendon reflexes are spinal cord-mediated reflexes, not brainstem reflexes, and their presence or absence is not part of the brain death examination. Brain death determination requires absence of all brainstem reflexes, including pupillary, corneal, oculocephalic, oculovestibular, gag, and cough reflexes. Spinal reflexes may persist after brain death.',
         explanationWrong:
@@ -1190,12 +1190,12 @@ async function main() {
         questionText:
           'A patient in the ICU has been on mechanical ventilation for 10 days and is receiving continuous infusion propofol and intermittent cisatracurium. The patient develops generalized weakness with areflexia. Creatine kinase (CK) levels are markedly elevated. What is the most likely diagnosis?',
         choices: {
-          A: 'Propofol infusion syndrome',
-          B: 'Acute steroid myopathy',
+          A: 'Acute steroid myopathy',
+          B: 'Propofol infusion syndrome',
           C: 'Malignant hyperthermia',
           D: 'Prolonged neuromuscular junction blockade',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'Acute steroid myopathy (also classified under critical illness myopathy) is the most likely diagnosis given the combination of neuromuscular blocking agent use, generalized weakness, areflexia, and markedly elevated CK levels. The combination of corticosteroids and NMB agents is the classic risk factor for this acute necrotizing myopathy, which involves direct muscle fiber damage reflected by the elevated CK.',
         explanationWrong:
@@ -1210,10 +1210,10 @@ async function main() {
         choices: {
           A: 'Heliox increases oxygen delivery to the alveoli due to its higher oxygen concentration',
           B: 'Heliox reduces airway inflammation through its anti-inflammatory properties',
-          C: 'Heliox reduces turbulent airflow resistance due to its lower gas density, decreasing the work of breathing',
-          D: 'Heliox increases mucociliary clearance through enhanced humidification',
+          C: 'Heliox increases mucociliary clearance through enhanced humidification',
+          D: 'Heliox reduces turbulent airflow resistance due to its lower gas density, decreasing the work of breathing',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'Heliox (helium-oxygen mixture) has a lower density than air or nitrogen-oxygen mixtures. In obstructed airways where turbulent flow predominates, gas flow resistance is density-dependent. The lower density of heliox reduces turbulent flow resistance, decreasing airway pressure gradients and work of breathing in patients with obstructive airway disease.',
         explanationWrong:
@@ -1300,10 +1300,10 @@ async function main() {
         choices: {
           A: 'Vocal cord paralysis; immediate tracheostomy',
           B: 'Bronchospasm; administer nebulized albuterol',
-          C: 'Pulmonary embolism; administer heparin bolus',
-          D: 'Post-extubation laryngeal edema; administer nebulized racemic epinephrine and systemic corticosteroids',
+          C: 'Post-extubation laryngeal edema; administer nebulized racemic epinephrine and systemic corticosteroids',
+          D: 'Pulmonary embolism; administer heparin bolus',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'Stridor after extubation is most commonly caused by laryngeal edema, which is particularly common after cardiac surgery due to intraoperative transesophageal echocardiography use and fluid shifts. Nebulized racemic epinephrine provides rapid topical vasoconstriction to reduce mucosal edema, and systemic corticosteroids (dexamethasone) help reduce inflammation.',
         explanationWrong:
@@ -1460,12 +1460,12 @@ async function main() {
         questionText:
           'A burn patient with 45% TBSA burns and inhalation injury develops ARDS on day 3. The patient requires high ventilator settings (FiO2 0.80, PEEP 16). What unique challenge does the burn injury pose for ventilator management in ARDS?',
         choices: {
-          A: 'Massive fluid resuscitation required for burns worsens pulmonary edema, complicating ARDS management and often requiring higher PEEP and careful fluid balance',
-          B: 'Burn patients should receive tidal volumes of 10-12 mL/kg IBW to compensate for increased metabolic demands',
+          A: 'Burn patients should receive tidal volumes of 10-12 mL/kg IBW to compensate for increased metabolic demands',
+          B: 'Massive fluid resuscitation required for burns worsens pulmonary edema, complicating ARDS management and often requiring higher PEEP and careful fluid balance',
           C: 'High-dose corticosteroids should be administered to reduce pulmonary inflammation in burn ARDS',
           D: 'Burn patients with ARDS should be managed with permissive hyperoxia (FiO2 1.0) to support wound healing',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'Burn resuscitation requires massive crystalloid volumes (Parkland formula: 4 mL/kg x %TBSA), which significantly increases pulmonary edema and complicates ARDS management. The combination of third-spacing from burn capillary leak, obligatory fluid loading, and ARDS-related pulmonary vascular permeability creates a unique challenge requiring higher PEEP to maintain recruitment while carefully monitoring fluid balance to avoid worsening lung water.',
         explanationWrong:
@@ -1584,12 +1584,12 @@ async function main() {
         questionText:
           'A patient in the ICU has been mechanically ventilated for 18 days and has significant ICU-acquired weakness. The care team recommends neuromuscular electrical stimulation (NMES) of the quadriceps muscles. What is the primary goal of this intervention?',
         choices: {
-          A: 'To prevent further muscle atrophy and maintain muscle mass in patients who cannot participate in active exercise',
-          B: 'To replace the need for physical therapy entirely',
+          A: 'To replace the need for physical therapy entirely',
+          B: 'To prevent further muscle atrophy and maintain muscle mass in patients who cannot participate in active exercise',
           C: 'To stimulate the phrenic nerve and improve diaphragmatic function',
           D: 'To improve cardiac output through improved venous return',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'Neuromuscular electrical stimulation (NMES) applied to large muscle groups such as the quadriceps produces involuntary muscle contractions that help prevent muscle atrophy and maintain muscle mass in critically ill patients who cannot participate in active mobilization. Studies show NMES can preserve muscle thickness and strength, facilitating eventual participation in active rehabilitation.',
         explanationWrong:
@@ -1674,12 +1674,12 @@ async function main() {
         questionText:
           'A brain-dead patient is a potential organ donor. The hemodynamic management protocol calls for a target MAP of 60-70 mmHg. The current MAP is 52 mmHg on norepinephrine 20 mcg/min. Which hormone replacement therapy is recommended for donor hemodynamic management?',
         choices: {
-          A: 'Growth hormone and erythropoietin',
-          B: 'Combined hormonal replacement with T3 or T4, vasopressin, methylprednisolone, and insulin',
+          A: 'Combined hormonal replacement with T3 or T4, vasopressin, methylprednisolone, and insulin',
+          B: 'Growth hormone and erythropoietin',
           C: 'Testosterone and cortisol replacement only',
           D: 'Dopamine infusion as the sole vasopressor per donor management protocol',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'Brain death often results in a hormonal crisis with deficiency of thyroid hormone, ADH (vasopressin), cortisol, and insulin resistance. Combined hormonal replacement therapy (T3 or T4, vasopressin, methylprednisolone, and insulin) is the recommended protocol for organ donor management. This approach improves hemodynamic stability, reduces vasopressor requirements, and improves organ function for transplantation.',
         explanationWrong:
@@ -1764,12 +1764,12 @@ async function main() {
         questionText:
           'A patient with hemoptysis undergoes bronchial artery embolization. The interventional radiologist identifies the anterior spinal artery (artery of Adamkiewicz) arising from the same intercostal trunk as the bleeding bronchial artery. What is the major risk of embolizing this vessel?',
         choices: {
-          A: 'Pulmonary infarction',
+          A: 'Spinal cord ischemia and paraplegia',
           B: 'Aortic dissection',
-          C: 'Spinal cord ischemia and paraplegia',
+          C: 'Pulmonary infarction',
           D: 'Esophageal perforation',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'The artery of Adamkiewicz is the major anterior radiculomedullary artery supplying the lower two-thirds of the spinal cord. It may arise from a common trunk with bronchial or intercostal arteries. Inadvertent embolization of this artery during bronchial artery embolization can cause spinal cord ischemia, resulting in paraplegia. This is the most feared complication of BAE and requires careful selective catheterization.',
         explanationWrong:
@@ -1854,12 +1854,12 @@ async function main() {
         questionText:
           'A pressure-volume loop during mechanical ventilation shows the expiratory limb crossing over the inspiratory limb (figure-of-eight pattern). What does this abnormal loop configuration suggest?',
         choices: {
-          A: 'Active patient exhalation or expiratory muscle recruitment',
+          A: 'A large endotracheal tube cuff leak',
           B: 'The ventilator is delivering excessive tidal volume',
-          C: 'A large endotracheal tube cuff leak',
+          C: 'Active patient exhalation or expiratory muscle recruitment',
           D: 'The ventilator flow sensor needs calibration',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'A figure-of-eight (crossover) pattern on the pressure-volume loop occurs when the expiratory limb crosses the inspiratory limb. This is typically caused by active expiratory muscle recruitment, where the patient forcefully exhales, generating positive pressure that exceeds the elastic recoil pressure. This creates the characteristic crossover pattern and indicates patient-ventilator dyssynchrony during expiration.',
         explanationWrong:

@@ -45,12 +45,12 @@ async function main() {
         questionText:
           'A mechanically ventilated patient has the following arterial blood gas results: pH 7.28, PaCO2 55 mmHg, PaO2 72 mmHg, HCO3 26 mEq/L. Current settings are: VT 450 mL, RR 12/min, FiO2 0.50, PEEP 5 cm H2O. Which ventilator change is most appropriate?',
         choices: {
-          A: 'Increase the respiratory rate to 16/min',
+          A: 'Increase the FiO2 to 0.60',
           B: 'Increase the PEEP to 10 cm H2O',
-          C: 'Increase the FiO2 to 0.60',
+          C: 'Increase the respiratory rate to 16/min',
           D: 'Decrease the tidal volume to 400 mL',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'The ABG shows uncompensated respiratory acidosis (low pH, elevated PaCO2). Increasing the respiratory rate will increase minute ventilation and help lower the PaCO2, correcting the acidosis. The PaO2 is acceptable so FiO2 changes are not the priority.',
         explanationWrong:
@@ -63,12 +63,12 @@ async function main() {
         questionText:
           'During chest auscultation, a respiratory therapist hears bilateral, low-pitched, continuous sounds that clear with coughing. These findings are most consistent with which condition?',
         choices: {
-          A: 'Pneumothorax',
+          A: 'Secretions in the large airways',
           B: 'Pleural effusion',
           C: 'Pulmonary fibrosis',
-          D: 'Secretions in the large airways',
+          D: 'Pneumothorax',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'Low-pitched continuous sounds (rhonchi) that clear with coughing are characteristic of secretions in the large airways. Coughing mobilizes the secretions and temporarily eliminates the sounds.',
         explanationWrong:
@@ -297,12 +297,12 @@ async function main() {
         questionText:
           'A respiratory therapist is calculating the static compliance of a mechanically ventilated patient. The ventilator delivers a tidal volume of 500 mL, PIP is 35 cm H2O, plateau pressure is 25 cm H2O, and PEEP is 5 cm H2O. What is the static compliance?',
         choices: {
-          A: ' 14 mL/cm H2O',
+          A: '25 mL/cm H2O',
           B: ' 17 mL/cm H2O',
-          C: '25 mL/cm H2O',
+          C: ' 14 mL/cm H2O',
           D: '20 mL/cm H2O',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Static compliance = VT / (Pplat - PEEP) = 500 / (25 - 5) = 500 / 20 = 25 mL/cm H2O. Static compliance reflects the elastic properties of the lungs and chest wall, using plateau pressure to eliminate the resistive component.',
         explanationWrong:
@@ -333,12 +333,12 @@ async function main() {
         questionText:
           'A respiratory therapist obtains the following capnography reading from a mechanically ventilated patient: PETCO2 25 mmHg (previously 38 mmHg). The patient\'s blood pressure has dropped to 70/40 mmHg. What is the most likely cause of the decreased PETCO2?',
         choices: {
-          A: 'Pulmonary embolism causing increased dead space ventilation',
+          A: 'Mucus plugging of the endotracheal tube',
           B: 'Hypoventilation from sedation',
           C: 'Bronchospasm',
-          D: 'Mucus plugging of the endotracheal tube',
+          D: 'Pulmonary embolism causing increased dead space ventilation',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'A sudden decrease in PETCO2 combined with hypotension strongly suggests a pulmonary embolism. The embolus obstructs pulmonary blood flow, creating increased dead space ventilation (ventilated but not perfused alveoli), which lowers the PETCO2.',
         explanationWrong:
@@ -801,10 +801,10 @@ async function main() {
         choices: {
           A: 'The FiO2 is higher than set because the mask stores exhaled gas',
           B: 'The FiO2 is exactly 35% regardless of breathing pattern',
-          C: 'The FiO2 may be lower than 35% because the patient\'s inspiratory demand exceeds the total flow',
-          D: 'The FiO2 is higher than 35% because the respiratory rate increases entrainment',
+          C: 'The FiO2 is higher than 35% because the respiratory rate increases entrainment',
+          D: 'The FiO2 may be lower than 35% because the patient\'s inspiratory demand exceeds the total flow',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'Air-entrainment (Venturi) masks deliver a fixed FiO2 only when the total output flow meets or exceeds the patient\'s inspiratory demand. When a patient\'s peak inspiratory flow exceeds the mask\'s total flow output, room air is entrained around the mask, diluting the FiO2 below the set value.',
         explanationWrong:
@@ -891,10 +891,10 @@ async function main() {
         choices: {
           A: 'Increase tidal volume to 10 mL/kg to promote lung expansion',
           B: 'Maintain current aggressive ventilator settings',
-          C: 'Increase FiO2 to 1.0 and PEEP to 20 cm H2O',
-          D: 'Reduce ventilator settings to lung-rest strategy with low tidal volumes and pressures',
+          C: 'Reduce ventilator settings to lung-rest strategy with low tidal volumes and pressures',
+          D: 'Increase FiO2 to 1.0 and PEEP to 20 cm H2O',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'Once VV-ECMO is providing gas exchange, the ventilator should be set to a lung-rest strategy to minimize ventilator-induced lung injury. This typically includes low tidal volumes (approximately 4 mL/kg or less), low plateau pressures, moderate PEEP, and reduced FiO2.',
         explanationWrong:
@@ -925,12 +925,12 @@ async function main() {
         questionText:
           'A patient with a tracheostomy is being evaluated for decannulation. Which of the following criteria would BEST indicate readiness for decannulation?',
         choices: {
-          A: 'The patient requires suctioning every 2 hours',
-          B: 'The patient tolerates capping of the tracheostomy tube for 24-48 hours without distress',
+          A: 'The patient tolerates capping of the tracheostomy tube for 24-48 hours without distress',
+          B: 'The patient requires suctioning every 2 hours',
           C: 'The patient can speak with the cuff inflated',
           D: 'The tracheostomy has been in place for more than 30 days',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'Tolerating tracheostomy tube capping for 24-48 hours demonstrates that the patient can breathe through the upper airway, protect the airway, manage secretions, and maintain adequate oxygenation and ventilation without the tracheostomy. This is the most reliable indicator of readiness for decannulation.',
         explanationWrong:
@@ -1015,12 +1015,12 @@ async function main() {
         questionText:
           'A respiratory therapist is asked to recommend an aerosol delivery device for a patient who has poor hand-breath coordination and an inspiratory flow rate of less than 30 L/min. Which device is most appropriate?',
         choices: {
-          A: 'Metered-dose inhaler with a valved holding chamber (spacer)',
-          B: 'Dry powder inhaler',
+          A: 'Dry powder inhaler',
+          B: 'Metered-dose inhaler with a valved holding chamber (spacer)',
           C: 'Metered-dose inhaler without a spacer',
           D: 'Breath-actuated dry powder inhaler',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'A metered-dose inhaler with a valved holding chamber (spacer) eliminates the need for precise hand-breath coordination because the spacer holds the aerosol cloud until the patient inhales. It also works well with low inspiratory flows, unlike DPIs which require flows greater than 30 L/min.',
         explanationWrong:
@@ -1340,10 +1340,10 @@ async function main() {
         choices: {
           A: 'Normal ventilatory function because the injury is above the phrenic nerve',
           B: 'Loss of intercostal and abdominal muscle function only',
-          C: 'Loss of diaphragmatic, intercostal, and abdominal muscle function requiring mechanical ventilation',
-          D: 'Loss of abdominal muscle function only',
+          C: 'Loss of abdominal muscle function only',
+          D: 'Loss of diaphragmatic, intercostal, and abdominal muscle function requiring mechanical ventilation',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'The phrenic nerve originates from C3-C5. A C4 spinal cord injury may partially or completely interrupt phrenic nerve function, causing diaphragmatic paralysis. All intercostal (T1-T12) and abdominal muscles are also lost. Most C4 quadriplegic patients require mechanical ventilation.',
         explanationWrong:
@@ -1448,10 +1448,10 @@ async function main() {
         choices: {
           A: 'Intubation and mechanical ventilation',
           B: 'Nebulized albuterol treatments every 4 hours',
-          C: 'Inhaled corticosteroids via MDI with spacer and mask',
-          D: 'Supplemental oxygen and supportive care with close monitoring',
+          C: 'Supplemental oxygen and supportive care with close monitoring',
+          D: 'Inhaled corticosteroids via MDI with spacer and mask',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'The primary management of bronchiolitis in infants is supportive care including supplemental oxygen to maintain SpO2 above 90%, ensuring adequate hydration, and close monitoring. Clinical guidelines do not support routine use of bronchodilators or corticosteroids for RSV bronchiolitis.',
         explanationWrong:
@@ -1680,11 +1680,11 @@ async function main() {
           'A respiratory therapist is asked to recommend the appropriate size endotracheal tube for an 8-year-old child. Using the standard age-based formula, what internal diameter should be selected?',
         choices: {
           A: '4.0 mm',
-          B: '4.5 mm',
-          C: '5.5 mm',
+          B: '5.5 mm',
+          C: '4.5 mm',
           D: '6.5 mm',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'The standard formula for uncuffed ETT size in children over 2 years is: (age in years / 4) + 4 = (8 / 4) + 4 = 2 + 4 = 6.0 mm. For cuffed tubes, subtract 0.5 mm = 5.5 mm. Current practice favors cuffed tubes in children, making 5.5 mm the most appropriate answer.',
         explanationWrong:
@@ -1770,11 +1770,11 @@ async function main() {
           'A respiratory therapist is preparing to administer aerosolized pentamidine for Pneumocystis jirovecii pneumonia (PCP) prophylaxis. Which type of nebulizer is specifically recommended for this medication?',
         choices: {
           A: 'Standard small-volume jet nebulizer',
-          B: 'Respirgard II nebulizer with expiratory filter and negative pressure room',
-          C: 'Ultrasonic nebulizer',
+          B: 'Ultrasonic nebulizer',
+          C: 'Respirgard II nebulizer with expiratory filter and negative pressure room',
           D: 'Vibrating mesh nebulizer',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'Aerosolized pentamidine should be delivered using a Respirgard II nebulizer system, which includes one-way valves and an expiratory filter to capture exhaled pentamidine particles. Administration should occur in a negative pressure room or with adequate environmental controls to protect healthcare workers from exposure.',
         explanationWrong:

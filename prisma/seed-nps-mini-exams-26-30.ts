@@ -227,10 +227,10 @@ async function main() {
         choices: {
           A: 'The child has adequate cardiac output',
           B: 'The child is receiving excessive FiO2',
-          C: 'The child has increased oxygen consumption or decreased cardiac output',
-          D: 'The ventilator settings are causing air trapping',
+          C: 'The ventilator settings are causing air trapping',
+          D: 'The child has increased oxygen consumption or decreased cardiac output',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'A low SvO2 indicates that tissues are extracting more oxygen than normal from the blood, suggesting either increased oxygen consumption (fever, pain, shivering) or decreased oxygen delivery (low cardiac output, anemia, hypoxemia). In a post-cardiac surgery patient, decreased cardiac output is the most concerning cause and should be evaluated immediately.',
         explanationWrong:
@@ -317,10 +317,10 @@ async function main() {
         choices: {
           A: 'The flow sensor is malfunctioning',
           B: 'The patient is actively exhaling against the ventilator',
-          C: 'The humidifier is absorbing gas volume',
-          D: 'There is a leak in the ventilator circuit or around the airway',
+          C: 'There is a leak in the ventilator circuit or around the airway',
+          D: 'The humidifier is absorbing gas volume',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'A consistent difference between set/delivered tidal volume and exhaled tidal volume (280 mL vs 220 mL = 60 mL or ~21% loss) most commonly indicates a circuit leak or a leak around the endotracheal tube (if uncuffed or cuff insufficiently inflated). The therapist should check all circuit connections, the ETT cuff, and the circuit for damage.',
         explanationWrong:
@@ -1723,12 +1723,12 @@ async function main() {
         questionText:
           'A respiratory therapist is calibrating a transcutaneous CO2 (TcCO2) monitor for use on a premature infant. What is an important consideration when using TcCO2 monitoring in neonates?',
         choices: {
-          A: 'The sensor site must be changed every 2-4 hours to prevent thermal skin injury, and the probe temperature should be set at 42-43C for neonates',
-          B: 'TcCO2 monitoring is only accurate in term infants',
+          A: 'TcCO2 monitoring is only accurate in term infants',
+          B: 'The sensor site must be changed every 2-4 hours to prevent thermal skin injury, and the probe temperature should be set at 42-43C for neonates',
           C: 'The sensor can remain in one location for up to 24 hours',
           D: 'TcCO2 values are always 10-15 mmHg lower than PaCO2',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'Transcutaneous CO2 monitoring requires heated sensors (42-43C in neonates) to arterialize capillary blood flow and facilitate gas diffusion through the skin. Because of the heat, the sensor site must be rotated every 2-4 hours to prevent thermal burns to the delicate neonatal skin. TcCO2 values typically correlate well with PaCO2 in neonates when the sensor is properly calibrated and positioned.',
         explanationWrong:
@@ -1813,12 +1813,12 @@ async function main() {
         questionText:
           'A respiratory therapist is caring for a 2-year-old child who ingested a caustic alkaline substance (drain cleaner). The child has oral burns and is drooling. Direct laryngoscopy reveals supraglottic edema. What is the MOST important airway management consideration?',
         choices: {
-          A: 'Administer activated charcoal to reduce absorption',
-          B: 'Perform early elective intubation before edema progresses, as the airway can deteriorate rapidly from caustic burns',
+          A: 'Perform early elective intubation before edema progresses, as the airway can deteriorate rapidly from caustic burns',
+          B: 'Administer activated charcoal to reduce absorption',
           C: 'Observe the child and intubate only if complete obstruction occurs',
           D: 'Administer corticosteroids and monitor closely',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'Caustic alkaline ingestion causes liquefactive necrosis that can progress rapidly and unpredictably. Supraglottic edema on initial assessment indicates the potential for complete airway obstruction as tissue swelling continues. Early elective intubation by the most experienced provider is recommended before the airway becomes edematous to the point where intubation becomes impossible or extremely difficult.',
         explanationWrong:

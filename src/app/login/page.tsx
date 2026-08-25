@@ -1,10 +1,11 @@
 'use client'
 
-import { useState, useEffect, Suspense } from 'react'
+import { useState, useEffect, useCallback, Suspense } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Navbar } from '@/components/layout/Navbar'
+import { Turnstile } from '@/components/Turnstile'
 import { v4 as uuidv4 } from 'uuid'
 
 function getOrCreateDeviceId(): string {
@@ -27,6 +28,11 @@ function LoginForm() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
+
+  const handleTurnstileToken = useCallback((token: string) => {
+    setTurnstileToken(token)
+  }, [])
 
   useEffect(() => {
     if (errorParam === 'CredentialsSignin') {
@@ -46,6 +52,7 @@ function LoginForm() {
         email: identifier.trim(),
         password,
         deviceId,
+        turnstileToken,
         redirect: false,
       })
 
@@ -128,6 +135,8 @@ function LoginForm() {
                   autoComplete="current-password"
                 />
               </div>
+
+              <Turnstile onToken={handleTurnstileToken} />
 
               <button
                 type="submit"

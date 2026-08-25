@@ -3,6 +3,7 @@ import CredentialsProvider from 'next-auth/providers/credentials'
 import { PrismaAdapter } from '@auth/prisma-adapter'
 import bcrypt from 'bcryptjs'
 import { prisma } from './prisma'
+import { verifyTurnstileToken } from './turnstile'
 
 export const authOptions: NextAuthOptions = {
   // @ts-ignore - PrismaAdapter type compatibility
@@ -22,9 +23,15 @@ export const authOptions: NextAuthOptions = {
         email: { label: 'Email', type: 'email' },
         password: { label: 'Password', type: 'password' },
         deviceId: { label: 'Device ID', type: 'text' },
+        turnstileToken: { label: 'Turnstile', type: 'text' },
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null
+
+        if (credentials.turnstileToken) {
+          const valid = await verifyTurnstileToken(credentials.turnstileToken)
+          if (!valid) return null
+        }
 
         const identifier = credentials.email.toLowerCase().trim()
         const isEmail = identifier.includes('@')

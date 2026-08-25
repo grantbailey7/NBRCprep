@@ -1,15 +1,34 @@
 import { prisma } from '@/lib/prisma'
 import { sendWelcomeEmail } from '@/lib/email'
+import { verifyTurnstileToken } from '@/lib/turnstile'
+import { isDisposableEmail } from '@/lib/disposable-emails'
 import { NextResponse } from 'next/server'
 import bcrypt from 'bcryptjs'
 
 export async function POST(request: Request) {
   try {
-    const { name, email, username, password } = await request.json()
+    const { name, email, username, password, turnstileToken } = await request.json()
 
     if (!name || !email || !username || !password) {
       return NextResponse.json(
         { error: 'Name, email, username, and password are required' },
+        { status: 400 }
+      )
+    }
+
+    if (turnstileToken) {
+      const valid = await verifyTurnstileToken(turnstileToken)
+      if (!valid) {
+        return NextResponse.json(
+          { error: 'CAPTCHA verification failed. Please try again.' },
+          { status: 400 }
+        )
+      }
+    }
+
+    if (isDisposableEmail(email)) {
+      return NextResponse.json(
+        { error: 'Please use a permanent email address.' },
         { status: 400 }
       )
     }

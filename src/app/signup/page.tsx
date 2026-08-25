@@ -1,10 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Navbar } from '@/components/layout/Navbar'
+import { Turnstile } from '@/components/Turnstile'
 
 export default function SignupPage() {
   const router = useRouter()
@@ -16,6 +17,11 @@ export default function SignupPage() {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
+
+  const handleTurnstileToken = useCallback((token: string) => {
+    setTurnstileToken(token)
+  }, [])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -42,6 +48,7 @@ export default function SignupPage() {
           email: email.trim().toLowerCase(),
           username: username.trim().toLowerCase(),
           password,
+          turnstileToken,
         }),
       })
 
@@ -176,6 +183,8 @@ export default function SignupPage() {
                   autoComplete="new-password"
                 />
               </div>
+
+              <Turnstile onToken={handleTurnstileToken} />
 
               <button
                 type="submit"

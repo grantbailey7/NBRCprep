@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
 
   const exams = fullExams.map((e) => ({
     ...e,
-    division: e.division?.slug || '—',
+    division: e.division?.slug || '-',
     questionCount: e._count?.questions || e.questionCount,
   }))
 

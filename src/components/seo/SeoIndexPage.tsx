@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
+import { SignupCTA } from '@/components/seo/SignupCTA'
 
 interface SeoIndexPageProps {
   title: string
@@ -78,6 +79,14 @@ export function SeoIndexPage({ title, subtitle, basePath, pages }: SeoIndexPageP
             <p className="text-brand-gray-400 text-lg">Coming soon!</p>
           </div>
         )}
+
+        <div className="mt-16">
+          <SignupCTA
+            variant="banner"
+            heading="Ready to practice what you've learned?"
+            description="NBRCprep has 600+ flashcards, 30 mini exams, and 18 full-length practice tests across all 6 NBRC divisions. Start free, no card required."
+          />
+        </div>
       </div>
 
       <Footer />

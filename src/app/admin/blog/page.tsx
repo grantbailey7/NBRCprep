@@ -211,7 +211,7 @@ export default function AdminBlogPage() {
                   </span>
                 </td>
                 <td className="px-4 py-3 text-sm text-gray-400">
-                  {post.publishAt ? new Date(post.publishAt).toLocaleDateString() : '—'}
+                  {post.publishAt ? new Date(post.publishAt).toLocaleDateString() : '-'}
                 </td>
                 <td className="px-4 py-3 text-right">
                   <button onClick={() => editPost(post)} className="text-xs text-blue-400 hover:text-blue-300 mr-3">Edit</button>

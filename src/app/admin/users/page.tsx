@@ -142,7 +142,7 @@ export default function UsersPage() {
                 users.map((user) => (
                   <tr key={user.id} className="border-b border-gray-700 hover:bg-gray-750">
                     <td className="px-4 py-3">{user.email}</td>
-                    <td className="px-4 py-3 text-gray-300">{user.name || '—'}</td>
+                    <td className="px-4 py-3 text-gray-300">{user.name || '-'}</td>
                     <td className="px-4 py-3">
                       <select
                         value={user.planType}

@@ -290,11 +290,11 @@ export default async function PricingPage() {
               <tbody className="divide-y divide-brand-gray-100">
                 {[
                   ['TMC Flashcards', '20', '100', '100', '100'],
-                  ['Other Division Flashcards', '20 each', '—', '—', '100 each'],
+                  ['Other Division Flashcards', '20 each', '-', '-', '100 each'],
                   ['TMC Mini Exams', '1 sample', '5', '5', '5'],
-                  ['Other Division Mini Exams', '—', '—', '—', '5 each'],
-                  ['TMC Full Exams', '—', '3', '3', '3'],
-                  ['Other Division Full Exams', '—', '—', '—', '3 each'],
+                  ['Other Division Mini Exams', '-', '-', '-', '5 each'],
+                  ['TMC Full Exams', '-', '3', '3', '3'],
+                  ['Other Division Full Exams', '-', '-', '-', '3 each'],
                   ['Metrics Dashboard', 'Yes', 'Yes', 'Yes', 'Yes'],
                   ['Divisions', 'All (limited)', 'TMC only', 'TMC only', 'All 6'],
                 ].map(([feature, ...values]) => (

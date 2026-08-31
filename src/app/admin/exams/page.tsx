@@ -216,7 +216,7 @@ export default function ExamsPage() {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-gray-300">
-                      {exam._count?.questions ?? '—'}
+                      {exam._count?.questions ?? '-'}
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-2">

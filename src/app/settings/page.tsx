@@ -94,11 +94,11 @@ export default function SettingsPage() {
             <div className="space-y-4">
               <div>
                 <p className="text-sm text-brand-gray-500">Name</p>
-                <p className="text-black font-medium">{session?.user?.name || '—'}</p>
+                <p className="text-black font-medium">{session?.user?.name || '-'}</p>
               </div>
               <div>
                 <p className="text-sm text-brand-gray-500">Email</p>
-                <p className="text-black font-medium">{session?.user?.email || '—'}</p>
+                <p className="text-black font-medium">{session?.user?.email || '-'}</p>
               </div>
               <div>
                 <p className="text-sm text-brand-gray-500">Plan</p>

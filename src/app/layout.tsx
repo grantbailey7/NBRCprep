@@ -67,7 +67,7 @@ const organizationSchema = {
   '@type': ['Organization', 'EducationalOrganization'],
   name: 'NBRCprep',
   url: 'https://nbrcprep.app',
-  logo: 'https://nbrcprep.app/icon.png',
+  logo: 'https://nbrcprep.app/icon.svg',
   description: 'The most comprehensive study platform for NBRC Respiratory Therapy credentialing exams.',
   parentOrganization: { '@type': 'Organization', name: 'Certin LLC', url: 'https://certinhq.com' },
   contactPoint: { '@type': 'ContactPoint', email: 'certinhq@outlook.com', contactType: 'customer support' },

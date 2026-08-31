@@ -21,6 +21,7 @@ const RESOURCES = [
   { href: '/mistakes', label: 'Common Mistakes' },
   { href: '/exam-day', label: 'Exam Day' },
   { href: '/glossary', label: 'Glossary' },
+  { href: '/tools', label: 'Free Tools' },
 ]
 
 export function Navbar() {
@@ -54,12 +55,12 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 bg-white border-b border-brand-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex flex-col leading-none">
-            <span className="text-xl font-black tracking-tight">
+          <div className="flex flex-col leading-none">
+            <Link href="/" className="text-xl font-black tracking-tight">
               NBRC<span className="text-teal-500">prep</span>
-            </span>
+            </Link>
             <a href="https://certinhq.com" className="text-xs font-medium text-brand-gray-400 tracking-wide hover:text-brand-gray-600 transition-colors">By Certin</a>
-          </Link>
+          </div>
 
           <div className="hidden md:flex items-center gap-6">
             {session && (

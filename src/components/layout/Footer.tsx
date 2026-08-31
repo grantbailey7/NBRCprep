@@ -47,6 +47,7 @@ export function Footer() {
               <li><Link href="/topics" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Study Topics</Link></li>
               <li><Link href="/cheat-sheets" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Cheat Sheets</Link></li>
               <li><Link href="/glossary" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Glossary</Link></li>
+              <li><Link href="/tools" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Free Tools</Link></li>
               <li><Link href="/blog" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/pricing" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Pricing</Link></li>
             </ul>

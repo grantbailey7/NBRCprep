@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
 
   const exams = miniExams.map((e) => ({
     ...e,
-    division: e.division?.slug || '—',
+    division: e.division?.slug || '-',
   }))
 
   return NextResponse.json({ exams, total })

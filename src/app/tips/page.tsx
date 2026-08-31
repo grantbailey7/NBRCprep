@@ -8,6 +8,19 @@ export const metadata: Metadata = {
   title: 'NBRC Exam Tips & Strategies',
   description: 'Expert tips and strategies for passing NBRC respiratory therapy exams - TMC, NPS, ACCS, SDS, CPFT, and RPFT.',
   alternates: { canonical: 'https://nbrcprep.app/tips' },
+  openGraph: {
+    title: 'NBRC Exam Tips & Strategies',
+    description: 'Expert tips and strategies for passing NBRC respiratory therapy exams.',
+    url: 'https://nbrcprep.app/tips',
+    siteName: 'NBRCprep',
+    images: [{ url: '/api/og?title=NBRC%20Exam%20Tips&type=resource', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NBRC Exam Tips & Strategies',
+    description: 'Expert tips and strategies for passing NBRC respiratory therapy exams.',
+    images: ['/api/og?title=NBRC%20Exam%20Tips&type=resource'],
+  },
 }
 
 export default async function TipsPage() {

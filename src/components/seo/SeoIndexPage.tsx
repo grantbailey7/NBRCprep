@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 
 interface SeoIndexPageProps {
   title: string
@@ -16,11 +17,34 @@ interface SeoIndexPageProps {
 }
 
 export function SeoIndexPage({ title, subtitle, basePath, pages }: SeoIndexPageProps) {
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: title,
+    description: subtitle,
+    url: `https://nbrcprep.app${basePath}`,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: pages.length,
+      itemListElement: pages.map((page, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://nbrcprep.app${basePath}/${page.slug}`,
+        name: page.title,
+      })),
+    },
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       <Navbar />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <Breadcrumbs items={[{ label: 'Resources', href: '/resources' }, { label: title }]} />
         <div className="text-center mb-12">
           <h1 className="section-title">{title}</h1>
           <p className="section-subtitle">{subtitle}</p>

@@ -34,6 +34,14 @@ export const metadata: Metadata = {
     'SDS exam prep',
     'CPFT exam prep',
     'RPFT exam prep',
+    'respiratory therapy study guide',
+    'NBRC study materials',
+    'TMC practice questions',
+    'respiratory therapy flashcards',
+    'NBRC board review',
+    'CRT study guide',
+    'RRT study guide',
+    'respiratory therapy practice questions',
   ],
   metadataBase: new URL('https://nbrcprep.app'),
   alternates: { canonical: 'https://nbrcprep.app' },
@@ -74,8 +82,8 @@ const websiteSchema = {
   description: 'NBRC exam prep - flashcards, mini exams, and full-length simulations for all 6 divisions.',
   potentialAction: {
     '@type': 'SearchAction',
-    target: { '@type': 'EntryPoint', urlTemplate: 'https://nbrcprep.app/divisions/{division}' },
-    'query-input': 'required name=division',
+    target: 'https://nbrcprep.app/resources?q={search_term_string}',
+    'query-input': 'required name=search_term_string',
   },
 }
 

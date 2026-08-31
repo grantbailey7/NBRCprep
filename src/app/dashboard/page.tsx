@@ -7,7 +7,10 @@ import { Footer } from '@/components/layout/Footer';
 import { prisma } from '@/lib/prisma';
 import Link from 'next/link';
 
-export const metadata = { title: 'Dashboard | NBRCprep' };
+export const metadata = {
+  title: 'Dashboard | NBRCprep',
+  robots: { index: false, follow: false },
+};
 
 function calculateStreak(studyDates: Date[]): number {
   if (studyDates.length === 0) return 0;

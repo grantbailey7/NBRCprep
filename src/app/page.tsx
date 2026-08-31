@@ -9,6 +9,20 @@ export const metadata: Metadata = {
   description:
     'NBRCprep is the #1 NBRC study platform. 600 original flashcards, 30 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
   alternates: { canonical: 'https://nbrcprep.app' },
+  openGraph: {
+    title: 'NBRCprep - Pass the NBRC. The First Time.',
+    description: '600 original flashcards, 30 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
+    url: 'https://nbrcprep.app',
+    siteName: 'NBRCprep',
+    type: 'website',
+    images: [{ url: '/api/og', width: 1200, height: 630, alt: 'NBRCprep - NBRC Exam Prep Platform' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NBRCprep - Pass the NBRC. The First Time.',
+    description: '600 original flashcards, 30 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
+    images: ['/api/og'],
+  },
 }
 
 const HOMEPAGE_FAQ = [

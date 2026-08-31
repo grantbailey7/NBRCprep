@@ -17,7 +17,7 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
         {
           userAgent: '*',
           allow: '/',
-          disallow: ['/api/', '/admin/', '/dashboard/', '/settings/', '/billing/'],
+          disallow: ['/api/', '/admin/', '/dashboard/', '/settings/', '/billing/', '/flashcards/', '/mini-exams/', '/full-exams/', '/login', '/signup'],
         },
       ],
       sitemap: settings.sitemapEnabled ? 'https://nbrcprep.app/sitemap.xml' : undefined,

@@ -9,7 +9,10 @@ import { prisma } from '@/lib/prisma'
 import { PlanType, DivisionSlug } from '@prisma/client'
 import { canAccessFlashcards } from '@/lib/access-control'
 
-export const metadata = { title: 'Flashcards | NBRCprep' }
+export const metadata = {
+  title: 'Flashcards | NBRCprep',
+  robots: { index: false, follow: false },
+}
 
 export default async function FlashcardsPage() {
   const session = await getAuthSession()

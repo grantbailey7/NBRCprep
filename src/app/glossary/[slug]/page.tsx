@@ -28,6 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'NBRCprep',
       images: [`https://nbrcprep.app/api/og?title=${encodeURIComponent(page.title)}&type=resource`],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: page.title,
+      description: page.description,
+      images: [`https://nbrcprep.app/api/og?title=${encodeURIComponent(page.title)}&type=resource`],
+    },
   }
 }
 

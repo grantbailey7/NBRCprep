@@ -8,6 +8,19 @@ export const metadata: Metadata = {
   title: 'Respiratory Therapy Cheat Sheets',
   description: 'Quick-reference cheat sheets for NBRC exams - ABG interpretation, ventilator modes, pharmacology, PFT values, and more.',
   alternates: { canonical: 'https://nbrcprep.app/cheat-sheets' },
+  openGraph: {
+    title: 'Respiratory Therapy Cheat Sheets',
+    description: 'Quick-reference cheat sheets for NBRC exams - ABG, ventilator modes, pharmacology, PFT values.',
+    url: 'https://nbrcprep.app/cheat-sheets',
+    siteName: 'NBRCprep',
+    images: [{ url: '/api/og?title=RT%20Cheat%20Sheets&type=cheat-sheet', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Respiratory Therapy Cheat Sheets',
+    description: 'Quick-reference cheat sheets for NBRC exams - ABG, ventilator modes, pharmacology, PFT values.',
+    images: ['/api/og?title=RT%20Cheat%20Sheets&type=cheat-sheet'],
+  },
 }
 
 export default async function CheatSheetsPage() {

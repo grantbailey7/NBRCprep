@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   title: 'NBRC Exam Blog - Study Tips & Strategies',
   description: 'Free NBRC exam tips, TMC study strategies, and respiratory therapy board prep guides. Expert advice on passing the TMC, CRT, RRT, and specialty NBRC exams.',
   alternates: { canonical: 'https://nbrcprep.app/blog' },
+  openGraph: {
+    title: 'NBRC Exam Blog - Study Tips & Strategies',
+    description: 'Free NBRC exam tips, TMC study strategies, and respiratory therapy board prep guides.',
+    url: 'https://nbrcprep.app/blog',
+    siteName: 'NBRCprep',
+    images: [{ url: '/api/og?title=NBRC%20Exam%20Blog&type=blog', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NBRC Exam Blog - Study Tips & Strategies',
+    description: 'Free NBRC exam tips, TMC study strategies, and respiratory therapy board prep guides.',
+    images: ['/api/og?title=NBRC%20Exam%20Blog&type=blog'],
+  },
 }
 
 const blogSchema = {

@@ -8,6 +8,19 @@ export const metadata: Metadata = {
   title: 'NBRC Exam Day Walkthroughs',
   description: 'Step-by-step walkthroughs for exam day - what to expect, timing, question types, pacing, and strategies for every NBRC exam.',
   alternates: { canonical: 'https://nbrcprep.app/exam-day' },
+  openGraph: {
+    title: 'NBRC Exam Day Walkthroughs',
+    description: 'Step-by-step walkthroughs for exam day - what to expect, timing, and strategies.',
+    url: 'https://nbrcprep.app/exam-day',
+    siteName: 'NBRCprep',
+    images: [{ url: '/api/og?title=Exam%20Day%20Walkthroughs&type=exam', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NBRC Exam Day Walkthroughs',
+    description: 'Step-by-step walkthroughs for exam day - what to expect, timing, and strategies.',
+    images: ['/api/og?title=Exam%20Day%20Walkthroughs&type=exam'],
+  },
 }
 
 export default async function ExamDayPage() {

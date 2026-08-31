@@ -9,7 +9,10 @@ import { prisma } from '@/lib/prisma'
 import { PlanType } from '@prisma/client'
 import { canUserAccessMiniExam } from '@/lib/access-control'
 
-export const metadata = { title: 'Mini Exams | NBRCprep' }
+export const metadata = {
+  title: 'Mini Exams | NBRCprep',
+  robots: { index: false, follow: false },
+}
 
 export default async function MiniExamsPage() {
   const session = await getAuthSession()

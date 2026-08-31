@@ -40,12 +40,15 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Resources</h3>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Study Resources</h3>
             <ul className="space-y-2">
+              <li><Link href="/resources" className="text-sm text-brand-gray-400 hover:text-white transition-colors">All Resources</Link></li>
+              <li><Link href="/guides" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Exam Guides</Link></li>
+              <li><Link href="/topics" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Study Topics</Link></li>
+              <li><Link href="/cheat-sheets" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Cheat Sheets</Link></li>
+              <li><Link href="/glossary" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Glossary</Link></li>
               <li><Link href="/blog" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/pricing" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Pricing</Link></li>
-              <li><Link href="/signup" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Sign Up</Link></li>
-              <li><Link href="/login" className="text-sm text-brand-gray-400 hover:text-white transition-colors">Sign In</Link></li>
             </ul>
 
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4 mt-8">Legal</h3>

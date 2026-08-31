@@ -65,6 +65,14 @@ export async function generateMetadata({ params }: { params: { division: string 
       title: meta.title,
       description: meta.description,
       url: `https://nbrcprep.app/divisions/${slug}`,
+      siteName: 'NBRCprep',
+      images: [`https://nbrcprep.app/api/og?title=${encodeURIComponent(meta.title)}&type=exam`],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: meta.title,
+      description: meta.description,
+      images: [`https://nbrcprep.app/api/og?title=${encodeURIComponent(meta.title)}&type=exam`],
     },
   }
 }

@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   description:
     'Affordable NBRC exam prep starting free. Monthly TMC access at $29/mo, lifetime TMC access at $149, or all 6 divisions for $249. Practice tests, flashcards, and full-length exam simulations.',
   alternates: { canonical: 'https://nbrcprep.app/pricing' },
+  openGraph: {
+    title: 'Pricing - NBRC Exam Prep Plans',
+    description: 'Affordable NBRC exam prep starting free. Monthly TMC access at $29/mo, lifetime TMC access at $149, or all 6 divisions for $249.',
+    url: 'https://nbrcprep.app/pricing',
+    siteName: 'NBRCprep',
+    images: [{ url: '/api/og?title=Simple%20Pricing.%20No%20Tricks.&type=resource', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pricing - NBRC Exam Prep Plans',
+    description: 'Affordable NBRC exam prep starting free. Monthly TMC access at $29/mo, lifetime TMC access at $149, or all 6 divisions for $249.',
+    images: ['/api/og?title=Simple%20Pricing.%20No%20Tricks.&type=resource'],
+  },
 }
 
 const FAQ_ITEMS = [

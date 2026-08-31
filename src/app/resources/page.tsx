@@ -8,6 +8,19 @@ export const metadata: Metadata = {
   title: 'NBRC Study Resources',
   description: 'Free respiratory therapy study resources - exam guides, cheat sheets, topic deep dives, glossaries, tips, and exam day walkthroughs for all 6 NBRC divisions.',
   alternates: { canonical: 'https://nbrcprep.app/resources' },
+  openGraph: {
+    title: 'NBRC Study Resources',
+    description: 'Free respiratory therapy study resources - exam guides, cheat sheets, topic deep dives, glossaries, tips, and exam day walkthroughs.',
+    url: 'https://nbrcprep.app/resources',
+    siteName: 'NBRCprep',
+    images: [{ url: '/api/og?title=NBRC%20Study%20Resources&type=resource', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NBRC Study Resources',
+    description: 'Free respiratory therapy study resources - exam guides, cheat sheets, topic deep dives, glossaries, tips, and exam day walkthroughs.',
+    images: ['/api/og?title=NBRC%20Study%20Resources&type=resource'],
+  },
 }
 
 const CATEGORIES = [

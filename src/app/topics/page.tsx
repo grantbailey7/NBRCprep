@@ -30,12 +30,32 @@ export default async function TopicsPage() {
     select: { slug: true, title: true, description: true, division: true, readTime: true },
   })
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'NBRC Study Topics',
+    description: 'Deep-dive study guides for high-yield NBRC exam topics.',
+    url: 'https://nbrcprep.app/topics',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: pages.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://nbrcprep.app/topics/${p.slug}`,
+        name: p.title,
+      })),
+    },
+  }
+
   return (
-    <SeoIndexPage
-      title="NBRC Study Topics"
-      subtitle="Deep-dive guides on the most important respiratory therapy exam topics"
-      basePath="/topics"
-      pages={pages}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <SeoIndexPage
+        title="NBRC Study Topics"
+        subtitle="Deep-dive guides on the most important respiratory therapy exam topics"
+        basePath="/topics"
+        pages={pages}
+      />
+    </>
   )
 }

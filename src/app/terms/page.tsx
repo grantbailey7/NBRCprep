@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Terms of Service for NBRCprep, the NBRC respiratory therapy exam prep platform by Certin LLC.',
   alternates: { canonical: 'https://nbrcprep.app/terms' },
+  openGraph: {
+    title: 'Terms of Service',
+    description: 'Terms of Service for NBRCprep, the NBRC respiratory therapy exam prep platform by Certin LLC.',
+    url: 'https://nbrcprep.app/terms',
+    siteName: 'NBRCprep',
+  },
 }
 
 export default function TermsOfServicePage() {

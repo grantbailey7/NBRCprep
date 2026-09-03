@@ -30,12 +30,32 @@ export default async function GlossaryPage() {
     select: { slug: true, title: true, description: true, division: true, readTime: true },
   })
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Respiratory Therapy Glossary',
+    description: 'Comprehensive glossaries of respiratory therapy terms for NBRC exams.',
+    url: 'https://nbrcprep.app/glossary',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: pages.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://nbrcprep.app/glossary/${p.slug}`,
+        name: p.title,
+      })),
+    },
+  }
+
   return (
-    <SeoIndexPage
-      title="Respiratory Therapy Glossary"
-      subtitle="Master the terminology for every NBRC exam division"
-      basePath="/glossary"
-      pages={pages}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <SeoIndexPage
+        title="Respiratory Therapy Glossary"
+        subtitle="Master the terminology for every NBRC exam division"
+        basePath="/glossary"
+        pages={pages}
+      />
+    </>
   )
 }

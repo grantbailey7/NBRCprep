@@ -30,12 +30,32 @@ export default async function MistakesPage() {
     select: { slug: true, title: true, description: true, division: true, readTime: true },
   })
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Common NBRC Exam Mistakes',
+    description: 'Avoid the most common mistakes students make on NBRC respiratory therapy exams.',
+    url: 'https://nbrcprep.app/mistakes',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: pages.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://nbrcprep.app/mistakes/${p.slug}`,
+        name: p.title,
+      })),
+    },
+  }
+
   return (
-    <SeoIndexPage
-      title="Common NBRC Exam Mistakes"
-      subtitle="Learn from the most frequent errors students make - and how to avoid them"
-      basePath="/mistakes"
-      pages={pages}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <SeoIndexPage
+        title="Common NBRC Exam Mistakes"
+        subtitle="Learn from the most frequent errors students make - and how to avoid them"
+        basePath="/mistakes"
+        pages={pages}
+      />
+    </>
   )
 }

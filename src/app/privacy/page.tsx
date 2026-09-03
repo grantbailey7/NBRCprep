@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Privacy Policy for NBRCprep. Learn how we collect, use, and protect your data on our NBRC exam prep platform.',
   alternates: { canonical: 'https://nbrcprep.app/privacy' },
+  openGraph: {
+    title: 'Privacy Policy',
+    description: 'Privacy Policy for NBRCprep. Learn how we collect, use, and protect your data on our NBRC exam prep platform.',
+    url: 'https://nbrcprep.app/privacy',
+    siteName: 'NBRCprep',
+  },
 }
 
 export default function PrivacyPolicyPage() {

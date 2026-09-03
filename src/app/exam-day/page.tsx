@@ -30,12 +30,32 @@ export default async function ExamDayPage() {
     select: { slug: true, title: true, description: true, division: true, readTime: true },
   })
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'NBRC Exam Day Walkthroughs',
+    description: 'Step-by-step walkthroughs for exam day for every NBRC exam.',
+    url: 'https://nbrcprep.app/exam-day',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: pages.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://nbrcprep.app/exam-day/${p.slug}`,
+        name: p.title,
+      })),
+    },
+  }
+
   return (
-    <SeoIndexPage
-      title="NBRC Exam Day Walkthroughs"
-      subtitle="Know exactly what to expect on test day for each NBRC exam"
-      basePath="/exam-day"
-      pages={pages}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <SeoIndexPage
+        title="NBRC Exam Day Walkthroughs"
+        subtitle="Know exactly what to expect on test day for each NBRC exam"
+        basePath="/exam-day"
+        pages={pages}
+      />
+    </>
   )
 }

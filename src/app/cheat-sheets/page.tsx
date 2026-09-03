@@ -30,12 +30,32 @@ export default async function CheatSheetsPage() {
     select: { slug: true, title: true, description: true, division: true, readTime: true },
   })
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Respiratory Therapy Cheat Sheets',
+    description: 'Quick-reference cheat sheets for NBRC exams.',
+    url: 'https://nbrcprep.app/cheat-sheets',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: pages.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://nbrcprep.app/cheat-sheets/${p.slug}`,
+        name: p.title,
+      })),
+    },
+  }
+
   return (
-    <SeoIndexPage
-      title="Respiratory Therapy Cheat Sheets"
-      subtitle="Quick-reference guides for the most tested NBRC topics"
-      basePath="/cheat-sheets"
-      pages={pages}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <SeoIndexPage
+        title="Respiratory Therapy Cheat Sheets"
+        subtitle="Quick-reference guides for the most tested NBRC topics"
+        basePath="/cheat-sheets"
+        pages={pages}
+      />
+    </>
   )
 }

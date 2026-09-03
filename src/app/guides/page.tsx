@@ -30,12 +30,32 @@ export default async function GuidesPage() {
     select: { slug: true, title: true, description: true, division: true, readTime: true },
   })
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'NBRC Exam Guides',
+    description: 'Comprehensive guides for all 6 NBRC respiratory therapy credentialing exams.',
+    url: 'https://nbrcprep.app/guides',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: pages.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://nbrcprep.app/guides/${p.slug}`,
+        name: p.title,
+      })),
+    },
+  }
+
   return (
-    <SeoIndexPage
-      title="NBRC Exam Guides"
-      subtitle="Everything you need to know about each NBRC credentialing exam"
-      basePath="/guides"
-      pages={pages}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <SeoIndexPage
+        title="NBRC Exam Guides"
+        subtitle="Everything you need to know about each NBRC credentialing exam"
+        basePath="/guides"
+        pages={pages}
+      />
+    </>
   )
 }

@@ -4,13 +4,21 @@ import type { NextRequest } from 'next/server'
 const ALLOWED_COUNTRIES = new Set(['US'])
 
 const VERIFIED_BOT_PATTERNS = [
-  /googlebot/i, /bingbot/i, /slurp/i, /duckduckbot/i, /baiduspider/i,
-  /yandexbot/i, /facebot/i, /ia_archiver/i, /applebot/i,
+  /googlebot/i, /google-inspectiontool/i, /google-extended/i,
+  /storebot-google/i, /google-safety/i,
   /apis-google/i, /mediapartners-google/i, /adsbot-google/i,
+  /feedfetcher-google/i, /google favicon/i,
+  /bingbot/i, /msnbot/i, /adidxbot/i, /bingpreview/i,
+  /slurp/i, /duckduckbot/i, /baiduspider/i,
+  /yandexbot/i, /facebot/i, /ia_archiver/i, /applebot/i,
   /linkedinbot/i, /twitterbot/i, /whatsapp/i, /slack/i,
   /telegrambot/i, /discordbot/i, /pinterestbot/i,
+  /semrushbot/i, /ahrefsbot/i, /dotbot/i, /rogerbot/i,
+  /screaming frog/i, /gtmetrix/i,
   /uptimerobot/i, /sitemap/i, /feedfetcher/i,
   /vercel/i, /nextjs/i, /stripe/i,
+  /petalbot/i, /bytespider/i, /gptbot/i, /chatgpt-user/i,
+  /claudebot/i, /anthropic/i,
 ]
 
 function isVerifiedBot(userAgent: string): boolean {

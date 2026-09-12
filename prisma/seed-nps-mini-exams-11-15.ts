@@ -73,7 +73,7 @@ async function main() {
         explanationCorrect:
           'Capillary blood gas samples provide pH and PCO2 values that closely approximate arterial blood gas values when the sample is obtained from a well-warmed, well-perfused site. However, capillary PO2 values are significantly lower than arterial PaO2 and should not be used to assess oxygenation.',
         explanationWrong:
-          'Capillary PCO2 reflects arterial PCO2, not PaO2—these are different measurements. The pH from a properly obtained capillary sample is reliable and closely reflects arterial pH. HCO3 can be calculated from capillary blood gas values.',
+          'Capillary PCO2 reflects arterial PCO2, not PaO2 - these are different measurements. The pH from a properly obtained capillary sample is reliable and closely reflects arterial pH. HCO3 can be calculated from capillary blood gas values.',
         topic: 'Neonatal Blood Gas Interpretation',
       },
       {
@@ -271,7 +271,7 @@ async function main() {
         explanationCorrect:
           'Simple face masks are variable-performance devices. When the patient\'s inspiratory flow demand increases (due to tachypnea), it exceeds the oxygen flow from the mask, causing entrainment of room air through the mask ports and around the mask seal. This dilutes the inspired oxygen and decreases the effective FiO2.',
         explanationWrong:
-          'Faster breathing does not draw more oxygen from the mask because the flow rate is constant. The FiO2 from a simple mask is not constant—it varies with the patient\'s ventilatory pattern. The decrease in FiO2 depends on the ratio of mask flow to inspiratory flow, not a specific respiratory rate threshold.',
+          'Faster breathing does not draw more oxygen from the mask because the flow rate is constant. The FiO2 from a simple mask is not constant - it varies with the patient\'s ventilatory pattern. The decrease in FiO2 depends on the ratio of mask flow to inspiratory flow, not a specific respiratory rate threshold.',
         topic: 'Pediatric Oxygen Delivery Systems',
       },
       {
@@ -343,7 +343,7 @@ async function main() {
         explanationCorrect:
           'An oxygen blender mixes compressed air and oxygen to deliver any desired FiO2 between 0.21 and 1.0. This precise control allows clinicians to titrate oxygen to the lowest effective concentration, which is critical in neonates to minimize risks of oxygen toxicity including retinopathy of prematurity and bronchopulmonary dysplasia.',
         explanationWrong:
-          'An oxygen blender does not eliminate the need for pulse oximetry—continuous monitoring remains essential. Standard oxygen blenders do not automatically adjust FiO2; that requires closed-loop systems. Oxygen blenders are useful across the entire FiO2 range, not just above 0.60.',
+          'An oxygen blender does not eliminate the need for pulse oximetry - continuous monitoring remains essential. Standard oxygen blenders do not automatically adjust FiO2; that requires closed-loop systems. Oxygen blenders are useful across the entire FiO2 range, not just above 0.60.',
         topic: 'Pediatric Oxygen Delivery Systems',
       },
       {
@@ -530,7 +530,7 @@ async function main() {
         miniExamId: exam12.id,
         questionIndex: 8,
         questionText:
-          'A 5-day-old neonate presents with temperature instability, lethargy, poor feeding, apnea, and a bulging fontanelle. Blood culture grows Group B Streptococcus. This presentation is most consistent with:',
+          'A 12-day-old neonate presents with temperature instability, lethargy, poor feeding, apnea, and a bulging fontanelle. Blood culture grows Group B Streptococcus. This presentation is most consistent with:',
         choices: {
           A: 'Early-onset GBS sepsis with pneumonia',
           B: 'Late-onset GBS sepsis with meningitis',
@@ -539,9 +539,9 @@ async function main() {
         },
         correctChoice: 'B',
         explanationCorrect:
-          'Late-onset GBS disease occurs after 72 hours (typically 7 days to 3 months) and most commonly presents as meningitis. The bulging fontanelle, lethargy, and apnea are classic signs of neonatal meningitis. At 5 days of age, this falls within the late-onset timeframe, and the GBS-positive blood culture confirms the pathogen.',
+          'Late-onset GBS disease occurs after 6 days of life (typically 7 days to 3 months) and most commonly presents as meningitis. The bulging fontanelle, lethargy, and apnea are classic signs of neonatal meningitis. At 12 days of age, this clearly falls within the late-onset timeframe, and the GBS-positive blood culture confirms the pathogen.',
         explanationWrong:
-          'Early-onset GBS sepsis occurs within the first 72 hours and primarily presents with pneumonia and respiratory distress rather than meningitis with a bulging fontanelle. CMV infection is typically acquired in utero and presents differently. Neonatal herpes would show vesicular lesions and is caused by HSV, not GBS.',
+          'Early-onset GBS sepsis occurs within the first 6 days of life and primarily presents with pneumonia and respiratory distress rather than meningitis with a bulging fontanelle. CMV infection is typically acquired in utero and presents differently. Neonatal herpes would show vesicular lesions and is caused by HSV, not GBS.',
         topic: 'Neonatal Infection',
       },
       {
@@ -613,7 +613,7 @@ async function main() {
         explanationCorrect:
           'Current guidelines recommend intravenous penicillin (preferred) or ampicillin administered to GBS-positive mothers during labor at least 4 hours before delivery. This allows adequate time for the antibiotic to reach effective levels in the amniotic fluid and fetal tissues, significantly reducing the risk of early-onset GBS disease in the neonate.',
         explanationWrong:
-          'Universal prophylaxis for all mothers is not recommended—only GBS-positive mothers or those with risk factors. Oral antibiotics during the antepartum period do not reliably prevent GBS transmission during delivery. Intramuscular ceftriaxone is not the standard approach; IV penicillin or ampicillin is the recommended route and drug.',
+          'Universal prophylaxis for all mothers is not recommended - only GBS-positive mothers or those with risk factors. Oral antibiotics during the antepartum period do not reliably prevent GBS transmission during delivery. Intramuscular ceftriaxone is not the standard approach; IV penicillin or ampicillin is the recommended route and drug.',
         topic: 'Neonatal Infection',
       },
       {
@@ -674,7 +674,7 @@ async function main() {
         miniExamId: exam12.id,
         questionIndex: 16,
         questionText:
-          'A term neonate born by emergency cesarean section develops respiratory distress at 1 hour of life. Physical examination reveals diminished breath sounds on the right, scaphoid abdomen, and heart sounds displaced to the right. Chest radiograph shows bowel loops in the left hemithorax. Which congenital anomaly is present?',
+          'A term neonate born by emergency cesarean section develops respiratory distress at 1 hour of life. Physical examination reveals diminished breath sounds on the left, scaphoid abdomen, and heart sounds displaced to the right. Chest radiograph shows bowel loops in the left hemithorax. Which congenital anomaly is present?',
         choices: {
           A: 'Right-sided pneumothorax',
           B: 'Left congenital diaphragmatic hernia',
@@ -703,7 +703,7 @@ async function main() {
         explanationCorrect:
           'Neonates are immunologically immature with decreased levels of IgM and IgA (only IgG crosses the placenta), impaired neutrophil chemotaxis and phagocytosis, limited complement activation, and reduced cytokine production. These deficiencies make neonates particularly vulnerable to bacterial infections.',
         explanationWrong:
-          'Neonates have decreased, not excessive, complement system activity. Neonates have immature T-lymphocyte function, not an overproduction of T cells. Maternal IgG antibodies are protective, not interfering—the problem is deficiency of other immunoglobulin classes and immune components.',
+          'Neonates have decreased, not excessive, complement system activity. Neonates have immature T-lymphocyte function, not an overproduction of T cells. Maternal IgG antibodies are protective, not interfering - the problem is deficiency of other immunoglobulin classes and immune components.',
         topic: 'Neonatal Infection',
       },
       {
@@ -991,7 +991,7 @@ async function main() {
         explanationCorrect:
           'Dexmedetomidine is a highly selective alpha-2 adrenergic agonist that provides dose-dependent sedation resembling natural sleep, along with mild analgesia and anxiolysis. Its key advantage is that it produces minimal respiratory depression at therapeutic doses, making it valuable for patients who need sedation while maintaining spontaneous ventilation.',
         explanationWrong:
-          'Dexmedetomidine does not cause neuromuscular blockade—it is not a paralytic agent. It is not a benzodiazepine; it belongs to the alpha-2 agonist class. One of its primary advantages is the lack of significant respiratory depression, not the presence of it.',
+          'Dexmedetomidine does not cause neuromuscular blockade - it is not a paralytic agent. It is not a benzodiazepine; it belongs to the alpha-2 agonist class. One of its primary advantages is the lack of significant respiratory depression, not the presence of it.',
         topic: 'Pediatric Sedation and Pain Management',
       },
       {
@@ -1727,7 +1727,7 @@ async function main() {
         },
         correctChoice: 'D',
         explanationCorrect:
-          'RSV is transmitted primarily through contact with infected secretions (direct contact or fomites) and large respiratory droplets. Contact precautions—meticulous hand hygiene, wearing gowns and gloves, and cohorting RSV-positive patients with dedicated staff—are the most effective measures for preventing nosocomial transmission. Hand hygiene is the single most important intervention.',
+          'RSV is transmitted primarily through contact with infected secretions (direct contact or fomites) and large respiratory droplets. Contact precautions - meticulous hand hygiene, wearing gowns and gloves, and cohorting RSV-positive patients with dedicated staff - are the most effective measures for preventing nosocomial transmission. Hand hygiene is the single most important intervention.',
         explanationWrong:
           'RSV is not transmitted via the airborne route, so N95 respirators are not necessary for standard RSV precautions. Prophylactic antibiotics are ineffective against viruses and promote antibiotic resistance. While RSV vaccines for adults are emerging, universal healthcare worker vaccination is not the primary prevention strategy for nosocomial transmission.',
         topic: 'Bronchiolitis (RSV) Management',

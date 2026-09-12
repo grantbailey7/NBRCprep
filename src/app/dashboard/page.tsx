@@ -272,6 +272,33 @@ export default async function DashboardPage() {
               </div>
             </Link>
 
+            {/* Play & Learn Card */}
+            <Link
+              href="/play"
+              className="card block p-6 transition-all hover:ring-2 hover:ring-teal-400/50"
+            >
+              <div className="mb-4 flex items-center justify-between">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-500/10 text-2xl">
+                  🎮
+                </div>
+                <div className="text-right">
+                  <p className="text-2xl font-bold text-teal-600">5</p>
+                  <p className="text-xs text-brand-gray-500">game types</p>
+                </div>
+              </div>
+              <h3 className="mb-1 text-xl font-bold text-black">Play & Learn</h3>
+              <p className="mb-4 text-sm text-brand-gray-500">
+                Learn through games - multiple choice, matching, and more
+              </p>
+              <div className="flex gap-4 text-xs text-brand-gray-500">
+                <span>6 divisions</span>
+                <span>Daily challenges</span>
+              </div>
+              <div className="mt-4 text-sm font-semibold text-teal-600">
+                Play Now &rarr;
+              </div>
+            </Link>
+
             {/* Full Length Exams Card */}
             <Link
               href="/full-exams"

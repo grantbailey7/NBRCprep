@@ -115,6 +115,7 @@ model User {
   miniExamResults    UserMiniExamResult[]
   fullExamResults    UserFullExamResult[]
   studyStreaks       StudyStreak[]
+  playEvents         PlayEvent[]
 }
 
 model Division {
@@ -327,6 +328,24 @@ model SeoPage {
 
   @@index([type])
   @@index([division])
+}
+
+model PlayEvent {
+  id               String       @id @default(cuid())
+  division         DivisionSlug
+  questionsTotal   Int
+  questionsCorrect Int
+  xpEarned         Int
+  completed        Boolean
+  userId           String?
+  sessionId        String
+  createdAt        DateTime     @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([createdAt])
+  @@index([division])
+  @@index([userId])
 }
 
 model SiteSettings {

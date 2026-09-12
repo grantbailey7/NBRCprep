@@ -248,7 +248,7 @@ async function main() {
         questionText: 'A patient is being ventilated on Assist/Control (AC) volume-controlled mode at a set rate of 14 and tidal volume of 500 mL. The patient\'s total respiratory rate is 22 breaths/min. Which statement about this situation is correct?',
         choices: { A: 'The patient is not triggering any additional breaths', B: 'All 22 breaths are machine-initiated', C: 'Only the 14 set breaths receive the full tidal volume', D: 'All 22 breaths deliver the full set tidal volume of 500 mL' },
         correctChoice: 'D',
-        explanationCorrect: 'In AC volume-controlled mode, every breath—whether machine-initiated or patient-triggered—delivers the full set tidal volume. The 8 additional breaths above the set rate of 14 are patient-triggered but still receive 500 mL.',
+        explanationCorrect: 'In AC volume-controlled mode, every breath - whether machine-initiated or patient-triggered - delivers the full set tidal volume. The 8 additional breaths above the set rate of 14 are patient-triggered but still receive 500 mL.',
         explanationWrong: 'The patient is triggering 8 additional breaths above the set rate. Not all breaths are machine-initiated; 8 are patient-triggered. In AC mode, all breaths receive the same tidal volume, not just the set-rate breaths.',
         topic: 'Ventilator Modes',
       },

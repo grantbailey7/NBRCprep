@@ -729,7 +729,7 @@ const flashcards = [
   {
     divisionId: NPS_DIVISION_ID,
     question: 'What is the correct ETT depth of insertion for an infant or child?',
-    answer: 'For oral intubation, a common estimation is ETT internal diameter multiplied by 3 (for example, a 4.0 mm tube would be inserted to 12 cm at the lip). For neonates, the tip-to-lip distance can be estimated as 6 cm plus the weight in kilograms. Tube position should always be confirmed by chest radiograph with the tip between T1 and T3.',
+    answer: 'For oral intubation, a common estimation is ETT internal diameter multiplied by 3 (for example, a 4.0 mm tube would be inserted to 12 cm at the lip). For neonates, the tip-to-lip distance can be estimated as 6 cm plus the weight in kilograms. Tube position should always be confirmed by chest radiograph with the tip between T1 and T2.',
     difficulty: 2,
     topic: 'Pediatric Critical Care',
     isFree: false,

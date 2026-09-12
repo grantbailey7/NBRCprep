@@ -147,10 +147,10 @@ const flashcards = [
   // ============================================================
   {
     divisionId: 'cmsm41fq00000zf54wqjaayvz',
-    question: 'What are the five components of the Apgar score?',
-    answer: 'The five Apgar components are: Appearance (skin color), Pulse (heart rate), Grimace (reflex irritability), Activity (muscle tone), and Respiration (breathing effort). Each is scored 0-2, with a maximum total of 10, assessed at 1 and 5 minutes after birth.',
+    question: 'What are the clinical signs and symptoms of oxygen toxicity and how can it be prevented?',
+    answer: 'Oxygen toxicity manifests in two forms: CNS toxicity (from hyperbaric O2, causing seizures) and pulmonary toxicity (from prolonged exposure to FiO2 >0.60 for more than 24-48 hours). Pulmonary signs include substernal chest pain, nonproductive cough, dyspnea, decreased vital capacity, and progressive atelectasis from absorptive mechanisms and surfactant inactivation. Prevention involves using the lowest FiO2 necessary to maintain adequate oxygenation (PaO2 60-100 mmHg, SpO2 >90%) and applying PEEP to allow FiO2 reduction.',
     difficulty: 1,
-    topic: 'Neonatal & Pediatric',
+    topic: 'Oxygen Therapy',
     isFree: false,
     orderIndex: 116,
   },
@@ -552,7 +552,7 @@ const flashcards = [
   {
     divisionId: 'cmsm41fq00000zf54wqjaayvz',
     question: 'What factors affect aerosol drug delivery during mechanical ventilation?',
-    answer: 'Key factors include ventilator mode and settings (tidal volume, inspiratory flow, duty cycle), humidification (heated humidifiers reduce delivery compared to HMEs), circuit tubing diameter, device placement in the circuit, patient-ventilator synchrony, and endotracheal tube size.',
+    answer: 'Key factors include ventilator mode and settings (tidal volume, inspiratory flow, duty cycle), humidification (heated humidifiers reduce aerosol delivery compared to dry circuits; HMEs should be removed during treatments as they filter aerosol particles), circuit tubing diameter, device placement in the circuit, patient-ventilator synchrony, and endotracheal tube size.',
     difficulty: 3,
     topic: 'Humidity & Aerosol Therapy',
     isFree: false,
@@ -775,10 +775,10 @@ const flashcards = [
   },
   {
     divisionId: 'cmsm41fq00000zf54wqjaayvz',
-    question: 'What hemodynamic profile is characteristic of cardiogenic shock?',
-    answer: 'Cardiogenic shock presents with decreased cardiac output, elevated PCWP (above 18 mmHg) reflecting left heart congestion, elevated CVP, increased SVR (compensatory vasoconstriction), and decreased SvO2 (increased oxygen extraction). Treatment focuses on improving cardiac contractility and reducing afterload.',
+    question: 'What are the indications for initiating noninvasive positive pressure ventilation (NPPV) in acute exacerbation of COPD?',
+    answer: 'NPPV is indicated for moderate-to-severe COPD exacerbations with respiratory acidosis (pH 7.25-7.35, PaCO2 >45 mmHg), moderate-to-severe dyspnea with accessory muscle use, and respiratory rate >25 breaths/min. Contraindications include hemodynamic instability, inability to protect the airway, facial trauma, and uncooperative patient. NPPV reduces intubation rates and mortality in appropriate candidates.',
     difficulty: 3,
-    topic: 'Hemodynamic Monitoring',
+    topic: 'Mechanical Ventilation',
     isFree: false,
     orderIndex: 184,
   },

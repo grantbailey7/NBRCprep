@@ -738,7 +738,7 @@ const flashcards = [
   {
     divisionId: NPS_DIVISION_ID,
     question: 'How does the physiological response to hemorrhagic shock differ in children compared to adults?',
-    answer: 'Children compensate for blood loss more effectively than adults through robust sympathetic vasoconstriction and tachycardia, maintaining blood pressure until 25 to 30 percent of blood volume is lost (compared to approximately 15 to 20 percent in adults). This means hypotension in a child is a late and ominous sign of decompensated shock. Respiratory compensation includes tachypnea to correct metabolic acidosis. Initial fluid resuscitation is 20 mL/kg isotonic crystalloid boluses, with blood transfusion considered after 40 mL/kg without improvement.',
+    answer: 'Children compensate for blood loss more effectively than adults through robust sympathetic vasoconstriction and tachycardia, maintaining blood pressure until 25 to 30 percent of blood volume is lost (compared to approximately 30 percent in adults). This means hypotension in a child is a late and ominous sign of decompensated shock. Respiratory compensation includes tachypnea to correct metabolic acidosis. Initial fluid resuscitation is 20 mL/kg isotonic crystalloid boluses, with blood transfusion considered after 40 mL/kg without improvement.',
     difficulty: 2,
     topic: 'Pediatric Emergency',
     isFree: false,

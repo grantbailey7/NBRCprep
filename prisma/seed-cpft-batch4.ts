@@ -28,7 +28,7 @@ async function main() {
       },
       {
         question: 'What is the commonly used formula to estimate MVV from FEV1?',
-        answer: 'MVV is estimated as FEV1 multiplied by 35 to 40 (MVV ≈ FEV1 × 35–40). This indirect estimate is sometimes used when a patient cannot perform the MVV maneuver, though directly measured MVV is preferred when feasible.',
+        answer: 'MVV is estimated as FEV1 multiplied by 35 to 40 (MVV ≈ FEV1 × 35-40). This indirect estimate is sometimes used when a patient cannot perform the MVV maneuver, though directly measured MVV is preferred when feasible.',
         difficulty: 2,
         topic: 'Maximal Voluntary Ventilation',
         isFree: false,
@@ -99,7 +99,7 @@ async function main() {
         divisionId: 'cmsm41fxw0004zf54sy6um2ui',
       },
 
-      // === Respiratory Muscle Strength – MIP/MEP (10 cards) ===
+      // === Respiratory Muscle Strength - MIP/MEP (10 cards) ===
       {
         question: 'What do MIP and MEP measure?',
         answer: 'MIP (Maximal Inspiratory Pressure) measures the strength of the inspiratory muscles, primarily the diaphragm. MEP (Maximal Expiratory Pressure) measures the strength of the expiratory muscles, primarily the abdominals and intercostals. Both are expressed in cmH2O.',
@@ -725,8 +725,8 @@ async function main() {
         divisionId: 'cmsm41fxw0004zf54sy6um2ui',
       },
       {
-        question: 'What is the VE/VCO2 slope and what does an elevated value indicate?',
-        answer: 'The VE/VCO2 slope represents the ventilatory efficiency - how many liters of ventilation are required to eliminate one liter of CO2. Normal values are approximately 25-30. An elevated slope (>34-36) indicates ventilatory inefficiency, commonly seen in heart failure, pulmonary hypertension, and increased dead space ventilation.',
+        question: 'What is the end-tidal CO2 (PETCO2) response during incremental exercise and how does it differ in cardiac versus pulmonary disease?',
+        answer: 'In healthy individuals, PETCO2 rises slightly during moderate exercise (reflecting increased perfusion matching ventilation) then falls at higher intensities as ventilation increases disproportionately above the ventilatory compensation point. In cardiac disease, PETCO2 is often low throughout exercise due to increased dead space from poor pulmonary perfusion. In pulmonary vascular disease, PETCO2 is similarly low due to V/Q mismatch with high dead space ventilation, while in obstructive lung disease PETCO2 may be elevated due to CO2 retention.',
         difficulty: 3,
         topic: 'Cardiopulmonary Exercise Testing',
         isFree: false,

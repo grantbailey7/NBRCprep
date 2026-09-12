@@ -12,6 +12,7 @@ const navLinks = [
   { href: '/admin/users', label: 'Users' },
   { href: '/admin/accounts', label: 'Accounts' },
   { href: '/admin/blog', label: 'Blog' },
+  { href: '/admin/play', label: 'Play & Learn' },
   { href: '/admin/console', label: 'Control Console' },
   { href: '/admin/seed', label: 'Seed DB' },
 ];

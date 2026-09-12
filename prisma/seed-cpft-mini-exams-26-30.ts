@@ -85,7 +85,7 @@ async function main() {
         },
         correctChoice: "D",
         explanationCorrect:
-          "A 3.08 L reading from a 3.00 L syringe represents a 2.7% error, which exceeds the ATS/ERS tolerance of ±3.5% (±105 mL for a 3 L syringe). Wait - 80 mL is within ±105 mL. However, the technologist should still investigate the discrepancy. Actually, 3.08 L is within the ±3.5% range (2.895–3.105 L), so it barely passes. Best practice is still to investigate any consistent over-reading to ensure accuracy.",
+          "A 3.08 L reading from a 3.00 L syringe represents a 2.7% error, which exceeds the ATS/ERS tolerance of ±3.5% (±105 mL for a 3 L syringe). Wait - 80 mL is within ±105 mL. However, the technologist should still investigate the discrepancy. Actually, 3.08 L is within the ±3.5% range (2.895-3.105 L), so it barely passes. Best practice is still to investigate any consistent over-reading to ensure accuracy.",
         explanationWrong:
           "While the reading may technically be within tolerance, a consistent over-reading warrants investigation. Replacing the syringe is premature without verifying it is the source. Warming the syringe does not address spirometer calibration issues.",
         topic: "Quality control and calibration",
@@ -868,18 +868,18 @@ async function main() {
         miniExamId: exam28.id,
         questionIndex: 6,
         questionText:
-          "A spirometer's daily calibration verification shows volumes of 2.92, 2.95, and 2.94 L using a 3.00 L syringe. What is the correct course of action?",
+          "A spirometer's daily calibration verification shows volumes of 2.85, 2.87, and 2.86 L using a 3.00 L syringe. What is the correct course of action?",
         choices: {
           A: "Investigate the discrepancy; all readings are below the acceptable range",
-          B: "Average the three readings and use 2.94 L as the correction factor",
+          B: "Average the three readings and use 2.86 L as the correction factor",
           C: "Proceed with testing since the readings are consistent",
           D: "Replace the spirometer immediately",
         },
         correctChoice: "A",
         explanationCorrect:
-          "The acceptable range for a 3.00 L calibration syringe is ±3.5% (2.895-3.105 L). While 2.95 and 2.94 are within range, 2.92 falls slightly above the lower limit (2.895). More importantly, a consistent under-reading pattern warrants investigation for causes such as a leak, temperature effects, or sensor degradation before patient testing.",
+          "The ATS/ERS acceptable range for a 3.00 L calibration syringe is ±3.5% (2.895-3.105 L). All three readings (2.85, 2.87, and 2.86 L) fall below the lower limit of 2.895 L, indicating the spirometer is reading outside acceptable tolerance. The technologist must investigate for causes such as a system leak, temperature effects, or sensor degradation before proceeding with patient testing.",
         explanationWrong:
-          "Averaging calibration readings to create a correction factor is not appropriate practice. Consistency of readings does not validate accuracy if all readings are systematically low. Immediate replacement is premature before troubleshooting.",
+          "Averaging calibration readings to create a correction factor is not appropriate practice. Consistency of readings does not validate accuracy if all readings fall outside the ±3.5% tolerance. Immediate replacement is premature before troubleshooting the underlying cause.",
         topic: "Quality control and calibration",
       },
       {

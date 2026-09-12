@@ -36,11 +36,21 @@ const config: Config = {
       },
       animation: {
         marquee: 'marquee 30s linear infinite',
+        slideUp: 'slideUp 0.3s ease-out',
+        confetti: 'confetti 2s ease-out forwards',
       },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        confetti: {
+          '0%': { transform: 'translateY(0) rotate(0deg)', opacity: '1' },
+          '100%': { transform: 'translateY(100vh) rotate(720deg)', opacity: '0' },
         },
       },
     },

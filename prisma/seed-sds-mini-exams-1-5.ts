@@ -44,14 +44,14 @@ async function main() {
         questionText:
           'According to the AASM scoring manual, which combination of EEG findings defines stage N3 sleep?',
         choices: {
-          A: 'Slow-wave activity of 0.5–2 Hz with peak-to-peak amplitude greater than 75 microvolts comprising 20% or more of an epoch',
+          A: 'Slow-wave activity of 0.5-2 Hz with peak-to-peak amplitude greater than 75 microvolts comprising 20% or more of an epoch',
           B: 'Sleep spindles and K-complexes present in at least 50% of the epoch',
           C: 'Low-amplitude mixed-frequency EEG with rapid eye movements',
           D: 'Alpha rhythm attenuation with vertex sharp waves',
         },
         correctChoice: 'A',
         explanationCorrect:
-          'Stage N3 sleep is defined by the presence of slow-wave activity (0.5–2 Hz) with peak-to-peak amplitude greater than 75 microvolts in at least 20% of a 30-second epoch, as measured from frontal derivations.',
+          'Stage N3 sleep is defined by the presence of slow-wave activity (0.5-2 Hz) with peak-to-peak amplitude greater than 75 microvolts in at least 20% of a 30-second epoch, as measured from frontal derivations.',
         explanationWrong:
           'Sleep spindles and K-complexes are hallmarks of stage N2, not N3. Low-amplitude mixed-frequency EEG with rapid eye movements describes REM sleep. Alpha attenuation with vertex sharp waves is characteristic of the transition from wake to N1 sleep.',
         topic: 'Sleep staging rules (AASM scoring manual)',
@@ -69,7 +69,7 @@ async function main() {
         },
         correctChoice: 'C',
         explanationCorrect:
-          'AHI is calculated as (total apneas + hypopneas) / total sleep time in hours. (45 + 30 + 5) / (400/60) = 80 / 6.67 = 12.0 events/hour. An AHI of 12.0 falls in the moderate range (5–14.9 or, per some criteria, 15–29.9 is moderate). With 12 events/hour this is moderate OSA.',
+          'AHI is calculated as (total apneas + hypopneas) / total sleep time in hours. (45 + 30 + 5) / (400/60) = 80 / 6.67 = 12.0 events/hour. An AHI of 12.0 falls in the moderate range (5-14.9 or, per some criteria, 15-29.9 is moderate). With 12 events/hour this is moderate OSA.',
         explanationWrong:
           'The calculation must include all apneas (obstructive and central) plus hypopneas divided by total sleep time in hours. An AHI of 12.0 does not meet the severe threshold of 30 or more events per hour. The value of 18.75 and 20.0 reflect incorrect calculations.',
         topic: 'Obstructive sleep apnea diagnosis and severity',
@@ -125,7 +125,7 @@ async function main() {
         explanationCorrect:
           'In healthy young adults, the first and second sleep cycles of the night contain the largest amount of stage N3 (slow-wave) sleep. As the night progresses, N3 diminishes and REM periods become longer and more frequent.',
         explanationWrong:
-          'The first REM period is typically the shortest, not the longest - REM periods lengthen as the night progresses. Stage N2 normally occupies approximately 45–55% of total sleep time, not 5%. Normal REM sleep latency is typically 70–100 minutes, but stating 60–120 minutes is a broader range that overlaps with the description of the first cycle having the most slow-wave sleep being the more definitive answer.',
+          'The first REM period is typically the shortest, not the longest - REM periods lengthen as the night progresses. Stage N2 normally occupies approximately 45-55% of total sleep time, not 5%. Normal REM sleep latency is typically 70-100 minutes, but stating 60-120 minutes is a broader range that overlaps with the description of the first cycle having the most slow-wave sleep being the more definitive answer.',
         topic: 'Sleep architecture and normal sleep patterns',
       },
       {
@@ -141,7 +141,7 @@ async function main() {
         },
         correctChoice: 'B',
         explanationCorrect:
-          'Cheyne-Stokes respiration is characterized by a crescendo-decrescendo pattern of ventilation alternating with central apneas or hypopneas. It is commonly associated with heart failure and has a typical cycle length of 45–90 seconds. The prolonged circulation time in CHF patients contributes to this pattern.',
+          'Cheyne-Stokes respiration is characterized by a crescendo-decrescendo pattern of ventilation alternating with central apneas or hypopneas. It is commonly associated with heart failure and has a typical cycle length of 45-90 seconds. The prolonged circulation time in CHF patients contributes to this pattern.',
         explanationWrong:
           'Treatment-emergent central sleep apnea occurs during PAP therapy, not during a diagnostic study in the absence of PAP. Obesity hypoventilation syndrome involves sustained hypoventilation, not a cyclical crescendo-decrescendo pattern. Upper airway resistance syndrome involves increased respiratory effort-related arousals, not central apneas.',
         topic: 'Central sleep apnea and Cheyne-Stokes respiration',
@@ -231,7 +231,7 @@ async function main() {
         },
         correctChoice: 'D',
         explanationCorrect:
-          'Delayed sleep-wake phase disorder (DSWPD) is characterized by a habitual sleep onset and wake time that are significantly later than conventional or desired times. Patients typically cannot fall asleep until 2–6 AM and have difficulty waking for morning obligations, but sleep quality is normal once asleep.',
+          'Delayed sleep-wake phase disorder (DSWPD) is characterized by a habitual sleep onset and wake time that are significantly later than conventional or desired times. Patients typically cannot fall asleep until 2-6 AM and have difficulty waking for morning obligations, but sleep quality is normal once asleep.',
         explanationWrong:
           'Advanced sleep-wake phase disorder involves abnormally early sleep onset and early morning awakening. Non-24-hour sleep-wake rhythm disorder involves a progressively shifting sleep-wake cycle and is most common in blind individuals. Shift work disorder is related to work schedules that overlap the normal sleep period.',
         topic: 'Insomnia and circadian rhythm disorders',
@@ -243,7 +243,7 @@ async function main() {
           'During a split-night polysomnogram, the diagnostic portion reveals an AHI of 42 events/hour. During the CPAP titration portion, the optimal pressure is determined to be 11 cmH2O but REM sleep was not captured. What is the most appropriate recommendation?',
         choices: {
           A: 'Accept the titration result and prescribe CPAP at 11 cmH2O',
-          B: 'Prescribe auto-adjusting PAP (APAP) with a range of 4–20 cmH2O',
+          B: 'Prescribe auto-adjusting PAP (APAP) with a range of 4-20 cmH2O',
           C: 'Repeat the study as a full-night CPAP titration',
           D: 'The split-night result is adequate since REM supine was documented during the diagnostic portion',
         },
@@ -285,7 +285,7 @@ async function main() {
         },
         correctChoice: 'C',
         explanationCorrect:
-          'Treatment-emergent central sleep apnea (previously called complex sleep apnea) occurs when central apneas appear or persist during PAP therapy despite resolution of obstructive events. It is seen in approximately 5–15% of patients undergoing CPAP titration and often resolves with continued PAP use.',
+          'Treatment-emergent central sleep apnea (previously called complex sleep apnea) occurs when central apneas appear or persist during PAP therapy despite resolution of obstructive events. It is seen in approximately 5-15% of patients undergoing CPAP titration and often resolves with continued PAP use.',
         explanationWrong:
           'Primary central sleep apnea would have been evident during the diagnostic portion of the study. CPAP device malfunction would not selectively produce central apneas. If the events showed continued respiratory effort, they would be classified as obstructive, not central.',
         topic: 'Central sleep apnea and Cheyne-Stokes respiration',
@@ -357,7 +357,7 @@ async function main() {
         },
         correctChoice: 'C',
         explanationCorrect:
-          'Sleep restriction therapy limits the time in bed to the estimated total sleep time to increase sleep drive and consolidate sleep. As sleep efficiency improves, time in bed is gradually increased in 15–20 minute increments until optimal sleep duration is achieved.',
+          'Sleep restriction therapy limits the time in bed to the estimated total sleep time to increase sleep drive and consolidate sleep. As sleep efficiency improves, time in bed is gradually increased in 15-20 minute increments until optimal sleep duration is achieved.',
         explanationWrong:
           'Stimulus control therapy focuses on re-associating the bed with sleep by eliminating non-sleep activities in bed and maintaining consistent sleep-wake times. Relaxation training involves techniques such as progressive muscle relaxation and guided imagery. Sleep hygiene education addresses environmental and behavioral factors that may interfere with sleep.',
         topic: 'Insomnia and circadian rhythm disorders',
@@ -375,9 +375,9 @@ async function main() {
         },
         correctChoice: 'B',
         explanationCorrect:
-          'Stage N1 sleep is characterized by low-amplitude mixed-frequency EEG (predominantly 4–7 Hz theta activity), slow rolling eye movements, absence of sleep spindles and K-complexes, and reduced but not absent chin EMG tone. It represents the lightest stage of NREM sleep.',
+          'Stage N1 sleep is characterized by low-amplitude mixed-frequency EEG (predominantly 4-7 Hz theta activity), slow rolling eye movements, absence of sleep spindles and K-complexes, and reduced but not absent chin EMG tone. It represents the lightest stage of NREM sleep.',
         explanationWrong:
-          'Stage W would show alpha rhythm (8–13 Hz) with eyes closed or low-amplitude mixed-frequency activity with rapid eye movements and eye blinks. Stage N2 requires the presence of sleep spindles and/or K-complexes. Stage REM shows low-amplitude mixed-frequency EEG but with rapid eye movements and markedly reduced chin EMG (atonia).',
+          'Stage W would show alpha rhythm (8-13 Hz) with eyes closed or low-amplitude mixed-frequency activity with rapid eye movements and eye blinks. Stage N2 requires the presence of sleep spindles and/or K-complexes. Stage REM shows low-amplitude mixed-frequency EEG but with rapid eye movements and markedly reduced chin EMG (atonia).',
         topic: 'Sleep staging rules (AASM scoring manual)',
       },
     ],
@@ -564,16 +564,16 @@ async function main() {
         questionText:
           'What percentage of total sleep time does REM sleep normally constitute in a healthy young adult?',
         choices: {
-          A: '5–10%',
-          B: '20–25%',
-          C: '50–60%',
-          D: '35–40%',
+          A: '5-10%',
+          B: '20-25%',
+          C: '50-60%',
+          D: '35-40%',
         },
         correctChoice: 'B',
         explanationCorrect:
-          'In healthy young adults, REM sleep normally constitutes approximately 20–25% of total sleep time. REM periods become progressively longer and more frequent in the second half of the night.',
+          'In healthy young adults, REM sleep normally constitutes approximately 20-25% of total sleep time. REM periods become progressively longer and more frequent in the second half of the night.',
         explanationWrong:
-          '5–10% is well below normal REM percentage and might be seen in severe REM suppression. 50–60% represents approximately the proportion of N2 sleep, not REM. 35–40% would be an abnormally high proportion of REM sleep.',
+          '5-10% is well below normal REM percentage and might be seen in severe REM suppression. 50-60% represents approximately the proportion of N2 sleep, not REM. 35-40% would be an abnormally high proportion of REM sleep.',
         topic: 'Sleep architecture and normal sleep patterns',
       },
       {
@@ -625,7 +625,7 @@ async function main() {
         },
         correctChoice: 'D',
         explanationCorrect:
-          'The AASM recommends placing surface EMG electrodes on the anterior tibialis muscle of each leg for detection of periodic limb movements during sleep (PLMS). Two electrodes are placed longitudinally on each leg, 2–3 cm apart on the middle of the muscle belly.',
+          'The AASM recommends placing surface EMG electrodes on the anterior tibialis muscle of each leg for detection of periodic limb movements during sleep (PLMS). Two electrodes are placed longitudinally on each leg, 2-3 cm apart on the middle of the muscle belly.',
         explanationWrong:
           'Masseter muscle electrodes would detect bruxism, not limb movements. The extensor digitorum muscle of the forearm is not a standard placement for PLMS detection. The gastrocnemius (calf) muscle is not the recommended site - the anterior tibialis is the standard placement per AASM guidelines.',
         topic: 'Polysomnography (PSG) setup and electrode placement',
@@ -634,11 +634,11 @@ async function main() {
         miniExamId: exam2.id,
         questionIndex: 14,
         questionText:
-          'A patient with OSA is prescribed auto-adjusting PAP (APAP) with a pressure range of 5–15 cmH2O. After 30 days, the device download shows a 95th percentile pressure of 8.2 cmH2O, residual AHI of 2.1 events/hour, and average usage of 6.5 hours per night. What do these data indicate?',
+          'A patient with OSA is prescribed auto-adjusting PAP (APAP) with a pressure range of 5-15 cmH2O. After 30 days, the device download shows a 95th percentile pressure of 8.2 cmH2O, residual AHI of 2.1 events/hour, and average usage of 6.5 hours per night. What do these data indicate?',
         choices: {
           A: 'The APAP is not providing adequate treatment and should be replaced with fixed CPAP',
           B: 'The therapy is effective with good compliance and adequate pressure delivery',
-          C: 'The pressure range should be narrowed to 4–10 cmH2O',
+          C: 'The pressure range should be narrowed to 4-10 cmH2O',
           D: 'The patient needs a titration study to determine a fixed pressure',
         },
         correctChoice: 'B',
@@ -670,7 +670,7 @@ async function main() {
         miniExamId: exam2.id,
         questionIndex: 16,
         questionText:
-          'During stage N2 sleep, an epoch contains a burst of 12–14 Hz oscillatory activity lasting 0.8 seconds over the central EEG derivation. How should this waveform be classified?',
+          'During stage N2 sleep, an epoch contains a burst of 12-14 Hz oscillatory activity lasting 0.8 seconds over the central EEG derivation. How should this waveform be classified?',
         choices: {
           A: 'Alpha intrusion',
           B: 'K-complex',
@@ -679,9 +679,9 @@ async function main() {
         },
         correctChoice: 'C',
         explanationCorrect:
-          'A sleep spindle is defined as a burst of oscillatory EEG activity, typically in the 11–16 Hz (sigma) frequency range, lasting at least 0.5 seconds with maximum amplitude over central derivations. The 12–14 Hz frequency and 0.8-second duration meet all criteria for a sleep spindle.',
+          'A sleep spindle is defined as a burst of oscillatory EEG activity, typically in the 11-16 Hz (sigma) frequency range, lasting at least 0.5 seconds with maximum amplitude over central derivations. The 12-14 Hz frequency and 0.8-second duration meet all criteria for a sleep spindle.',
         explanationWrong:
-          'Alpha intrusion involves alpha rhythm (8–13 Hz) appearing during sleep but is not a defining feature of normal sleep staging and has a different morphology. A K-complex is a high-amplitude biphasic wave with an initial sharp negative component followed by a positive component, not oscillatory activity. Vertex sharp waves are sharp-contoured, centrally maximal waves seen in N1 sleep and are not oscillatory.',
+          'Alpha intrusion involves alpha rhythm (8-13 Hz) appearing during sleep but is not a defining feature of normal sleep staging and has a different morphology. A K-complex is a high-amplitude biphasic wave with an initial sharp negative component followed by a positive component, not oscillatory activity. Vertex sharp waves are sharp-contoured, centrally maximal waves seen in N1 sleep and are not oscillatory.',
         topic: 'Sleep staging rules (AASM scoring manual)',
       },
       {
@@ -871,13 +871,13 @@ async function main() {
           A: 'The ultradian cycle length increases progressively from 60 minutes in the first cycle to 120 minutes in later cycles',
           B: 'The ultradian rhythm refers to the 24-hour sleep-wake cycle controlled by the suprachiasmatic nucleus',
           C: 'Each ultradian cycle ends with a REM period and lasts approximately 24 hours',
-          D: 'A typical NREM-REM sleep cycle lasts approximately 90–110 minutes and repeats 4–6 times per night',
+          D: 'A typical NREM-REM sleep cycle lasts approximately 90-110 minutes and repeats 4-6 times per night',
         },
         correctChoice: 'D',
         explanationCorrect:
-          'The ultradian rhythm refers to the cyclical alternation of NREM and REM sleep that occurs within a single sleep period. Each cycle lasts approximately 90–110 minutes and typically repeats 4–6 times during a normal night of sleep in adults.',
+          'The ultradian rhythm refers to the cyclical alternation of NREM and REM sleep that occurs within a single sleep period. Each cycle lasts approximately 90-110 minutes and typically repeats 4-6 times during a normal night of sleep in adults.',
         explanationWrong:
-          'While cycle length can vary slightly, it does not progressively increase from 60 to 120 minutes. The 24-hour cycle is the circadian rhythm, not the ultradian rhythm. Each ultradian cycle lasts about 90–110 minutes, not 24 hours.',
+          'While cycle length can vary slightly, it does not progressively increase from 60 to 120 minutes. The 24-hour cycle is the circadian rhythm, not the ultradian rhythm. Each ultradian cycle lasts about 90-110 minutes, not 24 hours.',
         topic: 'Sleep architecture and normal sleep patterns',
       },
       {
@@ -942,12 +942,12 @@ async function main() {
         choices: {
           A: 'Monomorphic sinusoidal 14 Hz oscillations lasting at least 0.5 seconds',
           B: 'High-amplitude biphasic waves followed by a burst of alpha activity',
-          C: 'Sharply contoured, triangular waves in the 2–6 Hz range with a serrated appearance, maximal at central and frontal derivations',
+          C: 'Sharply contoured, triangular waves in the 2-6 Hz range with a serrated appearance, maximal at central and frontal derivations',
           D: 'Rhythmic 3 Hz spike-and-wave complexes',
         },
         correctChoice: 'C',
         explanationCorrect:
-          'Sawtooth waves are a distinctive feature of REM sleep characterized by sharply contoured or triangular theta-frequency (2–6 Hz) waves with a serrated or notched morphology. They are best seen at vertex and frontal-central derivations and often precede bursts of rapid eye movements.',
+          'Sawtooth waves are a distinctive feature of REM sleep characterized by sharply contoured or triangular theta-frequency (2-6 Hz) waves with a serrated or notched morphology. They are best seen at vertex and frontal-central derivations and often precede bursts of rapid eye movements.',
         explanationWrong:
           'High-amplitude biphasic waves describe K-complexes of N2 sleep. Monomorphic 14 Hz oscillations describe sleep spindles. Rhythmic 3 Hz spike-and-wave complexes are associated with absence seizures, not normal sleep.',
         topic: 'Sleep staging rules (AASM scoring manual)',
@@ -1305,7 +1305,7 @@ async function main() {
         },
         correctChoice: 'C',
         explanationCorrect:
-          'Expiratory pressure relief (EPR, C-Flex, or similar proprietary features) reduces the delivered pressure by 1–3 cmH2O during expiration. This mimics a more natural breathing pattern by decreasing the resistance to exhalation, improving comfort without significantly compromising therapeutic efficacy.',
+          'Expiratory pressure relief (EPR, C-Flex, or similar proprietary features) reduces the delivered pressure by 1-3 cmH2O during expiration. This mimics a more natural breathing pattern by decreasing the resistance to exhalation, improving comfort without significantly compromising therapeutic efficacy.',
         explanationWrong:
           'Increasing pressure during expiration would increase the work of breathing, worsening discomfort. Heated humidity is delivered continuously by the humidifier, not selectively during expiration. EPR does not pause airflow - it continuously reduces pressure during the expiratory phase.',
         topic: 'PAP device types and mask interfaces',
@@ -1395,7 +1395,7 @@ async function main() {
         },
         correctChoice: 'C',
         explanationCorrect:
-          'Major risk factors for OSA include male sex (2–3 times higher prevalence), obesity (especially central adiposity), advancing age, and craniofacial abnormalities such as retrognathia, micrognathia, and macroglossia. Family history and certain ethnicities also increase risk.',
+          'Major risk factors for OSA include male sex (2-3 times higher prevalence), obesity (especially central adiposity), advancing age, and craniofacial abnormalities such as retrognathia, micrognathia, and macroglossia. Family history and certain ethnicities also increase risk.',
         explanationWrong:
           'While hypothyroidism can contribute to OSA due to tissue edema and weight gain, it is not as strongly established as the major risk factors listed. Low BMI is actually protective against OSA, not a risk factor. Caffeine consumption does not cause OSA, though it may affect sleep quality.',
         topic: 'Obstructive sleep apnea diagnosis and severity',
@@ -1548,7 +1548,7 @@ async function main() {
         questionText:
           'According to AASM guidelines, which of the following criteria is used to identify a K-complex on EEG during sleep?',
         choices: {
-          A: 'A brief burst of 12–14 Hz rhythmic activity lasting at least 0.5 seconds',
+          A: 'A brief burst of 12-14 Hz rhythmic activity lasting at least 0.5 seconds',
           B: 'A well-delineated negative sharp wave immediately followed by a positive component, with total duration of 0.5 seconds or greater, standing out from background EEG',
           C: 'A high-amplitude delta wave occurring in isolation during N1 sleep',
           D: 'A triphasic waveform with a duration of 0.2 seconds',
@@ -1557,7 +1557,7 @@ async function main() {
         explanationCorrect:
           'A K-complex is defined as a well-delineated negative sharp wave immediately followed by a positive component that stands out from the background EEG. The total duration must be 0.5 seconds or greater. K-complexes are maximal over frontal derivations and are a hallmark of stage N2 sleep.',
         explanationWrong:
-          'A burst of 12–14 Hz rhythmic activity describes a sleep spindle, not a K-complex. An isolated delta wave during N1 does not define a K-complex - K-complexes are specific biphasic waveforms. A triphasic waveform of 0.2 seconds does not match the K-complex definition, which requires at least 0.5 seconds duration.',
+          'A burst of 12-14 Hz rhythmic activity describes a sleep spindle, not a K-complex. An isolated delta wave during N1 does not define a K-complex - K-complexes are specific biphasic waveforms. A triphasic waveform of 0.2 seconds does not match the K-complex definition, which requires at least 0.5 seconds duration.',
         topic: 'Sleep staging rules (AASM scoring manual)',
       },
       {
@@ -1645,7 +1645,7 @@ async function main() {
         },
         correctChoice: 'C',
         explanationCorrect:
-          'High-altitude periodic breathing typically has a shorter cycle length (20–40 seconds) compared to Cheyne-Stokes respiration (45–90 seconds). It is driven by the hypoxic ventilatory response at altitude causing hyperventilation and subsequent hypocapnia, leading to central apneas. CSR is driven by prolonged circulatory time in heart failure.',
+          'High-altitude periodic breathing typically has a shorter cycle length (20-40 seconds) compared to Cheyne-Stokes respiration (45-90 seconds). It is driven by the hypoxic ventilatory response at altitude causing hyperventilation and subsequent hypocapnia, leading to central apneas. CSR is driven by prolonged circulatory time in heart failure.',
         explanationWrong:
           'High-altitude periodic breathing occurs primarily during NREM sleep, not exclusively during REM. It has a shorter, not longer, cycle length than CSR. High-altitude periodic breathing involves central, not obstructive, apneas.',
         topic: 'Central sleep apnea and Cheyne-Stokes respiration',
@@ -1699,7 +1699,7 @@ async function main() {
         },
         correctChoice: 'A',
         explanationCorrect:
-          'Multiple large epidemiological studies have established OSA as an independent risk factor for systemic hypertension after controlling for confounders such as obesity, age, and sex. CPAP treatment has been shown to modestly reduce blood pressure, typically by 2–3 mmHg, with greater reductions seen in patients with more severe OSA and better CPAP adherence.',
+          'Multiple large epidemiological studies have established OSA as an independent risk factor for systemic hypertension after controlling for confounders such as obesity, age, and sex. CPAP treatment has been shown to modestly reduce blood pressure, typically by 2-3 mmHg, with greater reductions seen in patients with more severe OSA and better CPAP adherence.',
         explanationWrong:
           'Hypertension rarely resolves completely with CPAP alone, as most patients have multiple contributing factors. OSA is associated with both systemic and pulmonary hypertension. The OSA-hypertension relationship persists after controlling for obesity, indicating it is not entirely explained by obesity.',
         topic: 'Obstructive sleep apnea diagnosis and severity',
@@ -1807,7 +1807,7 @@ async function main() {
         },
         correctChoice: 'B',
         explanationCorrect:
-          'The ramp feature starts PAP delivery at a low pressure (typically 4 cmH2O) and gradually increases to the therapeutic pressure over a user-adjustable time period (usually 5–45 minutes). Increasing the ramp time allows the patient to fall asleep at a comfortable low pressure before the therapeutic pressure is reached.',
+          'The ramp feature starts PAP delivery at a low pressure (typically 4 cmH2O) and gradually increases to the therapeutic pressure over a user-adjustable time period (usually 5-45 minutes). Increasing the ramp time allows the patient to fall asleep at a comfortable low pressure before the therapeutic pressure is reached.',
         explanationWrong:
           'Expiratory pressure relief reduces pressure during exhalation but does not affect how quickly the device reaches therapeutic pressure. Humidifier temperature does not influence pressure delivery timing. The maximum pressure limit on CPAP is the prescribed therapeutic pressure and should not be reduced.',
         topic: 'PAP device types and mask interfaces',
@@ -1861,7 +1861,7 @@ async function main() {
         },
         correctChoice: 'B',
         explanationCorrect:
-          'In sleep restriction therapy, the initial time in bed is set to match the patient\'s estimated average total sleep time, which in this case is 5.5 hours. A minimum of 5 hours in bed is generally recommended to prevent excessive daytime sleepiness. As sleep efficiency improves above 85–90%, time in bed is gradually increased.',
+          'In sleep restriction therapy, the initial time in bed is set to match the patient\'s estimated average total sleep time, which in this case is 5.5 hours. A minimum of 5 hours in bed is generally recommended to prevent excessive daytime sleepiness. As sleep efficiency improves above 85-90%, time in bed is gradually increased.',
         explanationWrong:
           'Maintaining 9 hours in bed perpetuates the conditioned wakefulness in bed that contributes to insomnia. 7 hours as a compromise does not follow the sleep restriction protocol. Restricting to 4 hours would be below the recommended minimum of 5 hours and could cause excessive sleepiness.',
         topic: 'Insomnia and circadian rhythm disorders',

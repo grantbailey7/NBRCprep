@@ -170,14 +170,14 @@ async function main() {
         questionText:
           'A newborn has an Apgar score of 3 at 1 minute of life. Which of the following components would contribute to this low score?',
         choices: {
-          A: 'Heart rate below 100 bpm, blue extremities, weak cry, some flexion, and grimace response',
+          A: 'Heart rate below 100 bpm, blue extremities, weak cry, limp/flaccid tone, and no response to stimulation',
           B: 'Heart rate above 100 bpm, completely pink, strong cry, active motion, and vigorous cry to stimulation',
           C: 'Heart rate of 120 bpm, cyanotic trunk, absent respiratory effort, and limp tone',
           D: 'Heart rate absent, completely pink, strong cry, active motion, and cough to stimulation',
         },
         correctChoice: 'A',
         explanationCorrect:
-          'An Apgar score of 3 is obtained by assigning partial scores: heart rate below 100 (1 point), blue extremities/acrocyanosis (1 point), weak cry (1 point), some flexion (0-1), and grimace only (0-1). This combination yields a score around 3, indicating a moderately depressed infant.',
+          'An Apgar score of 3 is obtained by assigning partial scores: heart rate below 100 (1 point), blue extremities/acrocyanosis (1 point), weak cry (1 point), limp/flaccid tone (0 points), and no response to stimulation (0 points). This combination yields a score of 3, indicating a severely depressed infant.',
         explanationWrong:
           'Option B describes a healthy infant with a near-perfect Apgar score of 9-10. Option C has inconsistencies since a heart rate of 120 would score 2 points. Option D is contradictory because an absent heart rate with a completely pink appearance and strong cry is not physiologically possible.',
         topic: 'Neonatal Assessment',
@@ -809,7 +809,7 @@ async function main() {
         explanationCorrect:
           'The infant has both hypercapnia (PaCO2 55) and hypoxemia (PaO2 50). On HFOV, increasing amplitude improves CO2 removal by increasing tidal volume, and increasing MAP improves oxygenation by recruiting alveoli. This combination addresses both problems simultaneously.',
         explanationWrong:
-          'Increasing MAP and decreasing frequency would improve oxygenation but decreasing frequency actually reduces CO2 removal on HFOV. Decreasing amplitude would worsen hypercapnia. Decreasing MAP would worsen hypoxemia.',
+          'Increasing MAP and decreasing frequency would improve oxygenation, and while decreasing frequency increases tidal volume and CO2 removal, it does not address oxygenation as effectively as increasing amplitude. Decreasing amplitude would worsen hypercapnia. Decreasing MAP would worsen hypoxemia.',
         topic: 'Neonatal Ventilation Strategies',
       },
       {
@@ -924,7 +924,7 @@ async function main() {
         miniExamId: exam3.id,
         questionIndex: 9,
         questionText:
-          'A premature infant born at 26 weeks gestation is now 36 weeks corrected gestational age and continues to require FiO2 of 0.30 via nasal cannula. According to the NIH consensus definition, how would this infant\'s BPD be classified?',
+          'A premature infant born at 26 weeks gestation is now 36 weeks corrected gestational age and continues to require FiO2 of 0.25 via nasal cannula. According to the NIH consensus definition, how would this infant\'s BPD be classified?',
         choices: {
           A: 'No BPD',
           B: 'Mild BPD',
@@ -933,7 +933,7 @@ async function main() {
         },
         correctChoice: 'D',
         explanationCorrect:
-          'According to the NIH consensus definition, moderate BPD is defined as the need for supplemental oxygen for at least 28 days plus the need for less than 30% oxygen at 36 weeks postmenstrual age. This infant meets both criteria with FiO2 of 0.30 at 36 weeks corrected age.',
+          'According to the NIH consensus definition, moderate BPD is defined as the need for supplemental oxygen for at least 28 days plus the need for less than 30% oxygen at 36 weeks postmenstrual age. This infant meets both criteria with FiO2 of 0.25 at 36 weeks corrected age.',
         explanationWrong:
           'No BPD would mean no oxygen requirement at 36 weeks. Mild BPD is defined as needing oxygen for 28 days but breathing room air at 36 weeks. Severe BPD requires FiO2 of 0.30 or greater, or positive pressure support at 36 weeks postmenstrual age.',
         topic: 'Bronchopulmonary Dysplasia',

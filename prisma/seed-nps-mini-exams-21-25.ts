@@ -1223,7 +1223,7 @@ async function main() {
           C: 'Esophageal web causing partial obstruction',
           D: 'Type C tracheoesophageal fistula with proximal esophageal atresia and distal fistula',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'The findings are classic for type C TEF: the orogastric tube cannot pass into the stomach because the proximal esophagus ends in a blind pouch (atresia), but gas is present in the stomach and intestines because there is a fistula connecting the distal esophagus to the trachea, allowing swallowed air to reach the GI tract. This is the most common type of TEF, accounting for approximately 85% of cases.',
         explanationWrong:

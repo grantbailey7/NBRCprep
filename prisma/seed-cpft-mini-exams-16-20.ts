@@ -1721,11 +1721,11 @@ async function main() {
           C: "Repeat the test immediately without further investigation",
           D: "Investigate for possible system leak or collection error because an RQ of 0.67 is below the physiologic range",
         },
-        correctChoice: "A",
-        explanationWrong:
-          "Increasing duration, repeating without investigation, or ignoring the result are all inappropriate. An RQ of 0.67 is at the lower boundary of physiologic range and suggests the patient may be in significant ketosis from prolonged fasting or uncontrolled diabetes.",
+        correctChoice: "D",
         explanationCorrect:
-          "While an RQ of 0.67 is very low and close to the lower limit of physiological plausibility, it can occur in patients with significant ketosis. However, the technologist should verify system integrity before reporting, as values below 0.7 may also indicate a measurement error such as a leak in the collection system.",
+          "An RQ of 0.67 is below the accepted physiological range of 0.7-1.0. Standard practice requires the technologist to investigate for system leaks or collection errors before reporting any result with an RQ outside the physiological range. Values below 0.7 most commonly indicate a leak in the collection circuit allowing CO2 to escape, which artificially lowers the measured RQ.",
+        explanationWrong:
+          "Reporting the result as ketosis without first ruling out technical error is inappropriate, as an RQ below the physiological range (0.7-1.0) most commonly indicates a system leak. Increasing duration or repeating without investigation does not address the likely equipment problem.",
         topic: "Indirect calorimetry basics",
       },
       {

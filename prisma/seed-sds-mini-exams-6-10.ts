@@ -169,7 +169,7 @@ async function main() {
         questionText: 'The recommended first-line pharmacological treatment for REM sleep behavior disorder is which of the following?',
         choices: { A: 'Clonazepam', B: 'Zolpidem', C: 'Trazodone', D: 'Gabapentin' },
         correctChoice: 'A',
-        explanationCorrect: 'Low-dose clonazepam (0.25–2 mg) taken at bedtime is the most widely recommended first-line pharmacotherapy for RBD. It reduces injurious behaviors in the majority of patients.',
+        explanationCorrect: 'Low-dose clonazepam (0.25-2 mg) taken at bedtime is the most widely recommended first-line pharmacotherapy for RBD. It reduces injurious behaviors in the majority of patients.',
         explanationWrong: 'Trazodone and zolpidem are used for insomnia, not RBD. Gabapentin may be used for RLS but is not first-line for RBD. Melatonin is sometimes used as an alternative.',
         topic: 'Parasomnias Treatment',
       },

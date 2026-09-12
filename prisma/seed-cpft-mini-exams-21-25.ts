@@ -533,11 +533,11 @@ async function main() {
           C: "Patient's height",
           D: "Pulmonary capillary blood volume",
         },
-        correctChoice: "D",
+        correctChoice: "C",
         explanationCorrect:
-          "While the question asks what does NOT affect DLCO, actually pulmonary capillary blood volume DOES affect DLCO. The correct answer is patient height - while height is used to predict normal DLCO values, height itself does not directly affect the actual measured gas transfer across the membrane.",
+          "Patient height is used to calculate predicted DLCO reference values but does not directly affect the actual measured gas transfer across the alveolar-capillary membrane. The Roughton-Forster equation shows that DLCO depends on membrane diffusing capacity and pulmonary capillary blood volume, not on patient anthropometrics.",
         explanationWrong:
-          "Hemoglobin concentration directly affects CO uptake. Membrane thickness affects diffusion distance. Pulmonary capillary blood volume affects the available surface area for gas exchange. All three directly alter the measured DLCO.",
+          "Hemoglobin concentration directly affects CO uptake. Membrane thickness affects diffusion distance per the Roughton-Forster equation. Pulmonary capillary blood volume affects the available surface area for gas exchange. All three directly alter the measured DLCO.",
         topic: "Diffusion capacity (DLCO) testing",
       },
       {
@@ -1192,7 +1192,7 @@ async function main() {
         miniExamId: exam24.id,
         questionIndex: 3,
         questionText:
-          "During DLCO testing, which of the following would cause a falsely elevated DLCO result?",
+          "During DLCO testing, which of the following would cause a falsely decreased DLCO result?",
         choices: {
           A: "Anemia",
           B: "Elevated carboxyhemoglobin from smoking",
@@ -1201,9 +1201,9 @@ async function main() {
         },
         correctChoice: "C",
         explanationCorrect:
-          "A Valsalva maneuver during breath-hold increases intrathoracic pressure, which can redistribute blood into the pulmonary vasculature and transiently increase pulmonary capillary blood volume, resulting in a falsely elevated DLCO. Actually, Valsalva reduces capillary blood - a Mueller maneuver would increase it. However, the key clinical point is that maneuvers altering intrathoracic pressure affect DLCO accuracy.",
+          "A Valsalva maneuver during breath-hold increases intrathoracic pressure, which pushes blood out of the pulmonary vasculature and decreases pulmonary capillary blood volume, resulting in a falsely decreased DLCO. The opposite maneuver (Mueller) would increase pulmonary blood volume and falsely elevate DLCO.",
         explanationWrong:
-          "Anemia decreases DLCO. Elevated COHb reduces available hemoglobin binding sites, decreasing DLCO. Pulmonary embolism reduces capillary blood volume, decreasing DLCO.",
+          "Anemia, elevated COHb, and pulmonary embolism all decrease DLCO, but they represent true pathological decreases rather than testing artifacts. The Valsalva maneuver is a procedural error that introduces a false decrease unrelated to the patient's actual diffusion capacity.",
         topic: "Diffusion capacity (DLCO) testing",
       },
       {
@@ -1451,11 +1451,11 @@ async function main() {
           C: "Moderate hypoxemia",
           D: "Severe hypoxemia",
         },
-        correctChoice: "D",
+        correctChoice: "C",
         explanationCorrect:
-          "A PaO2 of 55 mmHg on room air at sea level represents severe hypoxemia. Classification: normal >80 mmHg, mild 60-79 mmHg, moderate 40-59 mmHg, severe <40 mmHg. However, by Medicare criteria, PaO2 ≤55 mmHg qualifies for supplemental oxygen, classifying this as severe.",
+          "A PaO2 of 55 mmHg on room air at sea level represents moderate hypoxemia. Standard classification: normal >80 mmHg, mild 60-79 mmHg, moderate 40-59 mmHg, severe <40 mmHg. While PaO2 ≤55 mmHg qualifies for supplemental oxygen under Medicare criteria, the physiological classification based on PaO2 ranges places 55 mmHg in the moderate category.",
         explanationWrong:
-          "Normal PaO2 is >80 mmHg. Mild hypoxemia is 60-79 mmHg. A PaO2 of 55 mmHg is below the threshold for supplemental oxygen qualification and represents significant hypoxemia requiring intervention.",
+          "Normal PaO2 is >80 mmHg, so this is not normal. Mild hypoxemia is 60-79 mmHg, and 55 mmHg falls below that range. Severe hypoxemia is defined as PaO2 <40 mmHg, and 55 mmHg is above that threshold.",
         topic: "Arterial blood gas sampling",
       },
       {

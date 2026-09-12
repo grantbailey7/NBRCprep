@@ -162,7 +162,7 @@ const cards = [
   {
     divisionId: 'cmsm41fq00000zf54wqjaayvz',
     question: 'What is the stress index and how is it used to guide ventilator management?',
-    answer: 'The stress index is derived from the shape of the pressure-time curve during constant-flow volume ventilation. A value of 1 (straight line) indicates appropriate settings, less than 1 (concave up) suggests tidal recruitment and potential for increasing PEEP, and greater than 1 (concave down) indicates overdistension requiring reduced PEEP or tidal volume.',
+    answer: 'The stress index is derived from the shape of the pressure-time curve during constant-flow volume ventilation. A value of 1 (straight line) indicates appropriate settings, less than 1 (concave down) suggests tidal recruitment and potential for increasing PEEP, and greater than 1 (concave up) indicates overdistension requiring reduced PEEP or tidal volume.',
     difficulty: 3,
     topic: 'Advanced Ventilator Concepts',
     isFree: false,

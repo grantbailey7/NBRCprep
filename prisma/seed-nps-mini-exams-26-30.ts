@@ -194,11 +194,11 @@ async function main() {
           C: 'Albuterol followed by hypertonic saline then a PEP device',
           D: 'Dornase alfa followed by albuterol then high-frequency chest wall oscillation',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
-          'For a CF pulmonary exacerbation, the optimal sequence is: dornase alfa (to cleave DNA in mucus and reduce viscosity), then albuterol (to bronchodilate and improve mucus transport), followed by airway clearance with HFCWO or another modality. This sequence maximizes the effectiveness of airway clearance by first thinning secretions and opening airways.',
+          'For a CF pulmonary exacerbation, the optimal sequence is: bronchodilator first (albuterol to open airways), then mucolytic (hypertonic saline to thin secretions), followed by airway clearance with a PEP device or another modality. Per CF Foundation guidelines, bronchodilators are administered first to maximize airway patency before mucolytic and clearance therapies.',
         explanationWrong:
-          'CPT with postural drainage alone is less effective than combining mucolytics, bronchodilators, and clearance techniques. Incentive spirometry alone is insufficient for CF exacerbation management. Albuterol before hypertonic saline with PEP is a reasonable regimen, but dornase alfa should be given before bronchodilators per CF Foundation guidelines.',
+          'CPT with postural drainage alone is less effective than combining mucolytics, bronchodilators, and clearance techniques. Incentive spirometry alone is insufficient for CF exacerbation management. Dornase alfa followed by albuterol reverses the recommended order; bronchodilators should be given before mucolytics to open airways first and maximize mucolytic delivery.',
         topic: 'Pediatric Airway Clearance',
       },
       {
@@ -465,9 +465,9 @@ async function main() {
           C: 'The child has a strong cough with effective secretion clearance',
           D: 'Sleep study with the tracheostomy capped shows no significant obstruction',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
-          'Wait -- a strong cough with effective secretion clearance is actually a positive finding for decannulation. Let me reconsider. A 40% subglottic stenosis means significant airway narrowing exists above the tracheostomy. This degree of stenosis would make it unsafe to remove the tracheostomy, as the child may not be able to maintain adequate ventilation through the narrowed upper airway, especially during exertion or illness.',
+          'A 40% subglottic stenosis means significant airway narrowing exists above the tracheostomy. This degree of stenosis would make it unsafe to remove the tracheostomy, as the child may not be able to maintain adequate ventilation through the narrowed upper airway, especially during exertion or illness.',
         explanationWrong:
           'Tolerating capping trials for 48 hours demonstrates the child can breathe adequately through the upper airway. A strong cough supports decannulation readiness. A normal sleep study while capped confirms no significant obstruction during sleep. The 40% subglottic stenosis is the finding that would prevent safe decannulation.',
         topic: 'Pediatric Tracheostomy Management',
@@ -1205,9 +1205,9 @@ async function main() {
           C: 'The bacterial infection causes alveolar protein leak and surfactant inactivation, creating a diffuse ground-glass appearance similar to surfactant deficiency',
           D: 'GBS causes the same biochemical surfactant deficiency as prematurity',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
-          'Wait, this is incorrect. Let me reconsider. GBS pneumonia radiographically mimics RDS because the inflammatory process causes alveolar flooding with proteinaceous exudate and surfactant inactivation, creating a diffuse ground-glass or reticulogranular pattern similar to RDS. This is a well-recognized clinical challenge in neonatal medicine.',
+          'GBS pneumonia radiographically mimics RDS because the inflammatory process causes alveolar flooding with proteinaceous exudate and surfactant inactivation, creating a diffuse ground-glass or reticulogranular pattern similar to RDS. This is a well-recognized clinical challenge in neonatal medicine.',
         explanationWrong:
           'GBS pneumonia can affect term infants, not just premature ones. It is not limited to the upper lobes; it typically presents with a diffuse pattern. GBS does not cause the same type of surfactant deficiency as prematurity; rather, the inflammatory process inactivates existing surfactant.',
         topic: 'Neonatal Infectious Disease',

@@ -1476,7 +1476,7 @@ async function main() {
         miniExamId: exam4.id,
         questionIndex: 19,
         questionText:
-          'A therapist is setting up a large-volume nebulizer with an air-entrainment device. At the 40% setting, the device produces 32 L/min total flow. The ordered flow to the nebulizer is 10 L/min. What is the approximate air-to-oxygen ratio at 40% FiO2?',
+          'A therapist is setting up a large-volume nebulizer with an air-entrainment device. At the 40% setting, the device produces 40 L/min total flow. The ordered flow to the nebulizer is 10 L/min. What is the approximate air-to-oxygen ratio at 40% FiO2?',
         choices: {
           A: '3:1',
           B: '1:1',
@@ -1485,7 +1485,7 @@ async function main() {
         },
         correctChoice: 'A',
         explanationCorrect:
-          'At 40% FiO2, the air-to-oxygen entrainment ratio is approximately 3:1. With an oxygen input of 10 L/min, the device entrains approximately 30 L/min of room air, but the actual total output is approximately 32 L/min (accounting for slight variations). The 3:1 ratio means 3 parts room air to 1 part oxygen.',
+          'At 40% FiO2, the air-to-oxygen entrainment ratio is approximately 3:1. With an oxygen input of 10 L/min, the device entrains approximately 30 L/min of room air, but the total output is 40 L/min (30 L/min entrained air + 10 L/min oxygen). The 3:1 ratio means 3 parts room air to 1 part oxygen.',
         explanationWrong:
           '1:1 corresponds to approximately 60% FiO2. 5:1 corresponds to approximately 30% FiO2. 8:1 corresponds to approximately 24-25% FiO2.',
         topic: 'Equipment Operation and Troubleshooting',
@@ -1798,7 +1798,7 @@ async function main() {
         miniExamId: exam5.id,
         questionIndex: 16,
         questionText:
-          'A patient\'s ABG on 6 L/min nasal cannula shows pH 7.44, PaCO2 38 mmHg, HCO3 25 mEq/L, PaO2 350 mmHg. What is the most appropriate action?',
+          'A patient\'s ABG on a non-rebreather mask shows pH 7.44, PaCO2 38 mmHg, HCO3 25 mEq/L, PaO2 350 mmHg. What is the most appropriate action?',
         choices: {
           A: 'Continue current oxygen therapy',
           B: 'Decrease the FiO2 to prevent oxygen toxicity',

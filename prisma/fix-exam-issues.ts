@@ -36,7 +36,7 @@ async function main() {
   fixed++
 
   // 3. ACCS Mini Exam 4 - Q3 (cmsn3dtb1001yhjacjb5ltttm)
-  // explanationWrong says "The statement in option C describes real contributors" — C is correct
+  // explanationWrong says "The statement in option C describes real contributors" -C is correct
   // FIX: rewrite explanationWrong to not reference option C as wrong
   await prisma.miniExamQuestion.update({
     where: { id: 'cmsn3dtb1001yhjacjb5ltttm' },
@@ -61,7 +61,7 @@ async function main() {
   fixed++
 
   // 5. SDS Mini Exam 29 - Q2 (cmsn7tyfv001xt8lqx1auxuic)
-  // explanationWrong says "option D provides the more complete clinical interpretation" — D is correct
+  // explanationWrong says "option D provides the more complete clinical interpretation" -D is correct
   // FIX: rewrite explanationWrong
   await prisma.miniExamQuestion.update({
     where: { id: 'cmsn7tyfv001xt8lqx1auxuic' },
@@ -73,7 +73,7 @@ async function main() {
   fixed++
 
   // 6. SDS Mini Exam 30 - Q3 (cmsn7tyka002kt8lq63syt8xp)
-  // explanationWrong says "option B is more precise" — B is correct
+  // explanationWrong says "option B is more precise" -B is correct
   // FIX: rewrite explanationWrong
   await prisma.miniExamQuestion.update({
     where: { id: 'cmsn7tyka002kt8lq63syt8xp' },
@@ -85,7 +85,7 @@ async function main() {
   fixed++
 
   // 7. SDS Full Exam 3 - Q6 (cmsnm1ko9005vdgux9lubs59c)
-  // explanationWrong says "Normal PaCO2 (42) excludes OHS in option D" — should say option B
+  // explanationWrong says "Normal PaCO2 (42) excludes OHS in option D" -should say option B
   // D is correct (BMI 40, PaCO2 50), B has PaCO2 42
   // FIX: correct the letter reference
   await prisma.fullExamQuestion.update({

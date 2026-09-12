@@ -596,7 +596,7 @@ const flashcards = [
   },
   {
     divisionId: 'cmsm41fq00000zf54wqjaayvz',
-    question: 'What does an increased PaO2-to-ETCO2 gradient (P(a-ET)CO2) indicate?',
+    question: 'What does an increased PaCO2-to-ETCO2 gradient (P(a-ET)CO2) indicate?',
     answer: 'An increased P(a-ET)CO2 gradient (normally 2-5 mmHg) indicates increased dead space ventilation, meaning more ventilated alveoli are not being adequately perfused. This is seen in pulmonary embolism, low cardiac output states, and excessive PEEP. In these conditions, ETCO2 underestimates the true PaCO2.',
     difficulty: 3,
     topic: 'Blood Gas Sampling & Analysis',
@@ -821,7 +821,7 @@ const flashcards = [
   {
     divisionId: 'cmsm41fq00000zf54wqjaayvz',
     question: 'How is the PaO2/FiO2 (P/F) ratio used to assess oxygenation?',
-    answer: 'The P/F ratio is calculated by dividing PaO2 by FiO2 (as a decimal). A normal P/F ratio is 400-500. A P/F ratio below 300 indicates acute lung injury, and below 200 indicates severe ARDS by the Berlin criteria. For example, a PaO2 of 80 on an FiO2 of 0.40 yields a P/F ratio of 200.',
+    answer: 'The P/F ratio is calculated by dividing PaO2 by FiO2 (as a decimal). A normal P/F ratio is 400-500. A P/F ratio below 300 indicates mild ARDS, below 200 indicates moderate ARDS, and below 100 indicates severe ARDS by the Berlin criteria. For example, a PaO2 of 80 on an FiO2 of 0.40 yields a P/F ratio of 200.',
     difficulty: 1,
     topic: 'Respiratory Calculations',
     isFree: false,

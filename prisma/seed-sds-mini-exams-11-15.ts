@@ -1071,11 +1071,11 @@ async function main() {
           C: 'Immediately end all ongoing sleep studies',
           D: 'Notify the charge technologist or supervisor, ensure the primary oxygen supply is functional, and arrange for replacement of the backup supply as soon as possible',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
-          'If the patient is not currently receiving supplemental oxygen and the primary oxygen supply is still functional, the study can continue. However, the empty backup tank must be documented and reported so that it can be replaced before the next study night. The technologist should verify the primary supply is adequate and ensure timely replacement of the backup.',
+          'The most appropriate action is to notify the charge technologist or supervisor, verify the primary oxygen supply is functional, and arrange for replacement of the backup supply. Even though the patient is not currently on oxygen, an empty backup tank is a safety issue that requires immediate verification and corrective action, not passive continuation.',
         explanationWrong:
-          'While continuing the study is appropriate if the patient is stable, waiting until morning to report compromises patient safety. Immediately ending all studies is an overreaction if the primary supply is functional. Notifying the supervisor is important but the question asks about the most appropriate immediate action when the patient is not on oxygen.',
+          'Simply continuing the study without any action ignores the safety concern of an empty backup supply. Waiting until morning to report compromises patient safety. Immediately ending all studies is an overreaction if the primary supply is functional.',
         topic: 'Patient safety and infection control in sleep labs',
       },
       {
@@ -1425,15 +1425,15 @@ async function main() {
           'A patient with sleep-related hypoxemia is placed on nocturnal oxygen at 2 L/min via nasal cannula. After one month, a follow-up oximetry shows that the SpO2 no longer drops below 90% during sleep. However, the patient\'s morning headaches have worsened. What should be considered?',
         choices: {
           A: 'The oxygen therapy is working perfectly and no changes are needed',
-          B: 'The morning headaches are unrelated to the oxygen therapy',
+          B: 'Supplemental oxygen may be suppressing ventilatory drive; obtain a morning ABG or nocturnal capnography to evaluate for CO2 retention',
           C: 'The patient should switch to a higher oxygen flow rate',
           D: 'The patient should be switched from oxygen to CPAP since the headaches suggest undiagnosed OSA',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
-          'While the oxygenation has improved, worsening morning headaches in a patient on supplemental oxygen may indicate CO2 retention. Supplemental oxygen can suppress hypoxic ventilatory drive in susceptible patients, leading to hypoventilation and hypercapnia. A morning arterial blood gas or nocturnal capnography should be obtained to evaluate for CO2 retention before assuming the oxygen therapy alone is adequate.',
+          'Worsening morning headaches in a patient on supplemental oxygen may indicate CO2 retention. Supplemental oxygen can suppress hypoxic ventilatory drive in susceptible patients, leading to hypoventilation and hypercapnia. A morning arterial blood gas or nocturnal capnography should be obtained to evaluate for CO2 retention.',
         explanationWrong:
-          'Morning headaches in the context of supplemental oxygen use warrant investigation for hypercapnia; they may be directly related. Increasing the oxygen flow could worsen CO2 retention. While undiagnosed OSA is possible, the immediate concern with new morning headaches on supplemental oxygen is CO2 retention from suppressed ventilatory drive.',
+          'The oxygen therapy should not be assumed to be working perfectly when new symptoms (morning headaches) have developed. Morning headaches are a classic sign of nocturnal hypercapnia. Increasing the oxygen flow could worsen CO2 retention. While undiagnosed OSA is possible, the immediate concern with new morning headaches on supplemental oxygen is CO2 retention from suppressed ventilatory drive.',
         topic: 'Oxygen supplementation during sleep',
       },
       {

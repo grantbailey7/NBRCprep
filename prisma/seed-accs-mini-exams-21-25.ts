@@ -51,7 +51,7 @@ async function main() {
         },
         correctChoice: 'A',
         explanationCorrect:
-          'SVR is calculated as (MAP - CVP) / CO × 80. Substituting: (90 - 6) / 5.0 × 80 = 84 / 5.0 × 80 = 16.8 × 80 = 1344 dynes·s/cm⁵. This value falls within the normal range of 800-1200 dynes·s/cm⁵ but is slightly elevated.',
+          'SVR is calculated as (MAP - CVP) / CO × 80. Substituting: (90 - 6) / 5.0 × 80 = 84 / 5.0 × 80 = 16.8 × 80 = 1344 dynes·s/cm⁵. This value exceeds the normal range of 800-1200 dynes·s/cm⁵, indicating elevated systemic vascular resistance.',
         explanationWrong:
           'The other values result from calculation errors. Using incorrect formulas or omitting the conversion factor of 80 leads to wrong answers. The correct formula requires subtracting CVP from MAP, dividing by CO, and multiplying by 80.',
         topic: 'Advanced Hemodynamic Calculations',
@@ -501,7 +501,7 @@ async function main() {
         },
         correctChoice: 'C',
         explanationCorrect:
-          'The anion gap must be corrected for hypoalbuminemia because albumin is an unmeasured anion. The correction formula adds 2.5 mEq/L for each 1 g/dL decrease in albumin below 4.0 g/dL. The albumin deficit is 4.0 - 2.0 = 2.0 g/dL. Correction: 2.0 × 2.5 = 5 mEq/L. Corrected AG = 30 + 5 = 35, closest to 36 mEq/L when accounting for rounding.',
+          'The anion gap must be corrected for hypoalbuminemia because albumin is an unmeasured anion. The correction formula adds 2.5 mEq/L for each 1 g/dL decrease in albumin below 4.0 g/dL. The albumin deficit is 4.0 - 2.0 = 2.0 g/dL. Correction: 2.0 × 2.5 = 5 mEq/L. Corrected AG = 30 + 5 = 35 mEq/L. Some references use a correction factor of 3.0 mEq/L per g/dL, which yields 36 mEq/L. Either value confirms a significantly elevated corrected anion gap.',
         explanationWrong:
           'Using the uncorrected anion gap of 30 mEq/L underestimates the true anion gap in the presence of hypoalbuminemia, potentially missing a concurrent non-anion-gap metabolic acidosis. The other values do not correctly apply the albumin correction formula.',
         topic: 'Acid-Base Disturbances',
@@ -708,18 +708,18 @@ async function main() {
         miniExamId: exam22.id,
         questionIndex: 18,
         questionText:
-          'During interfacility transport of a patient on mechanical ventilation, the transport ventilator uses compressed oxygen cylinders. The H-cylinder has 1500 psi remaining, and the ventilator is consuming 12 L/min. Approximately how many minutes of oxygen remain?',
+          'During interfacility transport of a patient on mechanical ventilation, the transport ventilator uses a compressed oxygen E-cylinder. The E-cylinder has 1500 psi remaining, and the ventilator is consuming 12 L/min. Approximately how many minutes of oxygen remain?',
         choices: {
-          A: 'Approximately 88 minutes',
+          A: 'Approximately 35 minutes',
           B: 'Approximately 120 minutes',
           C: 'Approximately 60 minutes',
           D: 'Approximately 45 minutes',
         },
         correctChoice: 'A',
         explanationCorrect:
-          'H-cylinder factor is 3.14. Duration (minutes) = (pressure × cylinder factor) / flow rate = (1500 × 3.14) / 12 = 4710 / 12 ≈ 392 minutes. However, if using an E-cylinder (factor 0.28): (1500 × 0.28) / 12 = 420 / 12 = 35 minutes. For a common transport M-cylinder (factor 1.56): (1500 × 1.56) / 12 = 2340 / 12 = 195 minutes. Using an E-cylinder factor with safety margin considerations: approximately 88 minutes accounts for the most commonly used transport cylinder with appropriate safety reserve calculation.',
+          'E-cylinder factor is 0.28. Duration (minutes) = (pressure × cylinder factor) / flow rate = (1500 × 0.28) / 12 = 420 / 12 = 35 minutes. This is critical for transport planning — always calculate cylinder duration before departing and ensure adequate oxygen supply plus a safety margin of at least 30 minutes beyond the expected transport time.',
         explanationWrong:
-          'The other values result from using incorrect cylinder factors or flow rate calculations. Accurate calculation of available oxygen supply is critical for transport safety planning and must include a safety margin of at least 30 minutes beyond the expected transport time.',
+          'The other values result from using incorrect cylinder factors or flow rate calculations. 120 minutes would require a much larger cylinder. 60 and 45 minutes do not match any standard E-cylinder calculation with these parameters.',
         topic: 'Critical Care Transport',
       },
       {
@@ -1432,14 +1432,14 @@ async function main() {
         choices: {
           A: 'Increase P-high to compensate for the high auto-PEEP',
           B: 'Increase P-low to 10 cmH2O',
-          C: 'Decrease T-high to increase the release frequency',
+          C: 'Slightly lengthen T-low to allow more complete exhalation while targeting 50-75% of peak expiratory flow',
           D: 'Switch to volume-controlled ventilation immediately',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
-          'When auto-PEEP in APRV is excessive, the T-low should be slightly lengthened to allow more exhalation, targeting termination of expiratory flow at 50-75% of peak expiratory flow rate. However, among the given choices, the issue may also relate to an obstructive process. Increasing P-high helps maintain the driving pressure differential. The key is to optimize T-low duration to control auto-PEEP while maintaining recruitment.',
+          'When auto-PEEP in APRV is excessively high (18 cmH2O), the T-low should be slightly lengthened to allow more complete exhalation. The target is to terminate expiratory flow at 50-75% of peak expiratory flow rate. This reduces auto-PEEP while maintaining enough intrinsic PEEP to prevent derecruitment.',
         explanationWrong:
-          'Increasing P-low eliminates the auto-PEEP mechanism that is integral to APRV and may worsen recruitment. Decreasing T-high would increase ventilatory rate but does not directly address excessive auto-PEEP. Immediately switching to volume-controlled ventilation may cause significant derecruitment.',
+          'Increasing P-high does not reduce auto-PEEP. Increasing P-low eliminates the auto-PEEP mechanism that is integral to APRV and reduces the driving pressure for ventilation. Immediately switching to volume-controlled ventilation may cause significant derecruitment in a patient who is being managed with an open-lung strategy.',
         topic: 'APRV Advanced Concepts',
       },
       {
@@ -1597,11 +1597,11 @@ async function main() {
           C: 'Nephrotic syndrome-related ascites with moderate SBP risk',
           D: 'Portal hypertension-related ascites with HIGH SBP risk',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
-          'A SAAG ≥ 1.1 g/dL indicates portal hypertension. However, the high total ascitic protein (1.2 g/dL) combined with high SAAG suggests cardiac ascites rather than cirrhotic ascites (which typically has low ascitic protein < 1.0 g/dL). Cardiac ascites has a lower SBP risk because the higher ascitic protein provides better opsonic activity against bacteria.',
+          'A SAAG ≥ 1.1 g/dL indicates portal hypertension. In a patient with known cirrhosis, a low ascitic fluid protein (1.2 g/dL, below the 2.5 g/dL threshold for cardiac ascites) indicates cirrhotic portal hypertensive ascites. Low ascitic protein (<1.5 g/dL) confers HIGH SBP risk because poor opsonic activity in the ascitic fluid impairs bacterial clearance.',
         explanationWrong:
-          'Peritoneal carcinomatosis has a low SAAG (< 1.1 g/dL). Cirrhotic ascites typically has low ascitic protein and HIGH SBP risk. Nephrotic syndrome-related ascites has a low SAAG. The combination of high SAAG with relatively higher ascitic protein points to cardiac origin.',
+          'Peritoneal carcinomatosis has a low SAAG (< 1.1 g/dL). Cardiac ascites has high SAAG but also high ascitic protein (>2.5 g/dL), not 1.2 g/dL. Nephrotic syndrome-related ascites has a low SAAG. An ascitic protein of 1.2 g/dL is too low for cardiac ascites and indicates high SBP risk, not low.',
         topic: 'Liver Failure',
       },
       {

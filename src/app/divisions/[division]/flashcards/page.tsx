@@ -326,8 +326,9 @@ export default function FlashcardsPage() {
 
                         {/* Back */}
                         <div
-                          className="flip-card-back card flex flex-col border-2 border-teal-500 p-8"
+                          className="flip-card-back card flex cursor-pointer select-none flex-col border-2 border-teal-500 p-8"
                           style={{ height: cardH, position: 'absolute', top: 0, left: 0, right: 0 }}
+                          onClick={() => setIsFlipped(false)}
                         >
                           <div className="flex flex-1 flex-col justify-center">
                             <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-teal-600">Answer</p>
@@ -337,6 +338,9 @@ export default function FlashcardsPage() {
                               </p>
                             )}
                             <p className={`${aClass} leading-relaxed text-black`}>{currentCard.answer}</p>
+                          </div>
+                          <div className="mt-4 text-center text-sm text-brand-gray-400">
+                            Tap to see question
                           </div>
                         </div>
                       </div>

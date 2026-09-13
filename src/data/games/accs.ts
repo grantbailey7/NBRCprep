@@ -11,7 +11,7 @@ export const ACCS_GAME_ITEMS: GameItem[] = [
   { c: "ASV", d: "Closed-loop mode that automatically adjusts rate, tidal volume, and inspiratory pressure based on lung mechanics and target minute ventilation.", w: ["PRVC", "NAVA", "MMV"] },
   { c: "NAVA", d: "Mode that uses an esophageal catheter to detect diaphragm electrical activity and delivers pressure proportional to neural effort.", w: ["ASV", "PAV", "Pressure Support"] },
   { c: "PAV+", d: "Mode that amplifies the patient's own inspiratory effort by providing flow and volume assist proportional to instantaneous demand.", w: ["NAVA", "PRVC", "CPAP"] },
-  { c: "Flow Starvation", d: "Ventilator graphics artifact showing a concave inspiratory flow waveform indicating the set flow is insufficient for patient demand.", w: ["Auto-PEEP", "Breath Stacking", "Double Triggering"] },
+  { c: "Flow Starvation", d: "Ventilator graphics artifact showing a concave pressure-time waveform during inspiration indicating the set flow is insufficient for patient demand.", w: ["Auto-PEEP", "Breath Stacking", "Double Triggering"] },
   { c: "Auto-PEEP", d: "Unintentional positive end-expiratory pressure caused by incomplete exhalation, detected when expiratory flow does not return to zero.", w: ["Flow Starvation", "Overdistension", "Applied PEEP"] },
   { c: "Overdistension", d: "Ventilator graphics finding where the pressure-volume loop shows a beaking pattern or flattening at end-inspiration.", w: ["Derecruitment", "Auto-PEEP", "Flow Starvation"] },
   { c: "Pressure-Volume Loop", d: "Ventilator graphic plotting airway pressure against volume to assess compliance, overdistension, and work of breathing.", w: ["Flow-Volume Loop", "Scalars Display", "Capnography Waveform"] },

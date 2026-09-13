@@ -962,7 +962,7 @@ async function main() {
           'A technologist is performing a multiple sleep latency test (MSLT) following an overnight PSG. On the third nap opportunity, the patient falls asleep within 3 minutes and enters REM sleep at 6 minutes into the nap. According to AASM guidelines, how long should this nap trial continue after sleep onset?',
         choices: {
           A: 'Continue for 15 minutes from the first epoch of sleep, as the standard protocol requires observation for the full 15 minutes after sleep onset regardless of when REM appears',
-          B: 'Continue for 15 minutes from the first epoch of sleep',
+          B: 'Continue for 20 minutes from the first epoch of sleep to ensure complete data collection',
           C: 'Continue for 20 minutes from lights out',
           D: 'End the nap immediately after REM sleep is observed to save time',
         },
@@ -970,7 +970,7 @@ async function main() {
         explanationCorrect:
           'AASM MSLT protocol states that once sleep onset occurs, the nap opportunity continues for 15 minutes from the first epoch of sleep. This allows adequate time to observe whether REM sleep occurs and to capture sleep latency and SOREMP data accurately. Even if REM appears early in the nap, the full 15 minutes from sleep onset should be completed.',
         explanationWrong:
-          'Ending the nap immediately after REM observation violates the standard protocol and may miss additional clinically relevant data. The 20-minute window applies to sleep onset latency (if no sleep occurs within 20 minutes of lights out, the trial ends), not the post-sleep observation period. Option B states the correct duration but option D provides the complete rationale.',
+          'Ending the nap immediately after REM observation violates the standard protocol and may miss additional clinically relevant data. The 20-minute window applies to sleep onset latency (if no sleep occurs within 20 minutes of lights out, the trial ends), not the post-sleep observation period. The observation period after sleep onset is 15 minutes, not 20.',
         topic: 'Sleep study data interpretation',
       },
       {

@@ -240,7 +240,7 @@ async function main() {
         miniExamId: exam26.id,
         questionIndex: 13,
         questionText:
-          'A patient on mechanical ventilation develops ventilator-associated pneumonia (VAP) on day 7 of intubation. The patient has received no prior antibiotics during this admission. Gram stain of tracheal aspirate shows gram-negative rods. According to current guidelines, which is the most appropriate initial empiric antibiotic strategy?',
+          'A patient on mechanical ventilation develops ventilator-associated pneumonia (VAP) on day 4 of intubation. The patient has received no prior antibiotics during this admission. Gram stain of tracheal aspirate shows gram-negative rods. According to current guidelines, which is the most appropriate initial empiric antibiotic strategy?',
         choices: {
           A: 'Vancomycin monotherapy',
           B: 'Linezolid plus fluconazole',
@@ -249,7 +249,7 @@ async function main() {
         },
         correctChoice: 'D',
         explanationCorrect:
-          'For early-onset VAP (within 7 days) in a patient without prior antibiotic exposure or risk factors for multidrug-resistant organisms, guidelines recommend monotherapy with an anti-pseudomonal beta-lactam such as piperacillin-tazobactam, cefepime, or meropenem. The gram-negative rods on Gram stain support targeting enteric gram-negative organisms. Dual anti-pseudomonal coverage is reserved for patients at high risk for MDR organisms.',
+          'For early-onset VAP (within 4-5 days of intubation) in a patient without prior antibiotic exposure or risk factors for multidrug-resistant organisms, guidelines recommend monotherapy with an anti-pseudomonal beta-lactam such as piperacillin-tazobactam, cefepime, or meropenem. The gram-negative rods on Gram stain support targeting enteric gram-negative organisms. Dual anti-pseudomonal coverage is reserved for patients at high risk for MDR organisms.',
         explanationWrong:
           'Vancomycin monotherapy targets gram-positive organisms and would be inappropriate for gram-negative VAP. Linezolid plus fluconazole targets gram-positive bacteria and fungi, neither of which is suggested by the Gram stain. Adding ciprofloxacin to piperacillin-tazobactam provides dual anti-pseudomonal coverage, which is unnecessary in this low-risk patient and increases the risk of antibiotic resistance.',
         topic: 'Ventilator-Associated Pneumonia',
@@ -1052,7 +1052,7 @@ async function main() {
         questionText:
           'A patient with acute pancreatitis and ARDS has a PaO2/FiO2 ratio of 105 on PEEP 12 cmH2O. The patient is on enteral nutrition via nasojejunal tube. The abdominal pressure measured via bladder catheter is 22 mmHg. How does the elevated intra-abdominal pressure affect ventilator management?',
         choices: {
-          A: 'Elevated intra-abdominal pressure increases chest wall compliance, requiring lower PEEP',
+          A: 'Elevated intra-abdominal pressure decreases chest wall compliance, often requiring higher PEEP to maintain recruitment',
           B: 'The intra-abdominal pressure has no effect on ventilator management',
           C: 'Intra-abdominal pressure is only relevant for renal assessment',
           D: 'The abdominal pressure should be used to determine fluid responsiveness',
@@ -1475,7 +1475,7 @@ async function main() {
         explanationCorrect:
           'The classic toxidrome of miotic (pinpoint) pupils, respiratory depression, and decreased consciousness is consistent with opioid overdose. Naloxone is a competitive antagonist at opioid receptors that rapidly reverses respiratory depression, sedation, and miosis. It should be titrated in small increments (0.04-0.4 mg) to restore adequate ventilation without precipitating acute withdrawal in opioid-dependent patients. The half-life of naloxone (30-90 minutes) may be shorter than the opioid, requiring repeated dosing or a continuous infusion.',
         explanationWrong:
-          'Flumazenil reverses benzodiazepine overdose but benzodiazepines cause mydriasis (dilated pupils), not miosis, and flumazenil can precipitate seizures. N-acetylcysteine is the antidote for acetaminophen toxicity, which does not present with the described toxidrome. Atropine is used for organophosphate poisoning, which presents with the SLUDGE/DUMBELS toxidrome, not the opioid toxidrome.',
+          'Flumazenil reverses benzodiazepine overdose, which presents with sedation and respiratory depression but normal or slightly small pupils rather than the pinpoint miosis characteristic of opioids; flumazenil can also precipitate seizures. N-acetylcysteine is the antidote for acetaminophen toxicity, which does not present with the described toxidrome. Atropine is used for organophosphate poisoning, which presents with the SLUDGE/DUMBELS toxidrome, not the opioid toxidrome.',
         topic: 'Toxicology in Critical Care',
       },
       {
@@ -1849,11 +1849,11 @@ async function main() {
           C: 'Late tracheostomy (after 14 days) provides better outcomes than early tracheostomy',
           D: 'Evidence does not consistently show a mortality benefit for early versus late tracheostomy',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
-          'While early tracheostomy may reduce sedation requirements, ICU length of stay, and duration of mechanical ventilation, the TracMan trial and other large studies have not consistently demonstrated a mortality benefit for early (within 4-7 days) versus late (after 10-14 days) tracheostomy. The decision should be individualized based on the patient expected duration of mechanical ventilation, trajectory of illness, comfort, and goals of care. Early tracheostomy may facilitate weaning, reduce sedation, and improve patient comfort.',
+          'The TracMan trial and other large RCTs have not consistently demonstrated a mortality benefit for early (within 4-7 days) versus late (after 10-14 days) tracheostomy. Early tracheostomy may reduce sedation requirements, ICU length of stay, and duration of mechanical ventilation, but the decision should be individualized based on the expected duration of mechanical ventilation, trajectory of illness, comfort, and goals of care.',
         explanationWrong:
-          'Tracheostomy is not contraindicated in viral pneumonia, though infection control precautions are important, particularly for aerosolized infections. Late tracheostomy has not been shown to provide better outcomes. The evidence on early versus late tracheostomy shows potential benefits of early tracheostomy for secondary outcomes but not consistent mortality reduction.',
+          'Early tracheostomy has NOT been consistently shown to reduce mortality in large RCTs. Tracheostomy is not contraindicated in viral pneumonia, though infection control precautions are important. Late tracheostomy has not been shown to provide better outcomes than early tracheostomy either.',
         topic: 'Tracheostomy Timing',
       },
       {

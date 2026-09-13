@@ -110,7 +110,7 @@ const flashcards = [
   {
     divisionId: ACCS_DIVISION_ID,
     question: 'Why must the PAWP be read at end-expiration?',
-    answer: 'At end-expiration, intrathoracic pressure is closest to atmospheric pressure, minimizing the effect of pleural pressure on the vascular pressure measurement. During mechanical ventilation, end-expiration is the highest point on the waveform, while during spontaneous breathing it is the lowest point.',
+    answer: 'At end-expiration, intrathoracic pressure is closest to atmospheric pressure, minimizing the effect of pleural pressure on the vascular pressure measurement. During mechanical ventilation, end-expiration is the lowest point on the respiratory variation of the waveform, while during spontaneous breathing it is the highest point.',
     difficulty: 3,
     topic: 'Advanced Hemodynamic Assessment',
     isFree: true,

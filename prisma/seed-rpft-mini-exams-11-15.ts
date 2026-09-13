@@ -349,8 +349,8 @@ async function main() {
         questionText: 'According to ATS/ERS 2019 spirometry standardization, which quality grade indicates results that are usable but with a lower degree of confidence?',
         choices: { A: 'Grade A', B: 'Grade B', C: 'Grade C', D: 'Grade D' },
         correctChoice: 'C',
-        explanationCorrect: 'The ATS/ERS 2019 grading system assigns: Grade A = ≥3 acceptable, repeatability ≤150 mL; Grade B = ≥2 acceptable, repeatability ≤150 mL; Grade C = ≥2 acceptable, repeatability ≤200 mL; Grade D = ≥2 acceptable, repeatability ≤250 mL. Grades A-C are considered usable, with C having lower confidence.',
-        explanationWrong: 'Grade A (A) is the highest quality with greatest confidence. Grade B (B) has slightly fewer efforts but still high confidence. Grade D (D) is considered usable only with caution, below the "usable" threshold.',
+        explanationCorrect: 'The ATS/ERS 2019 grading system assigns: Grade A = ≥3 acceptable, repeatability ≤150 mL; Grade B = ≥3 acceptable, repeatability ≤200 mL; Grade C = ≥2 acceptable, repeatability ≤200 mL; Grade D = ≥2 acceptable, repeatability ≤250 mL. Grades A-C are considered usable, with C having lower confidence.',
+        explanationWrong: 'Grade A (A) is the highest quality with greatest confidence. Grade B (B) requires ≥3 acceptable maneuvers with repeatability ≤200 mL, which is still high confidence. Grade D (D) is considered usable only with caution, below the "usable" threshold.',
         topic: 'Advanced spirometry interpretation and quality grading',
       },
       {
@@ -734,7 +734,7 @@ async function main() {
         choices: { A: 'Raised volume rapid thoracoabdominal compression (RVRTC) technique', B: 'Body plethysmography with panting maneuver', C: 'Cardiopulmonary exercise testing on a treadmill', D: 'Standard spirometry with 6-second forced expiratory time' },
         correctChoice: 'A',
         explanationCorrect: 'The raised volume rapid thoracoabdominal compression (RVRTC) technique is specifically designed for infant and toddler pulmonary function testing. The child is sedated, lungs are passively inflated to a standardized volume, and a rapid compression jacket produces a forced expiratory maneuver.',
-        explanationWrong: 'Standard spirometry (A) requires cooperation that a 3-year-old cannot reliably provide. Body plethysmography with panting (B) requires cooperation beyond a toddler\'s ability. CPET (C) is not feasible for a 3-year-old.',
+        explanationWrong: 'Standard spirometry (D) requires cooperation that a 3-year-old cannot reliably provide. Body plethysmography with panting (B) requires cooperation beyond a toddler\'s ability. CPET (C) is not feasible for a 3-year-old.',
         topic: 'Pediatric PFT testing techniques and interpretation',
       },
       {
@@ -1069,7 +1069,7 @@ async function main() {
         questionIndex: 19,
         questionText: 'A patient with suspected tracheal stenosis has peak inspiratory flow of 1.5 L/s and peak expiratory flow of 1.8 L/s. The FIF50/FEF50 ratio is 0.9. These findings suggest:',
         choices: { A: 'Variable extrathoracic obstruction', B: 'Variable intrathoracic obstruction', C: 'Normal flow-volume loop', D: 'Fixed obstruction with nearly equal limitation in both phases' },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect: 'A FIF50/FEF50 ratio close to 1.0 (range 0.8-1.2) with both flows reduced indicates a fixed obstruction that limits flow equally during both inspiration and expiration. This is characteristic of a fixed tracheal stenosis where the structural narrowing does not change with respiratory phase.',
         explanationWrong: 'Variable extrathoracic obstruction (A) would show predominantly inspiratory flow limitation with FIF50/FEF50 <0.8. Variable intrathoracic obstruction (B) would show predominantly expiratory limitation. Normal flow-volume loops (C) show much higher peak flows.',
         topic: 'Advanced flow-volume loop analysis',

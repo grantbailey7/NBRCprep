@@ -1250,14 +1250,14 @@ async function main() {
         choices: {
           A: "100% oxygen",
           B: "21% O2 with 5% CO2, balance nitrogen",
-          C: "21% O2 with 5% CO2 to maintain eucapnia during hyperventilation",
+          C: "5% CO2 with balance nitrogen (no supplemental O2)",
           D: "Room air with no supplemental gases",
         },
         correctChoice: "C",
         explanationCorrect:
           "The EVH challenge requires the patient to hyperventilate a dry gas mixture containing 5% CO2 (with 21% O2, balance nitrogen) at a target ventilation of 30× FEV1 for 6 minutes. The 5% CO2 prevents hypocapnia that would otherwise result from voluntary hyperventilation, maintaining a eucapnic state.",
         explanationWrong:
-          "100% oxygen is not used in EVH testing. While options B and C describe similar mixtures, the key purpose is maintaining eucapnia during hyperventilation. Room air alone would cause significant hypocapnia during hyperventilation, confounding the results and potentially causing symptoms unrelated to bronchoconstriction.",
+          "100% oxygen is not used in EVH testing. A mixture without supplemental O2 (C) would not provide the standard 21% O2 needed. Room air alone would cause significant hypocapnia during hyperventilation, confounding the results and potentially causing symptoms unrelated to bronchoconstriction.",
         topic: "Methacholine and exercise challenge testing protocols",
       },
       {
@@ -1701,11 +1701,11 @@ async function main() {
           A: "The largest FEV1 from any acceptable maneuver divided by the largest FVC from any acceptable maneuver",
           B: "The FEV1 and FVC from the single best maneuver only",
           C: "The average of all acceptable FEV1/FVC ratios",
-          D: "The largest FEV1/FVC ratio calculated from each individual maneuver",
+          D: "The FEV1/FVC from the maneuver with the largest sum of FEV1 + FVC",
         },
         correctChoice: "D",
         explanationCorrect:
-          "ATS/ERS 2019 standards specify that the reported FEV1/FVC ratio should be taken from the single maneuver with the largest sum of FEV1 + FVC. However, FEV1 and FVC used for other reporting purposes are the largest values from any acceptable maneuver, which may come from different maneuvers. The ratio is calculated from individual maneuvers because FEV1 and FVC from different maneuvers cannot be physiologically related.",
+          "ATS/ERS 2019 standards specify that the reported FEV1/FVC ratio should be taken from the single maneuver with the largest sum of FEV1 + FVC. The ratio is calculated from an individual maneuver because FEV1 and FVC from different maneuvers cannot be physiologically related. FEV1 and FVC used for other reporting purposes are the largest values from any acceptable maneuver, which may come from different maneuvers.",
         explanationWrong:
           "Using the largest FEV1 and largest FVC from different maneuvers to calculate the ratio is inappropriate because they may represent different physiological conditions. Averaging all ratios gives equal weight to potentially lower-quality maneuvers. The reported values depend on the specific standard being followed.",
         topic: "Advanced spirometry interpretation and quality grading (ATS/ERS standards)",
@@ -1741,7 +1741,7 @@ async function main() {
         },
         correctChoice: "B",
         explanationCorrect:
-          "ATS/ERS standards require daily verification of spirometer/pneumotachometer accuracy using a certified 3-liter calibration syringe. The syringe delivers a known volume at various flow rates, and the device must measure within 3.5% of the syringe volume or 0.050 L. The syringe itself should be periodically checked for accuracy.",
+          "ATS/ERS standards require daily verification of spirometer/pneumotachometer accuracy using a certified 3-liter calibration syringe. The syringe delivers a known volume at various flow rates, and the device must measure within +/-3% of the syringe volume or 50 mL, whichever is greater, per ATS/ERS 2019 standards. The syringe itself should be periodically checked for accuracy.",
         explanationWrong:
           "A digital pressure gauge measures pressure, not volume, and is used for different calibration purposes. A rotameter measures flow rate but is not used for spirometer calibration verification. A dry gas meter measures accumulated volume and is not the standard tool for daily spirometer calibration verification.",
         topic: "Calibration verification and linearity checks",

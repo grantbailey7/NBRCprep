@@ -844,7 +844,7 @@ async function main() {
       },
       {
         question: 'How do you interpret DLCO results when the hemoglobin is significantly abnormal?',
-        answer: 'DLCO must be corrected for hemoglobin because CO transfer depends on available hemoglobin binding sites. The correction formula: DLCOcorrected = DLCOmeasured x (1.7 x Hb) / ((10.22 + Hb) for males or (9.38 + Hb) for females). In anemia, uncorrected DLCO underestimates true membrane diffusing capacity. In polycythemia, uncorrected DLCO overestimates it. A DLCO that is low uncorrected but normal after hemoglobin correction localizes the problem to anemia rather than parenchymal disease.',
+        answer: 'DLCO must be corrected for hemoglobin because CO transfer depends on available hemoglobin binding sites. The correction formula: DLCOcorrected = DLCOmeasured x (10.22 + Hb) / (1.7 x Hb) for males or DLCOmeasured x (9.38 + Hb) / (1.7 x Hb) for females. In anemia, uncorrected DLCO underestimates true membrane diffusing capacity. In polycythemia, uncorrected DLCO overestimates it. A DLCO that is low uncorrected but normal after hemoglobin correction localizes the problem to anemia rather than parenchymal disease.',
         difficulty: 2,
         topic: 'Complex Case Interpretation',
         isFree: false,

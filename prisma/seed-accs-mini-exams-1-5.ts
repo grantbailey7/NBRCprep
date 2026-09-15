@@ -386,7 +386,7 @@ async function main() {
   console.log('  ✓ ACCS Mini Exam 1 seeded (20 questions, isFree: true)')
 
   // ─── EXAM 2 (isFree: false) ──────────────────────────────────────────
-  // Correct answer distribution: A=5(Q2,Q5,Q11,Q15,Q18) B=5(Q1,Q6,Q9,Q14,Q20) C=5(Q4,Q8,Q13,Q16,Q19) D=5(Q3,Q7,Q10,Q12,Q17)
+  // Correct answer distribution: A=5(Q2,Q5,Q11,Q13,Q15) B=5(Q1,Q6,Q9,Q14,Q20) C=5(Q4,Q8,Q16,Q18,Q19) D=5(Q3,Q7,Q10,Q12,Q17)
   const exam2 = await prisma.miniExam.create({
     data: {
       divisionId: ACCS_DIVISION_ID,

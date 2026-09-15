@@ -10,7 +10,7 @@ async function main() {
   // ─── EXAM 6 ──────────────────────────────────────────────────────────
   // Topics: Pediatric mechanical ventilation strategies, Pediatric asthma and status asthmaticus
   // Correct answer distribution: A=5, B=5, C=5, D=5
-  // Distribution: Q1-D, Q2-B, Q3-A, Q4-C, Q5-B, Q6-D, Q7-A, Q8-C, Q9-B, Q10-A, Q11-D, Q12-C, Q13-A, Q14-B, Q15-D, Q16-C, Q17-A, Q18-B, Q19-C, Q20-D
+  // Distribution: Q1-D, Q2-B, Q3-B, Q4-C, Q5-B, Q6-D, Q7-A, Q8-C, Q9-B, Q10-A, Q11-D, Q12-C, Q13-A, Q14-B, Q15-D, Q16-C, Q17-A, Q18-A, Q19-C, Q20-D
   const exam6 = await prisma.miniExam.create({
     data: {
       divisionId: NPS_DIVISION_ID,
@@ -388,7 +388,7 @@ async function main() {
   // ─── EXAM 7 ──────────────────────────────────────────────────────────
   // Topics: Croup, epiglottitis, upper airway obstruction, Neonatal jaundice and phototherapy
   // Correct answer distribution: A=5, B=5, C=5, D=5
-  // Distribution: Q1-C, Q2-A, Q3-D, Q4-B, Q5-A, Q6-C, Q7-B, Q8-D, Q9-A, Q10-B, Q11-D, Q12-C, Q13-B, Q14-A, Q15-C, Q16-D, Q17-B, Q18-A, Q19-D, Q20-C
+  // Distribution: Q1-C, Q2-A, Q3-D, Q4-B, Q5-A, Q6-C, Q7-B, Q8-D, Q9-A, Q10-B, Q11-D, Q12-B, Q13-B, Q14-A, Q15-C, Q16-D, Q17-C, Q18-A, Q19-D, Q20-C
   const exam7 = await prisma.miniExam.create({
     data: {
       divisionId: NPS_DIVISION_ID,
@@ -404,18 +404,18 @@ async function main() {
         miniExamId: exam7.id,
         questionIndex: 1,
         questionText:
-          'A 2-year-old presents with a barking cough, inspiratory stridor, and low-grade fever. An anteroposterior neck radiograph shows subglottic narrowing. Which condition is most consistent with these findings?',
+          'A 2-year-old child has had three episodes of sudden-onset nighttime stridor with barking cough over the past month, each resolving within 2 hours without treatment. The child is afebrile between episodes and has no preceding upper respiratory infection symptoms. Which condition best explains these recurrent episodes?',
         choices: {
-          A: 'Epiglottitis',
-          B: 'Foreign body aspiration',
-          C: 'Viral croup (laryngotracheobronchitis)',
-          D: 'Bacterial tracheitis',
+          A: 'Recurrent bacterial tracheitis',
+          B: 'Laryngomalacia with acute exacerbations',
+          C: 'Spasmodic croup',
+          D: 'Recurrent viral croup from the same pathogen',
         },
         correctChoice: 'C',
         explanationCorrect:
-          'The classic presentation of viral croup includes a barking (seal-like) cough, inspiratory stridor, and low-grade fever in a toddler. The "steeple sign" on AP neck radiograph represents subglottic narrowing from inflammation and edema below the vocal cords.',
+          'Spasmodic croup is characterized by recurrent episodes of sudden-onset nighttime stridor and barking cough without fever or preceding viral illness. Episodes are typically brief (1-2 hours) and self-resolving. The etiology is thought to involve allergic or spasmodic mechanisms rather than viral infection.',
         explanationWrong:
-          'Epiglottitis presents with high fever, drooling, and a "thumb sign" on lateral neck film. Foreign body aspiration has sudden onset without fever. Bacterial tracheitis presents with higher fever and a toxic appearance with tracheal irregularity on imaging.',
+          'Bacterial tracheitis presents with high fever, toxic appearance, and purulent secretions and does not recur in this pattern. Laryngomalacia causes chronic inspiratory stridor that worsens with feeding or supine positioning, not episodic nighttime attacks. Recurrent viral croup would involve febrile illness and URI symptoms with each episode.',
         topic: 'Croup and Upper Airway Obstruction',
       },
       {
@@ -494,18 +494,18 @@ async function main() {
         miniExamId: exam7.id,
         questionIndex: 6,
         questionText:
-          'A 3-year-old previously healthy child suddenly develops choking and unilateral wheezing while playing with small toys. A chest radiograph shows hyperinflation of the right lung. What is the most likely diagnosis?',
+          'A 2-year-old child with a witnessed choking event on a peanut is now stable with persistent unilateral wheezing and decreased air entry on the right. Inspiratory and expiratory chest radiographs confirm right-sided air trapping. What is the definitive diagnostic and therapeutic procedure?',
         choices: {
-          A: 'Right-sided pneumonia',
-          B: 'Right-sided pneumothorax',
-          C: 'Foreign body aspiration in the right main bronchus',
-          D: 'Acute asthma exacerbation',
+          A: 'CT scan of the chest with contrast',
+          B: 'Lateral decubitus chest radiographs for further evaluation',
+          C: 'Rigid bronchoscopy under general anesthesia',
+          D: 'Flexible fiberoptic bronchoscopy at the bedside',
         },
         correctChoice: 'C',
         explanationCorrect:
-          'Sudden onset of choking and unilateral wheezing in a toddler playing with small objects strongly suggests foreign body aspiration. Unilateral hyperinflation occurs because the foreign body acts as a ball-valve, allowing air entry but trapping it on expiration.',
+          'Rigid bronchoscopy under general anesthesia is the gold standard for both diagnosis and removal of airway foreign bodies in children. It allows direct visualization, provides a secure airway during the procedure, and has instruments designed for foreign body extraction.',
         explanationWrong:
-          'Pneumonia would show infiltrates, not hyperinflation. Pneumothorax would show absence of lung markings, not hyperinflation of the lung parenchyma. Asthma causes bilateral wheezing, not unilateral findings with sudden onset during play.',
+          'CT scan may help localize a radiolucent foreign body but is not therapeutic. Lateral decubitus films can confirm air trapping but delay definitive treatment when aspiration is strongly suspected. Flexible bronchoscopy can identify foreign bodies but lacks the instruments and airway control needed for safe removal in young children.',
         topic: 'Upper Airway Obstruction',
       },
       {
@@ -766,7 +766,7 @@ async function main() {
   // ─── EXAM 8 ──────────────────────────────────────────────────────────
   // Topics: Retinopathy of prematurity (ROP), Necrotizing enterocolitis (NEC), Neonatal and pediatric CPR (PALS/NRP)
   // Correct answer distribution: A=5, B=5, C=5, D=5
-  // Distribution: Q1-B, Q2-D, Q3-C, Q4-A, Q5-D, Q6-B, Q7-A, Q8-C, Q9-D, Q10-A, Q11-B, Q12-C, Q13-A, Q14-D, Q15-B, Q16-C, Q17-A, Q18-D, Q19-B, Q20-C
+  // Distribution: Q1-B, Q2-D, Q3-C, Q4-A, Q5-D, Q6-B, Q7-A, Q8-C, Q9-D, Q10-B, Q11-B, Q12-C, Q13-A, Q14-D, Q15-A, Q16-C, Q17-A, Q18-D, Q19-B, Q20-C
   const exam8 = await prisma.miniExam.create({
     data: {
       divisionId: NPS_DIVISION_ID,
@@ -818,36 +818,36 @@ async function main() {
         miniExamId: exam8.id,
         questionIndex: 3,
         questionText:
-          'A premature neonate at 28 weeks gestation develops abdominal distension, bloody stools, and pneumatosis intestinalis on abdominal radiograph. Which condition is most likely?',
+          'A premature neonate diagnosed with Stage II NEC (Bell staging) is being managed medically with bowel rest and IV antibiotics. Over the next 12 hours, the infant develops abdominal wall erythema, absent bowel sounds, and a new abdominal radiograph shows free air under the diaphragm. These findings indicate progression to which stage?',
         choices: {
-          A: 'Pyloric stenosis',
-          B: 'Intestinal malrotation',
-          C: 'Necrotizing enterocolitis (NEC)',
-          D: 'Meconium ileus',
+          A: 'Stage I (suspected NEC)',
+          B: 'Stage IIA (definite NEC, mildly ill)',
+          C: 'Stage IIIB (advanced NEC with intestinal perforation)',
+          D: 'Stage IIB (definite NEC, moderately ill)',
         },
         correctChoice: 'C',
         explanationCorrect:
-          'The triad of abdominal distension, bloody stools, and pneumatosis intestinalis (air within the bowel wall on radiograph) in a premature neonate is the hallmark presentation of necrotizing enterocolitis (NEC). NEC is the most common gastrointestinal emergency in premature infants.',
+          'Stage IIIB NEC (Bell staging) is defined by intestinal perforation evidenced by pneumoperitoneum (free air) on radiograph. Abdominal wall erythema, absent bowel sounds, and free air are hallmarks of advanced disease with perforation requiring emergent surgical consultation for possible bowel resection.',
         explanationWrong:
-          'Pyloric stenosis presents with projectile vomiting without bloody stools and occurs in term infants at 2-6 weeks. Malrotation presents with bilious vomiting. Meconium ileus presents with failure to pass meconium and is associated with cystic fibrosis, not pneumatosis intestinalis.',
+          'Stage I NEC includes only nonspecific signs without radiographic confirmation. Stage IIA involves pneumatosis intestinalis without systemic deterioration. Stage IIB includes pneumatosis with mild systemic illness but not perforation. The presence of free air on radiograph definitively indicates Stage IIIB with perforation.',
         topic: 'Necrotizing Enterocolitis',
       },
       {
         miniExamId: exam8.id,
         questionIndex: 4,
         questionText:
-          'During neonatal resuscitation, a term newborn has a heart rate of 50 bpm despite 30 seconds of effective positive pressure ventilation. What is the next appropriate step?',
+          'During neonatal resuscitation, a respiratory therapist is delivering positive pressure ventilation to a term newborn but the chest is not rising. After repositioning the head into a sniffing position and clearing the airway with a bulb syringe, the chest still does not rise. According to NRP, what corrective steps should be taken next?',
         choices: {
-          A: 'Begin chest compressions coordinated with ventilation',
-          B: 'Administer intravenous epinephrine',
-          C: 'Increase the FiO2 to 1.0',
-          D: 'Suction the airway and reassess',
+          A: 'Open the mouth slightly, increase the PIP, and consider an alternative airway if ventilation remains ineffective',
+          B: 'Immediately proceed to endotracheal intubation',
+          C: 'Begin chest compressions to improve circulation',
+          D: 'Administer epinephrine via the umbilical vein',
         },
         correctChoice: 'A',
         explanationCorrect:
-          'Per NRP guidelines, if the heart rate remains below 60 bpm despite 30 seconds of effective ventilation (with chest movement confirmed), chest compressions should be initiated. Compressions are coordinated with ventilations at a 3:1 ratio.',
+          'NRP teaches the MR SOPA corrective steps for ineffective PPV: Mask adjustment, Reposition the head, Suction the airway, Open the mouth, increase Pressure, and consider an Alternative airway. After repositioning and suctioning have been attempted, opening the mouth, increasing PIP, and considering an alternative airway (LMA or ETT) are the next corrective steps.',
         explanationWrong:
-          'Epinephrine is indicated only if the heart rate remains below 60 bpm despite adequate ventilation and chest compressions. While FiO2 may be increased, compressions are the immediate priority. Additional suctioning delays the critical intervention of compressions when the heart rate is below 60 bpm.',
+          'Immediate intubation bypasses simpler corrective steps that may resolve the problem. Chest compressions are only initiated when the heart rate is below 60 bpm after effective ventilation has been established. Epinephrine is reserved for persistent bradycardia despite effective ventilation and compressions.',
         topic: 'Neonatal CPR (NRP)',
       },
       {
@@ -1144,7 +1144,7 @@ async function main() {
   // ─── EXAM 9 ──────────────────────────────────────────────────────────
   // Topics: Pediatric trauma and burn inhalation, Extracorporeal membrane oxygenation (ECMO) in neonates
   // Correct answer distribution: A=5, B=5, C=5, D=5
-  // Distribution: Q1-A, Q2-C, Q3-B, Q4-D, Q5-C, Q6-A, Q7-D, Q8-B, Q9-C, Q10-D, Q11-A, Q12-B, Q13-D, Q14-C, Q15-A, Q16-B, Q17-D, Q18-A, Q19-B, Q20-C
+  // Distribution: Q1-C, Q2-A, Q3-A, Q4-C, Q5-D, Q6-A, Q7-D, Q8-D, Q9-A, Q10-B, Q11-D, Q12-B, Q13-A, Q14-C, Q15-B, Q16-C, Q17-B, Q18-D, Q19-B, Q20-C
   const exam9 = await prisma.miniExam.create({
     data: {
       divisionId: NPS_DIVISION_ID,
@@ -1162,12 +1162,12 @@ async function main() {
         questionText:
           'A 4-year-old child is brought to the emergency department after a house fire. The child has soot around the nares, singed nasal hairs, and a hoarse voice. What is the primary concern?',
         choices: {
-          A: 'Impending upper airway obstruction from thermal and chemical injury to the airway',
+          A: 'Skin burns requiring immediate debridement',
           B: 'Carbon monoxide poisoning only',
-          C: 'Skin burns requiring immediate debridement',
+          C: 'Impending upper airway obstruction from thermal and chemical injury to the airway',
           D: 'Smoke inhalation affecting only the lower airways',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Soot in the nares, singed nasal hairs, and hoarseness are classic signs of inhalation injury and indicate thermal/chemical damage to the upper airway. Progressive edema can cause complete airway obstruction within hours, making early intubation a priority.',
         explanationWrong:
@@ -1180,16 +1180,16 @@ async function main() {
         questionText:
           'In neonatal ECMO, the venoarterial (VA) configuration differs from venovenous (VV) in that VA ECMO:',
         choices: {
-          A: 'Requires only one cannulation site',
+          A: 'Provides both cardiac and pulmonary support',
           B: 'Provides no cardiac support',
-          C: 'Provides both cardiac and pulmonary support',
+          C: 'Requires only one cannulation site',
           D: 'Has a lower risk of arterial complications',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Venoarterial ECMO drains blood from the venous system and returns oxygenated blood to the arterial system, bypassing both the heart and lungs. This provides both hemodynamic (cardiac) and respiratory (pulmonary) support, making it suitable for patients with cardiac failure.',
         explanationWrong:
-          'VA ECMO typically requires cannulation of both the right internal jugular vein and right common carotid artery. VV ECMO provides only pulmonary support, not VA. VA ECMO has a higher risk of arterial complications (stroke, limb ischemia) compared to VV.',
+          'VA ECMO requires cannulation of both the right internal jugular vein and right common carotid artery, not a single site. VV ECMO provides only pulmonary support, not cardiac and pulmonary. VA ECMO has a higher risk of arterial complications (stroke, limb ischemia) compared to VV.',
         topic: 'Neonatal ECMO',
       },
       {
@@ -1218,10 +1218,10 @@ async function main() {
         choices: {
           A: 'Prematurity at 24 weeks gestation',
           B: 'Transient tachypnea of the newborn',
-          C: 'Mild respiratory distress syndrome responding to surfactant',
-          D: 'Persistent pulmonary hypertension of the newborn (PPHN) refractory to maximal medical therapy',
+          C: 'Persistent pulmonary hypertension of the newborn (PPHN) refractory to maximal medical therapy',
+          D: 'Mild respiratory distress syndrome responding to surfactant',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'PPHN refractory to maximal medical management (including inhaled nitric oxide, optimal ventilation, and vasopressors) is one of the most common indications for neonatal ECMO. ECMO provides cardiopulmonary support while allowing the pulmonary vasculature to recover.',
         explanationWrong:
@@ -1236,10 +1236,10 @@ async function main() {
         choices: {
           A: 'Pulse oximetry will accurately display the low oxygen saturation',
           B: 'Pulse oximetry will display a lower-than-actual SpO2',
-          C: 'Pulse oximetry will display a falsely normal or elevated SpO2',
-          D: 'Pulse oximetry is unaffected by carboxyhemoglobin',
+          C: 'Pulse oximetry is unaffected by carboxyhemoglobin',
+          D: 'Pulse oximetry will display a falsely normal or elevated SpO2',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'Standard pulse oximeters use two wavelengths of light and cannot distinguish carboxyhemoglobin from oxyhemoglobin. COHb absorbs light similarly to oxyhemoglobin at these wavelengths, causing the SpO2 reading to be falsely normal or elevated despite significantly reduced oxygen-carrying capacity.',
         explanationWrong:
@@ -1289,11 +1289,11 @@ async function main() {
           'A child involved in a motor vehicle accident presents with paradoxical chest wall movement on the left side. This finding is most consistent with:',
         choices: {
           A: 'Tension pneumothorax',
-          B: 'Flail chest',
+          B: 'Pulmonary contusion without rib fractures',
           C: 'Hemothorax',
-          D: 'Pulmonary contusion without rib fractures',
+          D: 'Flail chest',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
           'Paradoxical chest wall movement (the affected segment moves inward during inspiration and outward during expiration) is the hallmark sign of flail chest. This occurs when three or more adjacent ribs are fractured in two or more places, creating a free-floating segment.',
         explanationWrong:
@@ -1325,11 +1325,11 @@ async function main() {
           'A pediatric patient with severe burns is intubated and mechanically ventilated. Bronchoscopy reveals diffuse mucosal erythema, edema, and carbonaceous deposits throughout the tracheobronchial tree. Which pulmonary complication is most likely to develop?',
         choices: {
           A: 'Pneumothorax from barotrauma',
-          B: 'Pulmonary embolism',
+          B: 'Cast formation and airway obstruction from sloughed mucosal tissue and secretions',
           C: 'Pleural effusion',
-          D: 'Cast formation and airway obstruction from sloughed mucosal tissue and secretions',
+          D: 'Pulmonary embolism',
         },
-        correctChoice: 'D',
+        correctChoice: 'B',
         explanationCorrect:
           'Inhalation injury causes mucosal necrosis and inflammation. The damaged epithelium sloughs off and combines with fibrin and secretions to form airway casts that can cause significant obstruction. Aggressive pulmonary hygiene, frequent suctioning, and bronchoscopy may be needed.',
         explanationWrong:
@@ -1342,12 +1342,12 @@ async function main() {
         questionText:
           'Before initiating neonatal ECMO, which cranial imaging study is essential and why?',
         choices: {
-          A: 'Head ultrasound to rule out pre-existing intracranial hemorrhage, which is a contraindication to systemic anticoagulation',
+          A: 'Skull radiograph to rule out fractures',
           B: 'CT scan to measure brain volume',
           C: 'MRI to assess myelination',
-          D: 'Skull radiograph to rule out fractures',
+          D: 'Head ultrasound to rule out pre-existing intracranial hemorrhage, which is a contraindication to systemic anticoagulation',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'A head ultrasound is performed before ECMO to rule out significant intracranial hemorrhage (grade III or IV intraventricular hemorrhage). ECMO requires systemic anticoagulation with heparin, which would worsen any pre-existing hemorrhage and could be fatal.',
         explanationWrong:
@@ -1378,16 +1378,16 @@ async function main() {
         questionText:
           'The sweep gas flow on a neonatal ECMO circuit primarily controls which parameter?',
         choices: {
-          A: 'Systemic blood pressure',
+          A: 'Carbon dioxide removal',
           B: 'Oxygen delivery to the patient',
           C: 'Circuit blood flow rate',
-          D: 'Carbon dioxide removal',
+          D: 'Systemic blood pressure',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'Sweep gas flow through the membrane lung (oxygenator) primarily controls carbon dioxide removal. Increasing the sweep gas flow rate increases the gradient for CO2 diffusion across the membrane, enhancing CO2 elimination. Oxygenation is primarily controlled by the FiO2 of the sweep gas and the blood flow rate.',
         explanationWrong:
-          'Blood pressure is affected by circuit flow rate. While sweep gas carries oxygen, oxygenation is more dependent on blood flow rate and FiO2. Circuit blood flow is controlled by the pump speed, not sweep gas flow.',
+          'Systemic blood pressure is affected by circuit flow rate, not sweep gas flow. While sweep gas carries oxygen, oxygenation is more dependent on blood flow rate and FiO2. Circuit blood flow is controlled by the pump speed, not sweep gas flow.',
         topic: 'Neonatal ECMO',
       },
       {
@@ -1415,15 +1415,15 @@ async function main() {
           'What is the typical minimum weight requirement for a neonate to be considered a candidate for ECMO?',
         choices: {
           A: '3.5 kg',
-          B: '1.0 kg',
-          C: '2.0 kg (approximately 2000 grams)',
+          B: '2.0 kg (approximately 2000 grams)',
+          C: '1.0 kg',
           D: '500 grams',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'The generally accepted minimum weight for neonatal ECMO is approximately 2.0 kg (2000 grams). Below this weight, the risk of intracranial hemorrhage with systemic anticoagulation is unacceptably high, and the small vessel size makes cannulation technically difficult.',
         explanationWrong:
-          'A weight of 1.0 kg and 500 grams are too small for safe cannulation and anticoagulation. A 3.5 kg minimum is too restrictive and would exclude many neonates who could benefit from ECMO. The 2.0 kg threshold balances procedural feasibility with acceptable complication rates.',
+          'Weights of 1.0 kg and 500 grams are too small for safe cannulation and anticoagulation. A 3.5 kg minimum is too restrictive and would exclude many neonates who could benefit from ECMO. The 2.0 kg threshold balances procedural feasibility with acceptable complication rates.',
         topic: 'Neonatal ECMO',
       },
       {
@@ -1433,11 +1433,11 @@ async function main() {
           'In a pediatric trauma patient with a suspected tension pneumothorax, what is the immediate life-saving intervention?',
         choices: {
           A: 'Obtain a chest radiograph to confirm the diagnosis',
-          B: 'Needle decompression at the second intercostal space, midclavicular line',
-          C: 'Endotracheal intubation',
+          B: 'Endotracheal intubation',
+          C: 'Needle decompression at the second intercostal space, midclavicular line',
           D: 'Administer IV fluids for volume resuscitation',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'Tension pneumothorax is a clinical diagnosis requiring immediate needle decompression without waiting for radiographic confirmation. A large-bore needle is inserted at the second intercostal space, midclavicular line (or fourth/fifth intercostal space, anterior axillary line) to release trapped air and restore venous return.',
         explanationWrong:
@@ -1451,15 +1451,15 @@ async function main() {
           'During neonatal ECMO, activated clotting time (ACT) is monitored to guide anticoagulation. What is the typical target ACT range?',
         choices: {
           A: '100-120 seconds',
-          B: '250-300 seconds',
+          B: '180-220 seconds',
           C: '60-80 seconds',
-          D: '180-220 seconds',
+          D: '250-300 seconds',
         },
-        correctChoice: 'D',
+        correctChoice: 'B',
         explanationCorrect:
           'The target ACT during neonatal ECMO is typically 180-220 seconds. This range provides adequate anticoagulation to prevent circuit thrombosis while minimizing the risk of bleeding complications in the neonate.',
         explanationWrong:
-          'An ACT of 100-120 seconds is insufficient anticoagulation for ECMO and risks circuit clotting. An ACT of 250-300 seconds represents excessive anticoagulation with high bleeding risk. An ACT of 60-80 seconds is a normal baseline without heparin and is far too low for ECMO.',
+          'An ACT of 100-120 seconds is insufficient anticoagulation for ECMO and risks circuit clotting. An ACT of 250-300 seconds represents excessive anticoagulation with high bleeding risk. An ACT of 60-80 seconds is the normal baseline without heparin and is far too low for ECMO.',
         topic: 'Neonatal ECMO',
       },
       {
@@ -1469,11 +1469,11 @@ async function main() {
           'Cyanide toxicity should be suspected in a pediatric burn patient when:',
         choices: {
           A: 'The patient develops a dry cough',
-          B: 'The patient has persistent lactic acidosis despite adequate oxygenation and perfusion',
+          B: 'The patient has superficial burns only',
           C: 'The carboxyhemoglobin level is elevated',
-          D: 'The patient has superficial burns only',
+          D: 'The patient has persistent lactic acidosis despite adequate oxygenation and perfusion',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
           'Cyanide is released from the combustion of synthetic materials (plastics, nylon, polyurethane). Cyanide inhibits cytochrome oxidase, preventing cellular oxygen utilization. Persistent lactic acidosis despite adequate oxygen delivery (PaO2 and hemoglobin are normal) suggests cyanide toxicity.',
         explanationWrong:
@@ -1522,7 +1522,7 @@ async function main() {
   // ─── EXAM 10 ─────────────────────────────────────────────────────────
   // Topics: Developmental care and family-centered care, mixed NPS review
   // Correct answer distribution: A=5, B=5, C=5, D=5
-  // Distribution: Q1-D, Q2-A, Q3-C, Q4-B, Q5-D, Q6-C, Q7-A, Q8-B, Q9-D, Q10-C, Q11-A, Q12-B, Q13-C, Q14-D, Q15-B, Q16-A, Q17-B, Q18-D, Q19-A, Q20-C
+  // Distribution: Q1-D, Q2-A, Q3-C, Q4-B, Q5-D, Q6-C, Q7-A, Q8-B, Q9-D, Q10-C, Q11-A, Q12-D, Q13-C, Q14-D, Q15-B, Q16-A, Q17-B, Q18-B, Q19-A, Q20-C
   const exam10 = await prisma.miniExam.create({
     data: {
       divisionId: NPS_DIVISION_ID,

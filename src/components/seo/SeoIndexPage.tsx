@@ -84,7 +84,7 @@ export function SeoIndexPage({ title, subtitle, basePath, pages }: SeoIndexPageP
           <SignupCTA
             variant="banner"
             heading="Ready to practice what you've learned?"
-            description="NBRCprep has 600+ flashcards, 30 mini exams, and 18 full-length practice tests across all 6 NBRC divisions. Start free, no card required."
+            description="NBRCprep has 2,500+ flashcards, 65 mini exams, and 18 full-length practice tests across all 6 NBRC divisions. Start free, no card required."
           />
         </div>
       </div>

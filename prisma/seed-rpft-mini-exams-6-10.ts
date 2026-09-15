@@ -5,7 +5,7 @@ const DIVISION_ID = 'cmsm41fyp0005zf54vrwow6p4'
 
 async function main() {
   // Exam 6
-  // Answer distribution: D,A,B,C,A,D,B,C,A,D,C,B,A,D,C,B,D,B,C,A
+  // Answer distribution: A=5(Q5,7,9,13,20) B=5(Q2,3,11,12,18) C=4(Q4,15,16,19) D=6(Q1,6,8,10,14,17)
   const exam6 = await prisma.miniExam.create({
     data: {
       divisionId: DIVISION_ID,
@@ -40,11 +40,11 @@ async function main() {
       {
         miniExamId: exam6.id,
         questionIndex: 3,
-        questionText: 'In impulse oscillometry (IOS), a patient shows elevated R5 with normal R20. The difference (R5-R20) is significantly increased. This pattern is most consistent with:',
-        choices: { A: 'Upper airway obstruction', B: 'Peripheral small airway obstruction', C: 'Restrictive lung disease', D: 'Vocal cord dysfunction' },
+        questionText: 'In impulse oscillometry (IOS), the coherence function at 5 Hz is calculated as 0.6 (normal threshold > 0.9). This finding most likely indicates:',
+        choices: { A: 'The patient has severe peripheral airway obstruction', B: 'Poor signal quality at that frequency, likely due to irregular breathing, swallowing, or air leak', C: 'The oscillometry device requires recalibration', D: 'Normal measurement that can be interpreted without concern' },
         correctChoice: 'B',
-        explanationCorrect: 'R5 reflects total airway resistance (central and peripheral), while R20 reflects primarily central airway resistance. An elevated R5 with normal R20 and increased R5-R20 indicates peripheral small airway obstruction, as the low-frequency oscillations penetrate to the lung periphery.',
-        explanationWrong: 'Upper airway obstruction (A) and vocal cord dysfunction (D) would elevate both R5 and R20. Restrictive disease (C) typically shows increased reactance (X5) with relatively preserved resistance values.',
+        explanationCorrect: 'The coherence function in IOS reflects the reliability of the measurement at each frequency. A coherence below 0.9 indicates poor signal-to-noise ratio, commonly caused by irregular tidal breathing, swallowing, air leak around the mouthpiece, or vocalization during the measurement. Data at frequencies with low coherence should be interpreted with caution or the measurement repeated.',
+        explanationWrong: 'While severe obstruction (A) can affect signal quality, low coherence itself indicates measurement artifact rather than a specific clinical finding. Equipment calibration issues (C) would typically affect all frequencies, not selectively reduce coherence. A coherence of 0.6 is significantly below the acceptable threshold and cannot be interpreted as normal (D).',
         topic: 'Impulse oscillometry and forced oscillation technique',
       },
       {
@@ -80,21 +80,21 @@ async function main() {
       {
         miniExamId: exam6.id,
         questionIndex: 7,
-        questionText: 'A flow-volume loop demonstrates a plateau on both the inspiratory and expiratory limbs with a relatively preserved peak expiratory flow. This pattern is most consistent with:',
-        choices: { A: 'Fixed central airway obstruction', B: 'Variable intrathoracic obstruction', C: 'Variable extrathoracic obstruction', D: 'Bilateral diaphragm paralysis' },
+        questionText: 'A flow-volume loop shows a steep rise to a normal peak expiratory flow followed by a rapid, nearly linear descent to zero flow with a preserved shape on both limbs, but the total FVC is markedly reduced. The FEV1/FVC ratio is normal. This miniature-appearing loop is most consistent with:',
+        choices: { A: 'A restrictive ventilatory defect with reduced lung volumes but normal airway function', B: 'An obstructive ventilatory defect with air trapping', C: 'Variable extrathoracic obstruction', D: 'Combined obstructive and restrictive defect' },
         correctChoice: 'A',
-        explanationCorrect: 'A fixed obstruction (such as tracheal stenosis from a stent or tumor) causes flattening of both inspiratory and expiratory limbs since the obstruction does not change with the respiratory cycle. The FEF50/FIF50 ratio approaches 1.0.',
-        explanationWrong: 'Variable intrathoracic obstruction (A) flattens only the expiratory limb. Variable extrathoracic obstruction (C) flattens only the inspiratory limb. Bilateral diaphragm paralysis (D) reduces lung volumes but does not produce flow plateaus.',
+        explanationCorrect: 'In restrictive disease (such as pulmonary fibrosis, chest wall deformity, or neuromuscular weakness), the flow-volume loop appears as a miniature version of normal. Peak flow may be reduced proportionally to the reduced lung volume, but the overall shape is preserved with a normal FEV1/FVC ratio because both FEV1 and FVC are reduced proportionally.',
+        explanationWrong: 'An obstructive defect (B) would show a concave (scooped-out) expiratory limb with a reduced FEV1/FVC ratio. Variable extrathoracic obstruction (C) would produce a flattened inspiratory limb. A combined defect (D) would show both reduced volumes and a concave expiratory curve with reduced FEV1/FVC ratio.',
         topic: 'Advanced flow-volume loop analysis',
       },
       {
         miniExamId: exam6.id,
         questionIndex: 8,
-        questionText: 'According to the ATS/ERS 2021 technical standard, which of the following defines a positive bronchodilator response for FEV1?',
-        choices: { A: 'An increase of at least 12% AND 200 mL from baseline', B: 'An increase of at least 15% AND 200 mL from baseline', C: 'An increase exceeding the upper limit of normal for change', D: 'An increase of at least 10% of predicted value' },
+        questionText: 'A patient\'s FEV1 improves from 1.80 L (pre-bronchodilator) to 2.10 L (post-bronchodilator). The predicted FEV1 is 3.20 L. According to ATS/ERS 2021 criteria, this bronchodilator response is:',
+        choices: { A: 'Positive, because the absolute change of 300 mL exceeds 200 mL', B: 'Positive, because the 16.7% change from baseline exceeds 12%', C: 'Positive, because the change exceeds 10% of predicted', D: 'Negative, because the 9.4% change relative to predicted does not exceed the 10% threshold' },
         correctChoice: 'D',
-        explanationCorrect: 'The ATS/ERS 2021 technical standard defines a positive bronchodilator response as an increase of at least 10% of the predicted value for FEV1. This criterion replaces the older fixed 12%/200 mL threshold and reduces age, sex, and height bias inherent in the prior criteria.',
-        explanationWrong: 'The 12%/200 mL criterion (A) was the prior standard (2005) and is no longer recommended. Exceeding the upper limit of normal for change (C) has been proposed but is not the primary ATS/ERS 2021 criterion. The 15%/200 mL (B) was never a widely accepted standard.',
+        explanationCorrect: 'Using ATS/ERS 2021 criteria, bronchodilator response is calculated as (post - pre) / predicted x 100 = (2.10 - 1.80) / 3.20 x 100 = 9.4%. Since 9.4% does not exceed the 10% threshold, this is a negative bronchodilator response despite the 300 mL absolute change and 16.7% change from baseline.',
+        explanationWrong: 'The 200 mL absolute threshold (A) was part of the older 2005 criterion and is no longer used. The 12% from baseline criterion (B) was also the 2005 standard. The 2021 criteria use percent of predicted, not baseline, to reduce bias. The change of 9.4% of predicted does not reach 10% (C).',
         topic: 'Bronchodilator response criteria (ATS/ERS 2021 updates)',
       },
       {
@@ -110,11 +110,11 @@ async function main() {
       {
         miniExamId: exam6.id,
         questionIndex: 10,
-        questionText: 'A patient\'s ABG shows: pH 7.28, PaCO2 55 mmHg, HCO3- 26 mEq/L, PaO2 58 mmHg on room air. The A-a gradient is 25 mmHg. Which mixed acid-base disorder is present?',
-        choices: { A: 'Chronic respiratory acidosis with metabolic alkalosis', B: 'Combined respiratory and metabolic acidosis', C: 'Acute respiratory acidosis only', D: 'Acute respiratory acidosis with superimposed metabolic acidosis' },
+        questionText: 'A patient found unresponsive has an ABG showing: pH 7.18, PaCO2 25 mmHg, HCO3- 9 mEq/L, anion gap 28 mEq/L. Using Winter\'s formula, the expected PaCO2 is 1.5(9) + 8 +/- 2 = 19.5-23.5 mmHg. The actual PaCO2 of 25 exceeds this range. This pattern represents:',
+        choices: { A: 'Simple anion gap metabolic acidosis with appropriate respiratory compensation', B: 'Primary respiratory alkalosis with metabolic compensation', C: 'Non-anion gap metabolic acidosis', D: 'Anion gap metabolic acidosis with concurrent respiratory acidosis' },
         correctChoice: 'D',
-        explanationCorrect: 'For acute respiratory acidosis, expected HCO3- compensation is 1 mEq/L increase per 10 mmHg rise in PaCO2. With PaCO2 of 55 (15 above normal), expected HCO3- would be ~25.5. The actual HCO3- of 26 is near expected, but the pH is lower than expected for simple acute respiratory acidosis (expected ~7.32), suggesting a superimposed metabolic acidosis. The widened A-a gradient suggests a pulmonary component.',
-        explanationWrong: 'Simple acute respiratory acidosis (C) would show pH closer to 7.32. Chronic respiratory acidosis (A) would have HCO3- around 31-32 mEq/L. Combined respiratory and metabolic acidosis (B) would show even lower HCO3-.',
+        explanationCorrect: 'The elevated anion gap (28) and low HCO3 (9) indicate a primary anion gap metabolic acidosis. Winter\'s formula predicts expected PaCO2 of 19.5-23.5 mmHg, but the actual PaCO2 of 25 is higher than expected. This means the respiratory system is not compensating adequately, indicating a concurrent respiratory acidosis superimposed on the metabolic acidosis.',
+        explanationWrong: 'Simple metabolic acidosis with appropriate compensation (A) would have PaCO2 within the Winter\'s formula range. The primary process is metabolic acidosis, not respiratory alkalosis (B). The elevated anion gap indicates an anion gap metabolic acidosis, not non-anion gap (C).',
         topic: 'Advanced ABG interpretation',
       },
       {
@@ -124,7 +124,7 @@ async function main() {
         choices: { A: '1 second with peak pressure recorded', B: '1.5 seconds with the highest 1-second average reported', C: '3 seconds with end-expiratory pressure recorded', D: '5 seconds with plateau pressure recorded' },
         correctChoice: 'B',
         explanationCorrect: 'ATS/ERS guidelines recommend that the patient sustain the MIP effort for at least 1.5 seconds. The reported value should be the highest average pressure maintained over 1 second (peak 1-second average), not the instantaneous peak, to avoid reporting transient pressure spikes.',
-        explanationWrong: 'Recording only the peak (A) overestimates sustainable pressure. A 3-second (B) or 5-second (D) sustained effort is not required for MIP measurement and would be difficult for many patients.',
+        explanationWrong: 'Recording only the peak (A) overestimates sustainable pressure. A 3-second (C) or 5-second (D) sustained effort is not required for MIP measurement and would be difficult for many patients.',
         topic: 'Respiratory muscle strength testing (MIP/MEP)',
       },
       {
@@ -223,7 +223,7 @@ async function main() {
   console.log(`Exam 6 created: ${exam6.id} with 20 questions`)
 
   // Exam 7
-  // Answer distribution: C,B,A,D,C,A,B,D,B,A,D,C,A,C,D,B,C,D,B,A
+  // Answer distribution: A=5(Q3,6,10,13,20) B=5(Q2,7,9,16,19) C=5(Q1,5,12,14,17) D=5(Q4,8,11,15,18)
   const exam7 = await prisma.miniExam.create({
     data: {
       divisionId: DIVISION_ID,
@@ -288,11 +288,11 @@ async function main() {
       {
         miniExamId: exam7.id,
         questionIndex: 6,
-        questionText: 'In impulse oscillometry, the reactance area (AX) represents:',
-        choices: { A: 'The integrated area of low-frequency reactance between 5 Hz and resonant frequency', B: 'The sum of all resistance values from 5 to 20 Hz', C: 'The ratio of resistance to reactance at 5 Hz', D: 'The frequency at which inertive and elastic forces are equal' },
+        questionText: 'In oscillometry, elevated resistance at both 5 Hz (R5) and 20 Hz (R20) with a preserved (normal) R5-R20 difference indicates obstruction primarily in:',
+        choices: { A: 'The central large airways, since both low and high frequency oscillations are equally affected', B: 'The small peripheral airways only', C: 'The lung parenchyma and alveoli', D: 'The chest wall and pleura' },
         correctChoice: 'A',
-        explanationCorrect: 'The reactance area (AX) is defined as the integral of reactance (X) from 5 Hz to the resonant frequency (Fres). It represents the cumulative reactance at low frequencies and is a sensitive marker of peripheral airway dysfunction.',
-        explanationWrong: 'The sum of resistance values (B) does not describe AX. The ratio of R to X (C) is not a standard IOS parameter. The frequency where inertive and elastic forces are equal (D) describes the resonant frequency (Fres), not AX.',
+        explanationCorrect: 'When both R5 and R20 are proportionally elevated with a normal R5-R20 difference (no frequency dependence of resistance), the obstruction is located in the central airways. Central obstruction affects all oscillation frequencies equally because both high and low frequency waves must pass through the same large airway narrowing.',
+        explanationWrong: 'Peripheral small airway disease (B) would elevate R5 more than R20, producing frequency dependence of resistance and an increased R5-R20 difference. Parenchymal disease (C) primarily affects reactance rather than resistance. Chest wall abnormalities (D) affect compliance and reactance rather than producing proportional resistance elevation.',
         topic: 'Impulse oscillometry and forced oscillation technique',
       },
       {
@@ -398,11 +398,11 @@ async function main() {
       {
         miniExamId: exam7.id,
         questionIndex: 17,
-        questionText: 'During spirometry grading, a session with 2 acceptable maneuvers showing FEV1 values of 2.85 L and 2.70 L (difference of 150 mL) and FVC values of 3.60 L and 3.48 L (difference of 120 mL) would receive a grade of:',
+        questionText: 'During spirometry grading, a session with 2 acceptable maneuvers showing FEV1 values of 2.85 L and 2.68 L (difference of 170 mL) and FVC values of 3.60 L and 3.44 L (difference of 160 mL) would receive a grade of:',
         choices: { A: 'A', B: 'B', C: 'C', D: 'D' },
         correctChoice: 'C',
-        explanationCorrect: 'Per ATS/ERS 2019 grading: Grade A requires 3 acceptable maneuvers with repeatability within 150 mL. Grade B requires 3 acceptable maneuvers with repeatability within 200 mL. Grade C is assigned when only 2 acceptable maneuvers are obtained with repeatability within 200 mL. This session has only 2 acceptable efforts with 150 mL FEV1 difference, qualifying for Grade C.',
-        explanationWrong: 'Grade A (A) and Grade B (B) both require 3 acceptable maneuvers. Grade D (D) is for sessions with 2 acceptable maneuvers but repeatability > 200 mL.',
+        explanationCorrect: 'Per ATS/ERS 2019 grading: Grade A requires at least 3 acceptable maneuvers with repeatability within 150 mL. Grade B requires 2 acceptable maneuvers with repeatability within 150 mL. Grade C is assigned when 2 or more acceptable maneuvers are obtained with repeatability within 200 mL but exceeding the 150 mL threshold for Grade B. This session has 2 acceptable efforts with 170 mL FEV1 difference and 160 mL FVC difference, both exceeding 150 mL but within 200 mL, qualifying for Grade C.',
+        explanationWrong: 'Grade A (A) requires at least 3 acceptable maneuvers. Grade B (B) requires 2 acceptable maneuvers with repeatability within 150 mL, but the 170 mL FEV1 difference exceeds this threshold. Grade D (D) applies when 2 acceptable maneuvers have repeatability exceeding 200 mL.',
         topic: 'Advanced spirometry interpretation and quality grading',
       },
       {
@@ -441,7 +441,7 @@ async function main() {
   console.log(`Exam 7 created: ${exam7.id} with 20 questions`)
 
   // Exam 8
-  // Answer distribution: D,A,C,B,A,D,C,B,A,C,D,B,A,D,B,C,D,B,C,A
+  // Answer distribution: A=5(Q2,5,9,13,20) B=5(Q4,7,8,15,18) C=5(Q3,10,12,16,19) D=5(Q1,6,11,14,17)
   const exam8 = await prisma.miniExam.create({
     data: {
       divisionId: DIVISION_ID,
@@ -496,11 +496,11 @@ async function main() {
       {
         miniExamId: exam8.id,
         questionIndex: 5,
-        questionText: 'A patient\'s flow-volume loop shows normal expiratory flows but truncation of the inspiratory limb with a flattened plateau. The FIF50/FEF50 ratio is significantly reduced. This pattern is most consistent with:',
-        choices: { A: 'Variable extrathoracic obstruction', B: 'Fixed central obstruction', C: 'Variable intrathoracic obstruction', D: 'Small airway disease' },
+        questionText: 'During forced expiration, the portion of the flow-volume curve that is effort-independent and therefore most reproducible across repeated maneuvers is:',
+        choices: { A: 'The mid-to-late expiratory flow region (FEF25-75), which is determined by lung elastic recoil and airway resistance rather than expiratory muscle effort', B: 'Peak expiratory flow (PEF)', C: 'The first 25% of expired volume', D: 'The inspiratory limb of the flow-volume loop' },
         correctChoice: 'A',
-        explanationCorrect: 'Variable extrathoracic obstruction (such as vocal cord paralysis) characteristically flattens the inspiratory limb while preserving the expiratory limb. During inspiration, negative intraluminal pressure causes the extrathoracic lesion to narrow.',
-        explanationWrong: 'Fixed obstruction (B) would flatten both limbs. Variable intrathoracic obstruction (C) would flatten the expiratory limb. Small airway disease (D) affects late expiratory flows with a concave expiratory limb.',
+        explanationCorrect: 'After the initial effort-dependent peak flow, the mid-to-late expiratory portion of the flow-volume curve becomes effort-independent. Flow in this region is determined by the equal pressure point theory, where lung elastic recoil pressure and airway resistance (particularly in smaller airways) govern maximum flow regardless of additional expiratory muscle effort. This is why FEF25-75 reflects intrinsic airway properties.',
+        explanationWrong: 'Peak expiratory flow (B) is highly effort-dependent and varies with the vigor of the expiratory blast. The first 25% of expired volume (C) includes the effort-dependent portion near PEF. The inspiratory limb (D) is entirely effort-dependent as there is no flow-limiting mechanism during inspiration in normal lungs.',
         topic: 'Advanced flow-volume loop analysis',
       },
       {
@@ -570,7 +570,7 @@ async function main() {
         choices: { A: '3 L only', B: '0.5 L increments from 0.5 to 8 L', C: 'At least 3 different volumes spanning the expected clinical range', D: '1 L and 3 L' },
         correctChoice: 'C',
         explanationCorrect: 'ATS/ERS standards require that spirometer linearity be verified across the full expected measurement range. Testing at multiple volumes (at least 3) ensures the device is accurate across the entire range of clinical measurements.',
-        explanationWrong: 'Testing at 3 L only (A) verifies one point but does not confirm linearity. Two volumes (D) is insufficient. While comprehensive, 0.5 L increments to 8 L (C) exceeds what is practically required.',
+        explanationWrong: 'Testing at 3 L only (A) verifies one point but does not confirm linearity. Two volumes (D) is insufficient. While comprehensive, 0.5 L increments to 8 L (B) exceeds what is practically required.',
         topic: 'Calibration verification and linearity checks',
       },
       {
@@ -659,7 +659,7 @@ async function main() {
   console.log(`Exam 8 created: ${exam8.id} with 20 questions`)
 
   // Exam 9
-  // Answer distribution: B,D,A,C,A,D,B,C,D,A,C,B,A,D,C,B,A,C,B,D
+  // Answer distribution: A=5(Q3,5,8,10,17) B=5(Q1,7,12,16,19) C=4(Q4,13,18,20) D=6(Q2,6,9,11,14,15)
   const exam9 = await prisma.miniExam.create({
     data: {
       divisionId: DIVISION_ID,
@@ -794,11 +794,11 @@ async function main() {
       {
         miniExamId: exam9.id,
         questionIndex: 13,
-        questionText: 'In a preschool-aged child (age 3-5 years), the interrupter technique (Rint) measures:',
-        choices: { A: 'Functional residual capacity', B: 'Static lung compliance', C: 'Airway resistance during tidal breathing by briefly occluding the airway', D: 'Maximal expiratory flow at functional residual capacity' },
+        questionText: 'In infant pulmonary function testing, the tidal breathing flow-volume loop (TBFVL) parameter most commonly used to identify airway obstruction is:',
+        choices: { A: 'Peak tidal inspiratory flow', B: 'Tidal volume normalized to body weight', C: 'The ratio of time to peak tidal expiratory flow to total expiratory time (tPTEF/tE)', D: 'Respiratory rate alone' },
         correctChoice: 'C',
-        explanationCorrect: 'The interrupter technique (Rint) measures airway resistance in young children by briefly occluding the airway during tidal breathing (typically for 100 ms). It requires only passive tidal breathing, making it feasible in preschool children.',
-        explanationWrong: 'Static compliance (B) requires esophageal pressure measurement. FRC (A) is measured by gas dilution or plethysmography. Maximal expiratory flow at FRC (D) is measured by different techniques.',
+        explanationCorrect: 'The ratio tPTEF/tE (time to peak tidal expiratory flow divided by total expiratory time) is the most widely used tidal breathing parameter for detecting airway obstruction in infants. A reduced tPTEF/tE ratio (normally approximately 0.3-0.4) indicates that peak expiratory flow occurs earlier in expiration, consistent with increased airway resistance and obstructive physiology. Values below 0.20 are considered abnormal.',
+        explanationWrong: 'Peak tidal inspiratory flow (A) is less sensitive to obstructive changes than expiratory flow timing. Tidal volume normalized to weight (B) reflects ventilatory demand but does not specifically indicate airway obstruction. Respiratory rate (D) is nonspecific and influenced by many factors beyond airway mechanics.',
         topic: 'Pediatric PFT testing techniques and interpretation',
       },
       {
@@ -877,7 +877,7 @@ async function main() {
   console.log(`Exam 9 created: ${exam9.id} with 20 questions`)
 
   // Exam 10
-  // Answer distribution: C,A,D,B,A,D,B,C,B,D,A,C,D,B,A,C,D,B,A,C
+  // Answer distribution: A=5(Q2,5,11,15,19) B=6(Q4,7,9,14,18,20) C=4(Q1,8,12,16) D=5(Q3,6,10,13,17)
   const exam10 = await prisma.miniExam.create({
     data: {
       divisionId: DIVISION_ID,
@@ -1022,11 +1022,11 @@ async function main() {
       {
         miniExamId: exam10.id,
         questionIndex: 14,
-        questionText: 'A Levy-Jennings control chart for a biological QC subject shows two consecutive values exceeding 2 standard deviations on the same side of the mean. According to Westgard rules, this triggers the:',
-        choices: { A: '1-2s warning rule', B: '2-2s rejection rule', C: 'R-4s rule', D: '10x rule' },
+        questionText: 'A PFT laboratory\'s Levy-Jennings chart shows two consecutive biological control FVC measurements where one falls at +2.5 SD above the mean and the next at -2.0 SD below the mean, giving a range of 4.5 SD between the two points. According to Westgard rules, this pattern:',
+        choices: { A: 'Is acceptable because neither individual value exceeds 3 SD', B: 'Violates the R-4s rule, indicating random error that requires investigation of measurement precision', C: 'Violates the 2-2s rule because both values exceed 2 SD', D: 'Triggers only the 1-2s warning rule for the first value' },
         correctChoice: 'B',
-        explanationCorrect: 'The Westgard 2-2s rule is triggered when two consecutive control values exceed the same 2 SD limit. This indicates systematic error and requires investigation before clinical testing can continue.',
-        explanationWrong: 'The 1-2s rule (A) is a warning for a single value exceeding 2 SD. The R-4s rule (C) applies when consecutive values are on opposite sides with range exceeding 4 SD. The 10x rule (D) requires 10 consecutive values on the same side of the mean.',
+        explanationCorrect: 'The Westgard R-4s rule is triggered when the range (difference) between two consecutive control measurements exceeds 4 standard deviations, with one value above +2 SD and the other below -2 SD. A range of 4.5 SD violates this rule, indicating random error from sources such as inconsistent technique, environmental fluctuations, or intermittent equipment malfunction.',
+        explanationWrong: 'While neither value individually exceeds 3 SD (A), the R-4s rule evaluates the range between consecutive values, not individual values alone. The 2-2s rule (C) requires two consecutive values on the same side of the mean, but these values are on opposite sides. The 1-2s warning rule (D) addresses a single value beyond 2 SD, but this pattern has additional significance due to the large range.',
         topic: 'Advanced quality control and biological controls',
       },
       {

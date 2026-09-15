@@ -25,7 +25,12 @@ export default async function MiniExamsPage() {
 
   const [exams, results] = await Promise.all([
     prisma.miniExam.findMany({
-      where: { examIndex: { lte: 5 } },
+      where: {
+        OR: [
+          { division: { slug: 'TMC' as any }, examIndex: { lte: 15 } },
+          { division: { slug: { not: 'TMC' as any } }, examIndex: { lte: 10 } },
+        ],
+      },
       orderBy: [{ divisionId: 'asc' }, { examIndex: 'asc' }],
       include: {
         _count: { select: { questions: true } },
@@ -33,7 +38,15 @@ export default async function MiniExamsPage() {
       },
     }),
     prisma.userMiniExamResult.findMany({
-      where: { userId, miniExam: { examIndex: { lte: 5 } } },
+      where: {
+        userId,
+        miniExam: {
+          OR: [
+            { division: { slug: 'TMC' as any }, examIndex: { lte: 15 } },
+            { division: { slug: { not: 'TMC' as any } }, examIndex: { lte: 10 } },
+          ],
+        },
+      },
       orderBy: { takenAt: 'desc' },
     }),
   ])
@@ -76,7 +89,7 @@ export default async function MiniExamsPage() {
           </div>
 
           <div className="mb-8 rounded-lg border border-teal-400/30 bg-teal-500/10 p-3 text-sm text-teal-700">
-            Mini Exam 1 is free for each division. Upgrade your plan to unlock all mini exams.
+            Mini Exam 1 is free for each division. Upgrade your plan to unlock all mini exams (15 for TMC, 10 for other divisions).
           </div>
 
           {divisions.map((division) => {

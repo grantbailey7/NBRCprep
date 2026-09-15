@@ -8,7 +8,7 @@ async function main() {
   console.log('Seeding NPS mini exams 1-5...')
 
   // ─── EXAM 1 (isFree: true) ───────────────────────────────────────────
-  // Correct answer distribution: A=5(Q2,Q5,Q9,Q13,Q17) B=5(Q4,Q7,Q10,Q15,Q18) C=5(Q1,Q6,Q12,Q16,Q20) D=5(Q3,Q8,Q11,Q14,Q19)
+  // Correct answer distribution: A=5(Q1,Q5,Q11,Q14,Q17) B=5(Q4,Q6,Q10,Q16,Q18) C=5(Q2,Q7,Q12,Q15,Q20) D=5(Q3,Q8,Q9,Q13,Q19)
   const exam1 = await prisma.miniExam.create({
     data: {
       divisionId: NPS_DIVISION_ID,
@@ -26,12 +26,12 @@ async function main() {
         questionText:
           'A newborn delivered at 28 weeks gestation exhibits nasal flaring, grunting, and intercostal retractions within the first hour of life. Chest radiograph reveals a diffuse ground-glass appearance with air bronchograms. Which condition is the most likely diagnosis?',
         choices: {
-          A: 'Meconium aspiration syndrome',
+          A: 'Respiratory distress syndrome',
           B: 'Transient tachypnea of the newborn',
-          C: 'Respiratory distress syndrome',
+          C: 'Meconium aspiration syndrome',
           D: 'Congenital diaphragmatic hernia',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Respiratory distress syndrome (RDS) is caused by surfactant deficiency and is the most common cause of respiratory distress in premature infants. The classic radiographic findings include a diffuse reticulogranular (ground-glass) pattern with air bronchograms.',
         explanationWrong:
@@ -44,12 +44,12 @@ async function main() {
         questionText:
           'A neonate born at 32 weeks gestation has been diagnosed with RDS. The respiratory therapist is preparing to administer exogenous surfactant. What is the recommended dose route for surfactant administration?',
         choices: {
-          A: 'Intratracheal instillation via endotracheal tube',
+          A: 'Intravenous infusion',
           B: 'Aerosolized delivery via nebulizer',
-          C: 'Intravenous infusion',
+          C: 'Intratracheal instillation via endotracheal tube',
           D: 'Intramuscular injection',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Exogenous surfactant is administered via intratracheal instillation through an endotracheal tube. The surfactant is divided into aliquots and instilled directly into the lungs, with the infant repositioned between doses to promote distribution.',
         explanationWrong:
@@ -117,11 +117,11 @@ async function main() {
           'Which of the following findings on the Silverman-Anderson scoring system indicates the MOST severe respiratory distress in a neonate?',
         choices: {
           A: 'A total score of 0',
-          B: 'A total score of 4',
-          C: 'A total score of 10',
+          B: 'A total score of 10',
+          C: 'A total score of 4',
           D: 'A total score of 2',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'The Silverman-Anderson score ranges from 0 to 10, with higher scores indicating more severe respiratory distress. A score of 10 represents maximum distress with marked retractions, xiphoid lag, nasal flaring, and expiratory grunting.',
         explanationWrong:
@@ -135,11 +135,11 @@ async function main() {
           'A premature infant at 26 weeks gestation is receiving mechanical ventilation with an FiO2 of 0.70 and PEEP of 6 cmH2O. The SpO2 target for this infant should be maintained in which range to minimize the risk of retinopathy of prematurity?',
         choices: {
           A: 'SpO2 96-100%',
-          B: 'SpO2 88-95%',
-          C: 'SpO2 80-85%',
+          B: 'SpO2 80-85%',
+          C: 'SpO2 88-95%',
           D: 'SpO2 75-80%',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'For premature infants, the recommended SpO2 target range is 88-95%. This range balances adequate oxygenation with minimizing the risk of oxygen toxicity, including retinopathy of prematurity (ROP) and bronchopulmonary dysplasia (BPD).',
         explanationWrong:
@@ -170,16 +170,16 @@ async function main() {
         questionText:
           'A newborn has an Apgar score of 3 at 1 minute of life. Which of the following components would contribute to this low score?',
         choices: {
-          A: 'Heart rate below 100 bpm, blue extremities, weak cry, limp/flaccid tone, and no response to stimulation',
+          A: 'Heart rate absent, completely pink, strong cry, active motion, and cough to stimulation',
           B: 'Heart rate above 100 bpm, completely pink, strong cry, active motion, and vigorous cry to stimulation',
           C: 'Heart rate of 120 bpm, cyanotic trunk, absent respiratory effort, and limp tone',
-          D: 'Heart rate absent, completely pink, strong cry, active motion, and cough to stimulation',
+          D: 'Heart rate below 100 bpm, blue extremities, weak cry, limp/flaccid tone, and no response to stimulation',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'An Apgar score of 3 is obtained by assigning partial scores: heart rate below 100 (1 point), blue extremities/acrocyanosis (1 point), weak cry (1 point), limp/flaccid tone (0 points), and no response to stimulation (0 points). This combination yields a score of 3, indicating a severely depressed infant.',
         explanationWrong:
-          'Option B describes a healthy infant with a near-perfect Apgar score of 9-10. Option C has inconsistencies since a heart rate of 120 would score 2 points. Option D is contradictory because an absent heart rate with a completely pink appearance and strong cry is not physiologically possible.',
+          'Option B describes a healthy infant with a near-perfect Apgar score of 9-10. Option C has inconsistencies since a heart rate of 120 would score 2 points. Option A is contradictory because an absent heart rate with a completely pink appearance and strong cry is not physiologically possible.',
         topic: 'Neonatal Assessment',
       },
       {
@@ -206,12 +206,12 @@ async function main() {
         questionText:
           'An infant born at 25 weeks gestation has been on mechanical ventilation for 4 weeks and continues to require supplemental oxygen. Chest radiograph shows cystic changes and hyperinflation. Which diagnosis is most appropriate?',
         choices: {
-          A: 'Respiratory distress syndrome',
+          A: 'Bronchopulmonary dysplasia',
           B: 'Pneumonia',
           C: 'Meconium aspiration syndrome',
-          D: 'Bronchopulmonary dysplasia',
+          D: 'Respiratory distress syndrome',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'Bronchopulmonary dysplasia (BPD) is defined as the need for supplemental oxygen at 36 weeks postmenstrual age or after 28 days of life in a premature infant. Radiographic findings include cystic changes, hyperinflation, and fibrotic streaking, indicating chronic lung injury.',
         explanationWrong:
@@ -242,12 +242,12 @@ async function main() {
         questionText:
           'A neonate is diagnosed with congenital diaphragmatic hernia (CDH). Which of the following is an expected finding on physical examination?',
         choices: {
-          A: 'Scaphoid (concave) abdomen and diminished breath sounds on the affected side',
+          A: 'Normal breath sounds with cyanosis only during feeding',
           B: 'Distended abdomen with bilateral wheezing',
           C: 'Barrel chest with hyperresonance bilaterally',
-          D: 'Normal breath sounds with cyanosis only during feeding',
+          D: 'Scaphoid (concave) abdomen and diminished breath sounds on the affected side',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'In congenital diaphragmatic hernia, abdominal contents herniate into the thorax through the defective diaphragm. This results in a scaphoid abdomen (because organs have moved upward) and diminished or absent breath sounds on the affected side due to lung compression.',
         explanationWrong:
@@ -260,12 +260,12 @@ async function main() {
         questionText:
           'In a neonate with tracheoesophageal fistula (TEF), which finding is most characteristic during the initial assessment?',
         choices: {
-          A: 'Projectile vomiting after feeding',
+          A: 'Excessive drooling and choking with the first feeding, inability to pass an orogastric tube',
           B: 'Progressive abdominal distension only',
           C: 'Inspiratory stridor at rest',
-          D: 'Excessive drooling and choking with the first feeding, inability to pass an orogastric tube',
+          D: 'Projectile vomiting after feeding',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'The most common type of TEF (Type C) involves esophageal atresia with a distal tracheoesophageal fistula. The blind esophageal pouch causes excessive drooling, and the infant chokes and coughs with the first feeding attempt. An orogastric tube cannot be advanced past the atresia.',
         explanationWrong:
@@ -279,11 +279,11 @@ async function main() {
           'Which medication is commonly administered to maintain ductal patency in a neonate with a ductal-dependent congenital heart defect?',
         choices: {
           A: 'Indomethacin',
-          B: 'Prostaglandin E1 (alprostadil)',
-          C: 'Furosemide',
+          B: 'Furosemide',
+          C: 'Prostaglandin E1 (alprostadil)',
           D: 'Methylxanthine',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'Prostaglandin E1 (alprostadil) is administered as a continuous intravenous infusion to maintain patency of the ductus arteriosus in neonates with ductal-dependent congenital heart defects, ensuring adequate pulmonary or systemic blood flow until surgical repair.',
         explanationWrong:
@@ -297,11 +297,11 @@ async function main() {
           'A premature neonate at 30 weeks gestation has recurrent apneic episodes. The respiratory therapist should recommend initiating which medication?',
         choices: {
           A: 'Dexamethasone',
-          B: 'Inhaled nitric oxide',
-          C: 'Caffeine citrate',
+          B: 'Caffeine citrate',
+          C: 'Inhaled nitric oxide',
           D: 'Racemic epinephrine',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'Caffeine citrate is the first-line pharmacologic treatment for apnea of prematurity. It stimulates the central respiratory drive and has been shown to reduce the frequency of apneic episodes and the need for mechanical ventilation in premature infants.',
         explanationWrong:
@@ -386,7 +386,7 @@ async function main() {
   console.log('  ✓ NPS Mini Exam 1 seeded (20 questions, isFree: true)')
 
   // ─── EXAM 2 (isFree: false) ──────────────────────────────────────────
-  // Correct answer distribution: A=5(Q3,Q6,Q10,Q14,Q18) B=5(Q1,Q5,Q9,Q13,Q17) C=5(Q4,Q8,Q11,Q15,Q20) D=5(Q2,Q7,Q12,Q16,Q19)
+  // Correct answer distribution: A=5(Q4,Q6,Q12,Q16,Q18) B=5(Q2,Q5,Q8,Q9,Q19) C=5(Q3,Q11,Q13,Q15,Q20) D=5(Q1,Q7,Q10,Q14,Q17)
   const exam2 = await prisma.miniExam.create({
     data: {
       divisionId: NPS_DIVISION_ID,
@@ -405,11 +405,11 @@ async function main() {
           'A premature neonate born at 27 weeks gestation develops worsening respiratory distress 48 hours after surfactant administration. The chest radiograph shows bilateral hazy opacification. Which of the following is the most appropriate next step?',
         choices: {
           A: 'Discontinue mechanical ventilation and switch to nasal cannula',
-          B: 'Administer a repeat dose of surfactant',
+          B: 'Perform emergent thoracotomy',
           C: 'Initiate inhaled nitric oxide therapy',
-          D: 'Perform emergent thoracotomy',
+          D: 'Administer a repeat dose of surfactant',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
           'Repeat dosing of surfactant is appropriate when a premature infant with RDS deteriorates after initial surfactant therapy. Guidelines support redosing if the infant continues to require significant ventilatory support, typically up to 2-3 additional doses at 6-12 hour intervals.',
         explanationWrong:
@@ -423,11 +423,11 @@ async function main() {
           'During the assessment of a newborn using the New Ballard Score, the examiner notes the infant has no lanugo, creased over the entire sole, thick cartilage with instant ear recoil, and palpable breast tissue of 5-10 mm. This infant is most likely at which gestational age?',
         choices: {
           A: 'Less than 28 weeks',
-          B: 'Between 30-32 weeks',
+          B: 'Between 38-40 weeks',
           C: 'Between 33-35 weeks',
-          D: 'Between 38-40 weeks',
+          D: 'Between 30-32 weeks',
         },
-        correctChoice: 'D',
+        correctChoice: 'B',
         explanationCorrect:
           'The described physical maturity findings (absent lanugo, fully creased soles, firm ear cartilage with instant recoil, and palpable breast tissue of 5-10 mm) are consistent with a term infant at 38-40 weeks gestation on the New Ballard Score.',
         explanationWrong:
@@ -440,12 +440,12 @@ async function main() {
         questionText:
           'A neonate on HFOV has a PaCO2 of 32 mmHg. To correct this respiratory alkalosis, the respiratory therapist should make which adjustment?',
         choices: {
-          A: 'Decrease the amplitude (delta P)',
+          A: 'Decrease the mean airway pressure',
           B: 'Increase the amplitude (delta P)',
-          C: 'Decrease the mean airway pressure',
+          C: 'Decrease the amplitude (delta P)',
           D: 'Increase the FiO2',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'On HFOV, CO2 elimination is primarily determined by the amplitude (delta P) and frequency. A low PaCO2 indicates excessive ventilation. Decreasing the amplitude reduces tidal volume, thereby decreasing CO2 removal and allowing the PaCO2 to rise toward normal.',
         explanationWrong:
@@ -458,12 +458,12 @@ async function main() {
         questionText:
           'A 2-year-old child with a history of prematurity presents with recurrent wheezing episodes and requires supplemental oxygen at home. The child was ventilated for 8 weeks after birth. Which condition is the most likely underlying diagnosis?',
         choices: {
-          A: 'Cystic fibrosis',
+          A: 'Bronchopulmonary dysplasia',
           B: 'Asthma',
-          C: 'Bronchopulmonary dysplasia',
+          C: 'Cystic fibrosis',
           D: 'Primary ciliary dyskinesia',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Bronchopulmonary dysplasia (BPD) is a chronic lung disease that results from prolonged mechanical ventilation and oxygen exposure in premature infants. Children with BPD often have persistent respiratory symptoms, recurrent wheezing, and may require supplemental oxygen well into childhood.',
         explanationWrong:
@@ -566,12 +566,12 @@ async function main() {
         questionText:
           'A premature infant on CPAP of 6 cmH2O develops abdominal distension and feeding intolerance. Abdominal radiograph shows pneumatosis intestinalis. Which condition should be suspected?',
         choices: {
-          A: 'Necrotizing enterocolitis',
+          A: 'Pyloric stenosis',
           B: 'Meconium plug syndrome',
           C: 'Gastroesophageal reflux',
-          D: 'Pyloric stenosis',
+          D: 'Necrotizing enterocolitis',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'Necrotizing enterocolitis (NEC) is a serious gastrointestinal emergency in premature infants. The hallmark radiographic finding is pneumatosis intestinalis (intramural gas), and clinical findings include abdominal distension, feeding intolerance, and bloody stools.',
         explanationWrong:
@@ -602,16 +602,16 @@ async function main() {
         questionText:
           'Which mechanism of heat loss is most significant in the delivery room for a wet newborn placed on an unwarmed surface?',
         choices: {
-          A: 'Radiation',
+          A: 'Conduction',
           B: 'Convection',
-          C: 'Evaporation from wet skin is significant but not the primary mechanism in this scenario',
-          D: 'Conduction',
+          C: 'Evaporation',
+          D: 'Radiation',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'Conduction is the transfer of heat from the infant to the cooler surface it is in direct contact with. A wet newborn placed on an unwarmed surface loses heat rapidly through conduction. This is why radiant warmers with pre-warmed blankets are used during resuscitation.',
         explanationWrong:
-          'Radiation involves heat loss to cooler surrounding surfaces without direct contact. Convection involves heat loss to air currents. While evaporation is significant for a wet newborn, the question specifically asks about placement on an unwarmed surface, making conduction the primary mechanism.',
+          'Radiation involves heat loss to cooler surrounding surfaces without direct contact. Convection involves heat loss to air currents. Evaporation is significant for a wet newborn but the question specifically asks about placement on an unwarmed surface, making conduction the primary mechanism in this scenario.',
         topic: 'Thermoregulation and Neutral Thermal Environment',
       },
       {
@@ -638,12 +638,12 @@ async function main() {
         questionText:
           'A newborn with meconium aspiration syndrome has patchy bilateral infiltrates on chest radiograph and a pneumothorax on the right side. Which complication of meconium aspiration is responsible for the pneumothorax?',
         choices: {
-          A: 'Ball-valve airway obstruction leading to air trapping and alveolar rupture',
+          A: 'Pulmonary hemorrhage from meconium toxicity',
           B: 'Chemical pneumonitis causing alveolar destruction',
           C: 'Surfactant inactivation leading to atelectasis',
-          D: 'Pulmonary hemorrhage from meconium toxicity',
+          D: 'Ball-valve airway obstruction leading to air trapping and alveolar rupture',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'Meconium creates a ball-valve obstruction in the airways, allowing air entry during inspiration but trapping air during expiration. This leads to progressive hyperinflation, alveolar overdistension, and eventually alveolar rupture, resulting in pneumothorax or pneumomediastinum.',
         explanationWrong:
@@ -674,12 +674,12 @@ async function main() {
         questionText:
           'Which of the following is a known risk factor for developing persistent pulmonary hypertension of the newborn (PPHN)?',
         choices: {
-          A: 'Maternal diabetes mellitus only',
+          A: 'Maternal use of NSAIDs or SSRIs during the third trimester',
           B: 'Premature birth at 28 weeks gestation',
           C: 'Vaginal delivery at term without complications',
-          D: 'Maternal use of NSAIDs or SSRIs during the third trimester',
+          D: 'Maternal diabetes mellitus only',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'Maternal use of nonsteroidal anti-inflammatory drugs (NSAIDs) and selective serotonin reuptake inhibitors (SSRIs) during the third trimester has been associated with an increased risk of PPHN. NSAIDs can cause premature closure of the ductus arteriosus, contributing to pulmonary hypertension.',
         explanationWrong:
@@ -693,11 +693,11 @@ async function main() {
           'A preterm infant born at 29 weeks gestation is placed on nasal CPAP at 5 cmH2O immediately after delivery room stabilization. This approach is an example of which strategy?',
         choices: {
           A: 'Rescue surfactant therapy',
-          B: 'Early non-invasive respiratory support to avoid intubation',
+          B: 'Therapeutic hypothermia protocol',
           C: 'Prophylactic surfactant administration',
-          D: 'Therapeutic hypothermia protocol',
+          D: 'Early non-invasive respiratory support to avoid intubation',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
           'Early application of nasal CPAP in the delivery room for preterm infants is a strategy to provide non-invasive respiratory support and avoid intubation and mechanical ventilation. Studies have shown this approach reduces the incidence of BPD and the need for surfactant therapy.',
         explanationWrong:
@@ -729,11 +729,11 @@ async function main() {
           'A neonatal respiratory therapist is calculating the appropriate endotracheal tube insertion depth for a 1.5 kg infant. Using the NRP guidelines, what is the recommended insertion depth at the lip?',
         choices: {
           A: 'Tip-to-lip distance of 10 cm',
-          B: 'Tip-to-lip distance of 6 cm',
+          B: 'Tip-to-lip distance of 7.5 cm using the formula: weight in kg + 6',
           C: 'Tip-to-lip distance of 9 cm',
-          D: 'Tip-to-lip distance of 7.5 cm using the formula: weight in kg + 6',
+          D: 'Tip-to-lip distance of 6 cm',
         },
-        correctChoice: 'D',
+        correctChoice: 'B',
         explanationCorrect:
           'The NRP guideline for ETT insertion depth at the lip uses the formula: weight in kilograms + 6 cm. For a 1.5 kg infant: 1.5 + 6 = 7.5 cm at the lip. This formula provides a reliable estimate for proper tube positioning above the carina.',
         explanationWrong:
@@ -764,7 +764,7 @@ async function main() {
   console.log('  ✓ NPS Mini Exam 2 seeded (20 questions, isFree: false)')
 
   // ─── EXAM 3 (isFree: false) ──────────────────────────────────────────
-  // Correct answer distribution: A=5(Q4,Q7,Q10,Q13,Q17) B=5(Q2,Q6,Q11,Q14,Q18) C=5(Q3,Q8,Q12,Q16,Q19) D=5(Q1,Q5,Q9,Q15,Q20)
+  // Correct answer distribution: A=5(Q4,Q7,Q13,Q14,Q17) B=5(Q2,Q3,Q5,Q11,Q15) C=5(Q8,Q10,Q16,Q19,Q20) D=5(Q1,Q6,Q9,Q12,Q18)
   const exam3 = await prisma.miniExam.create({
     data: {
       divisionId: NPS_DIVISION_ID,
@@ -855,11 +855,11 @@ async function main() {
           'A premature infant weighing 800 grams is placed in an isolette. The respiratory therapist notes the incubator temperature is set to maintain skin temperature at 36.5°C. What is the primary reason for using servo-controlled temperature in this infant?',
         choices: {
           A: 'To prevent hypothermia only during bathing procedures',
-          B: 'To increase the infant\'s metabolic rate for weight gain',
-          C: 'To provide an environment warm enough to trigger sweating',
-          D: 'To minimize oxygen consumption and caloric expenditure by maintaining a neutral thermal environment',
+          B: 'To minimize oxygen consumption and caloric expenditure by maintaining a neutral thermal environment',
+          C: 'To increase the infant\'s metabolic rate for weight gain',
+          D: 'To provide an environment warm enough to trigger sweating',
         },
-        correctChoice: 'D',
+        correctChoice: 'B',
         explanationCorrect:
           'Servo-controlled isolettes maintain the neutral thermal environment by continuously adjusting incubator temperature to keep the infant\'s skin temperature at a set point (typically 36.0-36.5°C). This minimizes oxygen consumption and caloric expenditure required for thermoregulation.',
         explanationWrong:
@@ -873,11 +873,11 @@ async function main() {
           'A newborn at 42 weeks gestation passes thick meconium prior to delivery. After birth, the infant has depressed tone, minimal respiratory effort, and a heart rate of 80 bpm. What is the most appropriate first action after clamping and cutting the cord?',
         choices: {
           A: 'Administer naloxone to reverse potential opioid depression',
-          B: 'Place the infant under a radiant warmer, position the airway, suction the mouth and nose, dry and stimulate',
+          B: 'Place the infant skin-to-skin on the mother for warmth',
           C: 'Begin chest compressions immediately',
-          D: 'Place the infant skin-to-skin on the mother for warmth',
+          D: 'Place the infant under a radiant warmer, position the airway, suction the mouth and nose, dry and stimulate',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
           'Per NRP guidelines, the initial steps for a depressed newborn are: place under a radiant warmer, position the head in a sniffing position, clear the airway (suction mouth then nose), dry thoroughly, and stimulate. These steps should be completed within the first 30 seconds (the Golden Minute).',
         explanationWrong:
@@ -946,10 +946,10 @@ async function main() {
         choices: {
           A: 'Normal breath sounds bilaterally with a distended abdomen',
           B: 'Heart sounds in the normal position with bilateral crackles',
-          C: 'Barrel-shaped chest with bilateral hyperresonance',
-          D: 'Heart sounds displaced to the right, absent breath sounds on the left, and a scaphoid abdomen',
+          C: 'Heart sounds displaced to the right, absent breath sounds on the left, and a scaphoid abdomen',
+          D: 'Barrel-shaped chest with bilateral hyperresonance',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'In a left-sided CDH (the most common type), abdominal organs herniate into the left thorax, pushing the mediastinum and heart to the right. This causes absent or diminished breath sounds on the left, heart sounds displaced to the right, and a scaphoid abdomen.',
         explanationWrong:
@@ -982,10 +982,10 @@ async function main() {
         choices: {
           A: 'A 10 Fr suction catheter',
           B: 'A 5 Fr suction catheter',
-          C: 'An 8 Fr suction catheter',
-          D: 'A 6 Fr suction catheter',
+          C: 'A 6 Fr suction catheter',
+          D: 'An 8 Fr suction catheter',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'The suction catheter size should be no more than half the internal diameter of the ETT to prevent excessive negative pressure and atelectasis. For a 3.5 mm ETT, an 8 Fr catheter is the largest that should be used (ETT size × 2 = 7; the next available size is 8 Fr).',
         explanationWrong:
@@ -1016,12 +1016,12 @@ async function main() {
         questionText:
           'A 2-week-old neonate born at 27 weeks gestation has an echocardiogram showing a large patent ductus arteriosus with left-to-right shunting. The infant has increasing FiO2 requirements and bounding peripheral pulses. After a course of ibuprofen fails to close the PDA, what is the recommended next step?',
         choices: {
-          A: 'Repeat the same dose of ibuprofen',
-          B: 'Surgical ligation of the PDA',
+          A: 'Surgical ligation of the PDA',
+          B: 'Repeat the same dose of ibuprofen',
           C: 'Administer prostaglandin E1',
           D: 'Initiate inhaled nitric oxide therapy',
         },
-        correctChoice: 'B',
+        correctChoice: 'A',
         explanationCorrect:
           'When pharmacologic closure of a hemodynamically significant PDA fails, surgical ligation is the next step. The persistent left-to-right shunt increases pulmonary blood flow, worsens respiratory status, and can lead to heart failure if untreated.',
         explanationWrong:
@@ -1034,12 +1034,12 @@ async function main() {
         questionText:
           'A premature neonate born at 25 weeks gestation is at highest risk for which type of intracranial hemorrhage?',
         choices: {
-          A: 'Intraventricular hemorrhage',
-          B: 'Epidural hematoma',
+          A: 'Epidural hematoma',
+          B: 'Intraventricular hemorrhage',
           C: 'Subarachnoid hemorrhage',
           D: 'Subdural hematoma',
         },
-        correctChoice: 'A',
+        correctChoice: 'B',
         explanationCorrect:
           'Intraventricular hemorrhage (IVH) is the most common type of intracranial hemorrhage in premature infants, originating from the fragile germinal matrix. Infants born before 32 weeks, especially before 28 weeks, are at the highest risk. Fluctuations in cerebral blood flow are a major contributing factor.',
         explanationWrong:
@@ -1090,10 +1090,10 @@ async function main() {
         choices: {
           A: 'Abrupt discontinuation from 20 ppm',
           B: 'Switch directly to 100% oxygen and discontinue iNO',
-          C: 'Gradual reduction in increments while monitoring for rebound pulmonary hypertension',
-          D: 'Reduce iNO to 5 ppm and discontinue after 10 minutes',
+          C: 'Reduce iNO to 5 ppm and discontinue after 10 minutes',
+          D: 'Gradual reduction in increments while monitoring for rebound pulmonary hypertension',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'Inhaled nitric oxide should be weaned gradually (typically by 5 ppm at a time, then by 1 ppm at lower doses) while monitoring SpO2 and hemodynamics. Abrupt discontinuation can cause severe rebound pulmonary hypertension due to downregulation of endogenous nitric oxide synthase.',
         explanationWrong:
@@ -1126,10 +1126,10 @@ async function main() {
         choices: {
           A: 'The esophagus connects normally to the stomach with no fistula',
           B: 'An H-type fistula connects the esophagus to the trachea without atresia',
-          C: 'Both proximal and distal esophageal segments connect to the trachea',
-          D: 'Proximal esophageal atresia with a blind pouch, and a distal tracheoesophageal fistula connecting the trachea to the distal esophagus and stomach',
+          C: 'Proximal esophageal atresia with a blind pouch, and a distal tracheoesophageal fistula connecting the trachea to the distal esophagus and stomach',
+          D: 'Both proximal and distal esophageal segments connect to the trachea',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'Type C TEF (Gross classification) is the most common type, accounting for approximately 85% of cases. It consists of a blind proximal esophageal pouch (esophageal atresia) with a fistula connecting the distal trachea to the distal esophagus, allowing air to enter the stomach.',
         explanationWrong:
@@ -1142,7 +1142,7 @@ async function main() {
   console.log('  ✓ NPS Mini Exam 3 seeded (20 questions, isFree: false)')
 
   // ─── EXAM 4 (isFree: false) ──────────────────────────────────────────
-  // Correct answer distribution: A=5(Q1,Q6,Q11,Q15,Q18) B=5(Q3,Q8,Q12,Q16,Q19) C=5(Q2,Q5,Q9,Q14,Q20) D=5(Q4,Q7,Q10,Q13,Q17)
+  // Correct answer distribution: A=5(Q2,Q3,Q6,Q9,Q10) B=5(Q7,Q12,Q15,Q18,Q20) C=5(Q1,Q5,Q14,Q16,Q19) D=5(Q4,Q8,Q11,Q13,Q17)
   const exam4 = await prisma.miniExam.create({
     data: {
       divisionId: NPS_DIVISION_ID,
@@ -1160,12 +1160,12 @@ async function main() {
         questionText:
           'A neonate born at 30 weeks gestation receives prophylactic surfactant via the INSURE technique. What does the INSURE method involve?',
         choices: {
-          A: 'Intubation, surfactant administration, and rapid extubation to CPAP',
+          A: 'Surfactant nebulization through a face mask without intubation',
           B: 'Intubation, surfactant administration, and continued mechanical ventilation',
-          C: 'Surfactant nebulization through a face mask without intubation',
+          C: 'Intubation, surfactant administration, and rapid extubation to CPAP',
           D: 'Nasal surfactant administration via a thin catheter without intubation',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'The INSURE technique stands for INtubate, SURfactant, Extubate. The infant is briefly intubated for surfactant administration, then rapidly extubated to nasal CPAP. This approach minimizes ventilator-induced lung injury while providing the benefits of surfactant therapy.',
         explanationWrong:
@@ -1178,12 +1178,12 @@ async function main() {
         questionText:
           'A neonate is being ventilated with synchronized intermittent mandatory ventilation (SIMV). The set rate is 30 bpm, but the total respiratory rate displayed is 55 bpm. What does this indicate?',
         choices: {
-          A: 'The ventilator is auto-triggering',
+          A: 'The infant is breathing spontaneously between the mandatory breaths',
           B: 'The flow sensor is malfunctioning',
-          C: 'The infant is breathing spontaneously between the mandatory breaths',
+          C: 'The ventilator is auto-triggering',
           D: 'The set rate is too high and should be reduced',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'In SIMV mode, the ventilator delivers a set number of mandatory breaths (30 bpm) and allows the patient to breathe spontaneously between those breaths. The total rate of 55 bpm indicates 25 spontaneous breaths per minute in addition to the 30 mandatory breaths.',
         explanationWrong:
@@ -1269,11 +1269,11 @@ async function main() {
           'Which component of the Apgar score evaluates the newborn\'s response to tactile stimulation?',
         choices: {
           A: 'Appearance',
-          B: 'Pulse',
+          B: 'Grimace (reflex irritability)',
           C: 'Activity',
-          D: 'Grimace (reflex irritability)',
+          D: 'Pulse',
         },
-        correctChoice: 'D',
+        correctChoice: 'B',
         explanationCorrect:
           'The Grimace component (reflex irritability) of the Apgar score evaluates the newborn\'s response to stimulation such as suctioning or flicking the sole of the foot. A score of 0 indicates no response, 1 indicates a grimace, and 2 indicates a vigorous cry or cough.',
         explanationWrong:
@@ -1287,11 +1287,11 @@ async function main() {
           'A 5-year-old child with status asthmaticus is intubated and placed on mechanical ventilation. The peak inspiratory pressure is 38 cmH2O and the plateau pressure is 22 cmH2O. What does the large difference between peak and plateau pressure suggest?',
         choices: {
           A: 'Decreased lung compliance',
-          B: 'Increased airway resistance',
+          B: 'Endotracheal tube obstruction',
           C: 'Pneumothorax',
-          D: 'Endotracheal tube obstruction',
+          D: 'Increased airway resistance',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
           'A large gradient between peak inspiratory pressure and plateau pressure (PIP - Pplat > 10 cmH2O) indicates increased airway resistance. In status asthmaticus, severe bronchospasm and airway inflammation significantly increase airway resistance, reflected in this pressure differential.',
         explanationWrong:
@@ -1322,12 +1322,12 @@ async function main() {
         questionText:
           'A premature infant on mechanical ventilation has been noted to have a Grade III intraventricular hemorrhage. Which ventilation practice may help minimize the risk of IVH extension?',
         choices: {
-          A: 'Maintaining high tidal volumes to ensure adequate ventilation',
+          A: 'Avoiding fluctuations in PaCO2 and maintaining hemodynamic stability',
           B: 'Rapid rate changes to correct ABG abnormalities quickly',
           C: 'Routine tracheal suctioning every 2 hours',
-          D: 'Avoiding fluctuations in PaCO2 and maintaining hemodynamic stability',
+          D: 'Maintaining high tidal volumes to ensure adequate ventilation',
         },
-        correctChoice: 'D',
+        correctChoice: 'A',
         explanationCorrect:
           'Fluctuations in PaCO2 cause changes in cerebral blood flow, which can extend existing IVH or cause new hemorrhage. Maintaining stable PaCO2 through gradual ventilator adjustments and avoiding hemodynamic instability are critical to preventing IVH extension in premature infants.',
         explanationWrong:
@@ -1340,12 +1340,12 @@ async function main() {
         questionText:
           'A neonate with severe meconium aspiration syndrome develops refractory hypoxemia. Despite maximal conventional ventilation and FiO2 of 1.0, the PaO2 remains at 35 mmHg. The respiratory therapist calculates an oxygenation index (OI) of 42. Which formula was used to calculate the OI?',
         choices: {
-          A: 'OI = (MAP × FiO2 × 100) / PaO2',
+          A: 'OI = (MAP × PaO2) / FiO2',
           B: 'OI = PaO2 / (MAP × FiO2)',
           C: 'OI = (PaO2 × FiO2) / MAP',
-          D: 'OI = (MAP × PaO2) / FiO2',
+          D: 'OI = (MAP × FiO2 × 100) / PaO2',
         },
-        correctChoice: 'A',
+        correctChoice: 'D',
         explanationCorrect:
           'The oxygenation index (OI) is calculated using the formula: OI = (MAP × FiO2 × 100) / PaO2. A higher OI indicates more severe oxygenation failure. An OI greater than 40 is a criterion for ECMO consideration. In this case: (MAP × 1.0 × 100) / 35 ≈ 42.',
         explanationWrong:
@@ -1413,11 +1413,11 @@ async function main() {
           'A 1-day-old term infant has persistent cyanosis that does not improve with administration of 100% oxygen. An echocardiogram reveals a congenital heart defect. This presentation is most consistent with which type of cardiac lesion?',
         choices: {
           A: 'A ventricular septal defect with pulmonary overcirculation',
-          B: 'An acyanotic defect with left-to-right shunting',
-          C: 'A cyanotic congenital heart defect with right-to-left shunting',
+          B: 'A cyanotic congenital heart defect with right-to-left shunting',
+          C: 'An acyanotic defect with left-to-right shunting',
           D: 'A patent ductus arteriosus with left-to-right flow',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'Persistent cyanosis unresponsive to 100% oxygen (failed hyperoxia test) is characteristic of cyanotic congenital heart disease with right-to-left shunting (e.g., tetralogy of Fallot, transposition of the great arteries). Deoxygenated blood bypasses the lungs, and supplemental oxygen cannot correct the cyanosis.',
         explanationWrong:
@@ -1431,11 +1431,11 @@ async function main() {
           'A premature neonate born at 24 weeks gestation has been on mechanical ventilation for 6 weeks and now has established severe BPD. Which characteristic finding is expected on the chest radiograph?',
         choices: {
           A: 'Bilateral ground-glass opacification with air bronchograms',
-          B: 'Alternating areas of atelectasis and hyperinflation with cystic changes and fibrotic streaking',
-          C: 'Normal chest radiograph with clear lung fields',
+          B: 'Normal chest radiograph with clear lung fields',
+          C: 'Alternating areas of atelectasis and hyperinflation with cystic changes and fibrotic streaking',
           D: 'Unilateral consolidation in the right lower lobe',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'Severe (classic) BPD demonstrates a heterogeneous radiographic pattern with alternating areas of atelectasis and hyperinflation, cystic changes (bubbly appearance), and fibrotic streaking. This reflects chronic lung injury from prolonged ventilation and oxygen exposure.',
         explanationWrong:
@@ -1485,11 +1485,11 @@ async function main() {
           'A preterm infant being treated with supplemental oxygen develops retinopathy of prematurity (ROP). Which of the following best describes the pathophysiology of ROP?',
         choices: {
           A: 'Excessive oxygen causes direct thermal injury to the retinal vessels',
-          B: 'Abnormal retinal vascular development due to fluctuating oxygen levels causing vasoconstriction followed by pathologic neovascularization',
-          C: 'Infection of the retinal blood vessels due to immature immune function',
+          B: 'Infection of the retinal blood vessels due to immature immune function',
+          C: 'Abnormal retinal vascular development due to fluctuating oxygen levels causing vasoconstriction followed by pathologic neovascularization',
           D: 'Mechanical damage to the retina from high CPAP pressures',
         },
-        correctChoice: 'B',
+        correctChoice: 'C',
         explanationCorrect:
           'ROP develops in two phases: Phase 1 involves vasoconstriction and cessation of normal retinal vascular growth due to hyperoxia. Phase 2 involves relative retinal hypoxia triggering release of VEGF (vascular endothelial growth factor), causing pathologic neovascularization that can lead to retinal detachment.',
         explanationWrong:
@@ -1503,11 +1503,11 @@ async function main() {
           'A neonate born at 32 weeks gestation requires surfactant replacement therapy. The respiratory therapist prepares to administer poractant alfa (Curosurf). What distinguishes poractant alfa from beractant (Survanta)?',
         choices: {
           A: 'Poractant alfa is a synthetic surfactant',
-          B: 'Beractant contains more surfactant protein than poractant alfa',
-          C: 'Poractant alfa is derived from porcine lung extract and has a higher phospholipid concentration per unit volume',
+          B: 'Poractant alfa is derived from porcine lung extract and has a higher phospholipid concentration per unit volume',
+          C: 'Beractant contains more surfactant protein than poractant alfa',
           D: 'Beractant is administered via nebulization while poractant alfa requires intubation',
         },
-        correctChoice: 'C',
+        correctChoice: 'B',
         explanationCorrect:
           'Poractant alfa (Curosurf) is derived from porcine (pig) lung extract, while beractant (Survanta) is derived from bovine (cow) lung extract. Poractant alfa has a higher phospholipid concentration per milliliter, allowing for smaller volume administration, which may reduce airway flooding.',
         explanationWrong:
@@ -1520,7 +1520,7 @@ async function main() {
   console.log('  ✓ NPS Mini Exam 4 seeded (20 questions, isFree: false)')
 
   // ─── EXAM 5 (isFree: false) ──────────────────────────────────────────
-  // Correct answer distribution: A=5(Q4,Q7,Q9,Q13,Q17) B=5(Q3,Q8,Q12,Q15,Q19) C=5(Q1,Q5,Q10,Q16,Q20) D=5(Q2,Q6,Q11,Q14,Q18)
+  // Correct answer distribution: A=5(Q1,Q7,Q10,Q13,Q17) B=5(Q3,Q8,Q11,Q18,Q19) C=5(Q4,Q6,Q9,Q16,Q20) D=5(Q2,Q5,Q12,Q14,Q15)
   const exam5 = await prisma.miniExam.create({
     data: {
       divisionId: NPS_DIVISION_ID,
@@ -1538,12 +1538,12 @@ async function main() {
         questionText:
           'A neonate born at 26 weeks gestation is intubated and placed on conventional mechanical ventilation. The initial ventilator settings include a tidal volume of 4 mL/kg. On the first ABG, the PaCO2 is 38 mmHg and pH is 7.35. How should the respiratory therapist interpret these results?',
         choices: {
-          A: 'The infant is being significantly over-ventilated',
+          A: 'The ventilator settings are providing adequate ventilation with acceptable gas exchange',
           B: 'The PaCO2 is critically low and requires immediate correction',
-          C: 'The ventilator settings are providing adequate ventilation with acceptable gas exchange',
+          C: 'The infant is being significantly over-ventilated',
           D: 'The ABG indicates severe respiratory acidosis',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'A PaCO2 of 38 mmHg and pH of 7.35 represent acceptable gas exchange for a ventilated neonate. While permissive hypercapnia (PaCO2 45-55) may be targeted to minimize ventilator-induced lung injury, these values are within normal range and do not require immediate change.',
         explanationWrong:
@@ -1592,12 +1592,12 @@ async function main() {
         questionText:
           'A neonate with a left-sided congenital diaphragmatic hernia has been stabilized with endotracheal intubation. The gastric contents are being decompressed with an orogastric tube. Which ventilation strategy is contraindicated?',
         choices: {
-          A: 'Bag-mask ventilation with high pressures',
+          A: 'HFOV as a rescue strategy',
           B: 'Gentle mechanical ventilation with PIP below 25 cmH2O',
-          C: 'HFOV as a rescue strategy',
+          C: 'Bag-mask ventilation with high pressures',
           D: 'Volume-targeted ventilation at 4-6 mL/kg',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'Bag-mask ventilation with high pressures is contraindicated in CDH because it forces air into the stomach and herniated bowel within the thorax, further compressing the already hypoplastic lung and worsening respiratory distress. Immediate intubation is preferred.',
         explanationWrong:
@@ -1612,10 +1612,10 @@ async function main() {
         choices: {
           A: 'Air bronchograms with a ground-glass pattern',
           B: 'Complete bilateral whiteout',
-          C: 'Patchy bilateral infiltrates with areas of hyperinflation and possible pneumothorax',
-          D: 'Butterfly pattern of pulmonary edema',
+          C: 'Butterfly pattern of pulmonary edema',
+          D: 'Patchy bilateral infiltrates with areas of hyperinflation and possible pneumothorax',
         },
-        correctChoice: 'C',
+        correctChoice: 'D',
         explanationCorrect:
           'Meconium aspiration syndrome characteristically shows patchy, irregular bilateral infiltrates with areas of hyperinflation (air trapping) on chest radiograph. Pneumothorax and pneumomediastinum may also be present due to the ball-valve obstruction mechanism. This pattern differs from the uniform ground-glass appearance of RDS.',
         explanationWrong:
@@ -1630,10 +1630,10 @@ async function main() {
         choices: {
           A: 'Oxygenation index greater than 40',
           B: 'Birth weight greater than 2 kg',
-          C: 'Gestational age of 38 weeks',
-          D: 'Gestational age less than 34 weeks or birth weight less than 2 kg',
+          C: 'Gestational age less than 34 weeks or birth weight less than 2 kg',
+          D: 'Gestational age of 38 weeks',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
           'ECMO contraindications in neonates include gestational age less than 34 weeks and birth weight less than 2 kg due to the high risk of intracranial hemorrhage from systemic heparinization. Other contraindications include lethal chromosomal abnormalities and Grade III or higher IVH.',
         explanationWrong:
@@ -1682,12 +1682,12 @@ async function main() {
         questionText:
           'A premature infant with BPD is being weaned from mechanical ventilation. The infant has chronic CO2 retention with a baseline PaCO2 of 55 mmHg. What renal compensation would be expected on the ABG?',
         choices: {
-          A: 'Elevated HCO3 (metabolic compensation) to maintain near-normal pH',
+          A: 'Normal HCO3 with an acidic pH',
           B: 'Decreased HCO3 indicating metabolic acidosis',
-          C: 'Normal HCO3 with an acidic pH',
+          C: 'Elevated HCO3 (metabolic compensation) to maintain near-normal pH',
           D: 'Elevated PaO2 to compensate for the elevated PaCO2',
         },
-        correctChoice: 'A',
+        correctChoice: 'C',
         explanationCorrect:
           'In chronic respiratory acidosis from BPD, the kidneys compensate by retaining bicarbonate (HCO3) and excreting hydrogen ions. This renal compensation raises the HCO3 level, maintaining the pH near normal despite the chronically elevated PaCO2.',
         explanationWrong:
@@ -1700,12 +1700,12 @@ async function main() {
         questionText:
           'A neonate born at 41 weeks gestation has unilateral choanal atresia. How does this presentation typically differ from bilateral choanal atresia?',
         choices: {
-          A: 'Unilateral choanal atresia causes immediate severe respiratory distress at birth',
+          A: 'Unilateral choanal atresia may present with chronic unilateral nasal discharge and congestion, often diagnosed later in life',
           B: 'Unilateral choanal atresia is always associated with CHARGE syndrome',
-          C: 'Unilateral choanal atresia may present with chronic unilateral nasal discharge and congestion, often diagnosed later in life',
+          C: 'Unilateral choanal atresia causes immediate severe respiratory distress at birth',
           D: 'Unilateral choanal atresia requires immediate surgical repair at birth',
         },
-        correctChoice: 'C',
+        correctChoice: 'A',
         explanationCorrect:
           'Unilateral choanal atresia is often less dramatic than bilateral involvement. Because the infant can breathe through the unaffected nostril, it may not present until later in life with chronic unilateral nasal congestion, discharge, or recurrent sinusitis on the affected side.',
         explanationWrong:
@@ -1719,11 +1719,11 @@ async function main() {
           'A premature infant is receiving total parenteral nutrition (TPN) through a central venous catheter. The respiratory therapist notices a sudden onset of respiratory distress with decreased breath sounds on the right side. Chest radiograph shows a right-sided pleural effusion. What is the most likely cause?',
         choices: {
           A: 'Spontaneous chylothorax',
-          B: 'Right-sided pneumonia',
+          B: 'Central line migration with TPN extravasation into the pleural space',
           C: 'Congestive heart failure',
-          D: 'Central line migration with TPN extravasation into the pleural space',
+          D: 'Right-sided pneumonia',
         },
-        correctChoice: 'D',
+        correctChoice: 'B',
         explanationCorrect:
           'The sudden onset of respiratory distress with a pleural effusion in a neonate with a central venous catheter receiving TPN strongly suggests catheter migration with TPN fluid extravasation into the pleural space. This is a known complication of central venous catheters requiring urgent intervention.',
         explanationWrong:
@@ -1737,11 +1737,11 @@ async function main() {
           'A neonate is being managed with therapeutic hypothermia (whole-body cooling) after perinatal asphyxia. What is the target core temperature for this therapy?',
         choices: {
           A: 'Core temperature of 36.5-37.0°C',
-          B: 'Core temperature of 33.5°C ± 0.5°C for 72 hours',
+          B: 'Core temperature of 35.0°C for 24 hours',
           C: 'Core temperature of 30.0°C for 48 hours',
-          D: 'Core temperature of 35.0°C for 24 hours',
+          D: 'Core temperature of 33.5°C ± 0.5°C for 72 hours',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
           'Therapeutic hypothermia for neonatal hypoxic-ischemic encephalopathy (HIE) targets a core temperature of 33.5°C ± 0.5°C (33-34°C) for 72 hours, followed by slow rewarming at 0.5°C per hour. This protocol has been shown to reduce mortality and neurodevelopmental disability.',
         explanationWrong:
@@ -1791,11 +1791,11 @@ async function main() {
           'A premature infant born at 28 weeks gestation develops a hemodynamically significant PDA. The infant fails two courses of indomethacin. Before proceeding to surgical ligation, which alternative pharmacologic agent may be considered?',
         choices: {
           A: 'Prostaglandin E1',
-          B: 'Acetaminophen (paracetamol)',
+          B: 'Dopamine',
           C: 'Milrinone',
-          D: 'Dopamine',
+          D: 'Acetaminophen (paracetamol)',
         },
-        correctChoice: 'B',
+        correctChoice: 'D',
         explanationCorrect:
           'Acetaminophen (paracetamol) has emerged as an alternative to indomethacin and ibuprofen for PDA closure. It inhibits the peroxidase component of prostaglandin synthase, reducing prostaglandin production with fewer renal and gastrointestinal side effects than traditional COX inhibitors.',
         explanationWrong:
@@ -1845,11 +1845,11 @@ async function main() {
           'A neonate with meconium aspiration syndrome is receiving mechanical ventilation. The respiratory therapist observes increasing auto-PEEP and bilateral hyperinflation on chest radiograph. Which ventilator adjustment would best address this problem?',
         choices: {
           A: 'Increase the PEEP to match the auto-PEEP level',
-          B: 'Increase the respiratory rate to improve minute ventilation',
+          B: 'Decrease the respiratory rate and increase the expiratory time',
           C: 'Increase the inspiratory time to deliver more tidal volume',
-          D: 'Decrease the respiratory rate and increase the expiratory time',
+          D: 'Increase the respiratory rate to improve minute ventilation',
         },
-        correctChoice: 'D',
+        correctChoice: 'B',
         explanationCorrect:
           'Auto-PEEP and air trapping in MAS result from the ball-valve obstruction of the airways by meconium. Decreasing the respiratory rate increases the expiratory time, allowing more complete exhalation and reducing gas trapping and auto-PEEP.',
         explanationWrong:

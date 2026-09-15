@@ -75,7 +75,7 @@ export default function ToolsPage() {
           <div className="mt-16 max-w-2xl mx-auto">
             <SignupCTA
               variant="banner"
-              heading="Want 600+ practice questions too?"
+              heading="Want 2,500+ practice questions too?"
               description="NBRCprep has flashcards, mini exams, and full-length simulations for all 6 NBRC divisions. Free tier available."
             />
           </div>

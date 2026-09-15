@@ -8,8 +8,8 @@ async function main() {
   console.log('Seeding TMC mini exams 11-15...')
 
   // ──────────────────────────────────────────────
-  // EXAM 11 - Answer key: C B A D C A B D A C D B A D B C D A B C
-  //   A: q3,6,9,13,18  B: q2,7,12,15,19  C: q1,5,10,16,20  D: q4,8,11,14,17
+  // EXAM 11 - Answer key: C C A A C A B D A C D B A D B B D D B C
+  //   A: q3,4,6,9,13  B: q7,12,15,16,19  C: q1,2,5,10,20  D: q8,11,14,17,18
   // ──────────────────────────────────────────────
   const exam11 = await prisma.miniExam.create({
     data: {
@@ -228,8 +228,8 @@ async function main() {
   console.log('  ✓ Exam 11 seeded (20 questions)')
 
   // ──────────────────────────────────────────────
-  // EXAM 12 - Answer key: D A C B A D B C D A B C A D C B D A C B
-  //   A: q2,5,10,13,18  B: q4,7,11,16,20  C: q3,8,12,15,19  D: q1,6,9,14,17
+  // EXAM 12 - Answer key: D A C B A D B A D C B C C D A B D A C B
+  //   A: q2,5,8,15,18  B: q4,7,11,16,20  C: q3,10,12,13,19  D: q1,6,9,14,17
   // ──────────────────────────────────────────────
   const exam12 = await prisma.miniExam.create({
     data: {
@@ -448,14 +448,8 @@ async function main() {
   console.log('  ✓ Exam 12 seeded (20 questions)')
 
   // ──────────────────────────────────────────────
-  // EXAM 13 - Answer key: B C D A C B D D C A D B C D A B A C B D
-  //   A: q4,10,15,17,19 → wait, let me recount
-  //   Actually: q1=B, q2=C, q3=D, q4=A, q5=C, q6=B, q7=D, q8=D, q9=C, q10=A, q11=D, q12=B, q13=C, q14=D, q15=A, q16=B, q17=A, q18=C, q19=B → wait that's only 4 B before 19
-  //   Let me recount: B: q1,6,12,16,19 = 5. But q19=B means I need q20=D
-  //   A: q4,10,15,17 = only 4... I need one more A.
-  //   Let me fix: q19=A, q20=D → A: q4,10,15,17,19=5 B: q1,6,12,16=4... need one more B
-  //   Redo:
-  //   A: q4,10,15,17,19  B: q1,6,12,16,20  C: q2,5,9,13,18  D: q3,7,8,11,14
+  // EXAM 13 - Answer key: B D D A C B C D C A D B A D A B A C C B
+  //   A: q4,10,13,15,17  B: q1,6,12,16,20  C: q5,7,9,18,19  D: q2,3,8,11,14
   // ──────────────────────────────────────────────
   const exam13 = await prisma.miniExam.create({
     data: {

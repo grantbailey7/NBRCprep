@@ -7,11 +7,11 @@ import { getAuthSession } from '@/lib/auth'
 export const metadata: Metadata = {
   title: 'NBRCprep - Pass the NBRC. The First Time.',
   description:
-    'NBRCprep is the #1 NBRC study platform. 600 original flashcards, 30 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
+    'NBRCprep is the #1 NBRC study platform. 2,500+ original flashcards, 65 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
   alternates: { canonical: 'https://nbrcprep.app' },
   openGraph: {
     title: 'NBRCprep - Pass the NBRC. The First Time.',
-    description: '600 original flashcards, 30 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
+    description: '2,500+ original flashcards, 65 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
     url: 'https://nbrcprep.app',
     siteName: 'NBRCprep',
     type: 'website',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NBRCprep - Pass the NBRC. The First Time.',
-    description: '600 original flashcards, 30 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
+    description: '2,500+ original flashcards, 65 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
     images: ['/api/og'],
   },
 }
@@ -52,7 +52,7 @@ const HOMEPAGE_FAQ = [
   },
   {
     question: 'How many NBRC practice questions does NBRCprep have?',
-    answer: 'NBRCprep has 600 original flashcards (100 per division), 600 mini exam questions (30 exams x 20 questions), and 18 full-length simulations across all 6 NBRC divisions.',
+    answer: 'NBRCprep has 2,500+ original flashcards (400-500 per division), 1,300 mini exam questions (65 exams x 20 questions), and 18 full-length simulations across all 6 NBRC divisions.',
   },
   {
     question: 'Is NBRCprep free?',
@@ -67,7 +67,7 @@ const jsonLd = {
       '@type': 'WebApplication',
       name: 'NBRCprep',
       url: 'https://nbrcprep.app',
-      description: 'NBRC exam prep platform with 600 flashcards, 30 mini exams, and full-length practice exams for all 6 NBRC divisions.',
+      description: 'NBRC exam prep platform with 2,500+ flashcards, 65 mini exams, and full-length practice exams for all 6 NBRC divisions.',
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Web',
       offers: [
@@ -123,7 +123,7 @@ export default async function HomePage() {
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
             <span className="w-2 h-2 bg-teal-500 rounded-full animate-pulse" />
-            600+ Flashcards · 600 Practice Questions · 6 Divisions
+            2,500+ Flashcards · 1,300 Practice Questions · 6 Divisions
           </div>
           <h1 className="text-5xl sm:text-6xl font-black text-black leading-[1.05] tracking-tight">
             Pass the NBRC.<br />
@@ -159,14 +159,14 @@ export default async function HomePage() {
               {
                 icon: '🗂',
                 title: 'Flashcards',
-                count: '600+',
-                desc: '100 original, clinically-focused flashcards per division with immediate answer reveals and progress tracking.',
+                count: '2,500+',
+                desc: '400-500 original, clinically-focused flashcards per division with immediate answer reveals and progress tracking.',
               },
               {
                 icon: '📝',
                 title: 'Mini Exams',
-                count: '30',
-                desc: '5 × 20-question mini exams per division. Timed, scored, and reviewed with detailed explanations.',
+                count: '65',
+                desc: '10-15 timed mini exams per division. 20 questions each, scored and reviewed with detailed explanations.',
               },
               {
                 icon: '🎯',
@@ -222,9 +222,9 @@ export default async function HomePage() {
                 <h3 className="font-bold text-black text-lg mb-1">{div.name}</h3>
                 <p className="text-sm text-brand-gray-500">{div.description}</p>
                 <div className="mt-4 flex gap-3 text-xs text-brand-gray-400">
-                  <span>100 flashcards</span>
+                  <span>400+ flashcards</span>
                   <span>·</span>
-                  <span>5 mini exams</span>
+                  <span>10+ mini exams</span>
                   <span>·</span>
                   <span>3 full exams</span>
                 </div>
@@ -245,7 +245,7 @@ export default async function HomePage() {
               {
                 step: '01',
                 title: 'Build your foundation with Flashcards',
-                desc: 'Work through 100 original flashcards per division. Mark cards as Known or flag them for Review Later. Your progress is tracked and visualized in real time.',
+                desc: 'Work through 400-500 original flashcards per division. Mark cards as Known or flag them for Review Later. Your progress is tracked and visualized in real time.',
               },
               {
                 step: '02',
@@ -301,7 +301,7 @@ export default async function HomePage() {
                 subtitle: 'TMC Only',
                 price: '$149',
                 period: 'one-time',
-                features: ['All TMC content', '100 flashcards', '5 mini exams', '3 full-length exams', 'Lifetime access'],
+                features: ['All TMC content', '500 flashcards', '15 mini exams', '3 full-length exams', 'Lifetime access'],
                 cta: 'Get Full Access',
                 href: isLoggedIn ? '/billing?upgrade=full_access' : '/signup?plan=full_access',
                 highlight: true,
@@ -311,7 +311,7 @@ export default async function HomePage() {
                 subtitle: 'All 6 Divisions',
                 price: '$249',
                 period: 'one-time',
-                features: ['All 6 divisions', '600 flashcards', '30 mini exams', '18 full-length exams', 'Lifetime access'],
+                features: ['All 6 divisions', '2,500+ flashcards', '65 mini exams', '18 full-length exams', 'Lifetime access'],
                 cta: 'Get Full Bundle',
                 href: isLoggedIn ? '/billing?upgrade=full_bundle' : '/signup?plan=full_bundle',
                 highlight: false,

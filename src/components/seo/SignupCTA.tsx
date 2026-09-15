@@ -10,7 +10,7 @@ interface SignupCTAProps {
 
 export function SignupCTA({
   heading = 'Ready to pass your NBRC exam?',
-  description = 'Join thousands of RT students using NBRCprep to study smarter. 600+ flashcards, 30 mini exams, and 18 full-length simulations. Start free, no card required.',
+  description = 'Join thousands of RT students using NBRCprep to study smarter. 2,500+ flashcards, 65 mini exams, and 18 full-length simulations. Start free, no card required.',
   buttonText = 'Start Free Today',
   buttonHref = '/signup',
   variant = 'default',

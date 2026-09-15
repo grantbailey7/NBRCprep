@@ -8,7 +8,7 @@ async function main() {
   console.log('Seeding ACCS mini exams 6-10...')
 
   // ─── EXAM 6 ───────────────────────────────────────────────────────────
-  // Correct answer distribution: A=5(Q2,Q5,Q11,Q15,Q18) B=5(Q1,Q7,Q12,Q16,Q20) C=5(Q3,Q8,Q13,Q17,Q19) D=5(Q4,Q6,Q9,Q10,Q14)
+  // Correct answer distribution: A=5(Q2,Q5,Q13,Q15,Q16) B=5(Q1,Q7,Q11,Q12,Q20) C=5(Q3,Q8,Q17,Q18,Q19) D=5(Q4,Q6,Q9,Q10,Q14)
   const exam6 = await prisma.miniExam.create({
     data: {
       divisionId: ACCS_DIVISION_ID,
@@ -24,18 +24,18 @@ async function main() {
         miniExamId: exam6.id,
         questionIndex: 1,
         questionText:
-          'A mechanically ventilated patient on volume-controlled ventilation shows a sudden increase in peak inspiratory pressure from 28 to 48 cmH2O while the plateau pressure remains unchanged at 22 cmH2O. Which of the following is the most likely cause?',
+          'A mechanically ventilated patient on volume-controlled ventilation has a volume-time waveform that consistently shows the exhaled tidal volume is 80 mL less than the inspired tidal volume. The set tidal volume is 450 mL and the exhaled volume reads 370 mL. What is the most likely cause of this discrepancy?',
         choices: {
-          A: 'Tension pneumothorax',
-          B: 'Mucus plug in the endotracheal tube',
-          C: 'Worsening pulmonary edema',
-          D: 'Abdominal distension',
+          A: 'Inaccurate ventilator flow sensor requiring recalibration',
+          B: 'An endotracheal tube cuff leak allowing gas to escape around the cuff during inspiration',
+          C: 'The patient is actively absorbing oxygen, reducing exhaled volume',
+          D: 'Auto-PEEP causing gas trapping',
         },
         correctChoice: 'B',
         explanationCorrect:
-          'When peak pressure rises but plateau pressure remains unchanged, the problem is increased airway resistance, not decreased compliance. A mucus plug in the endotracheal tube increases resistive pressure without affecting alveolar pressure (plateau pressure).',
+          'A consistent difference between inspired and expired tidal volumes on the volume-time waveform indicates a leak in the system. The most common cause in intubated patients is an endotracheal tube cuff leak, where gas escapes around the deflated or under-inflated cuff during positive pressure inspiration. The cuff pressure should be checked and maintained at 20-30 cmH2O.',
         explanationWrong:
-          'Tension pneumothorax, worsening pulmonary edema, and abdominal distension all decrease lung or thoracic compliance, which would cause both peak and plateau pressures to rise simultaneously. A stable plateau pressure rules out compliance-related issues.',
+          'While flow sensor inaccuracy is possible, a consistent 80 mL discrepancy strongly suggests a true leak rather than a calibration error. Oxygen absorption accounts for only a small volume difference (typically 10-20 mL) and would not explain an 80 mL discrepancy. Auto-PEEP causes gas trapping but the trapped gas would still register on the inspired volume; the volume-time waveform would show incomplete return to baseline on expiration rather than a volume difference.',
         topic: 'Ventilator Graphics and Waveform Analysis',
       },
       {
@@ -384,7 +384,7 @@ async function main() {
   })
 
   // ─── EXAM 7 ───────────────────────────────────────────────────────────
-  // Correct answer distribution: A=5(Q3,Q6,Q10,Q14,Q19) B=5(Q1,Q5,Q11,Q17,Q20) C=5(Q4,Q8,Q12,Q15,Q18) D=5(Q2,Q7,Q9,Q13,Q16)
+  // Correct answer distribution: A=5(Q3,Q6,Q14,Q15,Q19) B=5(Q1,Q5,Q11,Q12,Q20) C=5(Q4,Q8,Q10,Q17,Q18) D=5(Q2,Q7,Q9,Q13,Q16)
   const exam7 = await prisma.miniExam.create({
     data: {
       divisionId: ACCS_DIVISION_ID,
@@ -760,7 +760,7 @@ async function main() {
   })
 
   // ─── EXAM 8 ───────────────────────────────────────────────────────────
-  // Correct answer distribution: A=5(Q2,Q7,Q13,Q16,Q20) B=5(Q4,Q6,Q10,Q14,Q18) C=5(Q1,Q5,Q9,Q15,Q19) D=5(Q3,Q8,Q11,Q12,Q17)
+  // Correct answer distribution: A=5(Q2,Q7,Q16,Q18,Q20) B=5(Q4,Q6,Q10,Q13,Q14) C=5(Q1,Q5,Q9,Q15,Q19) D=5(Q3,Q8,Q11,Q12,Q17)
   const exam8 = await prisma.miniExam.create({
     data: {
       divisionId: ACCS_DIVISION_ID,
@@ -1136,7 +1136,7 @@ async function main() {
   })
 
   // ─── EXAM 9 ───────────────────────────────────────────────────────────
-  // Correct answer distribution: A=5(Q1,Q6,Q12,Q15,Q18) B=5(Q3,Q8,Q10,Q16,Q19) C=5(Q4,Q7,Q11,Q14,Q20) D=5(Q2,Q5,Q9,Q13,Q17)
+  // Correct answer distribution: A=5(Q1,Q3,Q6,Q12,Q15) B=5(Q8,Q10,Q16,Q18,Q19) C=5(Q7,Q9,Q11,Q14,Q20) D=5(Q2,Q4,Q5,Q13,Q17)
   const exam9 = await prisma.miniExam.create({
     data: {
       divisionId: ACCS_DIVISION_ID,
@@ -1512,7 +1512,7 @@ async function main() {
   })
 
   // ─── EXAM 10 ──────────────────────────────────────────────────────────
-  // Correct answer distribution: A=5(Q4,Q7,Q11,Q16,Q19) B=5(Q2,Q5,Q9,Q13,Q17) C=5(Q1,Q6,Q10,Q14,Q20) D=5(Q3,Q8,Q12,Q15,Q18)
+  // Correct answer distribution: A=5(Q7,Q9,Q11,Q14,Q16) B=5(Q2,Q4,Q5,Q13,Q17) C=5(Q1,Q6,Q10,Q19,Q20) D=5(Q3,Q8,Q12,Q15,Q18)
   const exam10 = await prisma.miniExam.create({
     data: {
       divisionId: ACCS_DIVISION_ID,

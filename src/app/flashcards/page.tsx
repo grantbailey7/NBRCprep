@@ -28,11 +28,10 @@ export default async function FlashcardsPage() {
   const [flashcardCounts, progressData] = await Promise.all([
     prisma.flashcard.groupBy({
       by: ['divisionId'],
-      where: { orderIndex: { lte: 100 } },
       _count: { id: true },
     }),
     prisma.userFlashcardProgress.findMany({
-      where: { userId, flashcard: { orderIndex: { lte: 100 } } },
+      where: { userId },
       select: { status: true, flashcard: { select: { divisionId: true } } },
     }),
   ])

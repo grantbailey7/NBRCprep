@@ -121,7 +121,7 @@ const TOOLS: Tool[] = [
       'Covers all 6 NBRC divisions, not just TMC',
       'Free tier with no credit card required',
       'Lifetime access option ($149 TMC, $249 all divisions)',
-      '600+ flashcards and 18 full-length practice exams',
+      '2,500+ flashcards and 18 full-length practice exams',
       'Metrics dashboard tracks weak areas automatically',
       'Modern interface built for focused study sessions',
     ],
@@ -130,8 +130,8 @@ const TOOLS: Tool[] = [
       'No video lectures or audio content',
       'No live seminar or instructor-led option',
     ],
-    flashcards: '600+',
-    practiceExams: '18 full-length + 30 mini',
+    flashcards: '2,500+',
+    practiceExams: '18 full-length + 65 mini',
     freeTier: 'Yes (20 cards/div + 1 mini exam)',
     mobileApp: 'Mobile web',
     highlight: true,
@@ -529,7 +529,7 @@ export default function BestNBRCStudyMaterialsPage() {
             <SignupCTA
               variant="banner"
               heading="Ready to start studying?"
-              description="NBRCprep has 600+ flashcards, 30 mini exams, and 18 full-length simulations across all 6 NBRC divisions. Start free today."
+              description="NBRCprep has 2,500+ flashcards, 65 mini exams, and 18 full-length simulations across all 6 NBRC divisions. Start free today."
             />
           </div>
 

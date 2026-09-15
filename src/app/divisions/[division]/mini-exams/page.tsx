@@ -27,7 +27,7 @@ export default async function MiniExamsListPage({ params }: { params: { division
   const plan = session.user.planType as PlanType
 
   const exams = await prisma.miniExam.findMany({
-    where: { divisionId: division.id, examIndex: { lte: 5 } },
+    where: { divisionId: division.id, examIndex: { lte: slugEnum === 'TMC' ? 15 : 10 } },
     orderBy: { examIndex: 'asc' },
     include: { _count: { select: { questions: true } } },
   })
@@ -56,7 +56,7 @@ export default async function MiniExamsListPage({ params }: { params: { division
           <h1 className="mb-2 text-3xl font-bold text-black">{division.name}</h1>
           <p className="mb-3 text-brand-gray-500">Mini Exams - 20 questions each, scored immediately</p>
           <div className="mb-8 rounded-lg border border-teal-400/30 bg-teal-500/10 p-3 text-sm text-teal-700">
-            Mini Exam 1 is free for all users. Upgrade your plan to unlock all 5 mini exams.
+            Mini Exam 1 is free for all users. Upgrade your plan to unlock all {slugEnum === 'TMC' ? 15 : 10} mini exams.
           </div>
 
           <div className="space-y-3">

@@ -79,7 +79,7 @@ export function SeoPageContent({
             <SignupCTA
               variant="banner"
               heading="Ready to pass your NBRC exam?"
-              description="600+ flashcards, 30 mini exams, and 18 full-length practice tests across all 6 NBRC divisions. Start free, no card required."
+              description="2,500+ flashcards, 65 mini exams, and 18 full-length practice tests across all 6 NBRC divisions. Start free, no card required."
               buttonText={ctaText}
             />
           </div>

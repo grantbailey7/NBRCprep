@@ -23,32 +23,32 @@ const SLUG_TO_ENUM: Record<string, string> = {
 const DIVISION_META: Record<string, { title: string; description: string; longName: string }> = {
   tmc: {
     title: 'TMC Exam Prep - Practice Tests & Flashcards',
-    description: 'Prepare for the TMC exam with 100 flashcards, 5 timed mini exams, and 3 full-length simulations. Master patient assessment, ventilator management, and pharmacology.',
+    description: 'Prepare for the TMC exam with 500 flashcards, 15 timed mini exams, and 3 full-length simulations. Master patient assessment, ventilator management, and pharmacology.',
     longName: 'Therapist Multiple-Choice (TMC)',
   },
   nps: {
     title: 'NPS Exam Prep - Neonatal/Pediatric Specialist',
-    description: 'NPS exam prep with 100 flashcards and 5 practice exams covering neonatal resuscitation, pediatric ventilation, surfactant therapy, and developmental physiology.',
+    description: 'NPS exam prep with 400 flashcards and 10 practice exams covering neonatal resuscitation, pediatric ventilation, surfactant therapy, and developmental physiology.',
     longName: 'Neonatal/Pediatric Specialist (NPS)',
   },
   accs: {
     title: 'ACCS Exam Prep - Adult Critical Care',
-    description: 'ACCS exam prep with 100 flashcards and 5 practice exams covering advanced ventilator management, hemodynamic monitoring, ARDS, and critical care protocols.',
+    description: 'ACCS exam prep with 400 flashcards and 10 practice exams covering advanced ventilator management, hemodynamic monitoring, ARDS, and critical care protocols.',
     longName: 'Adult Critical Care Specialist (ACCS)',
   },
   sds: {
     title: 'SDS Exam Prep - Sleep Disorders Specialist',
-    description: 'SDS exam prep with 100 flashcards and 5 practice exams covering polysomnography, CPAP/BiPAP titration, sleep-disordered breathing, and scoring criteria.',
+    description: 'SDS exam prep with 400 flashcards and 10 practice exams covering polysomnography, CPAP/BiPAP titration, sleep-disordered breathing, and scoring criteria.',
     longName: 'Sleep Disorders Specialist (SDS)',
   },
   cpft: {
     title: 'CPFT Exam Prep - Pulmonary Function Tech',
-    description: 'CPFT exam prep with 100 flashcards and 5 practice exams covering spirometry, lung volumes, diffusion capacity, and quality assurance in PFT labs.',
+    description: 'CPFT exam prep with 400 flashcards and 10 practice exams covering spirometry, lung volumes, diffusion capacity, and quality assurance in PFT labs.',
     longName: 'Certified Pulmonary Function Technologist (CPFT)',
   },
   rpft: {
     title: 'RPFT Exam Prep - Registered PFT',
-    description: 'RPFT exam prep with 100 flashcards and 5 practice exams covering advanced PFT interpretation, bronchial provocation, exercise testing, and research methodology.',
+    description: 'RPFT exam prep with 400 flashcards and 10 practice exams covering advanced PFT interpretation, bronchial provocation, exercise testing, and research methodology.',
     longName: 'Registered Pulmonary Function Technologist (RPFT)',
   },
 }
@@ -93,10 +93,10 @@ export default async function DivisionPage({ params }: { params: { division: str
   const plan = session.user.planType as PlanType
 
   // Flashcard metrics
-  const totalFlashcards = await prisma.flashcard.count({ where: { divisionId: division.id, orderIndex: { lte: 100 } } })
+  const totalFlashcards = await prisma.flashcard.count({ where: { divisionId: division.id } })
   const progressRows = await prisma.userFlashcardProgress.groupBy({
     by: ['status'],
-    where: { userId, flashcard: { divisionId: division.id, orderIndex: { lte: 100 } } },
+    where: { userId, flashcard: { divisionId: division.id } },
     _count: { status: true },
   })
   const known = progressRows.find((p) => p.status === 'KNOWN')?._count.status ?? 0
@@ -104,9 +104,10 @@ export default async function DivisionPage({ params }: { params: { division: str
   const flashPct = totalFlashcards > 0 ? Math.round((known / totalFlashcards) * 100) : 0
 
   // Mini exam metrics
-  const totalMiniExams = await prisma.miniExam.count({ where: { divisionId: division.id, examIndex: { lte: 5 } } })
+  const miniExamLimit = slugEnum === 'TMC' ? 15 : 10
+  const totalMiniExams = await prisma.miniExam.count({ where: { divisionId: division.id, examIndex: { lte: miniExamLimit } } })
   const miniResults = await prisma.userMiniExamResult.findMany({
-    where: { userId, miniExam: { divisionId: division.id, examIndex: { lte: 5 } } },
+    where: { userId, miniExam: { divisionId: division.id, examIndex: { lte: miniExamLimit } } },
   })
   const miniTaken = miniResults.length
   const miniPassed = miniResults.filter((r) => r.passed).length

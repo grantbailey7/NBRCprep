@@ -80,14 +80,29 @@ export default async function DashboardPage() {
     fullExamResults,
     studyStreaks,
   ] = await Promise.all([
-    prisma.flashcard.count({ where: { orderIndex: { lte: 100 } } }),
+    prisma.flashcard.count(),
     prisma.userFlashcardProgress.findMany({
-      where: { userId, flashcard: { orderIndex: { lte: 100 } } },
+      where: { userId },
       select: { status: true },
     }),
-    prisma.miniExam.count({ where: { examIndex: { lte: 5 } } }),
+    prisma.miniExam.count({
+      where: {
+        OR: [
+          { division: { slug: 'TMC' as any }, examIndex: { lte: 15 } },
+          { division: { slug: { not: 'TMC' as any } }, examIndex: { lte: 10 } },
+        ],
+      },
+    }),
     prisma.userMiniExamResult.findMany({
-      where: { userId, miniExam: { examIndex: { lte: 5 } } },
+      where: {
+        userId,
+        miniExam: {
+          OR: [
+            { division: { slug: 'TMC' as any }, examIndex: { lte: 15 } },
+            { division: { slug: { not: 'TMC' as any } }, examIndex: { lte: 10 } },
+          ],
+        },
+      },
       select: { passed: true, scorePercentage: true },
     }),
     prisma.fullExam.count(),

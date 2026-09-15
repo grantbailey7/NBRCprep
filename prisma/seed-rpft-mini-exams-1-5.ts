@@ -1140,7 +1140,7 @@ async function main() {
   console.log(`Exam 3 created: ${exam3.id} with 20 questions`);
 
   // ─── EXAM 4 (NOT FREE) ───────────────────────────────────
-  // Answer distribution: A=5(Q2,5,12,15,19) B=5(Q3,9,11,16,18) C=5(Q1,6,10,17,20) D=5(Q4,7,8,13,14)
+  // Answer distribution: A=5(Q2,5,12,15,19) B=6(Q3,6,9,11,16,18) C=4(Q1,10,17,20) D=5(Q4,7,8,13,14)
   const exam4 = await prisma.miniExam.create({
     data: {
       divisionId,
@@ -1253,11 +1253,11 @@ async function main() {
           C: "5% CO2 with balance nitrogen (no supplemental O2)",
           D: "Room air with no supplemental gases",
         },
-        correctChoice: "C",
+        correctChoice: "B",
         explanationCorrect:
-          "The EVH challenge requires the patient to hyperventilate a dry gas mixture containing 5% CO2 (with 21% O2, balance nitrogen) at a target ventilation of 30× FEV1 for 6 minutes. The 5% CO2 prevents hypocapnia that would otherwise result from voluntary hyperventilation, maintaining a eucapnic state.",
+          "The EVH challenge requires the patient to hyperventilate a dry gas mixture containing 5% CO2 with 21% O2 and balance nitrogen at a target ventilation of 30x FEV1 for 6 minutes. The 5% CO2 prevents hypocapnia that would otherwise result from voluntary hyperventilation, maintaining a eucapnic state.",
         explanationWrong:
-          "100% oxygen is not used in EVH testing. A mixture without supplemental O2 (C) would not provide the standard 21% O2 needed. Room air alone would cause significant hypocapnia during hyperventilation, confounding the results and potentially causing symptoms unrelated to bronchoconstriction.",
+          "100% oxygen (A) is not used in EVH testing. A mixture without supplemental O2 (C) would not provide the standard 21% O2 needed for safe breathing. Room air alone (D) would cause significant hypocapnia during hyperventilation, confounding the results and potentially causing symptoms unrelated to bronchoconstriction.",
         topic: "Methacholine and exercise challenge testing protocols",
       },
       {

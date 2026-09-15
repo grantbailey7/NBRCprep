@@ -292,7 +292,7 @@ export default function ABGInterpreterPage() {
               <div className="mt-6 rounded-xl border border-teal-400/30 bg-teal-500/10 p-5 text-center">
                 <p className="font-bold text-black text-sm">Want to practice ABG questions?</p>
                 <p className="text-xs text-brand-gray-500 mt-1">
-                  NBRCprep has 600+ flashcards and 30 practice exams covering ABGs and more.
+                  NBRCprep has 2,500+ flashcards and 65 practice exams covering ABGs and more.
                 </p>
                 <Link href="/signup" className="btn-primary text-sm px-5 py-2 mt-3 inline-block">
                   Start Free - No Card Required

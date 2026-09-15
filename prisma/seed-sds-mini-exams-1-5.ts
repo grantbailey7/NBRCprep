@@ -8,7 +8,7 @@ async function main() {
   console.log('Seeding SDS mini exams 1-5...')
 
   // ─── EXAM 1 (isFree: true) ───────────────────────────────────────────
-  // Correct answer distribution: A=5(Q2,Q5,Q9,Q14,Q18) B=5(Q1,Q7,Q11,Q16,Q20) C=5(Q3,Q8,Q12,Q15,Q19) D=5(Q4,Q6,Q10,Q13,Q17)
+  // Correct answer distribution: A=5(Q2,Q5,Q9,Q14,Q18) B=5(Q1,Q7,Q11,Q16,Q20) C=6(Q3,Q8,Q12,Q13,Q15,Q19) D=4(Q4,Q6,Q10,Q17)
   const exam1 = await prisma.miniExam.create({
     data: {
       divisionId: SDS_DIVISION_ID,
@@ -247,11 +247,11 @@ async function main() {
           C: 'Repeat the study as a full-night CPAP titration',
           D: 'The split-night result is adequate since REM supine was documented during the diagnostic portion',
         },
-        correctChoice: 'D',
+        correctChoice: 'C',
         explanationCorrect:
-          'According to AASM guidelines, a split-night titration is considered adequate if the recommended CPAP pressure eliminates or nearly eliminates respiratory events during REM sleep in the supine position. However, if REM sleep is not captured during the titration portion, the titration is considered suboptimal and a full-night titration study should be recommended.',
+          'According to AASM guidelines, if REM sleep is not captured during the titration portion of a split-night study, the titration is considered suboptimal. A full-night CPAP titration study should be recommended to ensure the prescribed pressure adequately treats respiratory events during REM sleep, when OSA is often most severe.',
         explanationWrong:
-          'Accepting the titration without REM documentation risks undertreating the patient since OSA is often most severe during REM sleep. Prescribing APAP with a wide range may be an alternative but does not address the need for proper titration documentation. Option D is incorrect because REM during the diagnostic portion does not validate the titration pressure during REM.',
+          'Accepting the titration without REM documentation (Option A) risks undertreating the patient since OSA is often most severe during REM sleep. Prescribing APAP with a wide range (Option B) may be an alternative but does not address the need for proper titration documentation. Option D is incorrect because REM during the diagnostic portion does not validate the titration pressure during REM.',
         topic: 'CPAP and BiPAP titration protocols',
       },
       {

@@ -717,7 +717,7 @@ async function main() {
         },
         correctChoice: 'A',
         explanationCorrect:
-          'E-cylinder factor is 0.28. Duration (minutes) = (pressure × cylinder factor) / flow rate = (1500 × 0.28) / 12 = 420 / 12 = 35 minutes. This is critical for transport planning — always calculate cylinder duration before departing and ensure adequate oxygen supply plus a safety margin of at least 30 minutes beyond the expected transport time.',
+          'E-cylinder factor is 0.28. Duration (minutes) = (pressure × cylinder factor) / flow rate = (1500 × 0.28) / 12 = 420 / 12 = 35 minutes. This is critical for transport planning. Always calculate cylinder duration before departing and ensure adequate oxygen supply plus a safety margin of at least 30 minutes beyond the expected transport time.',
         explanationWrong:
           'The other values result from using incorrect cylinder factors or flow rate calculations. 120 minutes would require a much larger cylinder. 60 and 45 minutes do not match any standard E-cylinder calculation with these parameters.',
         topic: 'Critical Care Transport',

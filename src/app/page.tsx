@@ -5,12 +5,12 @@ import { Footer } from '@/components/layout/Footer'
 import { getAuthSession } from '@/lib/auth'
 
 export const metadata: Metadata = {
-  title: 'NBRCprep - Pass the NBRC. The First Time.',
+  title: 'NBRCprep - Pass the NBRC Exams the First Time',
   description:
     'NBRCprep is the #1 NBRC study platform. 2,500+ original flashcards, 65 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
   alternates: { canonical: 'https://nbrcprep.app' },
   openGraph: {
-    title: 'NBRCprep - Pass the NBRC. The First Time.',
+    title: 'NBRCprep - Pass the NBRC Exams the First Time',
     description: '2,500+ original flashcards, 65 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
     url: 'https://nbrcprep.app',
     siteName: 'NBRCprep',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NBRCprep - Pass the NBRC. The First Time.',
+    title: 'NBRCprep - Pass the NBRC Exams the First Time',
     description: '2,500+ original flashcards, 65 timed mini exams, and full-length simulations across all 6 NBRC divisions. Start free today.',
     images: ['/api/og'],
   },
@@ -126,8 +126,8 @@ export default async function HomePage() {
             2,500+ Flashcards · 1,300 Practice Questions · 6 Divisions
           </div>
           <h1 className="text-5xl sm:text-6xl font-black text-black leading-[1.05] tracking-tight">
-            Pass the NBRC.<br />
-            <span className="text-teal-500">The first time.</span>
+            Pass the NBRC Exams<br />
+            <span className="text-teal-500">the First Time.</span>
           </h1>
           <p className="mt-6 text-xl text-brand-gray-500 max-w-2xl mx-auto leading-relaxed">
             NBRCprep gives you the sharpest flashcards, the hardest practice exams, and the

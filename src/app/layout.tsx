@@ -13,11 +13,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'NBRCprep - Pass the NBRC with Confidence',
+    default: 'NBRCprep - Pass the NBRC Exams the First Time',
     template: '%s | NBRCprep',
   },
   description:
-    'Pass the NBRC exam on your first try. 2,500+ flashcards, 65 timed practice tests, and full-length TMC exam simulations. The #1 respiratory therapy exam prep and NBRC study guide - start free today.',
+    'Pass the NBRC exams the first time. 2,500+ flashcards, 65 timed practice tests, and full-length TMC exam simulations. The #1 respiratory therapy exam prep and NBRC study guide - start free today.',
   keywords: [
     'NBRC exam prep',
     'respiratory therapy exam',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://nbrcprep.app' },
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'NBRCprep - Pass the NBRC with Confidence',
+    title: 'NBRCprep - Pass the NBRC Exams the First Time',
     description: '2,500+ original flashcards and 65 practice exams for all 6 NBRC divisions. Start free, no card required.',
     type: 'website',
     url: 'https://nbrcprep.app',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NBRCprep - Pass the NBRC with Confidence',
+    title: 'NBRCprep - Pass the NBRC Exams the First Time',
     description: '2,500+ original flashcards and 65 practice exams for all 6 NBRC divisions.',
     images: ['/api/og'],
   },

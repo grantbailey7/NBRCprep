@@ -350,8 +350,8 @@ model PlayEvent {
 
 model SiteSettings {
   id       String  @id @default("singleton")
-  seoMode  SeoMode @default(STEALTH)
-  robotsAllowAll Boolean @default(false)
-  sitemapEnabled Boolean @default(false)
-  metaNoIndex    Boolean @default(true)
+  seoMode  SeoMode @default(NORMAL)
+  robotsAllowAll Boolean @default(true)
+  sitemapEnabled Boolean @default(true)
+  metaNoIndex    Boolean @default(false)
 }

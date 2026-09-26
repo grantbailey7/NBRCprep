@@ -18,10 +18,10 @@ interface BlogStats {
 
 export default function ControlConsolePage() {
   const [settings, setSettings] = useState<SiteSettings>({
-    seoMode: 'STEALTH',
-    robotsAllowAll: false,
-    sitemapEnabled: false,
-    metaNoIndex: true,
+    seoMode: 'NORMAL',
+    robotsAllowAll: true,
+    sitemapEnabled: true,
+    metaNoIndex: false,
   })
   const [blogStats, setBlogStats] = useState<BlogStats>({ total: 0, published: 0, scheduled: 0, draft: 0 })
   const [saving, setSaving] = useState(false)

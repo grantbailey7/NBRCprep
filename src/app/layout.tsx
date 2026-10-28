@@ -44,7 +44,6 @@ export const metadata: Metadata = {
     'respiratory therapy practice questions',
   ],
   metadataBase: new URL('https://nbrcprep.app'),
-  alternates: { canonical: 'https://nbrcprep.app' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'NBRCprep - Pass the NBRC Exams the First Time',

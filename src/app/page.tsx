@@ -387,6 +387,36 @@ export default async function HomePage() {
       </section>
 
       <section className="bg-brand-gray-50 py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="section-title">Free Study Resources</h2>
+            <p className="section-subtitle">Hundreds of free articles, guides, and tools to boost your prep</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { href: '/guides', title: 'Exam Guides', desc: 'Step-by-step study plans' },
+              { href: '/topics', title: 'Study Topics', desc: 'Key concepts explained' },
+              { href: '/cheat-sheets', title: 'Cheat Sheets', desc: 'Quick-reference summaries' },
+              { href: '/tips', title: 'Exam Tips', desc: 'Test-taking strategies' },
+              { href: '/mistakes', title: 'Common Mistakes', desc: 'Pitfalls to avoid' },
+              { href: '/exam-day', title: 'Exam Day', desc: 'What to expect' },
+              { href: '/glossary', title: 'Glossary', desc: 'RT terms defined' },
+              { href: '/blog', title: 'Blog', desc: 'Latest articles' },
+              { href: '/tools/abg-interpreter', title: 'ABG Interpreter', desc: 'Free ABG analysis tool' },
+              { href: '/best-nbrc-study-materials', title: 'Best Study Materials', desc: 'Top-rated resources' },
+              { href: '/resources', title: 'All Resources', desc: 'Browse everything' },
+              { href: '/tools', title: 'Free Tools', desc: 'Practice utilities' },
+            ].map((r) => (
+              <Link key={r.href} href={r.href} className="card p-4 hover:border-teal-500 transition-all group">
+                <h3 className="font-bold text-black text-sm group-hover:text-teal-600 transition-colors">{r.title}</h3>
+                <p className="text-xs text-brand-gray-400 mt-1">{r.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="section-title">NBRC Exam FAQ</h2>

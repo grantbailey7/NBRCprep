@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { getAuthSession } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { submitToIndexNow } from '@/lib/indexnow'
 
 export async function POST(req: Request) {
   const session = await getAuthSession()
@@ -24,6 +25,11 @@ export async function POST(req: Request) {
       })
     )
   )
+
+  if (published.length > 0) {
+    const urls = published.map(p => `https://nbrcprep.app/blog/${p.slug}`)
+    submitToIndexNow(urls).catch(() => {})
+  }
 
   return NextResponse.json({ published: published.length })
 }

@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import { SeoPageContent } from '@/components/seo/SeoPageContent'
 import { RelatedResources } from '@/components/seo/RelatedResources'
+import { extractFaqsFromHtml, buildFaqSchema } from '@/lib/extractFaqs'
 
 interface Props {
   params: { slug: string }
@@ -55,9 +56,12 @@ export default async function TopicPage({ params }: Props) {
     image: `https://nbrcprep.app/api/og?title=${encodeURIComponent(page.title)}&type=topic`,
   }
 
+  const faqSchema = buildFaqSchema(extractFaqsFromHtml(page.content))
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       <SeoPageContent
         title={page.title}
         description={page.description}

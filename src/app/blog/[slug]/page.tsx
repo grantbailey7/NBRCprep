@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
   if (!post) return { title: 'Post Not Found' }
   return {
-    title: `${post.title} | NBRCprep Blog`,
+    title: post.title,
     description: post.description,
     alternates: { canonical: `https://nbrcprep.app/blog/${post.slug}` },
     openGraph: {

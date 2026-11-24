@@ -5,11 +5,11 @@ import { Footer } from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
-  description: 'Terms of Service for NBRCprep, the NBRC respiratory therapy exam prep platform by Certin LLC.',
+  description: 'Terms of Service for NBRCprep, the NBRC respiratory therapy exam prep platform by Arteura.',
   alternates: { canonical: 'https://nbrcprep.app/terms' },
   openGraph: {
     title: 'Terms of Service',
-    description: 'Terms of Service for NBRCprep, the NBRC respiratory therapy exam prep platform by Certin LLC.',
+    description: 'Terms of Service for NBRCprep, the NBRC respiratory therapy exam prep platform by Arteura.',
     url: 'https://nbrcprep.app/terms',
     siteName: 'NBRCprep',
   },
@@ -37,13 +37,13 @@ export default function TermsOfServicePage() {
                 1. Acceptance of Terms
               </h2>
               <p className="mt-3">
-                By accessing or using NBRCprep By Certin (the &ldquo;Service&rdquo;), available at{' '}
+                By accessing or using NBRCprep by Arteura (the &ldquo;Service&rdquo;), available at{' '}
                 <Link href="https://nbrcprep.app" className="text-blue-600 underline">
                   nbrcprep.app
                 </Link>
                 , you agree to be bound by these Terms of Service (&ldquo;Terms&rdquo;). If you do
                 not agree to these Terms, you may not access or use the Service. These Terms
-                constitute a legally binding agreement between you and Certin LLC
+                constitute a legally binding agreement between you and Arteura
                 (&ldquo;Company,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;).
               </p>
             </section>
@@ -54,7 +54,7 @@ export default function TermsOfServicePage() {
                 2. Description of Service
               </h2>
               <p className="mt-3">
-                NBRCprep By Certin is an online exam preparation platform designed for respiratory
+                NBRCprep by Arteura is an online exam preparation platform designed for respiratory
                 therapy professionals studying for National Board for Respiratory Care (NBRC)
                 credentialing examinations. The Service provides study materials across six
                 divisions: TMC, NPS, ACCS, SDS, CPFT, and RPFT.
@@ -144,10 +144,10 @@ export default function TermsOfServicePage() {
               <p className="mt-3">
                 All content available through the Service, including but not limited to flashcard
                 text, exam questions, explanations, graphics, and software, is the original work of
-                Certin LLC and is protected by applicable intellectual property laws.
+                Arteura and is protected by applicable intellectual property laws.
               </p>
               <p className="mt-3">
-                NBRCprep By Certin is not affiliated with, endorsed by, or sponsored by the National
+                NBRCprep by Arteura is not affiliated with, endorsed by, or sponsored by the National
                 Board for Respiratory Care (NBRC) or the American Association for Respiratory Care
                 (AARC). All trademarks, service marks, and trade names referenced in the Service are
                 the property of their respective owners.
@@ -165,7 +165,7 @@ export default function TermsOfServicePage() {
                 </li>
                 <li>
                   Copy, reproduce, distribute, or publicly display any content from the Service
-                  without prior written consent from Certin LLC.
+                  without prior written consent from Arteura.
                 </li>
                 <li>
                   Use automated tools, bots, scrapers, or similar technology to access or extract
@@ -193,7 +193,7 @@ export default function TermsOfServicePage() {
                 warranties of any kind, either express or implied.
               </p>
               <p className="mt-3">
-                NBRCprep By Certin is an educational study tool and is not a substitute for formal
+                NBRCprep by Arteura is an educational study tool and is not a substitute for formal
                 clinical training, accredited respiratory therapy education programs, or
                 professional medical instruction. The content provided through the Service is
                 intended solely for exam preparation purposes.
@@ -211,7 +211,7 @@ export default function TermsOfServicePage() {
                 9. Limitation of Liability
               </h2>
               <p className="mt-3">
-                To the fullest extent permitted by applicable law, Certin LLC and its officers,
+                To the fullest extent permitted by applicable law, Arteura and its officers,
                 directors, employees, and agents shall not be liable for any indirect, incidental,
                 special, consequential, or punitive damages, including but not limited to loss of
                 profits, data, or other intangible losses, arising out of or in connection with your
@@ -273,7 +273,7 @@ export default function TermsOfServicePage() {
                 If you have any questions about these Terms of Service, please contact us at:
               </p>
               <p className="mt-3">
-                <strong>Certin LLC</strong>
+                <strong>Arteura</strong>
                 <br />
                 Email:{' '}
                 <a href="mailto:certinhq@outlook.com" className="text-blue-600 underline">

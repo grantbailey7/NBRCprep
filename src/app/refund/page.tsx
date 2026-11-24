@@ -32,7 +32,7 @@ export default function RefundPolicyPage() {
 
           <div className="mt-10 space-y-10 text-brand-gray-700 leading-relaxed">
             <p>
-              At NBRCprep By Certin, operated by Certin LLC, we want you to be satisfied with your
+              At NBRCprep by Arteura, we want you to be satisfied with your
               purchase. This Refund Policy outlines the terms under which refunds may be issued for
               our subscription plans and one-time purchases.
             </p>
@@ -128,7 +128,7 @@ export default function RefundPolicyPage() {
                 If you have any questions about this Refund Policy, please contact us at:
               </p>
               <p className="mt-3">
-                <strong>Certin LLC</strong>
+                <strong>Arteura</strong>
                 <br />
                 Email:{' '}
                 <a href="mailto:certinhq@outlook.com" className="text-blue-600 underline">

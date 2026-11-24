@@ -32,8 +32,8 @@ export default function PrivacyPolicyPage() {
 
           <div className="mt-10 space-y-10 text-brand-gray-700 leading-relaxed">
             <p>
-              NBRCprep By Certin (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;),
-              operated by Certin LLC, is committed to protecting your privacy. This Privacy Policy
+              NBRCprep by Arteura (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;),
+              operated by Arteura, is committed to protecting your privacy. This Privacy Policy
               explains how we collect, use, disclose, and safeguard your information when you use our
               website at{' '}
               <Link href="https://nbrcprep.app" className="text-blue-600 underline">
@@ -262,7 +262,7 @@ export default function PrivacyPolicyPage() {
                 at:
               </p>
               <p className="mt-3">
-                <strong>Certin LLC</strong>
+                <strong>Arteura</strong>
                 <br />
                 Email:{' '}
                 <a href="mailto:certinhq@outlook.com" className="text-blue-600 underline">

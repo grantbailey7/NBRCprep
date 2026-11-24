@@ -68,9 +68,9 @@ const organizationSchema = {
   url: 'https://nbrcprep.app',
   logo: 'https://nbrcprep.app/icon.svg',
   description: 'The most comprehensive study platform for NBRC Respiratory Therapy credentialing exams.',
-  parentOrganization: { '@type': 'Organization', name: 'Certin LLC', url: 'https://certinhq.com' },
+  parentOrganization: { '@type': 'Organization', name: 'Arteura', url: 'https://arteura.com' },
   contactPoint: { '@type': 'ContactPoint', email: 'certinhq@outlook.com', contactType: 'customer support' },
-  sameAs: ['https://certinhq.com'],
+  sameAs: ['https://arteura.com'],
 }
 
 const websiteSchema = {

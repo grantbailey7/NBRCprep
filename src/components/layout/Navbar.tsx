@@ -59,7 +59,7 @@ export function Navbar() {
             <Link href="/" className="text-xl font-black tracking-tight">
               NBRC<span className="text-teal-500">prep</span>
             </Link>
-            <a href="https://certinhq.com" className="text-xs font-medium text-brand-gray-400 tracking-wide hover:text-brand-gray-600 transition-colors">By Certin</a>
+            <a href="https://arteura.com" target="_blank" rel="noopener" className="text-xs font-medium text-brand-gray-400 tracking-wide hover:text-brand-gray-600 transition-colors">By Arteura</a>
           </div>
 
           <div className="hidden md:flex items-center gap-6">

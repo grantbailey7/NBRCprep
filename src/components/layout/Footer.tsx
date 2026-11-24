@@ -15,7 +15,7 @@ export function Footer() {
               Built by respiratory professionals, for respiratory professionals.
             </p>
             <p className="mt-3 text-brand-gray-400 text-sm">
-              Contact: <a href="mailto:certinhq@outlook.com" className="text-teal-400 hover:text-teal-300 transition-colors">certinhq@outlook.com</a>
+              Contact: <a href="mailto:arteura@outlook.com" className="text-teal-400 hover:text-teal-300 transition-colors">arteura@outlook.com</a>
             </p>
           </div>
 
@@ -70,8 +70,8 @@ export function Footer() {
             © {new Date().getFullYear()} NBRCprep.app - All rights reserved.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a href="mailto:certinhq@outlook.com" className="text-xs text-brand-gray-400 hover:text-white transition-colors">
-              certinhq@outlook.com
+            <a href="mailto:arteura@outlook.com" className="text-xs text-brand-gray-400 hover:text-white transition-colors">
+              arteura@outlook.com
             </a>
             <p className="text-xs text-brand-gray-600">
               Not affiliated with NBRC or AARC. Questions are original and independently developed.

@@ -192,8 +192,8 @@ export default function SettingsPage() {
           <div className="mt-12 text-center">
             <p className="text-sm text-brand-gray-400">
               Need help?{' '}
-              <a href="mailto:certinhq@outlook.com" className="text-teal-600 hover:text-teal-700 font-medium">
-                certinhq@outlook.com
+              <a href="mailto:arteura@outlook.com" className="text-teal-600 hover:text-teal-700 font-medium">
+                arteura@outlook.com
               </a>
             </p>
           </div>

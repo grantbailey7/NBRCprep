@@ -80,8 +80,8 @@ export default function TermsOfServicePage() {
               </p>
               <p className="mt-3">
                 You agree to notify us immediately at{' '}
-                <a href="mailto:certinhq@outlook.com" className="text-blue-600 underline">
-                  certinhq@outlook.com
+                <a href="mailto:arteura@outlook.com" className="text-blue-600 underline">
+                  arteura@outlook.com
                 </a>{' '}
                 if you become aware of any unauthorized use of your account or any other breach of
                 security.
@@ -235,8 +235,8 @@ export default function TermsOfServicePage() {
               </p>
               <p className="mt-3">
                 You may terminate your account at any time by contacting us at{' '}
-                <a href="mailto:certinhq@outlook.com" className="text-blue-600 underline">
-                  certinhq@outlook.com
+                <a href="mailto:arteura@outlook.com" className="text-blue-600 underline">
+                  arteura@outlook.com
                 </a>
                 . Upon termination, your right to use the Service will cease immediately.
               </p>
@@ -276,8 +276,8 @@ export default function TermsOfServicePage() {
                 <strong>Arteura</strong>
                 <br />
                 Email:{' '}
-                <a href="mailto:certinhq@outlook.com" className="text-blue-600 underline">
-                  certinhq@outlook.com
+                <a href="mailto:arteura@outlook.com" className="text-blue-600 underline">
+                  arteura@outlook.com
                 </a>
                 <br />
                 Website:{' '}

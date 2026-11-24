@@ -97,8 +97,8 @@ export default function RefundPolicyPage() {
               </h2>
               <p className="mt-3">
                 To request a refund, please contact us at{' '}
-                <a href="mailto:certinhq@outlook.com" className="text-blue-600 underline">
-                  certinhq@outlook.com
+                <a href="mailto:arteura@outlook.com" className="text-blue-600 underline">
+                  arteura@outlook.com
                 </a>{' '}
                 with the following information:
               </p>
@@ -131,8 +131,8 @@ export default function RefundPolicyPage() {
                 <strong>Arteura</strong>
                 <br />
                 Email:{' '}
-                <a href="mailto:certinhq@outlook.com" className="text-blue-600 underline">
-                  certinhq@outlook.com
+                <a href="mailto:arteura@outlook.com" className="text-blue-600 underline">
+                  arteura@outlook.com
                 </a>
                 <br />
                 Website:{' '}

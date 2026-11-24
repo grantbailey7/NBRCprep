@@ -69,7 +69,7 @@ const organizationSchema = {
   logo: 'https://nbrcprep.app/icon.svg',
   description: 'The most comprehensive study platform for NBRC Respiratory Therapy credentialing exams.',
   parentOrganization: { '@type': 'Organization', name: 'Arteura', url: 'https://arteura.com' },
-  contactPoint: { '@type': 'ContactPoint', email: 'certinhq@outlook.com', contactType: 'customer support' },
+  contactPoint: { '@type': 'ContactPoint', email: 'arteura@outlook.com', contactType: 'customer support' },
   sameAs: ['https://arteura.com'],
 }
 

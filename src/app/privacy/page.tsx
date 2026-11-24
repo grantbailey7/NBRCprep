@@ -213,8 +213,8 @@ export default function PrivacyPolicyPage() {
               </ul>
               <p className="mt-3">
                 To exercise any of these rights, please contact us at{' '}
-                <a href="mailto:certinhq@outlook.com" className="text-blue-600 underline">
-                  certinhq@outlook.com
+                <a href="mailto:arteura@outlook.com" className="text-blue-600 underline">
+                  arteura@outlook.com
                 </a>
                 . We will respond to your request within a reasonable timeframe.
               </p>
@@ -234,8 +234,8 @@ export default function PrivacyPolicyPage() {
               <p className="mt-3">
                 If you believe that a child under 18 has provided us with personal information,
                 please contact us at{' '}
-                <a href="mailto:certinhq@outlook.com" className="text-blue-600 underline">
-                  certinhq@outlook.com
+                <a href="mailto:arteura@outlook.com" className="text-blue-600 underline">
+                  arteura@outlook.com
                 </a>
                 .
               </p>
@@ -265,8 +265,8 @@ export default function PrivacyPolicyPage() {
                 <strong>Arteura</strong>
                 <br />
                 Email:{' '}
-                <a href="mailto:certinhq@outlook.com" className="text-blue-600 underline">
-                  certinhq@outlook.com
+                <a href="mailto:arteura@outlook.com" className="text-blue-600 underline">
+                  arteura@outlook.com
                 </a>
                 <br />
                 Website:{' '}

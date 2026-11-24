@@ -59,7 +59,7 @@ function LoginForm() {
       if (result?.error) {
         if (result.error === 'DEVICE_MISMATCH') {
           setError(
-            'This account is locked to a different device. Full Access plans are single-device only. Contact certinhq@outlook.com for help.'
+            'This account is locked to a different device. Full Access plans are single-device only. Contact arteura@outlook.com for help.'
           )
         } else {
           setError('Invalid email/username or password.')

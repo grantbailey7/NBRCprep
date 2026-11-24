@@ -60,7 +60,7 @@ const FAQ_ITEMS = [
   {
     question: 'Do you offer refunds?',
     answer:
-      'We offer a refund policy for qualifying purchases. See our Refund Policy page for full details, or contact certinhq@outlook.com.',
+      'We offer a refund policy for qualifying purchases. See our Refund Policy page for full details, or contact arteura@outlook.com.',
   },
 ]
 
